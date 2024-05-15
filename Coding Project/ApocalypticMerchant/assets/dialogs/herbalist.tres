@@ -1,0 +1,316 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1",
+"healthy": "0_2",
+"low_health": "0_3",
+"neutral": "0_4",
+"no": "0_6",
+"yes1": "0_5",
+"yes2": "0_7"
+}
+nodes = {
+"0_1": {
+"link": "3_3",
+"offset": Vector2( -1060, -100 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "1_1",
+"offset": Vector2( -620, -300 ),
+"start_id": "healthy"
+},
+"0_3": {
+"link": "1_8",
+"offset": Vector2( -620, 120 ),
+"start_id": "low_health"
+},
+"0_4": {
+"link": "3_2",
+"offset": Vector2( -1060, 740 ),
+"start_id": "neutral"
+},
+"0_5": {
+"link": "3_9",
+"offset": Vector2( -1060, 580 ),
+"start_id": "yes1"
+},
+"0_6": {
+"link": "1_14",
+"offset": Vector2( -580, 880 ),
+"start_id": "no"
+},
+"0_7": {
+"link": "1_11",
+"offset": Vector2( -580, 580 ),
+"start_id": "yes2"
+},
+"1_1": {
+"dialogue": "Hi there! You're not hurt are you?",
+"offset": Vector2( -340, -400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "No. Who are you?"
+}
+},
+"size": Vector2( 300.001, 282 ),
+"speaker": "Herbalist"
+},
+"1_10": {
+"dialogue": "Your help means the world to me. I'll be waiting here. I hope to see you again!",
+"offset": Vector2( 1460, -360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "No problem."
+}
+},
+"size": Vector2( 300.002, 255 ),
+"speaker": "Herbalist Hannah"
+},
+"1_11": {
+"dialogue": "Hi! Good to see you again!",
+"offset": Vector2( -320, 480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_6",
+"text": "I have the ingredients you need."
+}
+},
+"size": Vector2( 300, 255.001 ),
+"speaker": "Herbalist Hannah"
+},
+"1_12": {
+"dialogue": "Oh, wonderful! I knew you wouldn't come back empty-handed. Give me a minute as I craft the medicine.",
+"offset": Vector2( 260, 480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_13",
+"text": "Sure thing."
+}
+},
+"size": Vector2( 300, 255.001 ),
+"speaker": "Herbalist Hannah"
+},
+"1_13": {
+"dialogue": "As promised, here's some of my specially-crafted medicine. You can use it for yourself or perhaps there's someone out there who could use it.",
+"offset": Vector2( 600, 480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_4",
+"text": "Thanks, much appreciated!"
+}
+},
+"size": Vector2( 300.003, 255.001 ),
+"speaker": "Herbalist Hannah"
+},
+"1_14": {
+"dialogue": "Nice to see you again! You wouldn't happen to have those herbs I asked for right?",
+"offset": Vector2( -320, 840 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_15",
+"text": "Nope, sorry."
+},
+1: {
+"condition": {
+},
+"link": "3_5",
+"text": "No, but I may have other things you might want (Trade)"
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Herbalist Hannah"
+},
+"1_15": {
+"dialogue": "Sorry, I shouldn't have my hopes up like that. Come back to me if you ever find those herbs, otherwise I'm too busy to talk. unfortunately.",
+"offset": Vector2( 20, 840 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "Alright."
+}
+},
+"size": Vector2( 300.008, 255 ),
+"speaker": "Herbalist Hannah"
+},
+"1_2": {
+"dialogue": "I'm Hannah. I used to be a nurse before the apocalypse, but since then I've also turned to herbalism to help survivors. I travel from settlement to settlement for those who may be in need of my skills, medication, or medicinal knowledge.",
+"offset": Vector2( 20, -160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "That's great. How's that going?"
+}
+},
+"size": Vector2( 300.005, 255 ),
+"speaker": "Herbalist Hannah"
+},
+"1_3": {
+"dialogue": "Say, could you do a favor for me?",
+"offset": Vector2( 740, 80 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "What is it?"
+}
+},
+"size": Vector2( 300.002, 255 ),
+"speaker": "Herbalist Hannah"
+},
+"1_4": {
+"dialogue": "It's going well, but with the sheer number of people who need help, I've run low on the ingredients I need to make my specialized medicines.",
+"offset": Vector2( 380, -160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "Is there any way I can help?"
+},
+1: {
+"condition": {
+},
+"link": "1_3",
+"text": "Sorry to hear."
+}
+},
+"size": Vector2( 299.997, 309 ),
+"speaker": "Herbalist Hannah"
+},
+"1_5": {
+"dialogue": "To make my special medicine, I need a Betony plant and Hyssop herb. If you can find some for me, I'll give you some of the medicine.",
+"offset": Vector2( 1080, -260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_10",
+"text": "I'll try my best."
+},
+1: {
+"condition": {
+},
+"link": "1_6",
+"text": "Not interested."
+}
+},
+"size": Vector2( 299.997, 282 ),
+"speaker": "Herbalist Hannah"
+},
+"1_6": {
+"dialogue": "No worries. If you ever change your mind, I'll be waiting here.",
+"offset": Vector2( 1460, -40 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Okay"
+}
+},
+"size": Vector2( 300.002, 255 ),
+"speaker": "Herbalist Hannah"
+},
+"1_7": {
+"dialogue": "Thanks. Please do come back if you ever find those herbs though.",
+"offset": Vector2( 260, 1200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "Alright."
+}
+},
+"size": Vector2( 300.001, 255 ),
+"speaker": "Herbalist Hannah"
+},
+"1_8": {
+"dialogue": "Hi there! You're not hurt are you?",
+"offset": Vector2( -340, 40 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "A little bit. Who are you?"
+}
+},
+"size": Vector2( 300.001, 255 ),
+"speaker": "Herbalist"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( 1840, -100 ),
+"signalValue": "continue"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( -840, 740 ),
+"signalValue": "?:player_has_item:Betony->start_dialog:yes1->start_dialog:no"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2( -840, -100 ),
+"signalValue": "?:healthy->start_dialog:healthy->start_dialog:low_health"
+},
+"3_4": {
+"link": "3_7",
+"offset": Vector2( 980, 500 ),
+"signalValue": "give_item:Herbalist Medicine"
+},
+"3_5": {
+"link": "1_7",
+"offset": Vector2( 20, 1200 ),
+"signalValue": "trade"
+},
+"3_6": {
+"link": "1_12",
+"offset": Vector2( 20, 480 ),
+"signalValue": "load_sprite:good"
+},
+"3_7": {
+"link": "3_8",
+"offset": Vector2( 980, 660 ),
+"signalValue": "pop"
+},
+"3_8": {
+"link": "END",
+"offset": Vector2( 1220, 780 ),
+"signalValue": "continue"
+},
+"3_9": {
+"link": "END",
+"offset": Vector2( -840, 580 ),
+"signalValue": "?:player_has_item:Hyssop->start_dialog:yes2->start_dialog:no"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

@@ -1,0 +1,50 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1"
+}
+nodes = {
+"0_1": {
+"link": "3_1",
+"offset": Vector2( -80, 300 ),
+"start_id": "default"
+},
+"1_1": {
+"dialogue": "",
+"offset": Vector2( 400, 220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_3",
+"text": "Collect"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "ITEM FOUND"
+},
+"3_1": {
+"link": "1_1",
+"offset": Vector2( 140, 300 ),
+"signalValue": "give_rand:show"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 1040, 340 ),
+"signalValue": "continue"
+},
+"3_3": {
+"link": "3_2",
+"offset": Vector2( 760, 300 ),
+"signalValue": "pop"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

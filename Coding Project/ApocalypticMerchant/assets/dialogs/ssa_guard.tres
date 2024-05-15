@@ -1,0 +1,398 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"bad": "0_5",
+"default": "0_1",
+"drive": "0_6",
+"good": "0_7",
+"neutral": "0_4",
+"no": "0_3",
+"yes": "0_2"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( 8, 220 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "1_7",
+"offset": Vector2( 1620, 40 ),
+"start_id": "yes"
+},
+"0_3": {
+"link": "3_6",
+"offset": Vector2( 1620, 160 ),
+"start_id": "no"
+},
+"0_4": {
+"link": "1_9",
+"offset": Vector2( 0, 760 ),
+"start_id": "neutral"
+},
+"0_5": {
+"link": "1_11",
+"offset": Vector2( -65.0533, 1158.99 ),
+"start_id": "bad"
+},
+"0_6": {
+"link": "3_13",
+"offset": Vector2( 2300, 0 ),
+"start_id": "drive"
+},
+"0_7": {
+"link": "1_12",
+"offset": Vector2( 1580, 560 ),
+"start_id": "good"
+},
+"1_1": {
+"dialogue": "Halt! This is a restricted area! State your business. You are surrounded so choose your words carefully. ",
+"offset": Vector2( 200, 80 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Just passing through."
+},
+1: {
+"condition": {
+},
+"link": "3_3",
+"text": "I'm a trader. I have supplies you might need."
+},
+2: {
+"condition": {
+},
+"link": "3_14",
+"text": "I was sent here..."
+}
+},
+"size": Vector2( 293.248, 309.001 ),
+"speaker": "Soldier"
+},
+"1_10": {
+"dialogue": "Good. Get to it.",
+"offset": Vector2( 640, 820 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "Leave"
+}
+},
+"size": Vector2( 300, 255.003 ),
+"speaker": "Soldier"
+},
+"1_11": {
+"dialogue": "You have a lot of nerve coming back here...",
+"offset": Vector2( 220, 1120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "This time I have your supplies, I swear!"
+},
+1: {
+"condition": {
+},
+"link": "3_16",
+"text": "(Run like hell)"
+}
+},
+"size": Vector2( 300, 281.999 ),
+"speaker": "Soldier"
+},
+"1_12": {
+"dialogue": "Heading in, Trader?",
+"offset": Vector2( 1920, 520 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_12",
+"text": "Just passing by (leave)"
+},
+1: {
+"condition": {
+},
+"link": "3_18",
+"text": "Let's go"
+}
+},
+"size": Vector2( 300.001, 282 ),
+"speaker": "Finger"
+},
+"1_13": {
+"dialogue": "You're the ammo guy?",
+"offset": Vector2( 1180, 460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Uh no?"
+},
+1: {
+"condition": {
+},
+"link": "1_5",
+"text": "That's me"
+},
+2: {
+"condition": {
+},
+"link": "1_14",
+"text": "No I'm the tech guy..."
+}
+},
+"size": Vector2( 300, 309 ),
+"speaker": "Soldier"
+},
+"1_14": {
+"dialogue": "What kind of tech?",
+"offset": Vector2( 1340, 820 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "(let them check inventory)"
+}
+},
+"size": Vector2( 300, 255.003 ),
+"speaker": "Soldier"
+},
+"1_2": {
+"dialogue": "Then you better keep moving. We'll be keeping an eye on you",
+"offset": Vector2( 200, 420 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Leave"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Soldier"
+},
+"1_3": {
+"dialogue": "Unless those supplies include boxes of 5.56, you can trade somewhere else.",
+"offset": Vector2( 540, -80 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "Oh. Okay."
+},
+1: {
+"condition": {
+},
+"link": "1_5",
+"text": "I have ammo."
+},
+2: {
+"condition": {
+},
+"link": "1_6",
+"text": "What about old tech?"
+}
+},
+"size": Vector2( 300, 309.001 ),
+"speaker": "Soldier"
+},
+"1_4": {
+"dialogue": "So keep it moving. We'll be keeping an eye on you.",
+"offset": Vector2( 820, 440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Leave"
+}
+},
+"size": Vector2( 300.002, 255.001 ),
+"speaker": "Soldier"
+},
+"1_5": {
+"dialogue": "Really? Alright we're gonna check your stuff, make sure its legit.",
+"offset": Vector2( 940, -100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_4",
+"text": "(let them check inventory)"
+}
+},
+"size": Vector2( 300.001, 255.001 ),
+"speaker": "Soldier"
+},
+"1_6": {
+"dialogue": "Hmmm... we're gonna have to see.",
+"offset": Vector2( 940, 180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "(let them check inventory)"
+}
+},
+"size": Vector2( 300.002, 255.001 ),
+"speaker": "Soldier"
+},
+"1_7": {
+"dialogue": "Alright, looks good. We'll drive you in.",
+"offset": Vector2( 1940, -120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_9",
+"text": "Let's go"
+}
+},
+"size": Vector2( 300.002, 282 ),
+"speaker": "Soldier"
+},
+"1_8": {
+"dialogue": "You fucking with me? I'll give you a minute headstart before I give my snipers the green light. SCRAM!",
+"offset": Vector2( 1940, 180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": "(run)"
+}
+},
+"size": Vector2( 300.002, 255.001 ),
+"speaker": "Soldier"
+},
+"1_9": {
+"dialogue": "The Trader... You must have something for us, if you've come back.",
+"offset": Vector2( 220, 740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "I have ammo."
+},
+1: {
+"condition": {
+},
+"link": "1_6",
+"text": "I have some tech you could use."
+},
+2: {
+"condition": {
+},
+"link": "1_10",
+"text": "Working on it."
+}
+},
+"size": Vector2( 300, 309.004 ),
+"speaker": "Soldier"
+},
+"3_1": {
+"link": "1_2",
+"offset": Vector2( -20, 400 ),
+"signalValue": "load_sprite:neutral"
+},
+"3_10": {
+"link": "END",
+"offset": Vector2( 3240, 0 ),
+"signalValue": "talk:0"
+},
+"3_11": {
+"link": "3_10",
+"offset": Vector2( 2940, 0 ),
+"signalValue": "enter:2"
+},
+"3_12": {
+"link": "END",
+"offset": Vector2( 2280, 740 ),
+"signalValue": "leave"
+},
+"3_13": {
+"link": "3_15",
+"offset": Vector2( 2540, 0 ),
+"signalValue": "inc_respect:3"
+},
+"3_14": {
+"link": "1_13",
+"offset": Vector2( 1300, 380 ),
+"signalValue": "load_sprite:neutral"
+},
+"3_15": {
+"link": "3_11",
+"offset": Vector2( 2660, 180 ),
+"signalValue": "set_location_dialog:ssa_int"
+},
+"3_16": {
+"link": "END",
+"offset": Vector2( 600, 1360 ),
+"signalValue": "exit"
+},
+"3_18": {
+"link": "END",
+"offset": Vector2( 2292.08, 616.58 ),
+"signalValue": "fade:start_dialog:drive"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 540, 600 ),
+"signalValue": "exit"
+},
+"3_3": {
+"link": "1_3",
+"offset": Vector2( 520, 440 ),
+"signalValue": "load_sprite:neutral"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2( 1300, 140 ),
+"signalValue": "?:player_has_type:ammo->start_dialog:yes->start_dialog:no"
+},
+"3_5": {
+"link": "END",
+"offset": Vector2( 1300, 260 ),
+"signalValue": "?:player_has_type:tech->start_dialog:yes->start_dialog:no"
+},
+"3_6": {
+"link": "1_8",
+"offset": Vector2( 1640, 300 ),
+"signalValue": "set_respect:2"
+},
+"3_7": {
+"link": "END",
+"offset": Vector2( 2300, 340 ),
+"signalValue": "exit"
+},
+"3_8": {
+"link": "END",
+"offset": Vector2( 1040, 920 ),
+"signalValue": "exit"
+},
+"3_9": {
+"link": "END",
+"offset": Vector2( 2300, 80 ),
+"signalValue": "fade:start_dialog:drive"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

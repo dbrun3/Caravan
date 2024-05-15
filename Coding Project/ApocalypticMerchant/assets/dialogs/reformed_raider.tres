@@ -1,0 +1,2171 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"bad": "0_4",
+"default": "0_1",
+"good": "0_3",
+"neutral": "0_2"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -157, 642 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "1_44",
+"offset": Vector2( -336.443, 2156.53 ),
+"start_id": "neutral"
+},
+"0_3": {
+"link": "1_45",
+"offset": Vector2( -389.698, 3738.53 ),
+"start_id": "good"
+},
+"0_4": {
+"link": "1_46",
+"offset": Vector2( -404.303, 5572.53 ),
+"start_id": "bad"
+},
+"1_1": {
+"dialogue": "How's it going, stranger. What brings you to a place like this?",
+"offset": Vector2( 340, 180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Umm... Sorry for disturbing you."
+}
+},
+"size": Vector2( 422.939, 429.001 ),
+"speaker": "Raider"
+},
+"1_10": {
+"dialogue": "Hey man, I am just trying to be nice. No need to be so rude.",
+"offset": Vector2( 4320, 1300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_11",
+"text": "..."
+}
+},
+"size": Vector2( 485.576, 429.007 ),
+"speaker": "Reformed Raider"
+},
+"1_100": {
+"dialogue": "Anything else?",
+"offset": Vector2( 21540, 3000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_32",
+"text": "That is all, see you around."
+}
+},
+"size": Vector2( 539.252, 534.999 ),
+"speaker": "Reformed Raider"
+},
+"1_101": {
+"dialogue": "In this chaos, they kidnap children they deem fit for service.",
+"offset": Vector2( 10360, 2920 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_102",
+"text": "..."
+}
+},
+"size": Vector2( 579.25, 463 ),
+"speaker": "Reformed Raider"
+},
+"1_102": {
+"dialogue": "The children are taken in and tought the ways of raider life. And its not just the violence and theft.",
+"offset": Vector2( 11120, 3200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_103",
+"text": "..."
+}
+},
+"size": Vector2( 557.255, 467.001 ),
+"speaker": "Reformed Raider"
+},
+"1_103": {
+"dialogue": "Pretty much every raider is into some form of drug.",
+"offset": Vector2( 11920, 3360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_104",
+"text": "..."
+}
+},
+"size": Vector2( 563.25, 520.999 ),
+"speaker": "Reformed Raider"
+},
+"1_104": {
+"dialogue": "From tobacco to opioids, I've seen it all. Anyways, that's all there really is to know about the raiders.",
+"offset": Vector2( 12700, 3460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_105",
+"text": "..."
+}
+},
+"size": Vector2( 545.251, 486.999 ),
+"speaker": "Reformed Raider"
+},
+"1_105": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 13400, 3540 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_106",
+"text": "What is a former raider like yourself doing here?"
+},
+1: {
+"condition": {
+},
+"link": "3_33",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 621.248, 533.001 ),
+"speaker": "Reformed Raider"
+},
+"1_106": {
+"dialogue": "I ended up wanting to get away from my past life. It was simply too dangerous of a life to continue living.",
+"offset": Vector2( 14300, 3620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_107",
+"text": "..."
+}
+},
+"size": Vector2( 615.26, 525 ),
+"speaker": "Reformed Raider"
+},
+"1_107": {
+"dialogue": "But why here? Well... let's just say I am righting a wrong of sorts.",
+"offset": Vector2( 15120, 3720 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_108",
+"text": "..."
+}
+},
+"size": Vector2( 555.251, 501 ),
+"speaker": "Reformed Raider"
+},
+"1_108": {
+"dialogue": "Some time ago, I was with a group of raiders. We decided to raid a settlement one night.",
+"offset": Vector2( 15860, 3900 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_109",
+"text": "..."
+}
+},
+"size": Vector2( 579.244, 492.999 ),
+"speaker": "Reformed Raider"
+},
+"1_109": {
+"dialogue": "There ended up being nothing of value there. So, we began executing the villagers. Until, one of them gave us a tip.",
+"offset": Vector2( 16575, 4182.21 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_110",
+"text": "..."
+}
+},
+"size": Vector2( 607.253, 489.001 ),
+"speaker": "Reformed Raider"
+},
+"1_11": {
+"dialogue": "So, now that that's out of the way, what brings you here?",
+"offset": Vector2( 5140, 0 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_12",
+"text": "I have some questions."
+},
+1: {
+"condition": {
+},
+"link": "3_37",
+"text": "Trade"
+},
+2: {
+"condition": {
+},
+"link": "3_8",
+"text": "You know what, I have somewhere to be. See you around."
+}
+},
+"size": Vector2( 583.354, 522.237 ),
+"speaker": "Reformed Raider"
+},
+"1_110": {
+"dialogue": "He said that there is a junkyard somewhere not far and that it could contain valuable scrap metal and vehicle parts.",
+"offset": Vector2( 17315.4, 4451.88 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_111",
+"text": "..."
+}
+},
+"size": Vector2( 557.251, 515.001 ),
+"speaker": "Reformed Raider"
+},
+"1_111": {
+"dialogue": "When we arrived here, it was quiet. Everything was free for our taking. Thankfully, the Junkman was not here that night.",
+"offset": Vector2( 17984.2, 4650.4 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_112",
+"text": "..."
+}
+},
+"size": Vector2( 557.249, 473.003 ),
+"speaker": "Reformed Raider"
+},
+"1_112": {
+"dialogue": "When I left my group, I found my way back here and came to apologize for my actions. The Junkman was surprisingly understanding.",
+"offset": Vector2( 18775.8, 4790.25 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_113",
+"text": "..."
+}
+},
+"size": Vector2( 609.249, 543.001 ),
+"speaker": "Reformed Raider"
+},
+"1_113": {
+"dialogue": "As part of my apology, I offered to help around with the work at the Junkyard. It was only supposed to be temporary, but I slowly started calling this place home.",
+"offset": Vector2( 19552.1, 4984.06 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_35",
+"text": "I'm glad you are in a better place."
+},
+1: {
+"condition": {
+},
+"link": "3_34",
+"text": "Wow. You are a monster."
+}
+},
+"size": Vector2( 639.249, 485 ),
+"speaker": "Reformed Raider"
+},
+"1_114": {
+"dialogue": "Thanks. I know you cannot change the past, but you can make things right.",
+"offset": Vector2( 21052.3, 4757.04 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_116",
+"text": "..."
+}
+},
+"size": Vector2( 521.242, 501.002 ),
+"speaker": "Reformed Raider"
+},
+"1_115": {
+"dialogue": "I know I did unspeakable things, but I am not a monster. I am just trying to make things right.",
+"offset": Vector2( 20760, 5660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_116",
+"text": "..."
+}
+},
+"size": Vector2( 559.251, 499.002 ),
+"speaker": "Reformed Raider"
+},
+"1_116": {
+"dialogue": "Anyways, anything else on your mind?",
+"offset": Vector2( 21766.5, 5214.25 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_36",
+"text": "That is all, see you around."
+}
+},
+"size": Vector2( 585.251, 539.001 ),
+"speaker": "Reformed Raider"
+},
+"1_117": {
+"dialogue": "Now that that is out of the way, did you need anything else?",
+"offset": Vector2( -940, 1680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_47",
+"text": "Yes. I have a few questions."
+},
+1: {
+"condition": {
+},
+"link": "3_38",
+"text": "No, that is all. See you around."
+}
+},
+"size": Vector2( 480.531, 467.001 ),
+"speaker": "Reformed Raider"
+},
+"1_118": {
+"dialogue": "Anything for you, my friend. What do you need?",
+"offset": Vector2( 920, 2720 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_119",
+"text": "I was wondering if you can offer me protection."
+}
+},
+"size": Vector2( 640.807, 569.246 ),
+"speaker": "Reformed Raider"
+},
+"1_119": {
+"dialogue": "Hmmm. I don't know. I really like it here.",
+"offset": Vector2( 1740, 2720 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_121",
+"text": "Please? The wasteland is a dangerous place."
+},
+1: {
+"condition": {
+},
+"link": "1_120",
+"text": "You know what, forget I mentioned it."
+}
+},
+"size": Vector2( 568.721, 553.227 ),
+"speaker": "Reformed Raider"
+},
+"1_12": {
+"dialogue": "Alrighty then, ask away.",
+"offset": Vector2( 6240, -300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_13",
+"text": "What is a former raider like yourself doing here?"
+},
+1: {
+"condition": {
+},
+"link": "1_42",
+"text": "Tell me what you know about the raiders."
+},
+2: {
+"condition": {
+},
+"link": "1_43",
+"text": "Tell me about the Junkman."
+}
+},
+"size": Vector2( 595.354, 541 ),
+"speaker": "Reformed Raider"
+},
+"1_120": {
+"dialogue": "Alrighty then. You need anything else?",
+"offset": Vector2( 2400, 3360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_47",
+"text": "Yes. I do have a few questions."
+},
+1: {
+"condition": {
+},
+"link": "3_37",
+"text": "Trade"
+},
+2: {
+"condition": {
+},
+"link": "3_39",
+"text": "No. That is all. See you around."
+}
+},
+"size": Vector2( 516.659, 519.999 ),
+"speaker": "Reformed Raider"
+},
+"1_121": {
+"dialogue": "You know what, you have been kind to me. That is a rare sight these days. I have helped the Junkman all this time, why not help you? Lead the way.",
+"offset": Vector2( 2520, 2280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_40",
+"text": "Leave"
+}
+},
+"size": Vector2( 587.392, 536.827 ),
+"speaker": "Reformed Raider"
+},
+"1_13": {
+"dialogue": "I ended up wanting to get away from my past life. It was simply too dangerous of a life to continue living.",
+"offset": Vector2( 7060, -700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_14",
+"text": "..."
+}
+},
+"size": Vector2( 571.333, 429.608 ),
+"speaker": "Reformed Raider"
+},
+"1_14": {
+"dialogue": "But why here? Well... let's just say I am righting a wrong of sorts.",
+"offset": Vector2( 7820, -780 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_15",
+"text": "..."
+}
+},
+"size": Vector2( 543.894, 460.485 ),
+"speaker": "Reformed Raider"
+},
+"1_15": {
+"dialogue": "Some time ago, I was with a group of raiders. We decided to raid a settlement one night.",
+"offset": Vector2( 8560, -880 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_16",
+"text": "..."
+}
+},
+"size": Vector2( 562.759, 513.662 ),
+"speaker": "Reformed Raider"
+},
+"1_16": {
+"dialogue": "There ended up being nothing of value there. So, we began executing the villagers. Until, one of them gave us a tip.",
+"offset": Vector2( 9240, -920 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_17",
+"text": "..."
+}
+},
+"size": Vector2( 557.612, 525.67 ),
+"speaker": "Reformed Raider"
+},
+"1_17": {
+"dialogue": "He said that there is a junkyard somewhere not far and that it could contain valuable scrap metal and vehicle parts.",
+"offset": Vector2( 9980, -920 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_18",
+"text": "..."
+}
+},
+"size": Vector2( 557.617, 499.938 ),
+"speaker": "Reformed Raider"
+},
+"1_18": {
+"dialogue": "When we arrived here, it was quiet. Everything was free for our taking. Thankfully, the Junkman was not here that night.",
+"offset": Vector2( 10700, -940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_19",
+"text": "..."
+}
+},
+"size": Vector2( 540.464, 496.508 ),
+"speaker": "Reformed Raider"
+},
+"1_19": {
+"dialogue": "When I left my group, I found my way back here and came to apologize for my actions. The Junkman was surprisingly understanding.",
+"offset": Vector2( 11380, -940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_20",
+"text": "..."
+}
+},
+"size": Vector2( 549.056, 486.216 ),
+"speaker": "Reformed Raider"
+},
+"1_2": {
+"dialogue": "You seem like you saw a ghost. Is it because...",
+"offset": Vector2( 880, 180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "..."
+}
+},
+"size": Vector2( 464.936, 504.998 ),
+"speaker": "Raider"
+},
+"1_20": {
+"dialogue": "As part of my apology, I offered to help around with the work at the Junkyard. It was only supposed to be temporary, but I slowly started calling this place home.",
+"offset": Vector2( 12040, -940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_11",
+"text": "I'm glad you are in a better place."
+},
+1: {
+"condition": {
+},
+"link": "3_10",
+"text": "Wow. You are a monster."
+}
+},
+"size": Vector2( 489.009, 485 ),
+"speaker": "Reformed Raider"
+},
+"1_21": {
+"dialogue": "Anyways, anything else I can help you with?",
+"offset": Vector2( 14300, -1000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_24",
+"text": "Tell me what you know about the raiders."
+},
+1: {
+"condition": {
+},
+"link": "1_33",
+"text": "Tell me about the Junkman."
+},
+2: {
+"condition": {
+},
+"link": "3_9",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 513.025, 541 ),
+"speaker": "Reformed Raider"
+},
+"1_22": {
+"dialogue": "Thanks. I know you cannot change the past, but you can make things right.",
+"offset": Vector2( 13120, -1180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_21",
+"text": "..."
+}
+},
+"size": Vector2( 507.864, 441.616 ),
+"speaker": "Reformed Raider"
+},
+"1_23": {
+"dialogue": "I know I did unspeakable things, but I am not a monster. I am just trying to make things right.",
+"offset": Vector2( 13100, -400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_21",
+"text": "..."
+}
+},
+"size": Vector2( 549.032, 450.192 ),
+"speaker": "Reformed Raider"
+},
+"1_24": {
+"dialogue": "Raiders simply go around, settlement to settlement, stealing valuables and causing chaos.",
+"offset": Vector2( 15220, -1680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_25",
+"text": "..."
+}
+},
+"size": Vector2( 531.89, 482.785 ),
+"speaker": "Reformed Raider"
+},
+"1_25": {
+"dialogue": "In this chaos, they kidnap children they deem fit for service.",
+"offset": Vector2( 15880, -1680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_26",
+"text": "..."
+}
+},
+"size": Vector2( 501.016, 472.493 ),
+"speaker": "Reformed Raider"
+},
+"1_26": {
+"dialogue": "The children are taken in and tought the ways of raider life. And its not just the violence and theft.",
+"offset": Vector2( 16480, -1680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_27",
+"text": "..."
+}
+},
+"size": Vector2( 511.31, 467.347 ),
+"speaker": "Reformed Raider"
+},
+"1_27": {
+"dialogue": "Pretty much every raider is into some form of drug.",
+"offset": Vector2( 17080, -1680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_28",
+"text": "..."
+}
+},
+"size": Vector2( 499.302, 472.493 ),
+"speaker": "Reformed Raider"
+},
+"1_28": {
+"dialogue": "From tobacco to opioids, I've seen it all. Anyways, that's all there really is to know about the raiders.",
+"offset": Vector2( 17680, -1680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_29",
+"text": "..."
+}
+},
+"size": Vector2( 509.583, 462.201 ),
+"speaker": "Reformed Raider"
+},
+"1_29": {
+"dialogue": "Is there anything else on your mind?",
+"offset": Vector2( 18440, -1700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_30",
+"text": "Tell me about the Junkman."
+},
+1: {
+"condition": {
+},
+"link": "3_12",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 555.913, 510.231 ),
+"speaker": "Reformed Raider"
+},
+"1_3": {
+"dialogue": "I promise I won't bite. ",
+"offset": Vector2( 1420, 180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_3",
+"text": "That's a relief."
+},
+1: {
+"condition": {
+},
+"link": "3_1",
+"text": "Yeah, right. I think I will be heading out."
+}
+},
+"size": Vector2( 565.937, 538.997 ),
+"speaker": "Reformed Raider"
+},
+"1_30": {
+"dialogue": "Well, I assume you've already met him. He is simply an honest man trying to make a living in this place.",
+"offset": Vector2( 19220, -2020 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_31",
+"text": "..."
+}
+},
+"size": Vector2( 585.061, 469.062 ),
+"speaker": "Reformed Raider"
+},
+"1_31": {
+"dialogue": "You know, occasionally we need a few more hands around here. If you ever need some work, I'm sure the Junkman would be glad to have your help. Assuming he needs it, of course.",
+"offset": Vector2( 19920, -2020 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_32",
+"text": "..."
+}
+},
+"size": Vector2( 549.041, 467.347 ),
+"speaker": "Reformed Raider"
+},
+"1_32": {
+"dialogue": "Anything else?",
+"offset": Vector2( 20560, -2020 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_13",
+"text": "That is all, see you around."
+}
+},
+"size": Vector2( 516.446, 460.485 ),
+"speaker": "Reformed Raider"
+},
+"1_33": {
+"dialogue": "Well, I assume you've already met him. He is simply an honest man trying to make a living in this place.",
+"offset": Vector2( 15220, -1040 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_34",
+"text": "..."
+}
+},
+"size": Vector2( 499.3, 457.054 ),
+"speaker": "Reformed Raider"
+},
+"1_34": {
+"dialogue": "You know, occasionally we need a few more hands around here. If you ever need some work, I'm sure the Junkman would be glad to have your help. Assuming he needs it, of course.",
+"offset": Vector2( 15900, -1040 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_35",
+"text": "..."
+}
+},
+"size": Vector2( 492.434, 475.924 ),
+"speaker": "Reformed Raider"
+},
+"1_35": {
+"dialogue": "Is there anything else on your mind?",
+"offset": Vector2( 16560, -740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_36",
+"text": "Tell me what you know about the raiders."
+},
+1: {
+"condition": {
+},
+"link": "3_14",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 518.165, 485 ),
+"speaker": "Reformed Raider"
+},
+"1_36": {
+"dialogue": "Raiders simply go around, settlement to settlement, stealing valuables and causing chaos.",
+"offset": Vector2( 17200, -1020 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_37",
+"text": "..."
+}
+},
+"size": Vector2( 579.924, 484.501 ),
+"speaker": "Reformed Raider"
+},
+"1_37": {
+"dialogue": "In this chaos, they kidnap children they deem fit for service.",
+"offset": Vector2( 17920, -1000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_38",
+"text": "..."
+}
+},
+"size": Vector2( 543.896, 489.647 ),
+"speaker": "Reformed Raider"
+},
+"1_38": {
+"dialogue": "The children are taken in and tought the ways of raider life. And its not just the violence and theft.",
+"offset": Vector2( 18600, -1000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_39",
+"text": "..."
+}
+},
+"size": Vector2( 540.481, 503.37 ),
+"speaker": "Reformed Raider"
+},
+"1_39": {
+"dialogue": "Pretty much every raider is into some form of drug.",
+"offset": Vector2( 19300, -1000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_40",
+"text": "..."
+}
+},
+"size": Vector2( 530.168, 494.793 ),
+"speaker": "Reformed Raider"
+},
+"1_4": {
+"dialogue": "Thank you for being open minded. Other people aren't. Some see me and assume I am still one of them.",
+"offset": Vector2( 2580, -140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "Them?"
+},
+1: {
+"condition": {
+},
+"link": "1_6",
+"text": "A raider?"
+}
+},
+"size": Vector2( 492.938, 485.001 ),
+"speaker": "Refomed Raider"
+},
+"1_40": {
+"dialogue": "From tobacco to opioids, I've seen it all. Anyways, that's all there really is to know about the raiders.",
+"offset": Vector2( 19960, -1000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_41",
+"text": "..."
+}
+},
+"size": Vector2( 521.598, 489.647 ),
+"speaker": "Reformed Raider"
+},
+"1_41": {
+"dialogue": "Anything else?",
+"offset": Vector2( 20680, -1060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_15",
+"text": "That is all, see you around."
+}
+},
+"size": Vector2( 537.03, 544.539 ),
+"speaker": "Reformed Raider"
+},
+"1_42": {
+"dialogue": "Raiders simply go around, settlement to settlement, stealing valuables and causing chaos.",
+"offset": Vector2( 7240, 140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_48",
+"text": "..."
+}
+},
+"size": Vector2( 634.809, 472.493 ),
+"speaker": "Reformed Raider"
+},
+"1_43": {
+"dialogue": "Well, I assume you've already met him. He is simply an honest man trying to make a living in this place.",
+"offset": Vector2( 7180, 1140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_81",
+"text": "..."
+}
+},
+"size": Vector2( 542.179, 453.623 ),
+"speaker": "Reformed Raider"
+},
+"1_44": {
+"dialogue": "Hey there. I remember you. How's it been?",
+"offset": Vector2( 245.742, 1850.28 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_47",
+"text": "Its been alright. I have a few more questions to ask you."
+},
+1: {
+"condition": {
+},
+"link": "3_37",
+"text": "Trade"
+},
+2: {
+"condition": {
+},
+"link": "3_16",
+"text": "Sorry, I got to go."
+}
+},
+"size": Vector2( 556.095, 520.001 ),
+"speaker": "Reformed Raider"
+},
+"1_45": {
+"dialogue": "Welcome back!",
+"offset": Vector2( 140, 3040 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_47",
+"text": "Sorry for bothering you again. I just was wondering a thing or two."
+},
+1: {
+"condition": {
+},
+"link": "3_37",
+"text": "Trade"
+},
+2: {
+"condition": {
+},
+"link": "1_118",
+"text": "I came here to ask you a favor."
+},
+3: {
+"condition": {
+},
+"link": "3_17",
+"text": "Nice seeing you again, but I got to go."
+}
+},
+"size": Vector2( 600.095, 572.999 ),
+"speaker": "Reformed Raider"
+},
+"1_46": {
+"dialogue": "You again?",
+"offset": Vector2( 160, 4700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_47",
+"text": "I need to ask you something."
+},
+1: {
+"condition": {
+},
+"link": "3_37",
+"text": "Trade"
+},
+2: {
+"condition": {
+},
+"link": "3_18",
+"text": "Leave"
+}
+},
+"size": Vector2( 584.095, 520.002 ),
+"speaker": "Reformed Raider"
+},
+"1_47": {
+"dialogue": "Go on...",
+"offset": Vector2( 4140, 3260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_13",
+"text": "What is a former raider like yourself doing here?"
+},
+1: {
+"condition": {
+},
+"link": "1_42",
+"text": "Tell me what you know about the raiders."
+},
+2: {
+"condition": {
+},
+"link": "1_43",
+"text": "Tell me about the Junkman."
+}
+},
+"size": Vector2( 616.094, 545.004 ),
+"speaker": "Reformed Raider"
+},
+"1_48": {
+"dialogue": "In this chaos, they kidnap children they deem fit for service.",
+"offset": Vector2( 8080, 140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_49",
+"text": "..."
+}
+},
+"size": Vector2( 496.093, 477.003 ),
+"speaker": "Reformed Raider"
+},
+"1_49": {
+"dialogue": "The children are taken in and tought the ways of raider life. And its not just the violence and theft.",
+"offset": Vector2( 8700, 160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_50",
+"text": "..."
+}
+},
+"size": Vector2( 496.091, 479.001 ),
+"speaker": "Reformed Raider"
+},
+"1_5": {
+"dialogue": "Oh. I take it you have never been unfortunate enough to come across a raider before. Consider yourself lucky.",
+"offset": Vector2( 3260, -320 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "Thanks."
+},
+1: {
+"condition": {
+},
+"link": "3_4",
+"text": "I don't know, I am talking to one right now."
+}
+},
+"size": Vector2( 467.941, 485 ),
+"speaker": "Reformed Raider"
+},
+"1_50": {
+"dialogue": "Pretty much every raider is into some form of drug.",
+"offset": Vector2( 9340, 180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_51",
+"text": "..."
+}
+},
+"size": Vector2( 498.09, 477 ),
+"speaker": "Reformed Raider"
+},
+"1_51": {
+"dialogue": "From tobacco to opioids, I've seen it all. Anyways, that's all there really is to know about the raiders.",
+"offset": Vector2( 9980, 200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_52",
+"text": "..."
+}
+},
+"size": Vector2( 490.096, 479.002 ),
+"speaker": "Reformed Raider"
+},
+"1_52": {
+"dialogue": "Is there anything else on your mind?",
+"offset": Vector2( 10740, 220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_53",
+"text": "What is a former raider like yourself doing here?"
+},
+1: {
+"condition": {
+},
+"link": "1_54",
+"text": "Tell me about the Junkman."
+},
+2: {
+"condition": {
+},
+"link": "3_19",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 536.098, 541.001 ),
+"speaker": "Reformed Raider"
+},
+"1_53": {
+"dialogue": "I ended up wanting to get away from my past life. It was simply too dangerous of a life to continue living.",
+"offset": Vector2( 11580, 20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_55",
+"text": "..."
+}
+},
+"size": Vector2( 600.093, 439.001 ),
+"speaker": "Reformed Raider"
+},
+"1_54": {
+"dialogue": "Well, I assume you've already met him. He is simply an honest man trying to make a living in this place.",
+"offset": Vector2( 11700, 720 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_68",
+"text": "..."
+}
+},
+"size": Vector2( 582.093, 484.999 ),
+"speaker": "Reformed Raider"
+},
+"1_55": {
+"dialogue": "But why here? Well... let's just say I am righting a wrong of sorts.",
+"offset": Vector2( 12420, 100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_56",
+"text": "..."
+}
+},
+"size": Vector2( 568.093, 457.001 ),
+"speaker": "Reformed Raider"
+},
+"1_56": {
+"dialogue": "Some time ago, I was with a group of raiders. We decided to raid a settlement one night.",
+"offset": Vector2( 13280, 140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_57",
+"text": "..."
+}
+},
+"size": Vector2( 542.095, 471.001 ),
+"speaker": "Reformed Raider"
+},
+"1_57": {
+"dialogue": "There ended up being nothing of value there. So, we began executing the villagers. Until, one of them gave us a tip.",
+"offset": Vector2( 13940, 140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_58",
+"text": "..."
+}
+},
+"size": Vector2( 510.098, 461 ),
+"speaker": "Reformed Raider"
+},
+"1_58": {
+"dialogue": "He said that there is a junkyard somewhere not far and that it could contain valuable scrap metal and vehicle parts.",
+"offset": Vector2( 14620, 160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_59",
+"text": "..."
+}
+},
+"size": Vector2( 522.102, 449 ),
+"speaker": "Reformed Raider"
+},
+"1_59": {
+"dialogue": "When we arrived here, it was quiet. Everything was free for our taking. Thankfully, the Junkman was not here that night.",
+"offset": Vector2( 15280, 160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_60",
+"text": "..."
+}
+},
+"size": Vector2( 474.091, 453.001 ),
+"speaker": "Reformed Raider"
+},
+"1_6": {
+"dialogue": "Ah,  so you might have been unfortunate enough to encounter them already. I'm so sorry.",
+"offset": Vector2( 3140, 680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": "Thanks. I appretiate it."
+},
+1: {
+"condition": {
+},
+"link": "3_6",
+"text": "I did not ask for your sympathy."
+}
+},
+"size": Vector2( 510.935, 485 ),
+"speaker": "Reformed Raider"
+},
+"1_60": {
+"dialogue": "When I left my group, I found my way back here and came to apologize for my actions. The Junkman was surprisingly understanding.",
+"offset": Vector2( 15880, 160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_61",
+"text": "..."
+}
+},
+"size": Vector2( 568.09, 471 ),
+"speaker": "Reformed Raider"
+},
+"1_61": {
+"dialogue": "As part of my apology, I offered to help around with the work at the Junkyard. It was only supposed to be temporary, but I slowly started calling this place home.",
+"offset": Vector2( 16600, 180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_21",
+"text": "I'm glad you are in a better place."
+},
+1: {
+"condition": {
+},
+"link": "3_20",
+"text": "Wow. You are a monster."
+}
+},
+"size": Vector2( 504.093, 485 ),
+"speaker": "Reformed Raider"
+},
+"1_62": {
+"dialogue": "Thanks. I know you cannot change the past, but you can make things right.",
+"offset": Vector2( 17760, 20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_64",
+"text": "..."
+}
+},
+"size": Vector2( 540.093, 443.001 ),
+"speaker": "Reformed Raider"
+},
+"1_63": {
+"dialogue": "I know I did unspeakable things, but I am not a monster. I am just trying to make things right.",
+"offset": Vector2( 17680, 680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_64",
+"text": "..."
+}
+},
+"size": Vector2( 550.091, 486.999 ),
+"speaker": "Reformed Raider"
+},
+"1_64": {
+"dialogue": "Anyways, anything else I can help you with?",
+"offset": Vector2( 18600, 240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_65",
+"text": "Tell me about the Junkman."
+},
+1: {
+"condition": {
+},
+"link": "3_22",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 542.103, 509.002 ),
+"speaker": "Reformed Raider"
+},
+"1_65": {
+"dialogue": "Well, I assume you've already met him. He is simply an honest man trying to make a living in this place.",
+"offset": Vector2( 19420, 20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_66",
+"text": "..."
+}
+},
+"size": Vector2( 572.094, 467.001 ),
+"speaker": "Reformed Raider"
+},
+"1_66": {
+"dialogue": "You know, occasionally we need a few more hands around here. If you ever need some work, I'm sure the Junkman would be glad to have your help. Assuming he needs it, of course.",
+"offset": Vector2( 20120, 20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_67",
+"text": "..."
+}
+},
+"size": Vector2( 544.095, 481.001 ),
+"speaker": "Reformed Raider"
+},
+"1_67": {
+"dialogue": "Anything else?",
+"offset": Vector2( 20780, 20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_23",
+"text": "That is all, see you around."
+}
+},
+"size": Vector2( 510.085, 495.001 ),
+"speaker": "Reformed Raider"
+},
+"1_68": {
+"dialogue": "You know, occasionally we need a few more hands around here. If you ever need some work, I'm sure the Junkman would be glad to have your help. Assuming he needs it, of course.",
+"offset": Vector2( 12440, 740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_69",
+"text": "..."
+}
+},
+"size": Vector2( 528.093, 486.999 ),
+"speaker": "Reformed Raider"
+},
+"1_69": {
+"dialogue": "Anything else?",
+"offset": Vector2( 13160, 760 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_70",
+"text": "What is a former raider like yourself doing here?"
+},
+1: {
+"condition": {
+},
+"link": "3_24",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 494.087, 485 ),
+"speaker": "Reformed Raider"
+},
+"1_7": {
+"dialogue": "Listen buddy. I already told you, I am not a threat.",
+"offset": Vector2( 4340, 160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_11",
+"text": "..."
+}
+},
+"size": Vector2( 494.94, 429.001 ),
+"speaker": "Reformed Raider"
+},
+"1_70": {
+"dialogue": "I ended up wanting to get away from my past life. It was simply too dangerous of a life to continue living.",
+"offset": Vector2( 13840, 780 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_71",
+"text": "..."
+}
+},
+"size": Vector2( 550.094, 490.999 ),
+"speaker": "Reformed Raider"
+},
+"1_71": {
+"dialogue": "But why here? Well... let's just say I am righting a wrong of sorts.",
+"offset": Vector2( 14500, 800 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_72",
+"text": "..."
+}
+},
+"size": Vector2( 542.1, 465 ),
+"speaker": "Reformed Raider"
+},
+"1_72": {
+"dialogue": "Some time ago, I was with a group of raiders. We decided to raid a settlement one night.",
+"offset": Vector2( 15180, 800 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_73",
+"text": "..."
+}
+},
+"size": Vector2( 514.091, 447 ),
+"speaker": "Reformed Raider"
+},
+"1_73": {
+"dialogue": "There ended up being nothing of value there. So, we began executing the villagers. Until, one of them gave us a tip.",
+"offset": Vector2( 15860, 1100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_74",
+"text": "..."
+}
+},
+"size": Vector2( 514.09, 458.999 ),
+"speaker": "Reformed Raider"
+},
+"1_74": {
+"dialogue": "He said that there is a junkyard somewhere not far and that it could contain valuable scrap metal and vehicle parts.",
+"offset": Vector2( 16580, 1200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_75",
+"text": "..."
+}
+},
+"size": Vector2( 516.087, 457 ),
+"speaker": "Reformed Raider"
+},
+"1_75": {
+"dialogue": "When we arrived here, it was quiet. Everything was free for our taking. Thankfully, the Junkman was not here that night.",
+"offset": Vector2( 17220, 1380 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_76",
+"text": "..."
+}
+},
+"size": Vector2( 530.096, 455 ),
+"speaker": "Reformed Raider"
+},
+"1_76": {
+"dialogue": "When I left my group, I found my way back here and came to apologize for my actions. The Junkman was surprisingly understanding.",
+"offset": Vector2( 17920, 1540 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_77",
+"text": "..."
+}
+},
+"size": Vector2( 496.095, 431.001 ),
+"speaker": "Reformed Raider"
+},
+"1_77": {
+"dialogue": "As part of my apology, I offered to help around with the work at the Junkyard. It was only supposed to be temporary, but I slowly started calling this place home.",
+"offset": Vector2( 18620, 1620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_25",
+"text": "I'm glad you are in a better place."
+},
+1: {
+"condition": {
+},
+"link": "3_26",
+"text": "Wow. You are a monster."
+}
+},
+"size": Vector2( 532.095, 485 ),
+"speaker": "Reformed Raider"
+},
+"1_78": {
+"dialogue": "I know I did unspeakable things, but I am not a monster. I am just trying to make things right.",
+"offset": Vector2( 19780, 2280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_80",
+"text": "..."
+}
+},
+"size": Vector2( 564.086, 452.999 ),
+"speaker": "Reformed Raider"
+},
+"1_79": {
+"dialogue": "Thanks. I know you cannot change the past, but you can make things right.",
+"offset": Vector2( 19780, 1480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_80",
+"text": "..."
+}
+},
+"size": Vector2( 564.086, 454.999 ),
+"speaker": "Reformed Raider"
+},
+"1_8": {
+"dialogue": "Don't mention it. ",
+"offset": Vector2( 4300, -440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_11",
+"text": "..."
+}
+},
+"size": Vector2( 476.94, 429.001 ),
+"speaker": "Reformed Raider"
+},
+"1_80": {
+"dialogue": "Anyways, anything else I can help you with?",
+"offset": Vector2( 20560, 1760 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_27",
+"text": "That is all, see you around."
+}
+},
+"size": Vector2( 622.083, 559 ),
+"speaker": "Reformed Raider"
+},
+"1_81": {
+"dialogue": "You know, occasionally we need a few more hands around here. If you ever need some work, I'm sure the Junkman would be glad to have your help. Assuming he needs it, of course.",
+"offset": Vector2( 7980, 1300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_82",
+"text": "..."
+}
+},
+"size": Vector2( 490.091, 436.998 ),
+"speaker": "Reformed Raider"
+},
+"1_82": {
+"dialogue": "Anything else?",
+"offset": Vector2( 8620, 1880 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_83",
+"text": "What is a former raider like yourself doing here?"
+},
+1: {
+"condition": {
+},
+"link": "1_84",
+"text": "Tell me what you know about the raiders."
+},
+2: {
+"condition": {
+},
+"link": "3_28",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 620.094, 541.002 ),
+"speaker": "Reformed Raider"
+},
+"1_83": {
+"dialogue": "I ended up wanting to get away from my past life. It was simply too dangerous of a life to continue living.",
+"offset": Vector2( 9500, 1440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_85",
+"text": "..."
+}
+},
+"size": Vector2( 546.095, 475 ),
+"speaker": "Reformed Raider"
+},
+"1_84": {
+"dialogue": "Raiders simply go around, settlement to settlement, stealing valuables and causing chaos.",
+"offset": Vector2( 9640, 2720 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_101",
+"text": "..."
+}
+},
+"size": Vector2( 576.093, 461 ),
+"speaker": "Reformed Raider"
+},
+"1_85": {
+"dialogue": "But why here? Well... let's just say I am righting a wrong of sorts.",
+"offset": Vector2( 10300, 1520 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_86",
+"text": "..."
+}
+},
+"size": Vector2( 546.094, 447 ),
+"speaker": "Reformed Raider"
+},
+"1_86": {
+"dialogue": "Some time ago, I was with a group of raiders. We decided to raid a settlement one night.",
+"offset": Vector2( 11020, 1680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_87",
+"text": "..."
+}
+},
+"size": Vector2( 544.096, 444.998 ),
+"speaker": "Reformed Raider"
+},
+"1_87": {
+"dialogue": "There ended up being nothing of value there. So, we began executing the villagers. Until, one of them gave us a tip.",
+"offset": Vector2( 11840, 1720 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_88",
+"text": "..."
+}
+},
+"size": Vector2( 528.095, 484.999 ),
+"speaker": "Reformed Raider"
+},
+"1_88": {
+"dialogue": "He said that there is a junkyard somewhere not far and that it could contain valuable scrap metal and vehicle parts.",
+"offset": Vector2( 12640, 1740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_89",
+"text": "..."
+}
+},
+"size": Vector2( 520.097, 512.999 ),
+"speaker": "Reformed Raider"
+},
+"1_89": {
+"dialogue": "When we arrived here, it was quiet. Everything was free for our taking. Thankfully, the Junkman was not here that night.",
+"offset": Vector2( 13360, 1780 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_90",
+"text": "..."
+}
+},
+"size": Vector2( 534.089, 481 ),
+"speaker": "Reformed Raider"
+},
+"1_9": {
+"dialogue": "Don't mention it.",
+"offset": Vector2( 4340, 720 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_11",
+"text": "..."
+}
+},
+"size": Vector2( 468.418, 429.001 ),
+"speaker": "Reformed Raider"
+},
+"1_90": {
+"dialogue": "When I left my group, I found my way back here and came to apologize for my actions. The Junkman was surprisingly understanding.",
+"offset": Vector2( 14020, 1800 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_91",
+"text": "..."
+}
+},
+"size": Vector2( 538.096, 463 ),
+"speaker": "Reformed Raider"
+},
+"1_91": {
+"dialogue": "As part of my apology, I offered to help around with the work at the Junkyard. It was only supposed to be temporary, but I slowly started calling this place home.",
+"offset": Vector2( 14740, 1840 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_30",
+"text": "I'm glad you are in a better place."
+},
+1: {
+"condition": {
+},
+"link": "3_29",
+"text": "Wow. You are a monster."
+}
+},
+"size": Vector2( 550.093, 484.999 ),
+"speaker": "Reformed Raider"
+},
+"1_92": {
+"dialogue": "I know I did unspeakable things, but I am not a monster. I am just trying to make things right.",
+"offset": Vector2( 15865.9, 2319.07 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_94",
+"text": "..."
+}
+},
+"size": Vector2( 496.093, 429.001 ),
+"speaker": "Reformed Raider"
+},
+"1_93": {
+"dialogue": "Thanks. I know you cannot change the past, but you can make things right.",
+"offset": Vector2( 16020, 1780 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_94",
+"text": "..."
+}
+},
+"size": Vector2( 502.094, 455.001 ),
+"speaker": "Reformed Raider"
+},
+"1_94": {
+"dialogue": "Anyways, anything else I can help you with?",
+"offset": Vector2( 16840, 2560 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_95",
+"text": "Tell me what you know about the raiders."
+},
+1: {
+"condition": {
+},
+"link": "3_31",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 590.093, 485.003 ),
+"speaker": "Reformed Raider"
+},
+"1_95": {
+"dialogue": "Raiders simply go around, settlement to settlement, stealing valuables and causing chaos.",
+"offset": Vector2( 17840, 2580 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_96",
+"text": "..."
+}
+},
+"size": Vector2( 552.093, 499.003 ),
+"speaker": "Reformed Raider"
+},
+"1_96": {
+"dialogue": "In this chaos, they kidnap children they deem fit for service.",
+"offset": Vector2( 18600, 2880 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_97",
+"text": "..."
+}
+},
+"size": Vector2( 558.103, 450.999 ),
+"speaker": "Reformed Raider"
+},
+"1_97": {
+"dialogue": "The children are taken in and tought the ways of raider life. And its not just the violence and theft.",
+"offset": Vector2( 19360, 3020 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_98",
+"text": "..."
+}
+},
+"size": Vector2( 558.092, 457.001 ),
+"speaker": "Reformed Raider"
+},
+"1_98": {
+"dialogue": "Pretty much every raider is into some form of drug.",
+"offset": Vector2( 20100, 3020 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_99",
+"text": "..."
+}
+},
+"size": Vector2( 550.093, 475.001 ),
+"speaker": "Reformed Raider"
+},
+"1_99": {
+"dialogue": "From tobacco to opioids, I've seen it all. Anyways, that's all there really is to know about the raiders.",
+"offset": Vector2( 20840, 3000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_100",
+"text": "..."
+}
+},
+"size": Vector2( 520.086, 479 ),
+"speaker": "Reformed Raider"
+},
+"3_1": {
+"link": "3_2",
+"offset": Vector2( 2080, 720 ),
+"signalValue": "dec_respect:3"
+},
+"3_10": {
+"link": "1_23",
+"offset": Vector2( 12613.5, -464.895 ),
+"signalValue": "dec_respect:3"
+},
+"3_11": {
+"link": "1_22",
+"offset": Vector2( 12616.9, -789.105 ),
+"signalValue": "inc_respect:3"
+},
+"3_12": {
+"link": "END",
+"offset": Vector2( 19080, -1200 ),
+"signalValue": "continue"
+},
+"3_13": {
+"link": "END",
+"offset": Vector2( 21158.5, -1722.23 ),
+"signalValue": "continue"
+},
+"3_14": {
+"link": "END",
+"offset": Vector2( 17260, -280 ),
+"signalValue": "continue"
+},
+"3_15": {
+"link": "END",
+"offset": Vector2( 21271.6, -655.622 ),
+"signalValue": "continue"
+},
+"3_16": {
+"link": "END",
+"offset": Vector2( 1040, 2380 ),
+"signalValue": "continue"
+},
+"3_17": {
+"link": "END",
+"offset": Vector2( 900, 3820 ),
+"signalValue": "continue"
+},
+"3_18": {
+"link": "END",
+"offset": Vector2( 840, 5300 ),
+"signalValue": "continue"
+},
+"3_19": {
+"link": "END",
+"offset": Vector2( 11280, 1180 ),
+"signalValue": "continue"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 2500, 820 ),
+"signalValue": "continue"
+},
+"3_20": {
+"link": "1_63",
+"offset": Vector2( 17200, 700 ),
+"signalValue": "dec_respect:3"
+},
+"3_21": {
+"link": "1_62",
+"offset": Vector2( 17240, 300 ),
+"signalValue": "inc_respect:3"
+},
+"3_22": {
+"link": "END",
+"offset": Vector2( 19200, 860 ),
+"signalValue": "continue"
+},
+"3_23": {
+"link": "END",
+"offset": Vector2( 21340, 420 ),
+"signalValue": "continue"
+},
+"3_24": {
+"link": "END",
+"offset": Vector2( 13720, 1460 ),
+"signalValue": "continue"
+},
+"3_25": {
+"link": "1_79",
+"offset": Vector2( 19260.8, 1804.24 ),
+"signalValue": "inc_respect:3"
+},
+"3_26": {
+"link": "1_78",
+"offset": Vector2( 19260, 2220 ),
+"signalValue": "dec_respect:3"
+},
+"3_27": {
+"link": "END",
+"offset": Vector2( 21271.8, 2182.89 ),
+"signalValue": "continue"
+},
+"3_28": {
+"link": "END",
+"offset": Vector2( 9120, 3040 ),
+"signalValue": "continue"
+},
+"3_29": {
+"link": "1_92",
+"offset": Vector2( 15420, 2340 ),
+"signalValue": "dec_respect:3"
+},
+"3_3": {
+"link": "1_4",
+"offset": Vector2( 2094.27, 402.35 ),
+"signalValue": "inc_respect:3"
+},
+"3_30": {
+"link": "1_93",
+"offset": Vector2( 15440, 1920 ),
+"signalValue": "inc_respect:3"
+},
+"3_31": {
+"link": "END",
+"offset": Vector2( 17472, 3172.73 ),
+"signalValue": "continue"
+},
+"3_32": {
+"link": "END",
+"offset": Vector2( 22133.3, 3411.39 ),
+"signalValue": "continue"
+},
+"3_33": {
+"link": "END",
+"offset": Vector2( 14042.3, 4333.98 ),
+"signalValue": "continue"
+},
+"3_34": {
+"link": "1_115",
+"offset": Vector2( 20259.6, 5517.88 ),
+"signalValue": "dec_respect:3"
+},
+"3_35": {
+"link": "1_114",
+"offset": Vector2( 20405.6, 5091.88 ),
+"signalValue": "inc_respect:3"
+},
+"3_36": {
+"link": "END",
+"offset": Vector2( 22562.2, 5573.46 ),
+"signalValue": "continue"
+},
+"3_37": {
+"link": "1_117",
+"offset": Vector2( -640, 2940 ),
+"signalValue": "trade"
+},
+"3_38": {
+"link": "END",
+"offset": Vector2( -340, 1880 ),
+"signalValue": "continue"
+},
+"3_39": {
+"link": "END",
+"offset": Vector2( 3000, 3940 ),
+"signalValue": "continue"
+},
+"3_4": {
+"link": "1_7",
+"offset": Vector2( 3820, 140 ),
+"signalValue": "dec_respect:3"
+},
+"3_40": {
+"link": "3_41",
+"offset": Vector2( 3220, 2640 ),
+"signalValue": "inc_combat:5"
+},
+"3_41": {
+"link": "3_42",
+"offset": Vector2( 3700, 2660 ),
+"signalValue": "pop"
+},
+"3_42": {
+"link": "END",
+"offset": Vector2( 4120, 2800 ),
+"signalValue": "continue"
+},
+"3_5": {
+"link": "1_8",
+"offset": Vector2( 3829.78, -141.39 ),
+"signalValue": "inc_respect:3"
+},
+"3_6": {
+"link": "1_10",
+"offset": Vector2( 3860, 1200 ),
+"signalValue": "dec_respect:3"
+},
+"3_7": {
+"link": "1_9",
+"offset": Vector2( 3840, 780 ),
+"signalValue": "inc_respect:3"
+},
+"3_8": {
+"link": "END",
+"offset": Vector2( 5880, 680 ),
+"signalValue": "continue"
+},
+"3_9": {
+"link": "END",
+"offset": Vector2( 15180, -400 ),
+"signalValue": "continue"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

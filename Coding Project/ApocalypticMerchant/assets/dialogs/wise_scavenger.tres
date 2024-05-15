@@ -1,0 +1,2209 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"bad": "0_4",
+"default": "0_1",
+"good": "0_3",
+"neutral": "0_2"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -10300, -1380 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "1_4",
+"offset": Vector2( -10340, -120 ),
+"start_id": "neutral"
+},
+"0_3": {
+"link": "1_3",
+"offset": Vector2( -10360, 660 ),
+"start_id": "good"
+},
+"0_4": {
+"link": "1_5",
+"offset": Vector2( -10380, 1420 ),
+"start_id": "bad"
+},
+"1_1": {
+"dialogue": "Hey there, stranger.",
+"offset": Vector2( -9640, -1820 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_6",
+"text": "Uh, hi. You seem... different from the rest."
+},
+1: {
+"condition": {
+},
+"link": "3_1",
+"text": "Buzz off"
+}
+},
+"size": Vector2( 658.5, 485 ),
+"speaker": "Scavenger"
+},
+"1_10": {
+"dialogue": "Yes, Mats. Those blue tablets that everyone is hooked on.",
+"offset": Vector2( -5580, -3620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_11",
+"text": "..."
+}
+},
+"size": Vector2( 566.516, 477 ),
+"speaker": "Wise Scavenger"
+},
+"1_100": {
+"dialogue": "Is there anything else on your mind?",
+"offset": Vector2( -4400, 2060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_101",
+"text": "What is the origin of the Mats?"
+},
+1: {
+"condition": {
+},
+"link": "1_102",
+"text": "What is Kronus"
+},
+2: {
+"condition": {
+},
+"link": "3_26",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 427.25, 541 ),
+"speaker": "Wise Scavenger"
+},
+"1_101": {
+"dialogue": "You want to know more about the Mats? Well then...",
+"offset": Vector2( -3740, 1400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_103",
+"text": "..."
+}
+},
+"size": Vector2( 427.25, 429.001 ),
+"speaker": "Wise Scavenger"
+},
+"1_102": {
+"dialogue": "Kronus is a pharmaceutical company, or at least they were some time ago.",
+"offset": Vector2( -3740, 2000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_114",
+"text": "..."
+}
+},
+"size": Vector2( 427.25, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_103": {
+"dialogue": "They originate from Kronus under a directive from their leader, The Executive.",
+"offset": Vector2( -3400, 1400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_104",
+"text": "..."
+}
+},
+"size": Vector2( 427.25, 429.001 ),
+"speaker": "Wise Scavenger"
+},
+"1_104": {
+"dialogue": "Mats are produced in the nearby pharmaceutical manufacturing facility.",
+"offset": Vector2( -3040, 1400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_105",
+"text": "..."
+}
+},
+"size": Vector2( 427.25, 429.001 ),
+"speaker": "Wise Scavenger"
+},
+"1_105": {
+"dialogue": "Now, I know what you are thinking. What might their purpose be?",
+"offset": Vector2( -2700, 1400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_106",
+"text": "..."
+}
+},
+"size": Vector2( 427.25, 429.001 ),
+"speaker": "Wise Scavenger"
+},
+"1_106": {
+"dialogue": "Well, they numb the brain, putting the user in a sort of trance.",
+"offset": Vector2( -2360, 1400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_107",
+"text": "..."
+}
+},
+"size": Vector2( 427.25, 429.001 ),
+"speaker": "Wise Scavenger"
+},
+"1_107": {
+"dialogue": "You see, this is how Kronus took control over the city. They convinced citizens to take them as some miracle cure for disease.",
+"offset": Vector2( -2000, 1400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_108",
+"text": "..."
+}
+},
+"size": Vector2( 427.25, 429.001 ),
+"speaker": "Wise Scavenger"
+},
+"1_108": {
+"dialogue": "Is there anything else on your mind?",
+"offset": Vector2( -1600, 1380 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_109",
+"text": "What is Kronus"
+},
+1: {
+"condition": {
+},
+"link": "3_27",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 427.25, 485.001 ),
+"speaker": "Wise Scavenger"
+},
+"1_109": {
+"dialogue": "Kronus is a pharmaceutical company, or at least they were some time ago.",
+"offset": Vector2( -1200, 1240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_110",
+"text": "..."
+}
+},
+"size": Vector2( 427.249, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_11": {
+"dialogue": "You see, I was once hooked on those things but I am now free. No longer a slave to my own mind.",
+"offset": Vector2( -4760, -2940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_12",
+"text": "Who gave them to you?"
+},
+1: {
+"condition": {
+},
+"link": "3_8",
+"text": "It was nice talking, but I got to go. See you around."
+}
+},
+"size": Vector2( 566.516, 485 ),
+"speaker": "Wise Scavenger"
+},
+"1_110": {
+"dialogue": "Nowadays, they operate as a tyrannical governing force of the city.",
+"offset": Vector2( -840, 1240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_111",
+"text": "..."
+}
+},
+"size": Vector2( 427.25, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_111": {
+"dialogue": "They have armored guards stationed everywhere, under the guise of maintaining order.",
+"offset": Vector2( -480, 1240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_112",
+"text": "..."
+}
+},
+"size": Vector2( 427.252, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_112": {
+"dialogue": "They can be very brutal. I have seen trouble makers be tortured and forcefully given Mats. Should you encounter them, I advice you to be on your best behavior.",
+"offset": Vector2( -120, 1240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_113",
+"text": "..."
+}
+},
+"size": Vector2( 427.249, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_113": {
+"dialogue": "Is there anything else on your mind?",
+"offset": Vector2( 240, 1220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_28",
+"text": "No. See you around"
+}
+},
+"size": Vector2( 427.249, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_114": {
+"dialogue": "Nowadays, they operate as a tyrannical governing force of the city.",
+"offset": Vector2( -3400, 2000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_115",
+"text": "..."
+}
+},
+"size": Vector2( 427.25, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_115": {
+"dialogue": "They have armored guards stationed everywhere, under the guise of maintaining order.",
+"offset": Vector2( -3060, 2000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_116",
+"text": "..."
+}
+},
+"size": Vector2( 427.25, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_116": {
+"dialogue": "They can be very brutal. I have seen trouble makers be tortured and forcefully given Mats. Should you encounter them, I advice you to be on your best behavior.",
+"offset": Vector2( -2700, 2000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_117",
+"text": "..."
+}
+},
+"size": Vector2( 427.25, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_117": {
+"dialogue": "Is there anything else on your mind?",
+"offset": Vector2( -2320, 2000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_118",
+"text": "What is the origin of the Mats?"
+},
+1: {
+"condition": {
+},
+"link": "3_29",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 427.25, 485 ),
+"speaker": "Wise Scavenger"
+},
+"1_118": {
+"dialogue": "You want to know more about the Mats? Well then...",
+"offset": Vector2( -1900, 1940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_119",
+"text": "..."
+}
+},
+"size": Vector2( 427.25, 429.001 ),
+"speaker": "Wise Scavenger"
+},
+"1_119": {
+"dialogue": "They originate from Kronus under a directive from their leader, The Executive.",
+"offset": Vector2( -1520, 1940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_120",
+"text": "..."
+}
+},
+"size": Vector2( 427.251, 429.001 ),
+"speaker": "Wise Scavenger"
+},
+"1_12": {
+"dialogue": "It is quite a long tale. Do you want to hear it? I can't help but notice there are other things on your mind.",
+"offset": Vector2( -4080, -2960 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_13",
+"text": "I'm all ears."
+},
+1: {
+"condition": {
+},
+"link": "1_14",
+"text": "I will see you around, I have somewhere to be."
+}
+},
+"size": Vector2( 410.094, 485 ),
+"speaker": "Wise Scavenger"
+},
+"1_120": {
+"dialogue": "Mats are produced in the nearby pharmaceutical manufacturing facility.",
+"offset": Vector2( -1180, 1940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_121",
+"text": "..."
+}
+},
+"size": Vector2( 427.249, 429.001 ),
+"speaker": "Wise Scavenger"
+},
+"1_121": {
+"dialogue": "Now, I know what you are thinking. What might their purpose be?",
+"offset": Vector2( -860, 1940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_122",
+"text": "..."
+}
+},
+"size": Vector2( 427.25, 429.001 ),
+"speaker": "Wise Scavenger"
+},
+"1_122": {
+"dialogue": "Well, they numb the brain, putting the user in a sort of trance.",
+"offset": Vector2( -520, 1940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_123",
+"text": "..."
+}
+},
+"size": Vector2( 427.251, 429.001 ),
+"speaker": "Wise Scavenger"
+},
+"1_123": {
+"dialogue": "You see, this is how Kronus took control over the city. They convinced citizens to take them as some miracle cure for disease.",
+"offset": Vector2( -180, 1940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_124",
+"text": "..."
+}
+},
+"size": Vector2( 427.249, 429.001 ),
+"speaker": "Wise Scavenger"
+},
+"1_124": {
+"dialogue": "Is there anything else on your mind?",
+"offset": Vector2( 180, 1920 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_30",
+"text": "No. See you around"
+}
+},
+"size": Vector2( 427.249, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_125": {
+"dialogue": "Well then, I will let you in on a little secret. Kronus controls the entire city.",
+"offset": Vector2( -2120, -3300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_18",
+"text": "..."
+}
+},
+"size": Vector2( 427.25, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_126": {
+"dialogue": "Now that business is out of the way, anything else on your mind?",
+"offset": Vector2( -11200, -800 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_32",
+"text": "I just have a few questions."
+},
+1: {
+"condition": {
+},
+"link": "3_32",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 519.25, 485 ),
+"speaker": "Wise Scavenger"
+},
+"1_127": {
+"dialogue": "Now where was I... You noticed how I was different from the others.",
+"offset": Vector2( -7580, -1900 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "..."
+},
+1: {
+"condition": {
+},
+"link": "3_34",
+"text": "I just wanted to trade. See you around."
+}
+},
+"size": Vector2( 510.757, 467 ),
+"speaker": "Wise Scavenger"
+},
+"1_13": {
+"dialogue": "There are lots of dealers around these parts. Some people are so hooked that they use Mats as a form of currency.",
+"offset": Vector2( -3580, -3080 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_15",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_14": {
+"dialogue": "Goodbye, stranger.",
+"offset": Vector2( -3600, -2620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_9",
+"text": "Leave"
+}
+},
+"size": Vector2( 410.095, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_15": {
+"dialogue": "But they are all pawns in the grand sceme of things, There is something more sinister going on.",
+"offset": Vector2( -3060, -3060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_16",
+"text": "Go on."
+},
+1: {
+"condition": {
+},
+"link": "3_10",
+"text": "It was nice chatting, but I got to go."
+}
+},
+"size": Vector2( 410.094, 485 ),
+"speaker": "Wise Scavenger"
+},
+"1_16": {
+"dialogue": "You ever hear of Kronus?",
+"offset": Vector2( -2540, -3160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_125",
+"text": "Yes."
+},
+1: {
+"condition": {
+},
+"link": "1_17",
+"text": "No."
+}
+},
+"size": Vector2( 410.094, 485 ),
+"speaker": "Wise Scavenger"
+},
+"1_17": {
+"dialogue": "I take it you are new here. I will let you in on a little secret. Kronus controls the entire city.",
+"offset": Vector2( -2140, -2900 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_18",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_18": {
+"dialogue": "Be careful, armored guards patrol the area at all times to ensure order.",
+"offset": Vector2( -1700, -2820 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_19",
+"text": "So, who calls the shots then?"
+},
+1: {
+"condition": {
+},
+"link": "3_11",
+"text": "I have heard enough. Bye."
+}
+},
+"size": Vector2( 410.094, 485 ),
+"speaker": "Wise Scavenger"
+},
+"1_19": {
+"dialogue": "You are quite a curious one, aren't you.",
+"offset": Vector2( -1300, -2900 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_20",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_2": {
+"dialogue": "Sheesh. Someone's had a bad day.  Off you go then.",
+"offset": Vector2( -8260, -1300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Leave"
+}
+},
+"size": Vector2( 612.5, 463.002 ),
+"speaker": "Wise Scavenger"
+},
+"1_20": {
+"dialogue": "He calls himself The Executive.",
+"offset": Vector2( -880, -2940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_21",
+"text": "The Executive?"
+}
+},
+"size": Vector2( 410.093, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_21": {
+"dialogue": "Yes. He runs Kronus. It is rumored his family owned the company before the apocalypse.",
+"offset": Vector2( -480, -2940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_22",
+"text": "..."
+}
+},
+"size": Vector2( 410.095, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_22": {
+"dialogue": "It is said that Kronus was once a company for good, providing healthcare services to even the most unfortunate.",
+"offset": Vector2( -80, -2940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_23",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_23": {
+"dialogue": "That is, of course, before the apocalypse and The Executive's rise to power.",
+"offset": Vector2( 285.319, -2947.56 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_24",
+"text": "I see."
+},
+1: {
+"condition": {
+},
+"link": "3_12",
+"text": "I have heard enough. See you around."
+}
+},
+"size": Vector2( 410.095, 485 ),
+"speaker": "Wise Scavenger"
+},
+"1_24": {
+"dialogue": "The Executive saw an opportunity within the chaos, which leads to the origin of the Mats.",
+"offset": Vector2( 720, -3000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_25",
+"text": "..."
+}
+},
+"size": Vector2( 410.095, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_25": {
+"dialogue": "Under his orders, Kronus began immediate restoration of their pharmaceutical manufacturing facility.",
+"offset": Vector2( 1080, -3000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_26",
+"text": "..."
+}
+},
+"size": Vector2( 410.096, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_26": {
+"dialogue": "The Executive even made a whole campaign around it, telling residents that this new drug will cure any sickness caused by the apocalypse.",
+"offset": Vector2( 1440, -3000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_27",
+"text": "..."
+}
+},
+"size": Vector2( 410.098, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_27": {
+"dialogue": "However, that was simply a ploy. The true purpose of Mats, as you may have seen, is to take over the mind of an individual...",
+"offset": Vector2( 1820, -3000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_28",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_28": {
+"dialogue": "Leaving Kronus to freely establish total control of the city.",
+"offset": Vector2( 2220, -2980 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_29",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_29": {
+"dialogue": "...",
+"offset": Vector2( 2600, -2980 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_13",
+"text": "Are you ok?"
+},
+1: {
+"condition": {
+},
+"link": "3_14",
+"text": "I think it is time to part ways."
+}
+},
+"size": Vector2( 410.094, 485 ),
+"speaker": "Wise Scavenger"
+},
+"1_3": {
+"dialogue": "Nice seeing you again. Not too many friendly faces around these parts.",
+"offset": Vector2( -9680, 240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_34",
+"text": "Back at ya. I just have a few questions."
+},
+1: {
+"condition": {
+},
+"link": "3_31",
+"text": "Trade"
+},
+2: {
+"condition": {
+},
+"link": "3_6",
+"text": "Sorry, I have to go. See you around."
+}
+},
+"size": Vector2( 668.5, 571.005 ),
+"speaker": "Wise Scavenger"
+},
+"1_30": {
+"dialogue": "Ahhh. Yes. I sometimes feel my consciousness slipping away. Don't worry, it is simply a side effect of the drugs.",
+"offset": Vector2( 3340, -2980 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_31",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_31": {
+"dialogue": "I am feeling awfully tired. It was nice meeting you, stranger. Stay safe out there.",
+"offset": Vector2( 3780, -2980 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_15",
+"text": "Bye."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_32": {
+"dialogue": "Ask away.",
+"offset": Vector2( -8400, -700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_37",
+"text": "What is the origin of the Mats?"
+},
+1: {
+"condition": {
+},
+"link": "1_36",
+"text": "What is Kronus?"
+},
+2: {
+"condition": {
+},
+"link": "1_33",
+"text": "Who are those armored guards patrolling the city?"
+}
+},
+"size": Vector2( 410.094, 540.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_33": {
+"dialogue": "The armored guards? They are people not to be messed with.",
+"offset": Vector2( -6160, 2060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_96",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_34": {
+"dialogue": "Anything for you, friend. How can I help?",
+"offset": Vector2( -8840, 240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_37",
+"text": "What is the origin of the Mats?"
+},
+1: {
+"condition": {
+},
+"link": "1_36",
+"text": "What is Kronus?"
+},
+2: {
+"condition": {
+},
+"link": "1_33",
+"text": "Who are the armored guards patrolling the city?"
+}
+},
+"size": Vector2( 410.094, 540.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_35": {
+"dialogue": "Alright then. What?",
+"offset": Vector2( -9000, 1280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_37",
+"text": "What is the origin of the Mats?"
+},
+1: {
+"condition": {
+},
+"link": "1_36",
+"text": "What is Kronus"
+},
+2: {
+"condition": {
+},
+"link": "1_33",
+"text": "Who are the armored guards patrolling the city?"
+}
+},
+"size": Vector2( 410.094, 541 ),
+"speaker": "Wise Scavenger"
+},
+"1_36": {
+"dialogue": "Kronus is a pharmaceutical company, or at least they were some time ago.",
+"offset": Vector2( -6180, 660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_66",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 428.998 ),
+"speaker": "Wise Scavenger"
+},
+"1_37": {
+"dialogue": "You want to know more about the Mats? Well then...",
+"offset": Vector2( -6200, -660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_38",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_38": {
+"dialogue": "They originate from Kronus under a directive from their leader, The Executive.",
+"offset": Vector2( -5800, -660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_39",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_39": {
+"dialogue": "Mats are produced in the nearby pharmaceutical manufacturing facility.",
+"offset": Vector2( -5420, -660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_40",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_4": {
+"dialogue": "Surprise, suprise. You've returned.",
+"offset": Vector2( -9900, -840 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_32",
+"text": "Hey, I have a few questions."
+},
+1: {
+"condition": {
+},
+"link": "3_31",
+"text": "Trade"
+},
+2: {
+"condition": {
+},
+"link": "3_7",
+"text": "I have to go. See you around."
+}
+},
+"size": Vector2( 576.5, 541 ),
+"speaker": "Wise Scavenger"
+},
+"1_40": {
+"dialogue": "Now, I know what you are thinking. What might their purpose be?",
+"offset": Vector2( -5040, -660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_41",
+"text": "Go on..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_41": {
+"dialogue": "Well, they numb the brain, putting the user in a sort of trance.",
+"offset": Vector2( -4640, -680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_42",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_42": {
+"dialogue": "You see, this is how Kronus took control over the city. They convinced citizens to take them as some miracle cure for disease.",
+"offset": Vector2( -4260, -660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_43",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_43": {
+"dialogue": "Is there anything else on your mind?",
+"offset": Vector2( -3880, -620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_44",
+"text": "What is Kronus?"
+},
+1: {
+"condition": {
+},
+"link": "1_45",
+"text": "Who are those armored guards patrolling the city?"
+},
+2: {
+"condition": {
+},
+"link": "3_16",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 410.094, 541 ),
+"speaker": "Wise Scavenger"
+},
+"1_44": {
+"dialogue": "Kronus is a pharmaceutical company, or at least they were some time ago.",
+"offset": Vector2( -3280, -1080 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_46",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_45": {
+"dialogue": "The armored guards? They are people not to be messed with.",
+"offset": Vector2( -3300, -600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_56",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_46": {
+"dialogue": "Nowadays, they operate as a tyrannical governing force of the city.",
+"offset": Vector2( -2920, -1080 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_47",
+"text": "..."
+}
+},
+"size": Vector2( 410.093, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_47": {
+"dialogue": "They have armored guards stationed everywhere, under the guise of maintaining order.",
+"offset": Vector2( -2580, -1080 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_48",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_48": {
+"dialogue": "They can be very brutal. I have seen trouble makers be tortured and forcefully given Mats. Should you encounter them, I advice you to be on your best behavior.",
+"offset": Vector2( -2200, -1080 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_49",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_49": {
+"dialogue": "Is there anything else on your mind?",
+"offset": Vector2( -1800, -1080 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_50",
+"text": "Who are those armored guards patrolling the city?"
+},
+1: {
+"condition": {
+},
+"link": "3_17",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 410.094, 485 ),
+"speaker": "Wise Scavenger"
+},
+"1_5": {
+"dialogue": "Oh, has someone had a change of heart?",
+"offset": Vector2( -9820, 1220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_35",
+"text": "Yes, sorry. I just have a few questions."
+},
+1: {
+"condition": {
+},
+"link": "3_31",
+"text": "Trade"
+},
+2: {
+"condition": {
+},
+"link": "3_5",
+"text": "Nope. Bye."
+}
+},
+"size": Vector2( 678.5, 541 ),
+"speaker": "Wise Scavenger"
+},
+"1_50": {
+"dialogue": "The armored guards? They are people not to be messed with.",
+"offset": Vector2( -1380, -1200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_51",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_51": {
+"dialogue": "They are extremely dedicated to Kronus and their mission.",
+"offset": Vector2( -1000, -1200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_52",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_52": {
+"dialogue": "Rumors are that they are composed of military and police forces of the old world.",
+"offset": Vector2( -600, -1200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_53",
+"text": "..."
+}
+},
+"size": Vector2( 410.095, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_53": {
+"dialogue": "They also serve as personal protection of The Executive. Anyone that wishes to enter Kronus headquarters must go through them.",
+"offset": Vector2( -200, -1200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_54",
+"text": "..."
+}
+},
+"size": Vector2( 410.095, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_54": {
+"dialogue": "If that is your goal, you must first become authorized Kronus personel for them to let you through. ",
+"offset": Vector2( 180, -1200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_55",
+"text": "..."
+}
+},
+"size": Vector2( 410.095, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_55": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 600, -1200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_18",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 410.095, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_56": {
+"dialogue": "They are extremely dedicated to Kronus and their mission.",
+"offset": Vector2( -2840, -600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_57",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_57": {
+"dialogue": "Rumors are that they are composed of military and police forces of the old world.",
+"offset": Vector2( -2400, -600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_58",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_58": {
+"dialogue": "They also serve as personal protection of The Executive. Anyone that wishes to enter Kronus headquarters must go through them.",
+"offset": Vector2( -1920, -560 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_59",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_59": {
+"dialogue": "If that is your goal, you must first become authorized Kronus personel for them to let you through. ",
+"offset": Vector2( -1460, -560 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_60",
+"text": "..."
+}
+},
+"size": Vector2( 410.095, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_6": {
+"dialogue": "You're quite an observant one, eh.",
+"offset": Vector2( -8660, -2380 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "..."
+},
+1: {
+"condition": {
+},
+"link": "3_33",
+"text": "Trade"
+}
+},
+"size": Vector2( 590.5, 467 ),
+"speaker": "Wise Scavenger"
+},
+"1_60": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( -1000, -560 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_61",
+"text": "What is Kronus?"
+},
+1: {
+"condition": {
+},
+"link": "3_19",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 410.094, 484.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_61": {
+"dialogue": "Kronus is a pharmaceutical company, or at least they were some time ago.",
+"offset": Vector2( -600, -640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_62",
+"text": "..."
+}
+},
+"size": Vector2( 410.095, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_62": {
+"dialogue": "Nowadays, they operate as a tyrannical governing force of the city.",
+"offset": Vector2( -240, -640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_63",
+"text": "..."
+}
+},
+"size": Vector2( 410.095, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_63": {
+"dialogue": "They have armored guards stationed everywhere, under the guise of maintaining order.",
+"offset": Vector2( 160, -620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_64",
+"text": "..."
+}
+},
+"size": Vector2( 410.095, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_64": {
+"dialogue": "They can be very brutal. I have seen trouble makers be tortured and forcefully given Mats. Should you encounter them, I advice you to be on your best behavior.",
+"offset": Vector2( 540, -620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_65",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_65": {
+"dialogue": "Is there anything else on your mind?",
+"offset": Vector2( 960, -600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_20",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 410.097, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_66": {
+"dialogue": "Nowadays, they operate as a tyrannical governing force of the city.",
+"offset": Vector2( -5760, 660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_67",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 428.998 ),
+"speaker": "Wise Scavenger"
+},
+"1_67": {
+"dialogue": "They have armored guards stationed everywhere, under the guise of maintaining order.",
+"offset": Vector2( -5360, 660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_68",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 428.998 ),
+"speaker": "Wise Scavenger"
+},
+"1_68": {
+"dialogue": "They can be very brutal. I have seen trouble makers be tortured and forcefully given Mats. Should you encounter them, I advice you to be on your best behavior.",
+"offset": Vector2( -5000, 660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_69",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 428.998 ),
+"speaker": "Wise Scavenger"
+},
+"1_69": {
+"dialogue": "Is there anything else on your mind?",
+"offset": Vector2( -4580, 680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_70",
+"text": "What is the origin of the Mats?"
+},
+1: {
+"condition": {
+},
+"link": "1_71",
+"text": "Who are the armored guards patrolling the city?"
+},
+2: {
+"condition": {
+},
+"link": "3_21",
+"text": "No. See you around"
+}
+},
+"size": Vector2( 410.094, 540.998 ),
+"speaker": "Wise Scavenger"
+},
+"1_7": {
+"dialogue": "Let's just say, I've been to hell and back.",
+"offset": Vector2( -7360, -2700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_9",
+"text": "Do you mind telling me more?"
+},
+1: {
+"condition": {
+},
+"link": "3_3",
+"text": "You damn sure look like it."
+}
+},
+"size": Vector2( 678.5, 561 ),
+"speaker": "Wise Scavenger"
+},
+"1_70": {
+"dialogue": "You want to know more about the Mats? Well then...",
+"offset": Vector2( -3900, 100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_72",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_71": {
+"dialogue": "The armored guards? They are people not to be messed with.",
+"offset": Vector2( -3920, 700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_84",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_72": {
+"dialogue": "They originate from Kronus under a directive from their leader, The Executive.",
+"offset": Vector2( -3520, 100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_73",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_73": {
+"dialogue": "Mats are produced in the nearby pharmaceutical manufacturing facility.",
+"offset": Vector2( -3140, 100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_74",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_74": {
+"dialogue": "Now, I know what you are thinking. What might their purpose be?",
+"offset": Vector2( -2760, 100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_75",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_75": {
+"dialogue": "Well, they numb the brain, putting the user in a sort of trance.",
+"offset": Vector2( -2400, 100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_76",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_76": {
+"dialogue": "You see, this is how Kronus took control over the city. They convinced citizens to take them as some miracle cure for disease.",
+"offset": Vector2( -2020, 100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_77",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_77": {
+"dialogue": "Is there anything else on your mind?",
+"offset": Vector2( -1640, 100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_78",
+"text": "Who are the armored guards patrolling the city?"
+},
+1: {
+"condition": {
+},
+"link": "3_22",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 410.094, 485 ),
+"speaker": "Wise Scavenger"
+},
+"1_78": {
+"dialogue": "The armored guards? They are people not to be messed with.",
+"offset": Vector2( -1200, 20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_79",
+"text": "..."
+}
+},
+"size": Vector2( 410.093, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_79": {
+"dialogue": "They are extremely dedicated to Kronus and their mission.",
+"offset": Vector2( -800, 20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_80",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_8": {
+"dialogue": "You know what, I  have more important things to do than talk to you. If I see you around, try being a little more polite. Bye.",
+"offset": Vector2( -6080, -2040 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_4",
+"text": "Leave"
+}
+},
+"size": Vector2( 560.5, 479 ),
+"speaker": "Wise Scavenger"
+},
+"1_80": {
+"dialogue": "Rumors are that they are composed of military and police forces of the old world.",
+"offset": Vector2( -460, 20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_81",
+"text": "..."
+}
+},
+"size": Vector2( 410.097, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_81": {
+"dialogue": "They also serve as personal protection of The Executive. Anyone that wishes to enter Kronus headquarters must go through them.",
+"offset": Vector2( -120, 20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_82",
+"text": "..."
+}
+},
+"size": Vector2( 410.095, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_82": {
+"dialogue": "If that is your goal, you must first become authorized Kronus personel for them to let you through. ",
+"offset": Vector2( 240, 20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_83",
+"text": "..."
+}
+},
+"size": Vector2( 410.095, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_83": {
+"dialogue": "Is there anything else on your mind?",
+"offset": Vector2( 600, 20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_23",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 410.095, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_84": {
+"dialogue": "They are extremely dedicated to Kronus and their mission.",
+"offset": Vector2( -3540, 700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_85",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_85": {
+"dialogue": "Rumors are that they are composed of military and police forces of the old world.",
+"offset": Vector2( -3200, 700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_86",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_86": {
+"dialogue": "They also serve as personal protection of The Executive. Anyone that wishes to enter Kronus headquarters must go through them.",
+"offset": Vector2( -2840, 700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_87",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_87": {
+"dialogue": "If that is your goal, you must first become authorized Kronus personel for them to let you through. ",
+"offset": Vector2( -2500, 700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_88",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_88": {
+"dialogue": "Is there anything else on your mind?",
+"offset": Vector2( -2140, 700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_89",
+"text": "What is the origin of the Mats?"
+},
+1: {
+"condition": {
+},
+"link": "3_24",
+"text": "No. See you around"
+}
+},
+"size": Vector2( 410.094, 484.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_89": {
+"dialogue": "You want to know more about the Mats? Well then...",
+"offset": Vector2( -1720, 620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_90",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_9": {
+"dialogue": "Mats... You must resist taking them at all costs.",
+"offset": Vector2( -6340, -3220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_10",
+"text": "Mats?"
+},
+1: {
+"condition": {
+},
+"link": "1_11",
+"text": "..."
+}
+},
+"size": Vector2( 596.5, 485 ),
+"speaker": "Wise Scavenger"
+},
+"1_90": {
+"dialogue": "They originate from Kronus under a directive from their leader, The Executive.",
+"offset": Vector2( -1360, 620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_91",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_91": {
+"dialogue": "Mats are produced in the nearby pharmaceutical manufacturing facility.",
+"offset": Vector2( -1000, 620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_92",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_92": {
+"dialogue": "Now, I know what you are thinking. What might their purpose be?",
+"offset": Vector2( -660, 620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_93",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_93": {
+"dialogue": "Well, they numb the brain, putting the user in a sort of trance.",
+"offset": Vector2( -320, 620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_94",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_94": {
+"dialogue": "You see, this is how Kronus took control over the city. They convinced citizens to take them as some miracle cure for disease.",
+"offset": Vector2( 20, 620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_95",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_95": {
+"dialogue": "Is there anything else on your mind?",
+"offset": Vector2( 400, 620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_25",
+"text": "No. See you around"
+}
+},
+"size": Vector2( 410.094, 428.999 ),
+"speaker": "Wise Scavenger"
+},
+"1_96": {
+"dialogue": "They are extremely dedicated to Kronus and their mission.",
+"offset": Vector2( -5820, 2060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_97",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_97": {
+"dialogue": "Rumors are that they are composed of military and police forces of the old world.",
+"offset": Vector2( -5480, 2060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_98",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_98": {
+"dialogue": "They also serve as personal protection of The Executive. Anyone that wishes to enter Kronus headquarters must go through them.",
+"offset": Vector2( -5140, 2060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_99",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"1_99": {
+"dialogue": "If that is your goal, you must first become authorized Kronus personel for them to let you through. ",
+"offset": Vector2( -4760, 2060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_100",
+"text": "..."
+}
+},
+"size": Vector2( 410.094, 429 ),
+"speaker": "Wise Scavenger"
+},
+"3_1": {
+"link": "1_2",
+"offset": Vector2( -8820, -1280 ),
+"signalValue": "dec_respect:3"
+},
+"3_10": {
+"link": "END",
+"offset": Vector2( -2741.84, -2754.37 ),
+"signalValue": "leave"
+},
+"3_11": {
+"link": "END",
+"offset": Vector2( -1366.12, -2526.42 ),
+"signalValue": "leave"
+},
+"3_12": {
+"link": "END",
+"offset": Vector2( 580.934, -2651.79 ),
+"signalValue": "leave"
+},
+"3_13": {
+"link": "1_30",
+"offset": Vector2( 3020, -2860 ),
+"signalValue": "inc_respect:9"
+},
+"3_14": {
+"link": "END",
+"offset": Vector2( 2980, -2700 ),
+"signalValue": "leave"
+},
+"3_15": {
+"link": "END",
+"offset": Vector2( 4180, -2780 ),
+"signalValue": "leave"
+},
+"3_16": {
+"link": "END",
+"offset": Vector2( -3560, -200 ),
+"signalValue": "leave"
+},
+"3_17": {
+"link": "END",
+"offset": Vector2( -1460, -800 ),
+"signalValue": "leave"
+},
+"3_18": {
+"link": "END",
+"offset": Vector2( 1000, -1040 ),
+"signalValue": "leave"
+},
+"3_19": {
+"link": "END",
+"offset": Vector2( -620, -280 ),
+"signalValue": "leave"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( -7500, -840 ),
+"signalValue": "leave"
+},
+"3_20": {
+"link": "END",
+"offset": Vector2( 1292.9, -410.573 ),
+"signalValue": "leave"
+},
+"3_21": {
+"link": "END",
+"offset": Vector2( -4260, 1000 ),
+"signalValue": "leave"
+},
+"3_22": {
+"link": "END",
+"offset": Vector2( -1300, 380 ),
+"signalValue": "leave"
+},
+"3_23": {
+"link": "END",
+"offset": Vector2( 940, 220 ),
+"signalValue": "leave"
+},
+"3_24": {
+"link": "END",
+"offset": Vector2( -1780, 980 ),
+"signalValue": "leave"
+},
+"3_25": {
+"link": "END",
+"offset": Vector2( 760, 840 ),
+"signalValue": "leave"
+},
+"3_26": {
+"link": "END",
+"offset": Vector2( -4040, 2380 ),
+"signalValue": "leave"
+},
+"3_27": {
+"link": "END",
+"offset": Vector2( -1260, 1660 ),
+"signalValue": "leave"
+},
+"3_28": {
+"link": "END",
+"offset": Vector2( 620, 1420 ),
+"signalValue": "leave"
+},
+"3_29": {
+"link": "END",
+"offset": Vector2( -1920, 2300 ),
+"signalValue": "leave"
+},
+"3_3": {
+"link": "1_8",
+"offset": Vector2( -6534.67, -2119.66 ),
+"signalValue": "dec_respect:3"
+},
+"3_30": {
+"link": "END",
+"offset": Vector2( 540, 2160 ),
+"signalValue": "leave"
+},
+"3_31": {
+"link": "1_126",
+"offset": Vector2( -11600, -100 ),
+"signalValue": "trade"
+},
+"3_32": {
+"link": "END",
+"offset": Vector2( -10660, 100 ),
+"signalValue": "leave"
+},
+"3_33": {
+"link": "1_127",
+"offset": Vector2( -8100, -1740 ),
+"signalValue": "trade"
+},
+"3_34": {
+"link": "END",
+"offset": Vector2( -7000, -1520 ),
+"signalValue": "leave"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2( -5380, -1540 ),
+"signalValue": "leave"
+},
+"3_5": {
+"link": "END",
+"offset": Vector2( -9080, 1940 ),
+"signalValue": "leave"
+},
+"3_6": {
+"link": "END",
+"offset": Vector2( -8840, 920 ),
+"signalValue": "leave"
+},
+"3_7": {
+"link": "END",
+"offset": Vector2( -9026.03, -163.07 ),
+"signalValue": "leave"
+},
+"3_8": {
+"link": "END",
+"offset": Vector2( -4174.08, -2480.69 ),
+"signalValue": "leave"
+},
+"3_9": {
+"link": "END",
+"offset": Vector2( -3200, -2400 ),
+"signalValue": "leave"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

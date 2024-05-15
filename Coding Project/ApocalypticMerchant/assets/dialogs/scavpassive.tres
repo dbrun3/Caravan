@@ -1,0 +1,116 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1",
+"no": "0_2",
+"yes": "0_3"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -2520, 1060 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "1_2",
+"offset": Vector2( -680, 1100 ),
+"start_id": "no"
+},
+"0_3": {
+"link": "1_3",
+"offset": Vector2( -680, 1480 ),
+"start_id": "yes"
+},
+"1_1": {
+"dialogue": "Hey stranger, you want to buy some Mats on the low?",
+"offset": Vector2( -2260, 1060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "No, I'm not interested."
+},
+1: {
+"condition": {
+},
+"link": "3_6",
+"text": "Yeah, let me buy some."
+}
+},
+"size": Vector2( 368.219, 455.001 ),
+"speaker": "Scav"
+},
+"1_2": {
+"dialogue": "WAIT! Actually I want that back now! I NEED IT NOW!",
+"offset": Vector2( -240, 900 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "(Attacks you)"
+}
+},
+"size": Vector2( 368.221, 404 ),
+"speaker": "Scav"
+},
+"1_3": {
+"dialogue": "Oh you don't want Mats? That's ok, later.",
+"offset": Vector2( -280, 1480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Later."
+}
+},
+"size": Vector2( 368.22, 404 ),
+"speaker": "Scav"
+},
+"3_1": {
+"link": "3_7",
+"offset": Vector2( 112.843, 1749.67 ),
+"signalValue": "pop"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( -1560, 1540 ),
+"signalValue": "continue"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2( -1100, 1360 ),
+"signalValue": "?:char_has_item:Mats->start_dialog:yes->start_dialog:no"
+},
+"3_4": {
+"link": "3_3",
+"offset": Vector2( -1560, 1360 ),
+"signalValue": "trade"
+},
+"3_5": {
+"link": "END",
+"offset": Vector2( 240, 1180 ),
+"signalValue": "fight"
+},
+"3_6": {
+"link": "3_4",
+"offset": Vector2( -1840, 1360 ),
+"signalValue": "set_char_inventory:Scav"
+},
+"3_7": {
+"link": "END",
+"offset": Vector2( 360, 1780 ),
+"signalValue": "continue"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

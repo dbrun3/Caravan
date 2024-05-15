@@ -1,0 +1,2425 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"bad": "0_4",
+"default": "0_1",
+"good": "0_3",
+"neutral": "0_2"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -6900, -2120 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "1_19",
+"offset": Vector2( -6980, -1460 ),
+"start_id": "neutral"
+},
+"0_3": {
+"link": "1_20",
+"offset": Vector2( -7000, -1080 ),
+"start_id": "good"
+},
+"0_4": {
+"link": "1_21",
+"offset": Vector2( -7020, -640 ),
+"start_id": "bad"
+},
+"1_1": {
+"dialogue": "Ah, there you are. Deacon told me you can help get the power online. ",
+"offset": Vector2( -6400, -2500 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "I have some questions..."
+},
+1: {
+"condition": {
+},
+"link": "3_47",
+"text": "Trade"
+},
+2: {
+"condition": {
+},
+"link": "3_1",
+"text": "Leave"
+}
+},
+"size": Vector2( 376.5, 520 ),
+"speaker": "Engineer"
+},
+"1_10": {
+"dialogue": "Nice doing business with you. Anything else?",
+"offset": Vector2( -7560, -2480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "I have some questions."
+},
+1: {
+"condition": {
+},
+"link": "3_48",
+"text": "Leave"
+}
+},
+"size": Vector2( 486.639, 467 ),
+"speaker": "Engineer"
+},
+"1_100": {
+"dialogue": "Well then, if you have any other questions feel free to stop on by,",
+"offset": Vector2( 14178.9, -3518.63 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_34",
+"text": "Leave"
+}
+},
+"size": Vector2( 582.527, 523 ),
+"speaker": "Engineer"
+},
+"1_101": {
+"dialogue": "Maybe Deacon already mentioned it, but the area used to house a nuclear reactor facility.",
+"offset": Vector2( 1460, -5540 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_122",
+"text": "..."
+}
+},
+"size": Vector2( 688.529, 501 ),
+"speaker": "Engineer"
+},
+"1_102": {
+"dialogue": "We didn't...",
+"offset": Vector2( 1520, -4560 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_103",
+"text": "..."
+}
+},
+"size": Vector2( 766.529, 539 ),
+"speaker": "Engineer"
+},
+"1_103": {
+"dialogue": "A few years ago, that shelter contained some of the brightest minds in the world.",
+"offset": Vector2( 2560, -4600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_104",
+"text": "..."
+}
+},
+"size": Vector2( 662.53, 557 ),
+"speaker": "Engineer"
+},
+"1_104": {
+"dialogue": "One day, communications with them were lost. It was like they simply vanished from the face of the Earth.",
+"offset": Vector2( 3460, -4600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_105",
+"text": "..."
+}
+},
+"size": Vector2( 602.526, 559 ),
+"speaker": "Engineer"
+},
+"1_105": {
+"dialogue": "We sent a scout out there to investigate, only to find the place abandoned.",
+"offset": Vector2( 4160, -4600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_106",
+"text": "..."
+}
+},
+"size": Vector2( 602.536, 563 ),
+"speaker": "Engineer"
+},
+"1_106": {
+"dialogue": "The scout returned back and reported seeing evidence of a struggle.",
+"offset": Vector2( 4860, -4600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_107",
+"text": "..."
+}
+},
+"size": Vector2( 592.535, 553 ),
+"speaker": "Engineer"
+},
+"1_107": {
+"dialogue": "We determined that they must have been found out and captured.",
+"offset": Vector2( 5600, -4580 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_108",
+"text": "..."
+}
+},
+"size": Vector2( 564.534, 545 ),
+"speaker": "Engineer"
+},
+"1_108": {
+"dialogue": "Perhaps they are still out there, forcefully working for someone. After all, scientists are hard to come by in the wasteland.",
+"offset": Vector2( 6260, -4580 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_109",
+"text": "..."
+}
+},
+"size": Vector2( 540.538, 559 ),
+"speaker": "Engineer"
+},
+"1_109": {
+"dialogue": "We would go looking for them, but it is simply too dangerous out there. It was risky enough sending a scout over there.",
+"offset": Vector2( 7020, -4580 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_35",
+"text": "Sorry for your loss."
+},
+1: {
+"condition": {
+},
+"link": "3_36",
+"text": "Huh. You all are a bunch of cowards."
+}
+},
+"size": Vector2( 550.53, 537 ),
+"speaker": "Engineer"
+},
+"1_11": {
+"dialogue": "A few years ago, the other shelter you came from contained some of the brightest minds in the world.",
+"offset": Vector2( -2360, -1960 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_12",
+"text": "..."
+}
+},
+"size": Vector2( 392.517, 414 ),
+"speaker": "Engineer"
+},
+"1_110": {
+"dialogue": "Thanks. I appretiate it. ",
+"offset": Vector2( 8220, -4920 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_112",
+"text": "..."
+}
+},
+"size": Vector2( 496.531, 431 ),
+"speaker": "Engineer"
+},
+"1_111": {
+"dialogue": "You don't understand. We are scientists and engineers. What are we supposed to do? Take on the whole world? Forget it.",
+"offset": Vector2( 8220, -4060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_112",
+"text": "..."
+}
+},
+"size": Vector2( 522.531, 467 ),
+"speaker": "Engineer"
+},
+"1_112": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 8954.21, -4840.65 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_114",
+"text": "What makes the Scorched so dangerous?"
+},
+1: {
+"condition": {
+},
+"link": "1_113",
+"text": "Nope."
+}
+},
+"size": Vector2( 532.526, 467 ),
+"speaker": "Engineer"
+},
+"1_113": {
+"dialogue": "Well then, if you have any other questions feel free to stop on by,",
+"offset": Vector2( 9640, -4440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_37",
+"text": "Leave"
+}
+},
+"size": Vector2( 546.536, 485 ),
+"speaker": "Engineer"
+},
+"1_114": {
+"dialogue": "Maybe Deacon already mentioned it, but the area used to house a nuclear reactor facility.",
+"offset": Vector2( 9680, -5160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_115",
+"text": "..."
+}
+},
+"size": Vector2( 560.546, 491 ),
+"speaker": "Engineer"
+},
+"1_115": {
+"dialogue": "The meteor impact caused a sudden meltdown of one of the reactors.",
+"offset": Vector2( 10380, -5160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_116",
+"text": "..."
+}
+},
+"size": Vector2( 526.541, 507 ),
+"speaker": "Engineer"
+},
+"1_116": {
+"dialogue": "As a result, radiation spread throughout the entire area, making it uninhabitable. ",
+"offset": Vector2( 11040, -5160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_117",
+"text": "..."
+}
+},
+"size": Vector2( 512.534, 497 ),
+"speaker": "Engineer"
+},
+"1_117": {
+"dialogue": "You will need a special hazmat suit to even go near the Scorched or radiation sickness will spread quickly.",
+"offset": Vector2( 11640, -5160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_118",
+"text": "..."
+}
+},
+"size": Vector2( 512.53, 489 ),
+"speaker": "Engineer"
+},
+"1_118": {
+"dialogue": "The symptoms are not pretty, and you will be dead within minutes.",
+"offset": Vector2( 12260, -5160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_40",
+"text": "Thanks for the heads up."
+},
+1: {
+"condition": {
+},
+"link": "3_39",
+"text": "Yeah, ok. Sounds made up. You are hiding something."
+}
+},
+"size": Vector2( 524.527, 497 ),
+"speaker": "Engineer"
+},
+"1_119": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 13980, -5220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_120",
+"text": "Nope."
+}
+},
+"size": Vector2( 566.535, 455 ),
+"speaker": "Engineer"
+},
+"1_12": {
+"dialogue": "One day, communications with the shelter were completely lost. It was like it had simply vanished from the face of the Earth.",
+"offset": Vector2( -1900, -2040 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_13",
+"text": "..."
+}
+},
+"size": Vector2( 392.516, 414 ),
+"speaker": "Engineer"
+},
+"1_120": {
+"dialogue": "Well then, if you have any other questions feel free to stop on by,",
+"offset": Vector2( 14700, -5060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_38",
+"text": "Leave"
+}
+},
+"size": Vector2( 592.542, 465 ),
+"speaker": "Engineer"
+},
+"1_121": {
+"dialogue": "I swear i'm not. Can't say I didn't warn you.",
+"offset": Vector2( 13440, -4520 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_119",
+"text": "..."
+}
+},
+"size": Vector2( 490.532, 451 ),
+"speaker": "Engineer"
+},
+"1_122": {
+"dialogue": "The meteor impact caused a sudden meltdown of one of the reactors.",
+"offset": Vector2( 2380, -5720 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_123",
+"text": "..."
+}
+},
+"size": Vector2( 632.535, 533 ),
+"speaker": "Engineer"
+},
+"1_123": {
+"dialogue": "As a result, radiation spread throughout the entire area, making it uninhabitable. ",
+"offset": Vector2( 3180, -5920 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_124",
+"text": "..."
+}
+},
+"size": Vector2( 664.527, 507 ),
+"speaker": "Engineer"
+},
+"1_124": {
+"dialogue": "You will need a special hazmat suit to even go near the Scorched or radiation sickness will spread quickly.",
+"offset": Vector2( 4200, -6260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_125",
+"text": "..."
+}
+},
+"size": Vector2( 658.537, 539 ),
+"speaker": "Engineer"
+},
+"1_125": {
+"dialogue": "The symptoms are not pretty, and you will be dead within minutes.",
+"offset": Vector2( 5000, -6560 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_42",
+"text": "Thanks for the heads up."
+},
+1: {
+"condition": {
+},
+"link": "3_41",
+"text": "Yeah, ok. Sounds made up. You are hiding something."
+}
+},
+"size": Vector2( 638.539, 519 ),
+"speaker": "Engineer"
+},
+"1_126": {
+"dialogue": "I swear i'm not. Can't say I didn't warn you.",
+"offset": Vector2( 6177.79, -5876.74 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_127",
+"text": "..."
+}
+},
+"size": Vector2( 550.542, 439 ),
+"speaker": "Engineer"
+},
+"1_127": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 6837.69, -6774.93 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_129",
+"text": "Why did the Remnants abandon the first shelter?"
+},
+1: {
+"condition": {
+},
+"link": "1_128",
+"text": "Nope."
+}
+},
+"size": Vector2( 495.555, 467 ),
+"speaker": "Engineer"
+},
+"1_128": {
+"dialogue": "Well then, if you have any other questions feel free to stop on by,",
+"offset": Vector2( 7460, -6180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_43",
+"text": "Leave"
+}
+},
+"size": Vector2( 564.536, 457 ),
+"speaker": "Engineer"
+},
+"1_129": {
+"dialogue": "We didn't...",
+"offset": Vector2( 7560, -6900 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_130",
+"text": "..."
+}
+},
+"size": Vector2( 537.779, 473.195 ),
+"speaker": "Engineer"
+},
+"1_13": {
+"dialogue": "We sent a scout out there to investigate, but he never returned.",
+"offset": Vector2( -1400, -2000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_17",
+"text": "..."
+}
+},
+"size": Vector2( 392.517, 414 ),
+"speaker": "Engineer"
+},
+"1_130": {
+"dialogue": "A few years ago, that shelter contained some of the brightest minds in the world.",
+"offset": Vector2( 8240, -6960 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_131",
+"text": "..."
+}
+},
+"size": Vector2( 580.535, 547 ),
+"speaker": "Engineer"
+},
+"1_131": {
+"dialogue": "One day, communications with them were lost. It was like they simply vanished from the face of the Earth.",
+"offset": Vector2( 8920, -7160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_132",
+"text": "..."
+}
+},
+"size": Vector2( 626.523, 525 ),
+"speaker": "Engineer"
+},
+"1_132": {
+"dialogue": "We sent a scout out there to investigate, only to find the place abandoned.",
+"offset": Vector2( 9680, -7220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_133",
+"text": "..."
+}
+},
+"size": Vector2( 640.537, 543 ),
+"speaker": "Engineer"
+},
+"1_133": {
+"dialogue": "The scout returned back and reported seeing evidence of a struggle.",
+"offset": Vector2( 10460, -7260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_134",
+"text": "..."
+}
+},
+"size": Vector2( 534.542, 503 ),
+"speaker": "Engineer"
+},
+"1_134": {
+"dialogue": "We determined that they must have been found out and captured.",
+"offset": Vector2( 11180, -7320 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_135",
+"text": "..."
+}
+},
+"size": Vector2( 600.524, 501 ),
+"speaker": "Engineer"
+},
+"1_135": {
+"dialogue": "Perhaps they are still out there, forcefully working for someone. After all, scientists are hard to come by in the wasteland.",
+"offset": Vector2( 11946.4, -7283.49 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_136",
+"text": "..."
+}
+},
+"size": Vector2( 598.528, 479 ),
+"speaker": "Engineer"
+},
+"1_136": {
+"dialogue": "We would go looking for them, but it is simply too dangerous out there. It was risky enough sending a scout over there.",
+"offset": Vector2( 12720, -7360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_44",
+"text": "Sorry for your loss."
+},
+1: {
+"condition": {
+},
+"link": "3_45",
+"text": "Huh. You all are a bunch of cowards."
+}
+},
+"size": Vector2( 592.528, 533 ),
+"speaker": "Engineer"
+},
+"1_137": {
+"dialogue": "You don't understand. We are scientists and engineers. What are we supposed to do? Take on the whole world? Forget it.",
+"offset": Vector2( 13811.8, -6893.85 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_139",
+"text": "..."
+}
+},
+"size": Vector2( 520.536, 486 ),
+"speaker": "Engineer"
+},
+"1_138": {
+"dialogue": "Thanks. I appretiate it. ",
+"offset": Vector2( 13880, -7640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_139",
+"text": "..."
+}
+},
+"size": Vector2( 526.532, 453 ),
+"speaker": "Engineer"
+},
+"1_139": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 14646.4, -7473.57 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_140",
+"text": "Nope."
+}
+},
+"size": Vector2( 540.522, 479 ),
+"speaker": "Engineer"
+},
+"1_140": {
+"dialogue": "Well then, if you have any other questions feel free to stop on by,",
+"offset": Vector2( 15377.3, -7297.33 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_46",
+"text": "Leave"
+}
+},
+"size": Vector2( 616.537, 564 ),
+"speaker": "Engineer"
+},
+"1_17": {
+"dialogue": "We would go looking for them, but it is simply too dangerous out there. It was risky enough sending one of us out there.",
+"offset": Vector2( -160, -2000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_4",
+"text": "Sorry for your loss."
+},
+1: {
+"condition": {
+},
+"link": "3_5",
+"text": "Huh. You all are a bunch of cowards."
+}
+},
+"size": Vector2( 392.52, 467 ),
+"speaker": "Engineer"
+},
+"1_18": {
+"dialogue": "Thanks. I appretiate it. Anyways, since then, Deacon has refused to let anyone leave the shelter.",
+"offset": Vector2( 1040, -2260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_50",
+"text": "..."
+}
+},
+"size": Vector2( 392.521, 414 ),
+"speaker": "Engineer"
+},
+"1_19": {
+"dialogue": "Back again?",
+"offset": Vector2( -6440, -1900 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "I have some questions..."
+},
+1: {
+"condition": {
+},
+"link": "3_47",
+"text": "Trade"
+},
+2: {
+"condition": {
+},
+"link": "3_1",
+"text": "Leave"
+}
+},
+"size": Vector2( 392.517, 520 ),
+"speaker": "Engineer"
+},
+"1_2": {
+"dialogue": "How can I be of assistance?",
+"offset": Vector2( -4880, -1640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_24",
+"text": "What makes the Scorched so dangerous?"
+},
+1: {
+"condition": {
+},
+"link": "1_4",
+"text": "Where can I find a hazmat suit?"
+},
+2: {
+"condition": {
+},
+"link": "1_11",
+"text": "Why me?"
+}
+},
+"size": Vector2( 856.5, 520 ),
+"speaker": "Engineer"
+},
+"1_20": {
+"dialogue": "Welcome back!",
+"offset": Vector2( -6480, -1300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "I have some questions..."
+},
+1: {
+"condition": {
+},
+"link": "3_47",
+"text": "Trade"
+},
+2: {
+"condition": {
+},
+"link": "3_1",
+"text": "Leave"
+}
+},
+"size": Vector2( 392.516, 520 ),
+"speaker": "Engineer"
+},
+"1_21": {
+"dialogue": "Ugh... You again?",
+"offset": Vector2( -6380, -440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "I have some questions..."
+},
+1: {
+"condition": {
+},
+"link": "3_47",
+"text": "Trade"
+},
+2: {
+"condition": {
+},
+"link": "3_1",
+"text": "Leave"
+}
+},
+"size": Vector2( 392.516, 519.998 ),
+"speaker": "Engineer"
+},
+"1_22": {
+"dialogue": "You don't understand. We are scientists and engineers. What are we supposed to do? Take on the whole world? Forget it.",
+"offset": Vector2( 1080, -1900 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_50",
+"text": "..."
+}
+},
+"size": Vector2( 392.519, 414 ),
+"speaker": "Engineer"
+},
+"1_23": {
+"dialogue": "I told you all I know. Sorry if it wasn't helpful enough. ",
+"offset": Vector2( -140, -2960 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_8",
+"text": "..."
+}
+},
+"size": Vector2( 528.518, 484 ),
+"speaker": "Engineer"
+},
+"1_24": {
+"dialogue": "Maybe Deacon already mentioned it, but the area used to house a nuclear reactor facility.",
+"offset": Vector2( -2200, -440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_25",
+"text": "..."
+}
+},
+"size": Vector2( 392.516, 414.003 ),
+"speaker": "Engineer"
+},
+"1_25": {
+"dialogue": "The meteor impact caused a sudden meltdown of one of the reactors.",
+"offset": Vector2( -1780, -440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_26",
+"text": "..."
+}
+},
+"size": Vector2( 392.517, 414.003 ),
+"speaker": "Engineer"
+},
+"1_26": {
+"dialogue": "As a result, radiation spread throughout the entire area, making it uninhabitable. ",
+"offset": Vector2( -1340, -440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_27",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 414.003 ),
+"speaker": "Engineer"
+},
+"1_27": {
+"dialogue": "You will need a special hazmat suit to even go near the Scorched or radiation sickness will spread quickly.",
+"offset": Vector2( -880, -440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_28",
+"text": "..."
+}
+},
+"size": Vector2( 392.517, 414.003 ),
+"speaker": "Engineer"
+},
+"1_28": {
+"dialogue": "The symptoms are not pretty, and you will be dead within minutes.",
+"offset": Vector2( -440, -440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "Thanks for the heads up."
+},
+1: {
+"condition": {
+},
+"link": "3_9",
+"text": "Yeah, ok. Sounds made up. You are hiding something."
+}
+},
+"size": Vector2( 392.52, 467.003 ),
+"speaker": "Engineer"
+},
+"1_29": {
+"dialogue": "I swear i'm not. Can't say I didn't warn you.",
+"offset": Vector2( 340, -220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "..."
+}
+},
+"size": Vector2( 392.521, 414.004 ),
+"speaker": "Engineer"
+},
+"1_3": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 859.323, -221.713 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_31",
+"text": "Where can I find a hazmat suit?"
+},
+1: {
+"condition": {
+},
+"link": "1_52",
+"text": "Why did the Remnants abandon the first shelter?"
+},
+2: {
+"condition": {
+},
+"link": "1_30",
+"text": "Nope"
+}
+},
+"size": Vector2( 376.5, 520.001 ),
+"speaker": "Engineer"
+},
+"1_30": {
+"dialogue": "Well then, if you have any other questions feel free to stop on by.",
+"offset": Vector2( 1080, 220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Leave"
+}
+},
+"size": Vector2( 392.52, 414 ),
+"speaker": "Engineer"
+},
+"1_31": {
+"dialogue": "Honestly... I'm not sure. They are quite rare to come by. ",
+"offset": Vector2( 1309.23, -338.962 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_32",
+"text": "..."
+}
+},
+"size": Vector2( 392.517, 414.004 ),
+"speaker": "Engineer"
+},
+"1_32": {
+"dialogue": "Throughout the wasteland, there are powerful factions. Perhaps you can somehow find a way to aquire one from them.",
+"offset": Vector2( 1777.45, -338.574 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_33",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 414.002 ),
+"speaker": "Engineer"
+},
+"1_33": {
+"dialogue": "I should warn you though. We are in hiding for a reason. These groups can be very dangerous.",
+"offset": Vector2( 2181.29, -282.984 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_34",
+"text": "..."
+}
+},
+"size": Vector2( 392.517, 413.999 ),
+"speaker": "Engineer"
+},
+"1_34": {
+"dialogue": "If I were you, I would establish a good rapport with those groups. That would be a nice starting point.",
+"offset": Vector2( 2580, -280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_10",
+"text": "Thanks for the advice."
+},
+1: {
+"condition": {
+},
+"link": "3_11",
+"text": "Thanks for nothing."
+}
+},
+"size": Vector2( 392.519, 467.006 ),
+"speaker": "Engineer"
+},
+"1_35": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 3740, -260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_38",
+"text": "Why did the Remnants abandon the first shelter?"
+},
+1: {
+"condition": {
+},
+"link": "1_37",
+"text": "Nope."
+}
+},
+"size": Vector2( 392.518, 467.003 ),
+"speaker": "Engineer"
+},
+"1_36": {
+"dialogue": "I told you all I know. Sorry if it wasn't helpful enough. ",
+"offset": Vector2( 3380, 120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_35",
+"text": "..."
+}
+},
+"size": Vector2( 392.517, 414.003 ),
+"speaker": "Engineer"
+},
+"1_37": {
+"dialogue": "Well then, if you have any other questions feel free to stop on by.",
+"offset": Vector2( 4060, 120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_12",
+"text": "Leave"
+}
+},
+"size": Vector2( 392.518, 414.003 ),
+"speaker": "Engineer"
+},
+"1_38": {
+"dialogue": "We didn't...",
+"offset": Vector2( 4174.61, -271.053 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_39",
+"text": "..."
+}
+},
+"size": Vector2( 392.521, 414.003 ),
+"speaker": "Engineer"
+},
+"1_39": {
+"dialogue": "A few years ago, that shelter contained some of the brightest minds in the world.",
+"offset": Vector2( 4576.22, -200.802 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_40",
+"text": "..."
+}
+},
+"size": Vector2( 392.516, 414.003 ),
+"speaker": "Engineer"
+},
+"1_4": {
+"dialogue": "Honestly... I'm not sure. They are quite rare to come by. ",
+"offset": Vector2( -3240, -3640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "..."
+}
+},
+"size": Vector2( 592.501, 540 ),
+"speaker": "Engineer"
+},
+"1_40": {
+"dialogue": "One day, communications with them were lost. It was like they simply vanished from the face of the Earth.",
+"offset": Vector2( 4915.35, -205.22 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_41",
+"text": "..."
+}
+},
+"size": Vector2( 392.523, 414.001 ),
+"speaker": "Engineer"
+},
+"1_41": {
+"dialogue": "We sent a scout out there to investigate, only to find the place abandoned.",
+"offset": Vector2( 5300, -260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_42",
+"text": "..."
+}
+},
+"size": Vector2( 392.526, 414.004 ),
+"speaker": "Engineer"
+},
+"1_42": {
+"dialogue": "The scout returned back and reported seeing evidence of a struggle.",
+"offset": Vector2( 5680, -320 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_43",
+"text": "..."
+}
+},
+"size": Vector2( 392.528, 414.001 ),
+"speaker": "Engineer"
+},
+"1_43": {
+"dialogue": "We determined that they must have been found out and captured.",
+"offset": Vector2( 6020, -140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_44",
+"text": "..."
+}
+},
+"size": Vector2( 392.521, 414.006 ),
+"speaker": "Engineer"
+},
+"1_44": {
+"dialogue": "Perhaps they are still out there, forcefully working for someone. After all, scientists are hard to come by in the wasteland.",
+"offset": Vector2( 6380, -140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_45",
+"text": "..."
+}
+},
+"size": Vector2( 392.52, 414.006 ),
+"speaker": "Engineer"
+},
+"1_45": {
+"dialogue": "We would go looking for them, but it is simply too dangerous out there. It was risky enough sending a scout over there.",
+"offset": Vector2( 6720, -100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_14",
+"text": "Sorry for your loss."
+},
+1: {
+"condition": {
+},
+"link": "3_13",
+"text": "Huh. You all are a bunch of cowards."
+}
+},
+"size": Vector2( 392.521, 467.001 ),
+"speaker": "Engineer"
+},
+"1_46": {
+"dialogue": "You don't understand. We are scientists and engineers. What are we supposed to do? Take on the whole world? Forget it.",
+"offset": Vector2( 7400, 300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_47",
+"text": "..."
+}
+},
+"size": Vector2( 392.521, 414 ),
+"speaker": "Engineer"
+},
+"1_47": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 8100, 40 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_48",
+"text": "Nope."
+}
+},
+"size": Vector2( 392.524, 414 ),
+"speaker": "Engineer"
+},
+"1_48": {
+"dialogue": "Well then, if you have any other questions feel free to stop on by,",
+"offset": Vector2( 8640, 140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_15",
+"text": "Leave"
+}
+},
+"size": Vector2( 392.517, 414.003 ),
+"speaker": "Engineer"
+},
+"1_49": {
+"dialogue": "Thanks. I appreatiate it.",
+"offset": Vector2( 7526.39, -230.053 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_47",
+"text": "..."
+}
+},
+"size": Vector2( 392.52, 414.005 ),
+"speaker": "Engineer"
+},
+"1_5": {
+"dialogue": "Throughout the wasteland, there are powerful factions. Perhaps you can somehow find a way to aquire one from them.",
+"offset": Vector2( -2400, -3680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_6",
+"text": "..."
+}
+},
+"size": Vector2( 512.5, 598 ),
+"speaker": "Engineer"
+},
+"1_50": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 1560, -2340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_71",
+"text": "What makes the Scorched so dangerous?"
+},
+1: {
+"condition": {
+},
+"link": "1_72",
+"text": "Where can I find a hazmat suit?"
+},
+2: {
+"condition": {
+},
+"link": "1_51",
+"text": "Nope."
+}
+},
+"size": Vector2( 532.512, 528 ),
+"speaker": "Engineer"
+},
+"1_51": {
+"dialogue": "Well then, if you have any other questions feel free to stop on by,",
+"offset": Vector2( 2060, -1240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_16",
+"text": "Leave"
+}
+},
+"size": Vector2( 468.514, 494 ),
+"speaker": "Engineer"
+},
+"1_52": {
+"dialogue": "We didn't...",
+"offset": Vector2( 1540, 140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_53",
+"text": "..."
+}
+},
+"size": Vector2( 392.521, 414.003 ),
+"speaker": "Engineer"
+},
+"1_53": {
+"dialogue": "A few years ago, that shelter contained some of the brightest minds in the world.",
+"offset": Vector2( 1980, 340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_54",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 414 ),
+"speaker": "Engineer"
+},
+"1_54": {
+"dialogue": "One day, communications with them were lost. It was like they simply vanished from the face of the Earth.",
+"offset": Vector2( 2380, 480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_55",
+"text": "..."
+}
+},
+"size": Vector2( 392.517, 414 ),
+"speaker": "Engineer"
+},
+"1_55": {
+"dialogue": "We sent a scout out there to investigate, only to find the place abandoned.",
+"offset": Vector2( 2780, 600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_56",
+"text": "..."
+}
+},
+"size": Vector2( 392.522, 414 ),
+"speaker": "Engineer"
+},
+"1_56": {
+"dialogue": "The scout returned back and reported seeing evidence of a struggle.",
+"offset": Vector2( 3140, 720 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_57",
+"text": "..."
+}
+},
+"size": Vector2( 392.519, 414 ),
+"speaker": "Engineer"
+},
+"1_57": {
+"dialogue": "We determined that they must have been found out and captured.",
+"offset": Vector2( 3520, 880 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_58",
+"text": "..."
+}
+},
+"size": Vector2( 392.516, 414.005 ),
+"speaker": "Engineer"
+},
+"1_58": {
+"dialogue": "Perhaps they are still out there, forcefully working for someone. After all, scientists are hard to come by in the wasteland.",
+"offset": Vector2( 3940, 1040 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_59",
+"text": "..."
+}
+},
+"size": Vector2( 392.523, 414.004 ),
+"speaker": "Engineer"
+},
+"1_59": {
+"dialogue": "We would go looking for them, but it is simply too dangerous out there. It was risky enough sending a scout over there.",
+"offset": Vector2( 4340, 1180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_17",
+"text": "Sorry for your loss."
+},
+1: {
+"condition": {
+},
+"link": "3_18",
+"text": "Huh. You all are a bunch of cowards."
+}
+},
+"size": Vector2( 392.518, 467.008 ),
+"speaker": "Engineer"
+},
+"1_6": {
+"dialogue": "I should warn you though. We are in hiding for a reason. These groups can be very dangerous.",
+"offset": Vector2( -1740, -3700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "..."
+}
+},
+"size": Vector2( 512.499, 552 ),
+"speaker": "Engineer"
+},
+"1_60": {
+"dialogue": "Thanks. I appreatiate it.",
+"offset": Vector2( 5220, 1000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_61",
+"text": "..."
+}
+},
+"size": Vector2( 392.521, 414.001 ),
+"speaker": "Engineer"
+},
+"1_61": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 5740, 1260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_64",
+"text": "Where can I find a hazmat suit?"
+},
+1: {
+"condition": {
+},
+"link": "1_63",
+"text": "Nope."
+}
+},
+"size": Vector2( 392.525, 467 ),
+"speaker": "Engineer"
+},
+"1_62": {
+"dialogue": "You don't understand. We are scientists and engineers. What are we supposed to do? Take on the whole world? Forget it.",
+"offset": Vector2( 5140, 1600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_61",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 414 ),
+"speaker": "Engineer"
+},
+"1_63": {
+"dialogue": "Well then, if you have any other questions feel free to stop on by.",
+"offset": Vector2( 6200, 1600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_19",
+"text": "Leave"
+}
+},
+"size": Vector2( 392.519, 414 ),
+"speaker": "Engineer"
+},
+"1_64": {
+"dialogue": "Honestly... I'm not sure. They are quite rare to come by. ",
+"offset": Vector2( 6220, 1160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_65",
+"text": "..."
+}
+},
+"size": Vector2( 392.523, 414.004 ),
+"speaker": "Engineer"
+},
+"1_65": {
+"dialogue": "Throughout the wasteland, there are powerful factions. Perhaps you can somehow find a way to aquire one from them.",
+"offset": Vector2( 6642.57, 1186.81 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_66",
+"text": "..."
+}
+},
+"size": Vector2( 392.52, 414.003 ),
+"speaker": "Engineer"
+},
+"1_66": {
+"dialogue": "I should warn you though. We are in hiding for a reason. These groups can be very dangerous.",
+"offset": Vector2( 7000.22, 1188.51 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_67",
+"text": "..."
+}
+},
+"size": Vector2( 392.516, 414.004 ),
+"speaker": "Engineer"
+},
+"1_67": {
+"dialogue": "If I were you, I would establish a good rapport with those groups. That would be a nice starting point.",
+"offset": Vector2( 7337.52, 1242.75 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_20",
+"text": "Thanks for the advice."
+},
+1: {
+"condition": {
+},
+"link": "3_21",
+"text": "Thanks for nothing"
+}
+},
+"size": Vector2( 392.522, 467.004 ),
+"speaker": "Engineer"
+},
+"1_68": {
+"dialogue": "I told you all I know. Sorry if it wasn't helpful enough. ",
+"offset": Vector2( 8140, 1500 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_69",
+"text": "..."
+}
+},
+"size": Vector2( 392.522, 414 ),
+"speaker": "Engineer"
+},
+"1_69": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 8760, 1220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_70",
+"text": "Nope."
+}
+},
+"size": Vector2( 392.522, 414.006 ),
+"speaker": "Engineer"
+},
+"1_7": {
+"dialogue": "If I were you, I would establish a good rapport with those groups. That would be a nice starting point.",
+"offset": Vector2( -1160, -3620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": "Thanks for the advice."
+},
+1: {
+"condition": {
+},
+"link": "3_6",
+"text": "Thanks for nothing."
+}
+},
+"size": Vector2( 536.5, 603 ),
+"speaker": "Engineer"
+},
+"1_70": {
+"dialogue": "Well then, if you have any other questions feel free to stop on by.",
+"offset": Vector2( 9260, 1260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_22",
+"text": "Leave"
+}
+},
+"size": Vector2( 392.518, 414.003 ),
+"speaker": "Engineer"
+},
+"1_71": {
+"dialogue": "Maybe Deacon already mentioned it, but the area used to house a nuclear reactor facility.",
+"offset": Vector2( 2700, -2660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_87",
+"text": "..."
+}
+},
+"size": Vector2( 680.523, 543 ),
+"speaker": "Engineer"
+},
+"1_72": {
+"dialogue": "Honestly... I'm not sure. They are quite rare to come by. ",
+"offset": Vector2( 2740, -1740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_73",
+"text": "..."
+}
+},
+"size": Vector2( 502.526, 478.999 ),
+"speaker": "Engineer"
+},
+"1_73": {
+"dialogue": "Throughout the wasteland, there are powerful factions. Perhaps you can somehow find a way to aquire one from them.",
+"offset": Vector2( 3540, -1680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_74",
+"text": "..."
+}
+},
+"size": Vector2( 534.512, 550.999 ),
+"speaker": "Engineer"
+},
+"1_74": {
+"dialogue": "I should warn you though. We are in hiding for a reason. These groups can be very dangerous.",
+"offset": Vector2( 4240, -1680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_75",
+"text": "..."
+}
+},
+"size": Vector2( 588.515, 519 ),
+"speaker": "Engineer"
+},
+"1_75": {
+"dialogue": "If I were you, I would establish a good rapport with those groups. That would be a nice starting point.",
+"offset": Vector2( 4960, -1660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_23",
+"text": "Thanks for the advice."
+},
+1: {
+"condition": {
+},
+"link": "3_24",
+"text": "Thanks for nothing."
+}
+},
+"size": Vector2( 658.525, 545 ),
+"speaker": "Engineer"
+},
+"1_76": {
+"dialogue": "I told you all I know. Sorry if it wasn't helpful enough. ",
+"offset": Vector2( 6360, -1200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_77",
+"text": "..."
+}
+},
+"size": Vector2( 524.523, 525 ),
+"speaker": "Engineer"
+},
+"1_77": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 7000, -1860 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_79",
+"text": "What makes the Scorched so dangerous?"
+},
+1: {
+"condition": {
+},
+"link": "1_78",
+"text": "Nope."
+}
+},
+"size": Vector2( 672.509, 547 ),
+"speaker": "Engineer"
+},
+"1_78": {
+"dialogue": "Well then, if you have any other questions feel free to stop on by,",
+"offset": Vector2( 7880, -1300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_25",
+"text": "Leave"
+}
+},
+"size": Vector2( 756.513, 587 ),
+"speaker": "Engineer"
+},
+"1_79": {
+"dialogue": "Maybe Deacon already mentioned it, but the area used to house a nuclear reactor facility.",
+"offset": Vector2( 7960, -2000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_80",
+"text": "..."
+}
+},
+"size": Vector2( 578.517, 485 ),
+"speaker": "Engineer"
+},
+"1_8": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 420, -4120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_101",
+"text": "What makes the Scorched so dangerous?"
+},
+1: {
+"condition": {
+},
+"link": "1_102",
+"text": "Why did the Remnants abandon the first shelter?"
+},
+2: {
+"condition": {
+},
+"link": "1_9",
+"text": "Nope."
+}
+},
+"size": Vector2( 840.5, 520 ),
+"speaker": "Engineer"
+},
+"1_80": {
+"dialogue": "The meteor impact caused a sudden meltdown of one of the reactors.",
+"offset": Vector2( 8680, -2000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_81",
+"text": "..."
+}
+},
+"size": Vector2( 482.514, 495 ),
+"speaker": "Engineer"
+},
+"1_81": {
+"dialogue": "As a result, radiation spread throughout the entire area, making it uninhabitable. ",
+"offset": Vector2( 9260, -2000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_82",
+"text": "..."
+}
+},
+"size": Vector2( 538.515, 529 ),
+"speaker": "Engineer"
+},
+"1_82": {
+"dialogue": "You will need a special hazmat suit to even go near the Scorched or radiation sickness will spread quickly.",
+"offset": Vector2( 9900, -2000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_83",
+"text": "..."
+}
+},
+"size": Vector2( 516.514, 531 ),
+"speaker": "Engineer"
+},
+"1_83": {
+"dialogue": "The symptoms are not pretty, and you will be dead within minutes.",
+"offset": Vector2( 10560, -2000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_26",
+"text": "Thanks for the heads up."
+},
+1: {
+"condition": {
+},
+"link": "3_27",
+"text": "Yeah, ok. Sounds made up. You are hiding something."
+}
+},
+"size": Vector2( 508.519, 519 ),
+"speaker": "Engineer"
+},
+"1_84": {
+"dialogue": "I swear i'm not. Can't say I didn't warn you.",
+"offset": Vector2( 11760, -1520 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_85",
+"text": "..."
+}
+},
+"size": Vector2( 590.496, 527 ),
+"speaker": "Engineer"
+},
+"1_85": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 12380, -2400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_86",
+"text": "Nope."
+}
+},
+"size": Vector2( 608.501, 571 ),
+"speaker": "Engineer"
+},
+"1_86": {
+"dialogue": "Well then, if you have any other questions feel free to stop on by,",
+"offset": Vector2( 13280, -1900 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_28",
+"text": "Leave"
+}
+},
+"size": Vector2( 586.508, 517 ),
+"speaker": "Engineer"
+},
+"1_87": {
+"dialogue": "The meteor impact caused a sudden meltdown of one of the reactors.",
+"offset": Vector2( 3680, -2760 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_88",
+"text": "..."
+}
+},
+"size": Vector2( 580.512, 575 ),
+"speaker": "Engineer"
+},
+"1_88": {
+"dialogue": "As a result, radiation spread throughout the entire area, making it uninhabitable. ",
+"offset": Vector2( 4600, -2940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_89",
+"text": "..."
+}
+},
+"size": Vector2( 644.518, 661 ),
+"speaker": "Engineer"
+},
+"1_89": {
+"dialogue": "You will need a special hazmat suit to even go near the Scorched or radiation sickness will spread quickly.",
+"offset": Vector2( 5540, -3040 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_90",
+"text": "..."
+}
+},
+"size": Vector2( 560.522, 549 ),
+"speaker": "Engineer"
+},
+"1_9": {
+"dialogue": "Well then, if you have any other questions feel free to stop on by,",
+"offset": Vector2( 1160, -3460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_3",
+"text": "Leave"
+}
+},
+"size": Vector2( 554.5, 514 ),
+"speaker": "Engineer"
+},
+"1_90": {
+"dialogue": "The symptoms are not pretty, and you will be dead within minutes.",
+"offset": Vector2( 6460, -3280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_29",
+"text": "Thanks for the heads up."
+},
+1: {
+"condition": {
+},
+"link": "3_30",
+"text": "Yeah, ok. Sounds made up. You are hiding something."
+}
+},
+"size": Vector2( 594.523, 560.999 ),
+"speaker": "Engineer"
+},
+"1_91": {
+"dialogue": "I swear i'm not. Can't say I didn't warn you.",
+"offset": Vector2( 7700.06, -2720.87 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_92",
+"text": "..."
+}
+},
+"size": Vector2( 516.519, 455 ),
+"speaker": "Engineer"
+},
+"1_92": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 8460, -3220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_94",
+"text": "Where can I find a hazmat suit?"
+},
+1: {
+"condition": {
+},
+"link": "1_93",
+"text": "Nope."
+}
+},
+"size": Vector2( 558.527, 503 ),
+"speaker": "Engineer"
+},
+"1_93": {
+"dialogue": "Well then, if you have any other questions feel free to stop on by,",
+"offset": Vector2( 9140, -2740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_31",
+"text": "Leave"
+}
+},
+"size": Vector2( 554.514, 497 ),
+"speaker": "Engineer"
+},
+"1_94": {
+"dialogue": "Honestly... I'm not sure. They are quite rare to come by. ",
+"offset": Vector2( 9180, -3520 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_95",
+"text": "..."
+}
+},
+"size": Vector2( 564.51, 537 ),
+"speaker": "Engineer"
+},
+"1_95": {
+"dialogue": "We are aware of other groups out in the wasteland, much more powerful than ourselves. Perhaps you can somehow find a way to aquire one from them.",
+"offset": Vector2( 9880, -3560 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_96",
+"text": "..."
+}
+},
+"size": Vector2( 586.516, 575 ),
+"speaker": "Engineer"
+},
+"1_96": {
+"dialogue": "I should warn you though. We are in hiding for a reason. These groups can be very dangerous.",
+"offset": Vector2( 10660, -3580 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_97",
+"text": "..."
+}
+},
+"size": Vector2( 624.511, 595 ),
+"speaker": "Engineer"
+},
+"1_97": {
+"dialogue": "If I were you, I would establish a good rapport with those groups. That would be a nice starting point.",
+"offset": Vector2( 11460, -3600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_33",
+"text": "Thanks for the advice."
+},
+1: {
+"condition": {
+},
+"link": "3_32",
+"text": "Thanks for nothing."
+}
+},
+"size": Vector2( 636.503, 595 ),
+"speaker": "Engineer"
+},
+"1_98": {
+"dialogue": "I told you all I know. Sorry if it wasn't helpful enough. ",
+"offset": Vector2( 12770.3, -3059.71 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_99",
+"text": "..."
+}
+},
+"size": Vector2( 584.513, 512 ),
+"speaker": "Engineer"
+},
+"1_99": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 13440, -3780 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_100",
+"text": "Nope."
+}
+},
+"size": Vector2( 580.505, 495 ),
+"speaker": "Engineer"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( -5800, -1440 ),
+"signalValue": "leave"
+},
+"3_10": {
+"link": "1_35",
+"offset": Vector2( 3196.51, -197.879 ),
+"signalValue": "inc_respect:3"
+},
+"3_11": {
+"link": "1_36",
+"offset": Vector2( 3189.97, -37.6497 ),
+"signalValue": "dec_respect:3"
+},
+"3_12": {
+"link": "END",
+"offset": Vector2( 4420, 420 ),
+"signalValue": "leave"
+},
+"3_13": {
+"link": "1_46",
+"offset": Vector2( 7160, 160 ),
+"signalValue": "dec_respect:3"
+},
+"3_14": {
+"link": "1_49",
+"offset": Vector2( 7160, -60 ),
+"signalValue": "inc_respect:3"
+},
+"3_15": {
+"link": "END",
+"offset": Vector2( 9019.06, 286.203 ),
+"signalValue": "leave"
+},
+"3_16": {
+"link": "END",
+"offset": Vector2( 2620, -740 ),
+"signalValue": "leave"
+},
+"3_17": {
+"link": "1_60",
+"offset": Vector2( 4781.55, 1304.72 ),
+"signalValue": "inc_respect:3"
+},
+"3_18": {
+"link": "1_62",
+"offset": Vector2( 4780, 1540 ),
+"signalValue": "dec_respect:3"
+},
+"3_19": {
+"link": "END",
+"offset": Vector2( 6620, 1900 ),
+"signalValue": "leave"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 1260, 720 ),
+"signalValue": "leave"
+},
+"3_20": {
+"link": "1_69",
+"offset": Vector2( 7812.35, 1326.94 ),
+"signalValue": "inc_respect:3"
+},
+"3_21": {
+"link": "1_68",
+"offset": Vector2( 7753.02, 1543.9 ),
+"signalValue": "dec_respect:3"
+},
+"3_22": {
+"link": "END",
+"offset": Vector2( 9759.48, 1458.04 ),
+"signalValue": "leave"
+},
+"3_23": {
+"link": "1_77",
+"offset": Vector2( 5975.47, -1656.24 ),
+"signalValue": "inc_respect:3"
+},
+"3_24": {
+"link": "1_76",
+"offset": Vector2( 5880, -1080 ),
+"signalValue": "dec_respect:3"
+},
+"3_25": {
+"link": "END",
+"offset": Vector2( 8740, -600 ),
+"signalValue": "leave"
+},
+"3_26": {
+"link": "1_85",
+"offset": Vector2( 11280, -1980 ),
+"signalValue": "inc_respect:3"
+},
+"3_27": {
+"link": "1_84",
+"offset": Vector2( 11160, -1400 ),
+"signalValue": "dec_respect:3"
+},
+"3_28": {
+"link": "END",
+"offset": Vector2( 14059.5, -1346.25 ),
+"signalValue": "leave"
+},
+"3_29": {
+"link": "1_92",
+"offset": Vector2( 7460, -3180 ),
+"signalValue": "inc_respect:3"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2( 1740, -2880 ),
+"signalValue": "leave"
+},
+"3_30": {
+"link": "1_91",
+"offset": Vector2( 7271.3, -2689.1 ),
+"signalValue": "dec_respect:3"
+},
+"3_31": {
+"link": "END",
+"offset": Vector2( 9800, -2320 ),
+"signalValue": "leave"
+},
+"3_32": {
+"link": "1_98",
+"offset": Vector2( 12282.8, -3039.73 ),
+"signalValue": "dec_respect:3"
+},
+"3_33": {
+"link": "1_99",
+"offset": Vector2( 12290.8, -3441.73 ),
+"signalValue": "inc_respect:3"
+},
+"3_34": {
+"link": "END",
+"offset": Vector2( 14990.9, -3156.63 ),
+"signalValue": "leave"
+},
+"3_35": {
+"link": "1_110",
+"offset": Vector2( 7780, -4520 ),
+"signalValue": "inc_respect:3"
+},
+"3_36": {
+"link": "1_111",
+"offset": Vector2( 7760, -4060 ),
+"signalValue": "dec_respect:3"
+},
+"3_37": {
+"link": "END",
+"offset": Vector2( 10300, -3980 ),
+"signalValue": "leave"
+},
+"3_38": {
+"link": "END",
+"offset": Vector2( 15320, -4520 ),
+"signalValue": "leave"
+},
+"3_39": {
+"link": "1_121",
+"offset": Vector2( 12940, -4560 ),
+"signalValue": "dec_respect:3"
+},
+"3_4": {
+"link": "1_18",
+"offset": Vector2( 780, -2160 ),
+"signalValue": "inc_respect:3"
+},
+"3_40": {
+"link": "1_119",
+"offset": Vector2( 13100, -5080 ),
+"signalValue": "inc_respect:3"
+},
+"3_41": {
+"link": "1_126",
+"offset": Vector2( 5743.79, -5998.74 ),
+"signalValue": "dec_respect:3"
+},
+"3_42": {
+"link": "1_127",
+"offset": Vector2( 5900, -6500 ),
+"signalValue": "inc_respect:3"
+},
+"3_43": {
+"link": "END",
+"offset": Vector2( 8120, -5760 ),
+"signalValue": "leave"
+},
+"3_44": {
+"link": "1_138",
+"offset": Vector2( 13474.1, -7213.09 ),
+"signalValue": "inc_respect:3"
+},
+"3_45": {
+"link": "1_137",
+"offset": Vector2( 13360.1, -6817.09 ),
+"signalValue": "dec_respect:3"
+},
+"3_46": {
+"link": "END",
+"offset": Vector2( 16064.7, -6983.97 ),
+"signalValue": "leave"
+},
+"3_47": {
+"link": "1_10",
+"offset": Vector2( -8140, -2320 ),
+"signalValue": "trade"
+},
+"3_48": {
+"link": "END",
+"offset": Vector2( -7152.46, -1834.66 ),
+"signalValue": "leave"
+},
+"3_5": {
+"link": "1_22",
+"offset": Vector2( 800, -1900 ),
+"signalValue": "dec_respect:3"
+},
+"3_6": {
+"link": "1_23",
+"offset": Vector2( -560, -2980 ),
+"signalValue": "dec_respect:3"
+},
+"3_7": {
+"link": "1_8",
+"offset": Vector2( -560, -3980 ),
+"signalValue": "inc_respect:3"
+},
+"3_8": {
+"link": "1_3",
+"offset": Vector2( 0, -460 ),
+"signalValue": "inc_respect:3"
+},
+"3_9": {
+"link": "1_29",
+"offset": Vector2( -80, -20 ),
+"signalValue": "dec_respect:3"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

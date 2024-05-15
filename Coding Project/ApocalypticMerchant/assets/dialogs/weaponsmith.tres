@@ -1,0 +1,78 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( 140, -40 ),
+"start_id": "default"
+},
+"1_1": {
+"dialogue": "Hey, you there! Lookin' for some sidearms or firepower? I got this [insert weapon here] I just crafted. Just look at this bad boy. Selling it for [insert price here]. You interested?",
+"offset": Vector2( 360, -160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Yes, I'll buy!"
+},
+1: {
+"condition": {
+},
+"link": "1_3",
+"text": "No thanks."
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Weaponsmith"
+},
+"1_2": {
+"dialogue": "Smart choice. You'll be ready for anything that comes at you. Pleasure doing business.",
+"offset": Vector2( 740, -220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Same."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Weaponsmith"
+},
+"1_3": {
+"dialogue": "You'll regret not having one of these. It's dangerous out there.",
+"offset": Vector2( 740, 100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "I'll be fine, thanks very much."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Weaponsmith"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( 1120, 40 ),
+"signalValue": "leave"
+}
+}
+variables = {
+"money": {
+"type": 2,
+"value": 10.0
+}
+}
+comments = [  ]
+strays = [  ]
+characters = ""

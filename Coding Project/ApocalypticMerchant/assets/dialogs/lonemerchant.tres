@@ -1,0 +1,457 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"bad": "0_4",
+"default": "0_1",
+"good": "0_2",
+"neutral": "0_3",
+"no": "0_5",
+"yes": "0_6"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -1140, -420 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "1_10",
+"offset": Vector2( -1063.04, 11.4876 ),
+"start_id": "good"
+},
+"0_3": {
+"link": "1_11",
+"offset": Vector2( -1060, 280 ),
+"start_id": "neutral"
+},
+"0_4": {
+"link": "1_12",
+"offset": Vector2( -1060, 560 ),
+"start_id": "bad"
+},
+"0_5": {
+"link": "1_17",
+"offset": Vector2( -2460, 580 ),
+"start_id": "no"
+},
+"0_6": {
+"link": "3_15",
+"offset": Vector2( -2460, 500 ),
+"start_id": "yes"
+},
+"1_1": {
+"dialogue": "Why do I even bother... Ain't nobody buying anything out here... Hell, there might be no one left to sell to in this wasteland...",
+"offset": Vector2( -900, -460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_6",
+"text": "Hello? You open?"
+},
+1: {
+"condition": {
+},
+"link": "3_2",
+"text": "Ignore (leave)"
+}
+},
+"size": Vector2( 285.532, 333.131 ),
+"speaker": "Lone Merchant"
+},
+"1_10": {
+"dialogue": "Ah! My favorite customer! What can I do for you?",
+"offset": Vector2( -880, -100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_12",
+"text": "(Trade)"
+},
+1: {
+"condition": {
+},
+"link": "3_14",
+"text": "(Buy pallet)"
+},
+2: {
+"condition": {
+},
+"link": "3_13",
+"text": "(Leave)"
+}
+},
+"size": Vector2( 300, 309 ),
+"speaker": "Lone Merchant"
+},
+"1_11": {
+"dialogue": "Ah! You're back. How can I help you today?",
+"offset": Vector2( -880, 220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": "(Trade)"
+},
+1: {
+"condition": {
+},
+"link": "3_2",
+"text": "I'm alright thanks. (leave)"
+}
+},
+"size": Vector2( 300, 282.001 ),
+"speaker": "Lone Merchant"
+},
+"1_12": {
+"dialogue": "Another lonely day...",
+"offset": Vector2( -860, 520 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "Hello?"
+},
+1: {
+"condition": {
+},
+"link": "3_2",
+"text": "Ignore (leave)"
+}
+},
+"size": Vector2( 300, 282.004 ),
+"speaker": "Lone Merchant"
+},
+"1_13": {
+"dialogue": "Say... that's not a bad idea. I've got quite the inventory, but I can't move it all here at the store. Whatya say about buying wholesale? $100 per pallet?",
+"offset": Vector2( 620, 260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_9",
+"text": "Let's do it. (buy pallet)"
+},
+1: {
+"condition": {
+},
+"link": "3_4",
+"text": "Next time. (leave)"
+}
+},
+"size": Vector2( 356.909, 282.012 ),
+"speaker": "Lone Merchant"
+},
+"1_14": {
+"dialogue": "I remember them talking about setting something up over in the Deadwoods. \"Independence\" they called it. I'll mark your map, but I don't really know if there's anything out there...",
+"offset": Vector2( 820, -40 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_16",
+"text": "Thanks"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Lone Merchant"
+},
+"1_15": {
+"dialogue": "Anything else I can do for you?",
+"offset": Vector2( -2000, -60 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_14",
+"text": "Let me get a pallet."
+},
+1: {
+"condition": {
+},
+"link": "3_13",
+"text": "No thanks. (leave)"
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Lone Merchant"
+},
+"1_16": {
+"dialogue": "Alright! I've got one open waiting for you outside. Anything else?",
+"offset": Vector2( -1800, 320 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_12",
+"text": "Let's trade."
+},
+1: {
+"condition": {
+},
+"link": "3_13",
+"text": "No thanks (leave)"
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Lone Merchant"
+},
+"1_17": {
+"dialogue": "Hmm. Come back when you have the funds. ",
+"offset": Vector2( -1820, 640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_11",
+"text": "(leave)"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Lone Merchant"
+},
+"1_2": {
+"dialogue": "AH! Come in! Yes we are open! Take a look at what I've got and let me know what you're interested in!",
+"offset": Vector2( -340, -940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "(Trade)"
+},
+1: {
+"condition": {
+},
+"link": "1_5",
+"text": "Not a lot of customers?"
+},
+2: {
+"condition": {
+},
+"link": "3_2",
+"text": "Maybe next time. (Leave)"
+}
+},
+"size": Vector2( 299.999, 309 ),
+"speaker": "Lone Merchant"
+},
+"1_3": {
+"dialogue": "Well, thank you for the business! Please come again soon!",
+"offset": Vector2( 500, -440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_4",
+"text": "Leave."
+}
+},
+"size": Vector2( 300.001, 255 ),
+"speaker": "Lone Merchant"
+},
+"1_4": {
+"dialogue": "Oh! It's you! Looking for anything in particular?",
+"offset": Vector2( 40, 540 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "(Trade)"
+},
+1: {
+"condition": {
+},
+"link": "3_4",
+"text": "Not now, thanks. (leave)"
+}
+},
+"size": Vector2( 299.996, 282.005 ),
+"speaker": "Lone Merchant"
+},
+"1_5": {
+"dialogue": "These days, not so much. Back in the day I made myself a decent living travelling.",
+"offset": Vector2( 40, -600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_6",
+"text": "continue"
+}
+},
+"size": Vector2( 299.996, 255 ),
+"speaker": "Lone Merchant"
+},
+"1_6": {
+"dialogue": "But that was a long time ago, and my bones arent as tough as they once were, so I decided settle down and open my own store here.",
+"offset": Vector2( 40, -320 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "continue"
+}
+},
+"size": Vector2( 299.996, 255 ),
+"speaker": "Lone Merchant"
+},
+"1_7": {
+"dialogue": "People came and went and things were alright for awhile. But then fewer came and more went... well, you know.",
+"offset": Vector2( 40, -40 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_8",
+"text": "I see."
+},
+1: {
+"condition": {
+},
+"link": "1_14",
+"text": "Where'd they go?"
+}
+},
+"size": Vector2( 299.996, 282 ),
+"speaker": "Lone Merchant"
+},
+"1_8": {
+"dialogue": "Anyways... what can I do for you?",
+"offset": Vector2( 40, 240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "(Trade)"
+},
+1: {
+"condition": {
+},
+"link": "3_2",
+"text": "Nothing today, thanks. (leave)"
+}
+},
+"size": Vector2( 294.877, 282.001 ),
+"speaker": "Lone Merchant"
+},
+"1_9": {
+"dialogue": "Appreciate the business! Let me know if there's anything else I can do for you.",
+"offset": Vector2( -420, 240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "How about going into business, together?"
+},
+1: {
+"condition": {
+},
+"link": "3_4",
+"text": "Till next time! (leave)"
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Lone Merchant"
+},
+"3_1": {
+"link": "3_3",
+"offset": Vector2( 80, -860 ),
+"signalValue": "inc_respect:1"
+},
+"3_10": {
+"link": "1_16",
+"offset": Vector2( -2040, 500 ),
+"signalValue": "give_item:pallet"
+},
+"3_11": {
+"link": "END",
+"offset": Vector2( -1440, 840 ),
+"signalValue": "leave"
+},
+"3_12": {
+"link": "1_15",
+"offset": Vector2( -2220, 0 ),
+"signalValue": "trade"
+},
+"3_13": {
+"link": "END",
+"offset": Vector2( -1660, 160 ),
+"signalValue": "leave"
+},
+"3_14": {
+"link": "END",
+"offset": Vector2( -2300, 380 ),
+"signalValue": "?:player_afford:100->start_dialog:yes->start_dialog:no"
+},
+"3_15": {
+"link": "3_10",
+"offset": Vector2( -2260, 500 ),
+"signalValue": "subtract_money:100"
+},
+"3_16": {
+"link": "1_8",
+"offset": Vector2( 1180, 100 ),
+"signalValue": "mark:Camp"
+},
+"3_2": {
+"link": "3_4",
+"offset": Vector2( -360, -100 ),
+"signalValue": "dec_respect:2"
+},
+"3_3": {
+"link": "1_3",
+"offset": Vector2( 340, -860 ),
+"signalValue": "trade"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2( 540, -80 ),
+"signalValue": "leave"
+},
+"3_5": {
+"link": "1_4",
+"offset": Vector2( -380, 740 ),
+"signalValue": "load_sprite:good"
+},
+"3_6": {
+"link": "1_2",
+"offset": Vector2( -600, -720 ),
+"signalValue": "load_sprite:good"
+},
+"3_7": {
+"link": "1_9",
+"offset": Vector2( -380, 100 ),
+"signalValue": "trade"
+},
+"3_8": {
+"link": "1_13",
+"offset": Vector2( 420, 320 ),
+"signalValue": "inc_respect:3"
+},
+"3_9": {
+"link": "END",
+"offset": Vector2( 1320, 680 ),
+"signalValue": "?:player_afford:100->start_dialog:yes->start_dialog:no"
+}
+}
+variables = {
+"money": {
+"type": 2,
+"value": 10.0
+}
+}
+comments = [  ]
+strays = [  ]
+characters = ""

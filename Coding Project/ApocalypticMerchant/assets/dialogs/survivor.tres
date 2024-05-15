@@ -1,0 +1,394 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"bad": "0_3",
+"default": "0_1",
+"good": "0_2",
+"neutral": "0_4",
+"no": "0_6",
+"yes": "0_5"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -280, 80 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "1_5",
+"offset": Vector2( -140, -240 ),
+"start_id": "good"
+},
+"0_3": {
+"link": "1_10",
+"offset": Vector2( -160, 1060 ),
+"start_id": "bad"
+},
+"0_4": {
+"link": "1_9",
+"offset": Vector2( -240, 800 ),
+"start_id": "neutral"
+},
+"0_5": {
+"link": "3_3",
+"offset": Vector2( 1300, 380 ),
+"start_id": "yes"
+},
+"0_6": {
+"link": "3_8",
+"offset": Vector2( 1300, 580 ),
+"start_id": "no"
+},
+"1_1": {
+"dialogue": "Hey there, wait up!",
+"offset": Vector2( 40, -80 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_11",
+"text": "Hello?"
+},
+1: {
+"condition": {
+},
+"link": "3_2",
+"text": "Ignore."
+}
+},
+"size": Vector2( 368.219, 455.001 ),
+"speaker": "Survivor"
+},
+"1_10": {
+"dialogue": "You find the frail body of woman, whose face appears both young and old. She looks familiar.",
+"offset": Vector2( 100, 1080 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Leave"
+}
+},
+"size": Vector2( 383.656, 404 ),
+"speaker": "Body"
+},
+"1_11": {
+"dialogue": "I'm being serious! I'm no use just waiting around. Going out there with you, I can actually do something for them.  Maybe you can show me Independence, and I can tell them its real!",
+"offset": Vector2( 840, -280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_6",
+"text": "Let's go."
+},
+1: {
+"condition": {
+},
+"link": "1_12",
+"text": "You can't come with."
+}
+},
+"size": Vector2( 383.657, 455 ),
+"speaker": "Melanie"
+},
+"1_12": {
+"dialogue": "I understand. I'll be here, I guess.",
+"offset": Vector2( 1300, -180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": "Leave."
+}
+},
+"size": Vector2( 383.657, 404 ),
+"speaker": "Melanie"
+},
+"1_13": {
+"dialogue": "Awesome!
+
+[Combat increased +10]",
+"offset": Vector2( 1760, -320 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_10",
+"text": "leave"
+}
+},
+"size": Vector2( 383.658, 404 ),
+"speaker": "Melanie"
+},
+"1_14": {
+"dialogue": "You haven't heard? It's a town and its supposed to be huge, and everyone there is free! They'll say it isn't real, that everyone who left died on the road for nothing...",
+"offset": Vector2( 1680, 820 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_15",
+"text": "continue"
+}
+},
+"size": Vector2( 383.657, 404.001 ),
+"speaker": "Survivor"
+},
+"1_15": {
+"dialogue": "But I know its real! And... I missed it. My family. Do you have map? It's right here. (she marks your map)",
+"offset": Vector2( 2020, 820 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_16",
+"text": "I can take you there."
+}
+},
+"size": Vector2( 383.657, 404.001 ),
+"speaker": "Survivor"
+},
+"1_16": {
+"dialogue": "I can't leave my family. They lost hope, started listening to what the LP's were saying... I'm stuck.",
+"offset": Vector2( 2360, 820 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_13",
+"text": "What can I do?"
+}
+},
+"size": Vector2( 383.655, 404.001 ),
+"speaker": "Survivor"
+},
+"1_2": {
+"dialogue": "Please, I'm not looking for your Mats or anything, just food or water.",
+"offset": Vector2( 100, 400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_4",
+"text": "Take a look. (Trade)"
+},
+1: {
+"condition": {
+},
+"link": "1_8",
+"text": "I don't, sorry."
+}
+},
+"size": Vector2( 368.219, 455.001 ),
+"speaker": "Survivor"
+},
+"1_3": {
+"dialogue": "I understand. When you do, please find me. I've got people here... and there's not a lot left for us.",
+"offset": Vector2( 560, 880 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "Leave."
+}
+},
+"size": Vector2( 368.219, 404.001 ),
+"speaker": "Survivor"
+},
+"1_4": {
+"dialogue": "Thank you! I wish I didn't have to beg, but I have people here I need to protect... We missed the last ride to Independence... ",
+"offset": Vector2( 1700, 360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_6",
+"text": "Do you need anything else?"
+},
+1: {
+"condition": {
+},
+"link": "1_14",
+"text": "Independence?"
+},
+2: {
+"condition": {
+},
+"link": "3_12",
+"text": "No problem (leave)"
+}
+},
+"size": Vector2( 368.22, 506.001 ),
+"speaker": "Survivor"
+},
+"1_5": {
+"dialogue": "You're back!",
+"offset": Vector2( 80, -340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "continue"
+}
+},
+"size": Vector2( 368.219, 404 ),
+"speaker": "Melanie"
+},
+"1_6": {
+"dialogue": "No, its okay. Aside from the shortage of food, I can handle myself. I'll still probably stuck here should you find yourself passing through. My name's Melanie by the way.",
+"offset": Vector2( 2220, 300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Nice to meet you. (goodbye)"
+}
+},
+"size": Vector2( 368.219, 404.001 ),
+"speaker": "Melanie"
+},
+"1_7": {
+"dialogue": "I've been thinking about how I can help my family and I've decided... I'm coming with you!",
+"offset": Vector2( 480, -160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_6",
+"text": "Alright, let's go."
+},
+1: {
+"condition": {
+},
+"link": "1_11",
+"text": "No way."
+},
+2: {
+"condition": {
+},
+"link": "1_11",
+"text": "Are you sure?"
+}
+},
+"size": Vector2( 368.219, 506.001 ),
+"speaker": "Melanie"
+},
+"1_8": {
+"dialogue": "Please, if you find something... come back. I'm not one of them I promise.",
+"offset": Vector2( 480, 300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "Leave."
+}
+},
+"size": Vector2( 368.219, 404.001 ),
+"speaker": "Survivor"
+},
+"1_9": {
+"dialogue": "You again! The regular supplies never made it into the city. I'm starting to think their doing it on purpose... do you have anything to eat today?",
+"offset": Vector2( 80, 760 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_4",
+"text": "Take a look. (Trade)"
+},
+1: {
+"condition": {
+},
+"link": "1_3",
+"text": "I don't sorry."
+}
+},
+"size": Vector2( 368.219, 455.001 ),
+"speaker": "Survivor"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( 1140, 480 ),
+"signalValue": "?:char_has_type:food->start_dialog:yes->start_dialog:no"
+},
+"3_10": {
+"link": "END",
+"offset": Vector2( 2200, -100 ),
+"signalValue": "leave"
+},
+"3_11": {
+"link": "1_2",
+"offset": Vector2( -220, 400 ),
+"signalValue": "load_sprite:neutral"
+},
+"3_12": {
+"link": "END",
+"offset": Vector2( 2020, 700 ),
+"signalValue": "leave"
+},
+"3_13": {
+"link": "1_6",
+"offset": Vector2( 2603.65, 716.956 ),
+"signalValue": "mark:Camp"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 940, 220 ),
+"signalValue": "continue"
+},
+"3_3": {
+"link": "1_4",
+"offset": Vector2( 1500, 480 ),
+"signalValue": "inc_respect:3"
+},
+"3_4": {
+"link": "3_1",
+"offset": Vector2( 860, 600 ),
+"signalValue": "trade"
+},
+"3_5": {
+"link": "3_2",
+"offset": Vector2( 820, 740 ),
+"signalValue": "dec_respect:1"
+},
+"3_6": {
+"link": "3_9",
+"offset": Vector2( 1280, -360 ),
+"signalValue": "inc_combat:10"
+},
+"3_7": {
+"link": "3_2",
+"offset": Vector2( 1716.36, 122.216 ),
+"signalValue": "set_respect:0"
+},
+"3_8": {
+"link": "1_3",
+"offset": Vector2( 1100, 800 ),
+"signalValue": "load_sprite:neutral"
+},
+"3_9": {
+"link": "1_13",
+"offset": Vector2( 1497.18, -339.424 ),
+"signalValue": "pop"
+}
+}
+variables = {
+"money": {
+"type": 2,
+"value": 10.0
+}
+}
+comments = [  ]
+strays = [  ]
+characters = ""

@@ -1,0 +1,117 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1"
+}
+nodes = {
+"0_1": {
+"link": "3_1",
+"offset": Vector2( 0, -40 ),
+"start_id": "default"
+},
+"1_1": {
+"dialogue": "Hey, you doing alright?",
+"offset": Vector2( 460, -140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Yeah, why?"
+},
+1: {
+"condition": {
+},
+"link": "1_3",
+"text": "Not exactly in the best condition."
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Medic"
+},
+"1_2": {
+"dialogue": "I'm a medic. I go around looking for people who may need medical attention. Wanted to make sure you were alright.",
+"offset": Vector2( 800, -260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "Appreciate it."
+}
+},
+"size": Vector2( 300.001, 255 ),
+"speaker": "Medic"
+},
+"1_3": {
+"dialogue": "Would you like to buy a medkit from me for [insert amount here]? Looks like it could help you out.",
+"offset": Vector2( 1120, -60 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "No thank you."
+},
+1: {
+"condition": {
+},
+"link": "1_5",
+"text": "Yes, please!"
+}
+},
+"size": Vector2( 300.001, 282 ),
+"speaker": "Medic"
+},
+"1_4": {
+"dialogue": "Alright. Stay safe out there.",
+"offset": Vector2( 1480, 180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Will do."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Medic"
+},
+"1_5": {
+"dialogue": "Smart choice. Always good to have one of these handy. Stay safe out there.",
+"offset": Vector2( 1480, -120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Will do."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Medic"
+},
+"3_1": {
+"link": "1_1",
+"offset": Vector2( 240, -40 ),
+"signalValue": "checkhealth"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 1880, 120 ),
+"signalValue": "leave"
+}
+}
+variables = {
+"money": {
+"type": 2,
+"value": 10.0
+}
+}
+comments = [  ]
+strays = [  ]
+characters = ""

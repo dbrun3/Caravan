@@ -1,0 +1,145 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1",
+"neutral": "0_2"
+}
+nodes = {
+"0_1": {
+"link": "3_1",
+"offset": Vector2( 580, -220 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "3_10",
+"offset": Vector2( 600, 20 ),
+"start_id": "neutral"
+},
+"1_1": {
+"dialogue": "Welcome to Fort Grand, home of the Salvaged States of America! On the right, there's the Armory. Bubbles will take that ammo off your hands there...",
+"offset": Vector2( 1040, -300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "continue"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Soldier"
+},
+"1_2": {
+"dialogue": "Just say the word...",
+"offset": Vector2( 1000, 80 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "The Oval Office"
+},
+1: {
+"condition": {
+},
+"link": "3_6",
+"text": "The Armory"
+},
+2: {
+"condition": {
+},
+"link": "3_7",
+"text": "Take me back"
+}
+},
+"size": Vector2( 300, 309 ),
+"speaker": "Finger"
+},
+"1_3": {
+"dialogue": "On the left, is the Oval Office. It's not an oval so not sure why they call it that, but that's where you'll meet the Colonel. He's in charge...",
+"offset": Vector2( 1380, -300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "continue"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Soldier"
+},
+"1_4": {
+"dialogue": "And I'm Finger by the way. You could guess why. I'll be the one to take you where you need while you're here...",
+"offset": Vector2( 1960, -280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_3",
+"text": "continue"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Finger"
+},
+"3_1": {
+"link": "1_1",
+"offset": Vector2( 820, -220 ),
+"signalValue": "load_sprite:neutral"
+},
+"3_10": {
+"link": "1_2",
+"offset": Vector2( 720, 160 ),
+"signalValue": "load_sprite:neutral"
+},
+"3_2": {
+"link": "1_4",
+"offset": Vector2( 1720, -180 ),
+"signalValue": "load_sprite:default"
+},
+"3_3": {
+"link": "1_2",
+"offset": Vector2( 1560, -20 ),
+"signalValue": "load_sprite:neutral"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2( 1620, 260 ),
+"signalValue": "fade:leave"
+},
+"3_5": {
+"link": "3_9",
+"offset": Vector2( 1400, 200 ),
+"signalValue": "enter:3"
+},
+"3_6": {
+"link": "3_8",
+"offset": Vector2( 1400, 140 ),
+"signalValue": "enter:4"
+},
+"3_7": {
+"link": "3_4",
+"offset": Vector2( 1400, 260 ),
+"signalValue": "set_location_dialog:ssa"
+},
+"3_8": {
+"link": "END",
+"offset": Vector2( 1620, 140 ),
+"signalValue": "talk:0"
+},
+"3_9": {
+"link": "END",
+"offset": Vector2( 1620, 200 ),
+"signalValue": "talk:0"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

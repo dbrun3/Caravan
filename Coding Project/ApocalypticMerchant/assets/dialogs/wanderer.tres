@@ -1,0 +1,117 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1"
+}
+nodes = {
+"0_1": {
+"link": "3_4",
+"offset": Vector2( -660, -180 ),
+"start_id": "default"
+},
+"1_1": {
+"dialogue": "Greetings traveler. I see that you are a merchant.",
+"offset": Vector2( -180, -180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Who are you?"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Wanderer"
+},
+"1_2": {
+"dialogue": "Oh, just a nomad who roams the wastelands. I do quite a bit of trading as well. I guess you could say I'm a bit of a merchant myself.",
+"offset": Vector2( 160, -180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "Is that so? Well why don't we trade?"
+},
+1: {
+"condition": {
+},
+"link": "1_4",
+"text": "Nice to meet you, but I gotta get going."
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Wanderer"
+},
+"1_3": {
+"dialogue": "Sure thing my friend, I reckon there'll be a lot I'll be interested in within that caravan of yours.",
+"offset": Vector2( 520, -280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "You know it. (Trade)"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Wanderer"
+},
+"1_4": {
+"dialogue": "Not even a few minutes to spare? Very well, good luck on your journey.",
+"offset": Vector2( 520, 80 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_3",
+"text": "Same to you."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Wanderer"
+},
+"1_5": {
+"dialogue": "It's a pleasure doing business with you friend. Good luck on your journey.",
+"offset": Vector2( 1100, -280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_3",
+"text": "Same to you."
+}
+},
+"size": Vector2( 300.001, 255 ),
+"speaker": "Wanderer"
+},
+"3_1": {
+"link": "1_5",
+"offset": Vector2( 860, -200 ),
+"signalValue": "trade"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 1740, 40 ),
+"signalValue": "continue"
+},
+"3_3": {
+"link": "3_2",
+"offset": Vector2( 1480, 40 ),
+"signalValue": "pop"
+},
+"3_4": {
+"link": "1_1",
+"offset": Vector2( -440, -180 ),
+"signalValue": "set_char_inventory:Wanderer"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

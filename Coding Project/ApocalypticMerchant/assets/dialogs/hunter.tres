@@ -1,0 +1,145 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -80, 40 ),
+"start_id": "default"
+},
+"1_1": {
+"dialogue": "Whoops, didn't see you there mate. What're you doin' out here?",
+"offset": Vector2( 140, -60 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Scavenging for parts. Anything good I can find really."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Hunter"
+},
+"1_2": {
+"dialogue": "Well that's good and all but it sure looks like you could use some food as well.",
+"offset": Vector2( 480, -60 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "I suppose so."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Hunter"
+},
+"1_3": {
+"dialogue": "Luckily for you, I hunt for a living. And I just so happened to get a big kill today. I got this [insert food here] I'd be willing to give you. ",
+"offset": Vector2( 1020, -260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "Yes, I'll take it! Thank you!"
+},
+1: {
+"condition": {
+},
+"link": "1_7",
+"text": "No, I'll be fine."
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Hunter"
+},
+"1_4": {
+"dialogue": "Luckily for you, I hunt for a living. And I just so happened to get a big kill today. I got this [insert food here] I'd be sell you for [insert amount here]. Interested?",
+"offset": Vector2( 1020, 120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "END",
+"text": "Yeah, I could use that."
+},
+1: {
+"condition": {
+},
+"link": "END",
+"text": "Nah I'm fine."
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Hunter"
+},
+"1_5": {
+"dialogue": "No problem, don't mention it. Just trying to help a fellow man out.",
+"offset": Vector2( 1400, -320 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Appreciate it."
+}
+},
+"size": Vector2( 299.999, 255 ),
+"speaker": "Hunter"
+},
+"1_6": {
+"dialogue": "Here you go. Pleasure doing business with you.",
+"offset": Vector2( 1400, -20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "END",
+"text": "Same to you."
+}
+},
+"size": Vector2( 299.999, 255 ),
+"speaker": "Hunter"
+},
+"1_7": {
+"dialogue": "You sure don't look fine. But hey, you do you man.",
+"offset": Vector2( 1400, 280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "See you."
+}
+},
+"size": Vector2( 299.999, 255 ),
+"speaker": "Hunter"
+},
+"3_1": {
+"link": "1_3",
+"offset": Vector2( 800, 20 ),
+"signalValue": "randomevent"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 1840, 40 ),
+"signalValue": "leave"
+}
+}
+variables = {
+"money": {
+"type": 2,
+"value": 10.0
+}
+}
+comments = [  ]
+strays = [ "1_6", "1_4" ]
+characters = ""

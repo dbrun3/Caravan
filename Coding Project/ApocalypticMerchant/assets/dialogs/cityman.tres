@@ -1,0 +1,289 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"bad": "0_4",
+"default": "0_1",
+"good": "0_2",
+"neutral": "0_3"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -1020, -300 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "1_11",
+"offset": Vector2( -1000, 160 ),
+"start_id": "good"
+},
+"0_3": {
+"link": "1_12",
+"offset": Vector2( -1000, 380 ),
+"start_id": "neutral"
+},
+"0_4": {
+"link": "1_13",
+"offset": Vector2( -1000, 660 ),
+"start_id": "bad"
+},
+"1_1": {
+"dialogue": "Hey, you there! Stop right where you're at stranger! What do you think you're doing here?",
+"offset": Vector2( -820, -420 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Easy there, relax. I don't mean any harm. I'm just passing through."
+},
+1: {
+"condition": {
+},
+"link": "3_2",
+"text": "Beat it pal, it ain't none of your business."
+}
+},
+"size": Vector2( 277.816, 283.929 ),
+"speaker": "Cityman"
+},
+"1_10": {
+"dialogue": "No problem man. Seems like no one needs one of these things nowadays. Hey, if you ever need it later, I'll be around. Hope you're able to find what you need here. I should warn you though, not all the locals here are friendly. On top of that, the creatures that are roaming about make it dangerous out here. Keep a keen eye and don't linger unnecessarily. Stay safe out there.",
+"offset": Vector2( 1120, -580 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": "Alright, thanks."
+}
+},
+"size": Vector2( 299.999, 255 ),
+"speaker": "Cityman"
+},
+"1_11": {
+"dialogue": "Good Test.",
+"offset": Vector2( -800, 100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": ""
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Good"
+},
+"1_12": {
+"dialogue": "Neutral Test.",
+"offset": Vector2( -800, 360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": ""
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Neutral"
+},
+"1_13": {
+"dialogue": "Bad Test.",
+"offset": Vector2( -800, 620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": ""
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Bad"
+},
+"1_2": {
+"dialogue": "Forgive me for my hostility. We usually don't get newcomers around these parts, so when someone new rolls around, we're always a bit on edge. As you might imagine, we don't take so well to strangers, especially after the recent events. Don't know who to trust except those you've known your whole life. I can tell you're cool though. What brings you about these parts?",
+"offset": Vector2( -300, -600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "Just scavenging for scrap and whatever I can find, if you don't mind."
+}
+},
+"size": Vector2( 300.001, 255 ),
+"speaker": "Cityman"
+},
+"1_3": {
+"dialogue": "Watch your mouth, son. I'll have you know we don't take well to strangers over here. Now state your business before I run you outta here.",
+"offset": Vector2( -300, -200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_9",
+"text": "Just scavenging for scrap and whatever I can find."
+},
+1: {
+"condition": {
+},
+"link": "3_3",
+"text": " My business here has nothing to do with you. That good enough for you? Now how about you tell me where I can find some good scrap around here."
+}
+},
+"size": Vector2( 295.983, 282 ),
+"speaker": "CityMan"
+},
+"1_4": {
+"dialogue": "You got some nerve asking for help with that attitude. You're on your own buddy. Don't come crying to me for help if you get yourself into trouble.",
+"offset": Vector2( 240, 120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_6",
+"text": "Never planned on it."
+}
+},
+"size": Vector2( 299.998, 255 ),
+"speaker": "Cityman"
+},
+"1_5": {
+"dialogue": " I get it man, resources are hard to come by these days. All of us are doing our best to survive out here. Normally, I'd run you out of town since competition is already pretty fierce, but for a guy like you, I'll make an exception. Do me a favor and let me know if you come across anything cool during your time here.",
+"offset": Vector2( 20, -740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "I doubt this place has much to offer."
+},
+1: {
+"condition": {
+},
+"link": "3_4",
+"text": "Will do!"
+}
+},
+"size": Vector2( 299.999, 282 ),
+"speaker": "Cityman"
+},
+"1_6": {
+"dialogue": "Much appreciated. Say, I got this [insert item here] here I been looking to sell. Would you be interested in buying it from me? I'll even give ya a bargain. [Insert price here]",
+"offset": Vector2( 580, -900 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "You got yourself a deal."
+},
+1: {
+"condition": {
+},
+"link": "1_10",
+"text": "Not today, sorry."
+}
+},
+"size": Vector2( 300.003, 282 ),
+"speaker": "Cityman"
+},
+"1_7": {
+"dialogue": "Hmm... fair enough. Although you never know what hidden gems you might come across under all the rubble. Well, I got business to attend to. Welcome to the [insert place name here]. And good luck, you're going to need it.",
+"offset": Vector2( 340, -520 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_6",
+"text": "Thanks."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Cityman"
+},
+"1_8": {
+"dialogue": "Ay, I knew you were a good man. Pleasure doing business with you. Welcome to [insert place name here]. I should warn you though, not all the locals here are friendly. On top of that, the creatures that are roaming about make it dangerous out here. Keep a keen eye and don't linger unnecessarily. Stay safe out there, hope to see you again sometime later.",
+"offset": Vector2( 1120, -960 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": "Same to you."
+}
+},
+"size": Vector2( 299.999, 255 ),
+"speaker": "Cityman"
+},
+"1_9": {
+"dialogue": "You're one of those people, huh? Well, do your business and then leave. Don't overstay your welcome, or you'll probably regret it. Don't say I didn't warn you. Good luck.",
+"offset": Vector2( 120, -220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_6",
+"text": "Okay, thanks."
+}
+},
+"size": Vector2( 299.999, 255 ),
+"speaker": "Cityman"
+},
+"3_1": {
+"link": "1_2",
+"offset": Vector2( -520, -480 ),
+"signalValue": "incRespect:2"
+},
+"3_2": {
+"link": "1_3",
+"offset": Vector2( -520, -160 ),
+"signalValue": "decRespect:2"
+},
+"3_3": {
+"link": "1_4",
+"offset": Vector2( 20, 100 ),
+"signalValue": "decRespect:1"
+},
+"3_4": {
+"link": "1_6",
+"offset": Vector2( 340, -740 ),
+"signalValue": "incRespect:1"
+},
+"3_5": {
+"link": "1_8",
+"offset": Vector2( 900, -840 ),
+"signalValue": "incRespect:1"
+},
+"3_6": {
+"link": "END",
+"offset": Vector2( 700, 0 ),
+"signalValue": "leave"
+},
+"3_7": {
+"link": "END",
+"offset": Vector2( 1540, -640 ),
+"signalValue": "leave"
+},
+"3_8": {
+"link": "END",
+"offset": Vector2( -380, 480 ),
+"signalValue": "leave"
+}
+}
+variables = {
+"money": {
+"type": 2,
+"value": 10.0
+}
+}
+comments = [  ]
+strays = [  ]
+characters = ""

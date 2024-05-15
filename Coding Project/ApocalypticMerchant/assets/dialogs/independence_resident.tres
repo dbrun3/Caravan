@@ -1,0 +1,1708 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"bad": "0_4",
+"default": "0_1",
+"good": "0_3",
+"neutral": "0_5"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -3840, -1080 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "1_19",
+"offset": Vector2( -3300, -240 ),
+"start_id": "neutral"
+},
+"0_3": {
+"link": "1_20",
+"offset": Vector2( -3580, 420 ),
+"start_id": "good"
+},
+"0_4": {
+"link": "1_21",
+"offset": Vector2( -3440, 1240 ),
+"start_id": "bad"
+},
+"0_5": {
+"link": "3_3",
+"offset": Vector2( -3907.47, -905.037 ),
+"start_id": "neutral"
+},
+"1_1": {
+"dialogue": "Why, hello there, stranger. Welcome to Independence!",
+"offset": Vector2( -3300, -1300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Hello."
+}
+},
+"size": Vector2( 376.5, 414 ),
+"speaker": "Independence Resident"
+},
+"1_10": {
+"dialogue": "The Yard serves as a dedicated commerce area for Independence. It is here where merchants visit Independence to sell goods and services to residents.",
+"offset": Vector2( 1360, -1840 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_11",
+"text": "Why the dedicated area?"
+}
+},
+"size": Vector2( 392.518, 414 ),
+"speaker": "Lukas"
+},
+"1_11": {
+"dialogue": "It was mostly established for safety reasons. We held a vote as some residents were paranoid of outsiders entering the settlement. This way, if any suspicious activity occurs, it is relatively isolated from the inner portions of the settlement.",
+"offset": Vector2( 1860, -1860 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "Seems smart. Good thinking."
+},
+1: {
+"condition": {
+},
+"link": "3_7",
+"text": "Yikes. So you are just a bunch of paranoid loners."
+}
+},
+"size": Vector2( 392.52, 467 ),
+"speaker": "Lukas"
+},
+"1_12": {
+"dialogue": "Thanks. We are a small community, after all. Better to be safe than sorry.",
+"offset": Vector2( 2540, -1960 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_14",
+"text": "..."
+}
+},
+"size": Vector2( 392.516, 414 ),
+"speaker": "Lukas"
+},
+"1_13": {
+"dialogue": "Listen, it is for our protection. We are a small community with little protection. We need to be careful.",
+"offset": Vector2( 2540, -1600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_14",
+"text": "..."
+}
+},
+"size": Vector2( 392.516, 414 ),
+"speaker": "Lukas"
+},
+"1_14": {
+"dialogue": "Anything else you want to know?",
+"offset": Vector2( 3080, -1820 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_15",
+"text": "Who are the people here?"
+},
+1: {
+"condition": {
+},
+"link": "1_16",
+"text": "Tell me more about your leader."
+},
+2: {
+"condition": {
+},
+"link": "3_40",
+"text": "That was all. See you around."
+}
+},
+"size": Vector2( 392.516, 520 ),
+"speaker": "Lukas"
+},
+"1_15": {
+"dialogue": "The people here? They originally came from all over the wasteland. What united them are a set of values that are hard to come by nowadays.",
+"offset": Vector2( 3520, -2620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_25",
+"text": "..."
+}
+},
+"size": Vector2( 392.517, 414 ),
+"speaker": "Lukas"
+},
+"1_16": {
+"dialogue": "Mayor Adams? He is one of the smartest people I know. I personally voted for him twice.",
+"offset": Vector2( 3540, -1840 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_35",
+"text": "..."
+}
+},
+"size": Vector2( 392.519, 414 ),
+"speaker": "Lukas"
+},
+"1_17": {
+"dialogue": "The people here? They originally came from all over the wasteland. What united them are a set of values that are hard to come by nowadays.",
+"offset": Vector2( 240, -460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_40",
+"text": "..."
+}
+},
+"size": Vector2( 392.519, 414 ),
+"speaker": "Lukas"
+},
+"1_18": {
+"dialogue": "Mayor Adams? He is one of the smartest people I know. I personally voted for him twice.",
+"offset": Vector2( -260, 680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_44",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 413.999 ),
+"speaker": "Lukas"
+},
+"1_19": {
+"dialogue": "Welcome back, stranger.",
+"offset": Vector2( -2900, -340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_24",
+"text": "I had a few more questions, if you don't mind."
+},
+1: {
+"condition": {
+},
+"link": "3_36",
+"text": "Trade"
+},
+2: {
+"condition": {
+},
+"link": "3_54",
+"text": "Sorry, I got to go."
+}
+},
+"size": Vector2( 392.516, 520 ),
+"speaker": "Lukas"
+},
+"1_2": {
+"dialogue": "My name is Lukas, nice to meet you.",
+"offset": Vector2( -2580, -1200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Nice to meet you, too."
+},
+1: {
+"condition": {
+},
+"link": "3_1",
+"text": "I don't care. Will probably forget your name anyway."
+}
+},
+"size": Vector2( 376.5, 467 ),
+"speaker": "Independence Resident"
+},
+"1_20": {
+"dialogue": "Hey there, friend. Welcome back.",
+"offset": Vector2( -3080, 340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_23",
+"text": "Sorry for bothering you again. A few more questions came up."
+},
+1: {
+"condition": {
+},
+"link": "3_36",
+"text": "Trade"
+},
+2: {
+"condition": {
+},
+"link": "3_52",
+"text": "Just stopping by. I got to go. See you around."
+}
+},
+"size": Vector2( 392.516, 520 ),
+"speaker": "Lukas"
+},
+"1_21": {
+"dialogue": "Well if it isn't...",
+"offset": Vector2( -2840, 1140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_22",
+"text": "I want you to answer a few questions."
+},
+1: {
+"condition": {
+},
+"link": "3_36",
+"text": "Trade"
+},
+2: {
+"condition": {
+},
+"link": "3_51",
+"text": "Leave"
+}
+},
+"size": Vector2( 392.516, 520.001 ),
+"speaker": "Lukas"
+},
+"1_22": {
+"dialogue": "Only a few. You better be on your best behavior this time.",
+"offset": Vector2( -1640, 1280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "What is this place?"
+},
+1: {
+"condition": {
+},
+"link": "1_17",
+"text": "Who are the people here?"
+},
+2: {
+"condition": {
+},
+"link": "1_18",
+"text": "Tell me more about your leader."
+}
+},
+"size": Vector2( 392.516, 520.002 ),
+"speaker": "Lukas"
+},
+"1_23": {
+"dialogue": "Anything for you my friend. What is on your mind?",
+"offset": Vector2( -1680, 420 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "What is this place?"
+},
+1: {
+"condition": {
+},
+"link": "1_17",
+"text": "Who are the people here?"
+},
+2: {
+"condition": {
+},
+"link": "1_18",
+"text": "Tell me more about your leader."
+}
+},
+"size": Vector2( 392.516, 519.999 ),
+"speaker": "Lukas"
+},
+"1_24": {
+"dialogue": "What do you want to know?",
+"offset": Vector2( -1680, -240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "What is this place?"
+},
+1: {
+"condition": {
+},
+"link": "1_17",
+"text": "Who are the people here?"
+},
+2: {
+"condition": {
+},
+"link": "1_18",
+"text": "Tell me more about your leader."
+}
+},
+"size": Vector2( 392.516, 520 ),
+"speaker": "Lukas"
+},
+"1_25": {
+"dialogue": "Here at Independence, the people believe in democracy and freedom of expression.",
+"offset": Vector2( 3960, -2620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_26",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 414 ),
+"speaker": "Lukas"
+},
+"1_26": {
+"dialogue": "You will find that most come from oppressive settlements. They simply had enough of bad leadership and came to the conclusion that the ordinary people should decide their own destiny.",
+"offset": Vector2( 4320, -2620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_27",
+"text": "..."
+}
+},
+"size": Vector2( 392.516, 414 ),
+"speaker": "Lukas"
+},
+"1_27": {
+"dialogue": "One thing led to another, and here we are now.",
+"offset": Vector2( 4680, -2620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_28",
+"text": "..."
+}
+},
+"size": Vector2( 392.516, 414 ),
+"speaker": "Lukas"
+},
+"1_28": {
+"dialogue": "In there anything else you would like to know?",
+"offset": Vector2( 5120, -2600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_29",
+"text": "Tell me more about your leader."
+},
+1: {
+"condition": {
+},
+"link": "3_41",
+"text": "That was all. See you around."
+}
+},
+"size": Vector2( 392.517, 467 ),
+"speaker": "Lukas"
+},
+"1_29": {
+"dialogue": "Mayor Adams? He is one of the smartest people I know. I personally voted for him twice.",
+"offset": Vector2( 5540, -2400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_30",
+"text": "..."
+}
+},
+"size": Vector2( 392.517, 414 ),
+"speaker": "Lukas"
+},
+"1_3": {
+"dialogue": "Someone has a temper. Well then, I will leave you be. I am free to chat later, provided you lighten yourself up a bit.",
+"offset": Vector2( -1920, -940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_38",
+"text": "Leave"
+}
+},
+"size": Vector2( 466.5, 484 ),
+"speaker": "Lukas"
+},
+"1_30": {
+"dialogue": "Never before has Independence had such an understanding yet dedicated leader.",
+"offset": Vector2( 5940, -2400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_31",
+"text": "..."
+}
+},
+"size": Vector2( 392.516, 414 ),
+"speaker": "Lukas"
+},
+"1_31": {
+"dialogue": "Mayor Adams is able to understand both sides of the issue at hand, and allow for compromise.",
+"offset": Vector2( 6360, -2400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_32",
+"text": "..."
+}
+},
+"size": Vector2( 392.515, 414 ),
+"speaker": "Lukas"
+},
+"1_32": {
+"dialogue": "After all, compromise is part of a functioning democracy. He truly wants the best for us.",
+"offset": Vector2( 6720, -2400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_33",
+"text": "..."
+}
+},
+"size": Vector2( 392.514, 414 ),
+"speaker": "Lukas"
+},
+"1_33": {
+"dialogue": "Which is why Independence has never had a two term mayor before. Everyone just loves his leadership. Should he run again, I will happily allow him to secure a third term.",
+"offset": Vector2( 7080, -2400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_34",
+"text": "..."
+}
+},
+"size": Vector2( 392.514, 414 ),
+"speaker": "Lukas"
+},
+"1_34": {
+"dialogue": "Anything else you would like to know?",
+"offset": Vector2( 7480, -2400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_42",
+"text": "That was it. See you around."
+}
+},
+"size": Vector2( 392.518, 414 ),
+"speaker": "Lukas"
+},
+"1_35": {
+"dialogue": "Never before has Independence had such an understanding yet dedicated leader.",
+"offset": Vector2( 3980, -1800 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_36",
+"text": "..."
+}
+},
+"size": Vector2( 392.514, 414 ),
+"speaker": "Lukas"
+},
+"1_36": {
+"dialogue": "Mayor Adams is able to understand both sides of the issue at hand, and allow for compromise.",
+"offset": Vector2( 4360, -1760 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_37",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 414 ),
+"speaker": "Lukas"
+},
+"1_37": {
+"dialogue": "After all, compromise is part of a functioning democracy. He truly wants the best for us.",
+"offset": Vector2( 4740, -1700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_38",
+"text": "..."
+}
+},
+"size": Vector2( 392.511, 414 ),
+"speaker": "Lukas"
+},
+"1_38": {
+"dialogue": "Which is why Independence has never had a two term mayor before. Everyone just loves his leadership. Should he run again, I will happily allow him to secure a third term.",
+"offset": Vector2( 5180, -1640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_39",
+"text": "..."
+}
+},
+"size": Vector2( 392.516, 414 ),
+"speaker": "Lukas"
+},
+"1_39": {
+"dialogue": "Anything else you would like to know?",
+"offset": Vector2( 5580, -1640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_49",
+"text": "Who are the people here?"
+},
+1: {
+"condition": {
+},
+"link": "3_44",
+"text": "That was all. See you around."
+}
+},
+"size": Vector2( 392.518, 467 ),
+"speaker": "Lukas"
+},
+"1_4": {
+"dialogue": "So, my friend, what brings you to this wonderful place?",
+"offset": Vector2( -1320, -1360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_6",
+"text": "I was wondering something."
+},
+1: {
+"condition": {
+},
+"link": "3_36",
+"text": "Trade"
+},
+2: {
+"condition": {
+},
+"link": "1_5",
+"text": "Just looking around. Talk to you later."
+}
+},
+"size": Vector2( 376.502, 520 ),
+"speaker": "Lukas"
+},
+"1_40": {
+"dialogue": "Here at Independence, the people believe in democracy and freedom of expression.",
+"offset": Vector2( 640, -460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_41",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 414 ),
+"speaker": "Lukas"
+},
+"1_41": {
+"dialogue": "You will find that most come from oppressive settlements. They simply had enough of bad leadership and came to the conclusion that the ordinary people should decide their own destiny.",
+"offset": Vector2( 1040, -460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_42",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 414 ),
+"speaker": "Lukas"
+},
+"1_42": {
+"dialogue": "One thing led to another, and here we are now.",
+"offset": Vector2( 1420, -460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_43",
+"text": "..."
+}
+},
+"size": Vector2( 392.517, 414 ),
+"speaker": "Lukas"
+},
+"1_43": {
+"dialogue": "In there anything else you would like to know?",
+"offset": Vector2( 1820, -460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_54",
+"text": "What is this place?"
+},
+1: {
+"condition": {
+},
+"link": "1_55",
+"text": "Tell me more about your leader."
+},
+2: {
+"condition": {
+},
+"link": "3_46",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 392.52, 519.999 ),
+"speaker": "Lukas"
+},
+"1_44": {
+"dialogue": "Never before has Independence had such an understanding yet dedicated leader.",
+"offset": Vector2( 100, 680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_45",
+"text": "..."
+}
+},
+"size": Vector2( 392.519, 413.999 ),
+"speaker": "Lukas"
+},
+"1_45": {
+"dialogue": "Mayor Adams is able to understand both sides of the issue at hand, and allow for compromise.",
+"offset": Vector2( 460, 680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_46",
+"text": "..."
+}
+},
+"size": Vector2( 392.516, 413.999 ),
+"speaker": "Lukas"
+},
+"1_46": {
+"dialogue": "After all, compromise is part of a functioning democracy. He truly wants the best for us.",
+"offset": Vector2( 820, 680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_47",
+"text": "..."
+}
+},
+"size": Vector2( 392.516, 413.999 ),
+"speaker": "Lukas"
+},
+"1_47": {
+"dialogue": "Which is why Independence has never had a two term mayor before. Everyone just loves his leadership. Should he run again, I will happily allow him to secure a third term.",
+"offset": Vector2( 1180, 680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_48",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 413.999 ),
+"speaker": "Lukas"
+},
+"1_48": {
+"dialogue": "In there anything else you would like to know?",
+"offset": Vector2( 1820, 380 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_76",
+"text": "What is this place?"
+},
+1: {
+"condition": {
+},
+"link": "1_84",
+"text": "Who are the people here?"
+},
+2: {
+"condition": {
+},
+"link": "3_47",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 392.52, 519.998 ),
+"speaker": "Lukas"
+},
+"1_49": {
+"dialogue": "The people here? They originally came from all over the wasteland. What united them are a set of values that are hard to come by nowadays.",
+"offset": Vector2( 5980, -1740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_50",
+"text": "..."
+}
+},
+"size": Vector2( 392.514, 414 ),
+"speaker": "Lukas"
+},
+"1_5": {
+"dialogue": "Alrighty then. Feel free to come on by if you need anything.",
+"offset": Vector2( -900, -880 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_39",
+"text": "Leave"
+}
+},
+"size": Vector2( 376.5, 414 ),
+"speaker": "Lukas"
+},
+"1_50": {
+"dialogue": "Here at Independence, the people believe in democracy and freedom of expression.",
+"offset": Vector2( 6320, -1740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_51",
+"text": "..."
+}
+},
+"size": Vector2( 392.52, 414 ),
+"speaker": "Lukas"
+},
+"1_51": {
+"dialogue": "You will find that most come from oppressive settlements. They simply had enough of bad leadership and came to the conclusion that the ordinary people should decide their own destiny.",
+"offset": Vector2( 6680, -1740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_52",
+"text": "..."
+}
+},
+"size": Vector2( 392.519, 414 ),
+"speaker": "Lukas"
+},
+"1_52": {
+"dialogue": "One thing led to another, and here we are now.",
+"offset": Vector2( 7040, -1740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_53",
+"text": "..."
+}
+},
+"size": Vector2( 392.515, 414 ),
+"speaker": "Lukas"
+},
+"1_53": {
+"dialogue": "In there anything else you would like to know?",
+"offset": Vector2( 7420, -1740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_43",
+"text": "That was it. See you around."
+}
+},
+"size": Vector2( 392.517, 414 ),
+"speaker": "Lukas"
+},
+"1_54": {
+"dialogue": "You are standing in perhaps the most democratic settlement in the wasteland, Independence.",
+"offset": Vector2( 2300, -1000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_56",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 414 ),
+"speaker": "Lukas"
+},
+"1_55": {
+"dialogue": "Mayor Adams? He is one of the smartest people I know. I personally voted for him twice.",
+"offset": Vector2( 2300, -480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_63",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 414 ),
+"speaker": "Lukas"
+},
+"1_56": {
+"dialogue": "We call this part of the settlement The Yard. ",
+"offset": Vector2( 2720, -1000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_19",
+"text": "Looks nice. Tell me more about it."
+},
+1: {
+"condition": {
+},
+"link": "3_20",
+"text": "Looks more like a junkyard to me."
+}
+},
+"size": Vector2( 392.516, 467 ),
+"speaker": "Lukas"
+},
+"1_57": {
+"dialogue": "Right... I'm not sure if you are aware, but there was that whole apocalypse thing. Anyhow...",
+"offset": Vector2( 3380, -780 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_58",
+"text": "..."
+}
+},
+"size": Vector2( 392.514, 414 ),
+"speaker": "Lukas"
+},
+"1_58": {
+"dialogue": "The Yard serves as a dedicated commerce area for Independence. It is here where merchants visit Independence to sell goods and services to residents.",
+"offset": Vector2( 3700, -1200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_59",
+"text": "Why the dedicated area?"
+}
+},
+"size": Vector2( 392.521, 414 ),
+"speaker": "Lukas"
+},
+"1_59": {
+"dialogue": "It was mostly established for safety reasons. We held a vote as some residents were paranoid of outsiders entering the settlement. This way, if any suspicious activity occurs, it is relatively isolated from the inner portions of the settlement.",
+"offset": Vector2( 4080, -1120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_22",
+"text": "Seems smart. Good thinking."
+},
+1: {
+"condition": {
+},
+"link": "3_21",
+"text": "Yikes. So you are just a bunch of paranoid loners."
+}
+},
+"size": Vector2( 392.52, 467 ),
+"speaker": "Lukas"
+},
+"1_6": {
+"dialogue": "Such as?",
+"offset": Vector2( -740, -1480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "What is this place?"
+},
+1: {
+"condition": {
+},
+"link": "1_17",
+"text": "Who are the people here?"
+},
+2: {
+"condition": {
+},
+"link": "1_18",
+"text": "Tell me more about your leader."
+}
+},
+"size": Vector2( 376.5, 520 ),
+"speaker": "Lukas"
+},
+"1_60": {
+"dialogue": "Listen, it is for our protection. We are a small community with little protection. We need to be careful.",
+"offset": Vector2( 4720, -880 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_62",
+"text": "..."
+}
+},
+"size": Vector2( 392.514, 414 ),
+"speaker": "Lukas"
+},
+"1_61": {
+"dialogue": "Thanks. We are a small community, after all. Better to be safe than sorry.",
+"offset": Vector2( 4720, -1240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_62",
+"text": "..."
+}
+},
+"size": Vector2( 392.514, 414 ),
+"speaker": "Lukas"
+},
+"1_62": {
+"dialogue": "Anything else you want to know?",
+"offset": Vector2( 5260, -1100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_29",
+"text": "Tell me more about your leader."
+},
+1: {
+"condition": {
+},
+"link": "3_45",
+"text": "That was all. See you around."
+}
+},
+"size": Vector2( 392.52, 467 ),
+"speaker": "Lukas"
+},
+"1_63": {
+"dialogue": "Never before has Independence had such an understanding yet dedicated leader.",
+"offset": Vector2( 2720, -400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_64",
+"text": "..."
+}
+},
+"size": Vector2( 392.516, 414.001 ),
+"speaker": "Lukas"
+},
+"1_64": {
+"dialogue": "Mayor Adams is able to understand both sides of the issue at hand, and allow for compromise.",
+"offset": Vector2( 3100, -380 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_65",
+"text": "..."
+}
+},
+"size": Vector2( 392.513, 413.999 ),
+"speaker": "Lukas"
+},
+"1_65": {
+"dialogue": "After all, compromise is part of a functioning democracy. He truly wants the best for us.",
+"offset": Vector2( 3500, -360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_66",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 414 ),
+"speaker": "Lukas"
+},
+"1_66": {
+"dialogue": "Which is why Independence has never had a two term mayor before. Everyone just loves his leadership. Should he run again, I will happily allow him to secure a third term.",
+"offset": Vector2( 3880, -360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_67",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 414 ),
+"speaker": "Lukas"
+},
+"1_67": {
+"dialogue": "Anything else you want to know?",
+"offset": Vector2( 4260, -360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_68",
+"text": "What is this place?"
+},
+1: {
+"condition": {
+},
+"link": "3_55",
+"text": "That was all. See you around."
+}
+},
+"size": Vector2( 392.517, 467 ),
+"speaker": "Lukas"
+},
+"1_68": {
+"dialogue": "You are standing in perhaps the most democratic settlement in the wasteland, Independence.",
+"offset": Vector2( 4740, -400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_69",
+"text": "..."
+}
+},
+"size": Vector2( 392.511, 414.001 ),
+"speaker": "Lukas"
+},
+"1_69": {
+"dialogue": "We call this part of the settlement The Yard. ",
+"offset": Vector2( 5080, -400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_25",
+"text": "Looks nice. Tell me more about it."
+},
+1: {
+"condition": {
+},
+"link": "3_26",
+"text": "Looks more like a junkyard to me."
+}
+},
+"size": Vector2( 392.516, 467.001 ),
+"speaker": "Lukas"
+},
+"1_7": {
+"dialogue": "You are standing in perhaps the most democratic settlement in the wasteland, Independence.",
+"offset": Vector2( -200, -1660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_8",
+"text": "..."
+}
+},
+"size": Vector2( 376.501, 414 ),
+"speaker": "Lukas"
+},
+"1_70": {
+"dialogue": "Right... I'm not sure if you are aware, but there was that whole apocalypse thing. Anyhow...",
+"offset": Vector2( 5580, -120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_71",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 414.001 ),
+"speaker": "Lukas"
+},
+"1_71": {
+"dialogue": "The Yard serves as a dedicated commerce area for Independence. It is here where merchants visit Independence to sell goods and services to residents.",
+"offset": Vector2( 5720, -540 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_72",
+"text": "Why the dedicated area?"
+}
+},
+"size": Vector2( 392.517, 414.001 ),
+"speaker": "Lukas"
+},
+"1_72": {
+"dialogue": "It was mostly established for safety reasons. We held a vote as some residents were paranoid of outsiders entering the settlement. This way, if any suspicious activity occurs, it is relatively isolated from the inner portions of the settlement.",
+"offset": Vector2( 6100, -520 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_28",
+"text": "Seems smart. Good thinking."
+},
+1: {
+"condition": {
+},
+"link": "3_27",
+"text": "Yikes. So you are just a bunch of paranoid loners."
+}
+},
+"size": Vector2( 392.515, 467 ),
+"speaker": "Lukas"
+},
+"1_73": {
+"dialogue": "Listen, it is for our protection. We are a small community with little protection. We need to be careful.",
+"offset": Vector2( 6740, -280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_75",
+"text": "..."
+}
+},
+"size": Vector2( 392.515, 414.001 ),
+"speaker": "Lukas"
+},
+"1_74": {
+"dialogue": "Thanks. We are a small community, after all. Better to be safe than sorry.",
+"offset": Vector2( 6740, -680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_75",
+"text": "..."
+}
+},
+"size": Vector2( 392.515, 414 ),
+"speaker": "Lukas"
+},
+"1_75": {
+"dialogue": "Anything else you want to know?",
+"offset": Vector2( 7200, -540 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_50",
+"text": "That was all. See you around."
+}
+},
+"size": Vector2( 392.516, 414.001 ),
+"speaker": "Lukas"
+},
+"1_76": {
+"dialogue": "You are standing in perhaps the most democratic settlement in the wasteland, Independence.",
+"offset": Vector2( 2560, 200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_77",
+"text": "..."
+}
+},
+"size": Vector2( 392.515, 414.001 ),
+"speaker": "Lukas"
+},
+"1_77": {
+"dialogue": "We call this part of the settlement The Yard. ",
+"offset": Vector2( 2960, 200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_31",
+"text": "Looks nice. Tell me more about it."
+},
+1: {
+"condition": {
+},
+"link": "3_30",
+"text": "Looks more like a junkyard to me."
+}
+},
+"size": Vector2( 392.513, 467.001 ),
+"speaker": "Lukas"
+},
+"1_78": {
+"dialogue": "The Yard serves as a dedicated commerce area for Independence. It is here where merchants visit Independence to sell goods and services to residents.",
+"offset": Vector2( 3920, 60 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_80",
+"text": "Why the dedicated area?"
+}
+},
+"size": Vector2( 392.517, 414 ),
+"speaker": "Lukas"
+},
+"1_79": {
+"dialogue": "Right... I'm not sure if you are aware, but there was that whole apocalypse thing. Anyhow...",
+"offset": Vector2( 3580, 460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_78",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 414.001 ),
+"speaker": "Lukas"
+},
+"1_8": {
+"dialogue": "We call this part of the settlement The Yard. ",
+"offset": Vector2( 200, -1660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_6",
+"text": "Looks nice. Tell me more about it."
+},
+1: {
+"condition": {
+},
+"link": "3_5",
+"text": "Looks more like a junkyard to me."
+}
+},
+"size": Vector2( 376.5, 467 ),
+"speaker": "Lukas"
+},
+"1_80": {
+"dialogue": "It was mostly established for safety reasons. We held a vote as some residents were paranoid of outsiders entering the settlement. This way, if any suspicious activity occurs, it is relatively isolated from the inner portions of the settlement.",
+"offset": Vector2( 4340, 140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_33",
+"text": "Seems smart. Good thinking."
+},
+1: {
+"condition": {
+},
+"link": "3_32",
+"text": "Yikes. So you are just a bunch of paranoid loners."
+}
+},
+"size": Vector2( 392.516, 467 ),
+"speaker": "Lukas"
+},
+"1_81": {
+"dialogue": "Listen, it is for our protection. We are a small community with little protection. We need to be careful.",
+"offset": Vector2( 5880, 900 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_83",
+"text": "..."
+}
+},
+"size": Vector2( 392.519, 413.998 ),
+"speaker": "Lukas"
+},
+"1_82": {
+"dialogue": "Thanks. We are a small community, after all. Better to be safe than sorry.",
+"offset": Vector2( 5860, 580 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_83",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 414.001 ),
+"speaker": "Lukas"
+},
+"1_83": {
+"dialogue": "Anything else you want to know?",
+"offset": Vector2( 6300, 700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_49",
+"text": "Who are the people here?"
+},
+1: {
+"condition": {
+},
+"link": "3_49",
+"text": "That was all. See you around."
+}
+},
+"size": Vector2( 392.514, 467.003 ),
+"speaker": "Lukas"
+},
+"1_84": {
+"dialogue": "The people here? They originally came from all over the wasteland. What united them are a set of values that are hard to come by nowadays.",
+"offset": Vector2( 2720, 780 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_85",
+"text": "..."
+}
+},
+"size": Vector2( 392.516, 413.999 ),
+"speaker": "Lukas"
+},
+"1_85": {
+"dialogue": "Here at Independence, the people believe in democracy and freedom of expression.",
+"offset": Vector2( 3160, 880 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_86",
+"text": "..."
+}
+},
+"size": Vector2( 392.513, 414 ),
+"speaker": "Lukas"
+},
+"1_86": {
+"dialogue": "You will find that most come from oppressive settlements. They simply had enough of bad leadership and came to the conclusion that the ordinary people should decide their own destiny.",
+"offset": Vector2( 3520, 960 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_87",
+"text": "..."
+}
+},
+"size": Vector2( 392.517, 414.003 ),
+"speaker": "Lukas"
+},
+"1_87": {
+"dialogue": "One thing led to another, and here we are now.",
+"offset": Vector2( 3940, 1040 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_88",
+"text": "..."
+}
+},
+"size": Vector2( 392.518, 414.002 ),
+"speaker": "Lukas"
+},
+"1_88": {
+"dialogue": "Anything else you want to know?",
+"offset": Vector2( 4400, 1040 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_68",
+"text": "What is this place?"
+},
+1: {
+"condition": {
+},
+"link": "3_48",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 392.516, 467.003 ),
+"speaker": "Lukas"
+},
+"1_89": {
+"dialogue": "Nice trading with you. Anything else?",
+"offset": Vector2( -4080, -80 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_24",
+"text": "I just have a few questions."
+},
+1: {
+"condition": {
+},
+"link": "3_53",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 452.516, 466.999 ),
+"speaker": "Lukas"
+},
+"1_9": {
+"dialogue": "Right... I'm not sure if you are aware, but there was that whole apocalypse thing. Anyhow...",
+"offset": Vector2( 920, -1440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_10",
+"text": "..."
+}
+},
+"size": Vector2( 376.498, 414 ),
+"speaker": "Lukas"
+},
+"3_1": {
+"link": "1_3",
+"offset": Vector2( -2200, -880 ),
+"signalValue": "dec_respect:3"
+},
+"3_19": {
+"link": "1_58",
+"offset": Vector2( 3069.33, -963.472 ),
+"signalValue": "inc_respect:3"
+},
+"3_2": {
+"link": "1_4",
+"offset": Vector2( -1920, -1280 ),
+"signalValue": "inc_respect:3"
+},
+"3_20": {
+"link": "1_57",
+"offset": Vector2( 3060, -740 ),
+"signalValue": "dec_respect:3"
+},
+"3_21": {
+"link": "1_60",
+"offset": Vector2( 4440, -800 ),
+"signalValue": "dec_respect:3"
+},
+"3_22": {
+"link": "1_61",
+"offset": Vector2( 4460, -1040 ),
+"signalValue": "inc_respect:3"
+},
+"3_25": {
+"link": "1_71",
+"offset": Vector2( 5460, -360 ),
+"signalValue": "inc_respect:3"
+},
+"3_26": {
+"link": "1_70",
+"offset": Vector2( 5320, -40 ),
+"signalValue": "dec_respect:3"
+},
+"3_27": {
+"link": "1_73",
+"offset": Vector2( 6460, -220 ),
+"signalValue": "dec_respect:3"
+},
+"3_28": {
+"link": "1_74",
+"offset": Vector2( 6500, -460 ),
+"signalValue": "inc_respect:3"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2( -3680, -860 ),
+"signalValue": "talk:?,1"
+},
+"3_30": {
+"link": "1_79",
+"offset": Vector2( 3340, 460 ),
+"signalValue": "dec_respect:3"
+},
+"3_31": {
+"link": "1_78",
+"offset": Vector2( 3340, 220 ),
+"signalValue": "inc_respect:3"
+},
+"3_32": {
+"link": "1_81",
+"offset": Vector2( 5180, 880 ),
+"signalValue": "dec_respect:3"
+},
+"3_33": {
+"link": "1_82",
+"offset": Vector2( 5180, 460 ),
+"signalValue": "inc_respect:3"
+},
+"3_36": {
+"link": "1_89",
+"offset": Vector2( -4520, 160 ),
+"signalValue": "trade"
+},
+"3_38": {
+"link": "END",
+"offset": Vector2( -1080, -340 ),
+"signalValue": "continue"
+},
+"3_39": {
+"link": "END",
+"offset": Vector2( 20, -860 ),
+"signalValue": "continue"
+},
+"3_40": {
+"link": "END",
+"offset": Vector2( 3860, -1340 ),
+"signalValue": "continue"
+},
+"3_41": {
+"link": "END",
+"offset": Vector2( 6060, -1940 ),
+"signalValue": "continue"
+},
+"3_42": {
+"link": "END",
+"offset": Vector2( 8320, -2180 ),
+"signalValue": "continue"
+},
+"3_43": {
+"link": "END",
+"offset": Vector2( 8321.31, -1525.27 ),
+"signalValue": "continue"
+},
+"3_44": {
+"link": "END",
+"offset": Vector2( 6540, -1200 ),
+"signalValue": "continue"
+},
+"3_45": {
+"link": "END",
+"offset": Vector2( 5979.61, -824.084 ),
+"signalValue": "continue"
+},
+"3_46": {
+"link": "END",
+"offset": Vector2( 2640, 60 ),
+"signalValue": "continue"
+},
+"3_47": {
+"link": "END",
+"offset": Vector2( 2462.32, 1304.69 ),
+"signalValue": "continue"
+},
+"3_48": {
+"link": "END",
+"offset": Vector2( 5275.25, 1582.4 ),
+"signalValue": "continue"
+},
+"3_49": {
+"link": "END",
+"offset": Vector2( 7240, 1320 ),
+"signalValue": "continue"
+},
+"3_5": {
+"link": "1_9",
+"offset": Vector2( 540, -1340 ),
+"signalValue": "dec_respect:3"
+},
+"3_50": {
+"link": "END",
+"offset": Vector2( 8100, -180 ),
+"signalValue": "continue"
+},
+"3_51": {
+"link": "END",
+"offset": Vector2( -2115.41, 1887.91 ),
+"signalValue": "continue"
+},
+"3_52": {
+"link": "END",
+"offset": Vector2( -2147.32, 979.445 ),
+"signalValue": "continue"
+},
+"3_53": {
+"link": "END",
+"offset": Vector2( -3121.5, 225.282 ),
+"signalValue": "continue"
+},
+"3_54": {
+"link": "END",
+"offset": Vector2( -2064.34, 193.547 ),
+"signalValue": "continue"
+},
+"3_55": {
+"link": "END",
+"offset": Vector2( 5140, 200 ),
+"signalValue": "continue"
+},
+"3_6": {
+"link": "1_10",
+"offset": Vector2( 600, -1600 ),
+"signalValue": "inc_respect:3"
+},
+"3_7": {
+"link": "1_13",
+"offset": Vector2( 2240, -1540 ),
+"signalValue": "dec_respect:3"
+},
+"3_8": {
+"link": "1_12",
+"offset": Vector2( 2240, -1760 ),
+"signalValue": "inc_respect:3"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

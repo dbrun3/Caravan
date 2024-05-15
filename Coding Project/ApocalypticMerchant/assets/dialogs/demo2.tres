@@ -1,0 +1,82 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"char1": "0_2",
+"loc1": "0_1"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -120, 320 ),
+"start_id": "loc1"
+},
+"0_2": {
+"link": "1_2",
+"offset": Vector2( -120, 660 ),
+"start_id": "char1"
+},
+"1_1": {
+"dialogue": "Demo with location class",
+"offset": Vector2( 120, 200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Talk to someone"
+},
+1: {
+"condition": {
+},
+"link": "3_2",
+"text": "leave"
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "The Ship"
+},
+"1_2": {
+"dialogue": "Demo with character class",
+"offset": Vector2( 120, 680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_3",
+"text": "Leave"
+},
+1: {
+"condition": {
+},
+"link": "3_2",
+"text": "Die"
+}
+},
+"size": Vector2( 300.001, 282 ),
+"speaker": "Amogus"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( 580, 360 ),
+"signalValue": "talk"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 580, 620 ),
+"signalValue": "die"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2( 580, 820 ),
+"signalValue": "leave"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

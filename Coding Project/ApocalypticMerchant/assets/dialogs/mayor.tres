@@ -1,0 +1,503 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1",
+"good": "0_3",
+"na": "0_6",
+"neutral": "0_2",
+"no": "0_5",
+"ye": "0_7",
+"yes": "0_4"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( 60, 220 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "3_14",
+"offset": Vector2( -420, 640 ),
+"start_id": "neutral"
+},
+"0_3": {
+"link": "3_4",
+"offset": Vector2( 420, 1000 ),
+"start_id": "good"
+},
+"0_4": {
+"link": "1_13",
+"offset": Vector2( 2200, 1380 ),
+"start_id": "yes"
+},
+"0_5": {
+"link": "1_12",
+"offset": Vector2( 2200, 1540 ),
+"start_id": "no"
+},
+"0_6": {
+"link": "1_7",
+"offset": Vector2( 1787.21, 823.351 ),
+"start_id": "na"
+},
+"0_7": {
+"link": "1_14",
+"offset": Vector2( 1800, 900 ),
+"start_id": "ye"
+},
+"1_1": {
+"dialogue": "Hmm... no.. hmmm...",
+"offset": Vector2( 300, 140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Hello?"
+}
+},
+"size": Vector2( 376.5, 414 ),
+"speaker": "Mayor"
+},
+"1_10": {
+"dialogue": "Even if we HAD the power, it's not like we could keep it for long... Raiders we could handle, but those demons from the City...",
+"offset": Vector2( 2220, 780 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_11",
+"text": "continue"
+}
+},
+"size": Vector2( 287.96, 255.001 ),
+"speaker": "Mayor"
+},
+"1_11": {
+"dialogue": "Well... what can I help you with?",
+"offset": Vector2( 2580, 780 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_17",
+"text": "I just had some questions"
+},
+1: {
+"condition": {
+},
+"link": "3_13",
+"text": "Just wanted to ask about the power"
+}
+},
+"size": Vector2( 300.008, 282 ),
+"speaker": "Mayor"
+},
+"1_12": {
+"dialogue": "What can I do for ya?",
+"offset": Vector2( 2500, 1480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_17",
+"text": "Just had some questions"
+},
+1: {
+"condition": {
+},
+"link": "3_3",
+"text": "Nothing right now (leave)"
+}
+},
+"size": Vector2( 300.006, 282 ),
+"speaker": "Mayor"
+},
+"1_13": {
+"dialogue": "What can I do for ya?",
+"offset": Vector2( 2500, 1200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_16",
+"text": "Head to the station. You've got power."
+}
+},
+"size": Vector2( 300.006, 255 ),
+"speaker": "Mayor"
+},
+"1_14": {
+"dialogue": "But even after fixing what we could, the power we draw from it is negligable. ",
+"offset": Vector2( 1540, 1020 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_15",
+"text": "That substation. It should have power."
+}
+},
+"size": Vector2( 300.006, 255 ),
+"speaker": "Mayor"
+},
+"1_15": {
+"dialogue": "No.. believe me we've tried. There's a current coming from somewhere but its pretty much useless.",
+"offset": Vector2( 1880, 1020 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_16",
+"text": "(Tell Mayor about Remnants)"
+}
+},
+"size": Vector2( 300.008, 255 ),
+"speaker": "Mayor"
+},
+"1_16": {
+"dialogue": "I... I don't believe it! I'm heading out right away. I'll meet you there!",
+"offset": Vector2( 3100, 1120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_6",
+"text": "Leave"
+}
+},
+"size": Vector2( 300.001, 255 ),
+"speaker": "Mayor"
+},
+"1_17": {
+"dialogue": "Sure.",
+"offset": Vector2( 2960, 780 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_19",
+"text": "What is Independence?"
+},
+1: {
+"condition": {
+},
+"link": "1_22",
+"text": "What do you do for power right now?"
+},
+2: {
+"condition": {
+},
+"link": "1_23",
+"text": "How do you get supplies?"
+},
+3: {
+"condition": {
+},
+"link": "1_18",
+"text": "That's all..."
+}
+},
+"size": Vector2( 299.999, 336 ),
+"speaker": "Mayor"
+},
+"1_18": {
+"dialogue": "Oh, well alright. Well I better get back to it... Welcome to Independence by the way.",
+"offset": Vector2( 3100, 1500 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_12",
+"text": "(leave)"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Mayor"
+},
+"1_19": {
+"dialogue": "Well... freedom! Though I suppose that's not what you meant. More literally it's an old national guard outpost, but to some of us, its a new home. ",
+"offset": Vector2( 3320, 640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_20",
+"text": "..."
+}
+},
+"size": Vector2( 299.997, 255 ),
+"speaker": "Mayor"
+},
+"1_2": {
+"dialogue": "Huh? Oh hi, uh.. sorry, really busy right now. Can it wait?",
+"offset": Vector2( 660, 140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Leave"
+}
+},
+"size": Vector2( 376.5, 414 ),
+"speaker": "Mayor"
+},
+"1_20": {
+"dialogue": "All of us are refugees. Raiders have displaced most of us from our various locations in the wastes... I've also heard some horror stories from the City...",
+"offset": Vector2( 3680, 640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_21",
+"text": "Tell me about the City..."
+},
+1: {
+"condition": {
+},
+"link": "1_17",
+"text": "I've got more questions..."
+}
+},
+"size": Vector2( 299.999, 282 ),
+"speaker": "Mayor"
+},
+"1_21": {
+"dialogue": "Some Old World corporation headed by a guy they call \"The Executive\" pretty much runs the whole place like a sweatshop is what I've heard. Keeps everyone so hopped up on drugs they don't even know where they are anymore...",
+"offset": Vector2( 4060, 620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_17",
+"text": "Let me ask about something else..."
+}
+},
+"size": Vector2( 300.003, 255 ),
+"speaker": "Mayor"
+},
+"1_22": {
+"dialogue": "When we need them, we mostly use gas generators, but we try to be conservative. There's only one place to reliably get gas and its a miracle that it's even open. I'll mark your map...",
+"offset": Vector2( 3320, 940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": "Thanks. Tell me something else..."
+}
+},
+"size": Vector2( 299.997, 255 ),
+"speaker": "Mayor"
+},
+"1_23": {
+"dialogue": "We try to be as self sufficient as possible. Talk to our herbalist in the yard, she can show you how to make medicine.",
+"offset": Vector2( 3960, 940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_17",
+"text": "I have another question..."
+}
+},
+"size": Vector2( 300.003, 255 ),
+"speaker": "Mayor"
+},
+"1_3": {
+"dialogue": "Even if we could get the power... it'd paint quite the target on our backs...",
+"offset": Vector2( 300, 480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "Sir?"
+}
+},
+"size": Vector2( 376.5, 414 ),
+"speaker": "Mayor"
+},
+"1_4": {
+"dialogue": "You're back... I'm sorry now still isn't a good time.",
+"offset": Vector2( 660, 460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Okay (leave)"
+},
+1: {
+"condition": {
+},
+"link": "3_2",
+"text": "You mentioned power.. like electricity?"
+}
+},
+"size": Vector2( 376.5, 467 ),
+"speaker": "Mayor"
+},
+"1_5": {
+"dialogue": "Yep. That kind. There's an old substation not far from here...",
+"offset": Vector2( 1220, 460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_6",
+"text": "continue"
+}
+},
+"size": Vector2( 299.999, 255 ),
+"speaker": "Mayor"
+},
+"1_6": {
+"dialogue": "The lines were intact and my tools read that there was still current coming from somewhere...",
+"offset": Vector2( 1540, 460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "continue"
+}
+},
+"size": Vector2( 300.005, 255 ),
+"speaker": "Mayor"
+},
+"1_7": {
+"dialogue": "But even after fixing what we could, the power we draw from it is negligable. ",
+"offset": Vector2( 1860, 440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_8",
+"text": "What do you need the power for?"
+},
+1: {
+"condition": {
+},
+"link": "1_10",
+"text": "I see."
+},
+2: {
+"condition": {
+},
+"link": "1_11",
+"text": "Can I ask about something else?"
+}
+},
+"size": Vector2( 300.01, 309 ),
+"speaker": "Mayor"
+},
+"1_8": {
+"dialogue": "Without power, Independence is little more than a campsite. People and come and go, trade here and there...",
+"offset": Vector2( 2220, 440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_9",
+"text": "continue"
+}
+},
+"size": Vector2( 300.015, 255 ),
+"speaker": "Mayor"
+},
+"1_9": {
+"dialogue": "But there isn't much reason for these folks to stay. Hard to rebuild a nation while still lighting fires with sticks for light.",
+"offset": Vector2( 2580, 440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_10",
+"text": "I see."
+}
+},
+"size": Vector2( 300.009, 255 ),
+"speaker": "Mayor"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( 1080, 320 ),
+"signalValue": "leave"
+},
+"3_10": {
+"link": "1_10",
+"offset": Vector2( 2920, 640 ),
+"signalValue": "load_sprite:neutral"
+},
+"3_11": {
+"link": "1_11",
+"offset": Vector2( 2251.84, 1077.41 ),
+"signalValue": "load_sprite:good"
+},
+"3_12": {
+"link": "END",
+"offset": Vector2( 3476.58, 1626.31 ),
+"signalValue": "leave"
+},
+"3_13": {
+"link": "1_18",
+"offset": Vector2( 3420, 1400 ),
+"signalValue": "load_sprite:default"
+},
+"3_14": {
+"link": "3_9",
+"offset": Vector2( -240, 400 ),
+"signalValue": "deadwoodfound"
+},
+"3_2": {
+"link": "1_5",
+"offset": Vector2( 980, 660 ),
+"signalValue": "inc_respect:1"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2( 2826.07, 1701.64 ),
+"signalValue": "leave"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2( 840, 1040 ),
+"signalValue": "?:hasdeadwoodpowered->start_dialog:yes->start_dialog:no"
+},
+"3_5": {
+"link": "END",
+"offset": Vector2( 1580, 880 ),
+"signalValue": "?:hasdeadwoodpowered->start_dialog:ye->start_dialog:na"
+},
+"3_6": {
+"link": "END",
+"offset": Vector2( 3560, 1280 ),
+"signalValue": "leave"
+},
+"3_7": {
+"link": "1_17",
+"offset": Vector2( 3700, 1100 ),
+"signalValue": "mark:gas"
+},
+"3_8": {
+"link": "3_5",
+"offset": Vector2( 1299.54, 774.003 ),
+"signalValue": "inc_respect:3"
+},
+"3_9": {
+"link": "1_3",
+"offset": Vector2( 19.7098, 645.734 ),
+"signalValue": "load_sprite:default"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

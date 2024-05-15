@@ -1,0 +1,252 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"bad": "0_5",
+"default": "0_1",
+"neutral": "0_2",
+"no": "0_4",
+"yes": "0_3"
+}
+nodes = {
+"0_1": {
+"link": "3_9",
+"offset": Vector2( -560, 300 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "3_2",
+"offset": Vector2( -340, 680 ),
+"start_id": "neutral"
+},
+"0_3": {
+"link": "1_5",
+"offset": Vector2( 360, 780 ),
+"start_id": "yes"
+},
+"0_4": {
+"link": "1_4",
+"offset": Vector2( 360, 680 ),
+"start_id": "no"
+},
+"0_5": {
+"link": "1_7",
+"offset": Vector2( -340, 840 ),
+"start_id": "bad"
+},
+"1_1": {
+"dialogue": "Halt! No handouts Scav, get back to work.",
+"offset": Vector2( -80, 180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Let me in the building."
+},
+1: {
+"condition": {
+},
+"link": "3_5",
+"text": "What is this place?"
+},
+2: {
+"condition": {
+},
+"link": "3_5",
+"text": "Who you calling Scav?"
+}
+},
+"size": Vector2( 300.002, 309 ),
+"speaker": "Security"
+},
+"1_2": {
+"dialogue": "You're clearly brain damaged. Report to the hospital or get back to work.",
+"offset": Vector2( 320, 160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_6",
+"text": "You're brain damaged."
+},
+1: {
+"condition": {
+},
+"link": "3_7",
+"text": "What?"
+},
+2: {
+"condition": {
+},
+"link": "3_8",
+"text": "Let me in the building."
+}
+},
+"size": Vector2( 299.999, 309 ),
+"speaker": "Security"
+},
+"1_3": {
+"dialogue": "I don't have time for this.",
+"offset": Vector2( 740, 180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Leave"
+}
+},
+"size": Vector2( 299.996, 255 ),
+"speaker": "Security"
+},
+"1_4": {
+"dialogue": "No admittance without an appointment",
+"offset": Vector2( 700, 460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_11",
+"text": "Let me speak to someone in charge."
+},
+1: {
+"condition": {
+},
+"link": "3_3",
+"text": "Fine whatever (leave)"
+}
+},
+"size": Vector2( 299.999, 282 ),
+"speaker": "Security"
+},
+"1_5": {
+"dialogue": "No admittance without an appointment.",
+"offset": Vector2( 700, 760 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_12",
+"text": "I did a favor for your boss. He's expecting me."
+}
+},
+"size": Vector2( 299.999, 255 ),
+"speaker": "Security"
+},
+"1_6": {
+"dialogue": "The Manager will see you shortly...",
+"offset": Vector2( 1280, 460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_13",
+"text": "continue"
+}
+},
+"size": Vector2( 299.997, 255 ),
+"speaker": "Security"
+},
+"1_7": {
+"dialogue": "You better keep moving if you know what's good for you Scav...",
+"offset": Vector2( -80, 780 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_10",
+"text": "Leave"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Security"
+},
+"1_8": {
+"dialogue": "...The Executive? I... Right. I'll them know you're here. Go ahead.",
+"offset": Vector2( 1300, 780 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Security"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( 1120, 360 ),
+"signalValue": "leave"
+},
+"3_10": {
+"link": "END",
+"offset": Vector2( 280, 980 ),
+"signalValue": "leave"
+},
+"3_11": {
+"link": "1_6",
+"offset": Vector2( 1040, 660 ),
+"signalValue": "set_respect:1"
+},
+"3_12": {
+"link": "1_8",
+"offset": Vector2( 1040, 960 ),
+"signalValue": "set_respect:8"
+},
+"3_13": {
+"link": "3_4",
+"offset": Vector2( 1660, 520 ),
+"signalValue": "move:Kronus,0"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 360, 580 ),
+"signalValue": "?:haskronuspowered->start_dialog:yes->start_dialog:no"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2( 1080, 780 ),
+"signalValue": "leave"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2( 1920, 600 ),
+"signalValue": "fade:talk:0"
+},
+"3_5": {
+"link": "1_2",
+"offset": Vector2( 240, 20 ),
+"signalValue": "set_respect:5"
+},
+"3_6": {
+"link": "1_3",
+"offset": Vector2( 700, -40 ),
+"signalValue": "set_respect:2"
+},
+"3_7": {
+"link": "1_3",
+"offset": Vector2( 980, 0 ),
+"signalValue": "set_respect:5"
+},
+"3_8": {
+"link": "3_2",
+"offset": Vector2( 360, 500 ),
+"signalValue": "set_respect:5"
+},
+"3_9": {
+"link": "1_1",
+"offset": Vector2( -340, 340 ),
+"signalValue": "set_respect:2"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

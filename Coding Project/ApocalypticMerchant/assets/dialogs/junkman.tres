@@ -1,0 +1,200 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1",
+"neutral": "0_3"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -3180, -1080 ),
+"start_id": "default"
+},
+"0_3": {
+"link": "1_11",
+"offset": Vector2( -3160, -840 ),
+"start_id": "neutral"
+},
+"1_1": {
+"dialogue": "Howdy, stranger. What brings you to my yard?",
+"offset": Vector2( -2920, -1220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "I have some questions..."
+},
+1: {
+"condition": {
+},
+"link": "3_1",
+"text": "Looking to trade..."
+},
+2: {
+"condition": {
+},
+"link": "END",
+"text": "Just passing through..."
+}
+},
+"size": Vector2( 300, 309 ),
+"speaker": "Junkman"
+},
+"1_11": {
+"dialogue": "Ah you're back. How's business?",
+"offset": Vector2( -2940, -760 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "It's good. Can I ask..."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Junkman"
+},
+"1_2": {
+"dialogue": "This old place used to be my father's junk yard before the Skyfall happened... Of course I wasn't alive then. When everyone came out from underground, he came right back here, and started up business like nothing happened!",
+"offset": Vector2( -2520, -1260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "Is business good?"
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Junkman"
+},
+"1_3": {
+"dialogue": "It's not bad. Get hastled here and there by those folks from the City, but my men in the yard do a good job keeping the \"peace\"...",
+"offset": Vector2( -2160, -1240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "Let me ask something else..."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Junkman"
+},
+"1_4": {
+"dialogue": "Sure.",
+"offset": Vector2( -2520, -920 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_6",
+"text": "Could you repair my Caravan?"
+},
+1: {
+"condition": {
+},
+"link": "3_1",
+"text": "Want to trade?"
+},
+2: {
+"condition": {
+},
+"link": "1_7",
+"text": "Know where I could get more supplies?"
+},
+3: {
+"condition": {
+},
+"link": "3_3",
+"text": "Nevermind (leave)"
+}
+},
+"size": Vector2( 300, 309 ),
+"speaker": "Junkman"
+},
+"1_5": {
+"dialogue": "Pleasure doin business.",
+"offset": Vector2( -1680, -920 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "(leave)"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Junkman"
+},
+"1_6": {
+"dialogue": "A certainly could... but parts like that don't come cheap. That alright?",
+"offset": Vector2( -2160, -660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_4",
+"text": "Yes"
+},
+1: {
+"condition": {
+},
+"link": "1_4",
+"text": "Maybe next time"
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Junkman"
+},
+"1_7": {
+"dialogue": "There's a man who runs a general store called the \"Lone Star\" a ways away  (he marks your map). We used to trade a lot back in the day, but haven't much from him lately. Maybe you could check in on him... see if he's alright...",
+"offset": Vector2( -2420, -300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "Will do. I have another question.."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Junkman"
+},
+"3_1": {
+"link": "1_5",
+"offset": Vector2( -2120, -900 ),
+"signalValue": "trade"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( -1320, -720 ),
+"signalValue": "leave"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2( -2437.05, -502.417 ),
+"signalValue": "leave"
+},
+"3_4": {
+"link": "1_5",
+"offset": Vector2( -1941.21, -746.861 ),
+"signalValue": "repair"
+},
+"3_5": {
+"link": "1_4",
+"offset": Vector2( -1960, -180 ),
+"signalValue": "mark:Merchant's Shack"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

@@ -1,0 +1,1624 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"bad": "0_4",
+"bad_b": "0_12",
+"bad_nb": "0_8",
+"default": "0_1",
+"good": "0_3",
+"good_b": "0_11",
+"good_nb": "0_9",
+"neutral": "0_2",
+"neutral_b": "0_10",
+"neutral_nb": "0_7",
+"no": "0_6",
+"yes": "0_5"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -3420, -220 ),
+"start_id": "default"
+},
+"0_10": {
+"link": "1_12",
+"offset": Vector2( -4250, 4244.77 ),
+"start_id": "neutral_b"
+},
+"0_11": {
+"link": "1_13",
+"offset": Vector2( -4540, 6440 ),
+"start_id": "good_b"
+},
+"0_12": {
+"link": "1_14",
+"offset": Vector2( -4473.61, 9476.88 ),
+"start_id": "bad_b"
+},
+"0_2": {
+"link": "3_56",
+"offset": Vector2( -4580, 3940 ),
+"start_id": "neutral"
+},
+"0_3": {
+"link": "3_60",
+"offset": Vector2( -4800, 6080 ),
+"start_id": "good"
+},
+"0_4": {
+"link": "3_63",
+"offset": Vector2( -4460, 9040 ),
+"start_id": "bad"
+},
+"0_5": {
+"link": "3_50",
+"offset": Vector2( -4100, 11160 ),
+"start_id": "yes"
+},
+"0_6": {
+"link": "1_60",
+"offset": Vector2( -4080, 12000 ),
+"start_id": "no"
+},
+"0_7": {
+"link": "1_61",
+"offset": Vector2( -4400, 4700 ),
+"start_id": "neutral_nb"
+},
+"0_8": {
+"link": "1_50",
+"offset": Vector2( -4080, 8040 ),
+"start_id": "bad_nb"
+},
+"0_9": {
+"link": "1_64",
+"offset": Vector2( -4494.76, 7096.05 ),
+"start_id": "good_nb"
+},
+"1_1": {
+"dialogue": "Hey, stranger. How's it going?",
+"offset": Vector2( -2920, -420 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "What are you working on?"
+}
+},
+"size": Vector2( 392.938, 429 ),
+"speaker": "Junkyard Worker"
+},
+"1_10": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 1820, -3700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_11",
+"text": "Need help with anything?"
+},
+1: {
+"condition": {
+},
+"link": "3_7",
+"text": "I have somewhere to be. See you around."
+}
+},
+"size": Vector2( 410.091, 485 ),
+"speaker": "Junkyard Worker"
+},
+"1_11": {
+"dialogue": "My ride has been having trouble and I am trying to figure out what is wrong with her. I am thinking she might need a new engine. If you happen to come across an engine block, come visit me again. I will gladly take it off your hands.",
+"offset": Vector2( 2460, -3800 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "Will do. See you around."
+}
+},
+"size": Vector2( 562.515, 550 ),
+"speaker": "Junkyard Worker"
+},
+"1_12": {
+"dialogue": "Back again so soon? What brings you here?",
+"offset": Vector2( -3280, 3800 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_63",
+"text": "I just had a few questions."
+},
+1: {
+"condition": {
+},
+"link": "3_40",
+"text": "I might have something you are interested in."
+},
+2: {
+"condition": {
+},
+"link": "3_9",
+"text": "Sorry for bothering you. See you around."
+}
+},
+"size": Vector2( 410.094, 541 ),
+"speaker": "Junkyard Worker"
+},
+"1_13": {
+"dialogue": "Hey there, fella. Nice seeing you again. ",
+"offset": Vector2( -3420, 5700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_63",
+"text": "Back at ya. Had something on my mind."
+},
+1: {
+"condition": {
+},
+"link": "3_42",
+"text": "I might have something you are interested in."
+},
+2: {
+"condition": {
+},
+"link": "3_10",
+"text": "Nice seeing you again, but I got to go. See you around."
+}
+},
+"size": Vector2( 410.094, 540.997 ),
+"speaker": "Junkyard Worker"
+},
+"1_14": {
+"dialogue": "You again?",
+"offset": Vector2( -3420, 9040 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_63",
+"text": "Yeah, me. I just had a few questions."
+},
+1: {
+"condition": {
+},
+"link": "3_41",
+"text": "I might have something you are interested in."
+},
+2: {
+"condition": {
+},
+"link": "3_11",
+"text": "Leave"
+}
+},
+"size": Vector2( 410.094, 540.989 ),
+"speaker": "Junkyard Worker"
+},
+"1_15": {
+"dialogue": "Go on...",
+"offset": Vector2( -640, 5660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "What is this place?"
+},
+1: {
+"condition": {
+},
+"link": "1_30",
+"text": "How did you end up here?"
+},
+2: {
+"condition": {
+},
+"link": "1_16",
+"text": "Need help with anything?"
+}
+},
+"size": Vector2( 678.519, 610 ),
+"speaker": "Junkyard Worker"
+},
+"1_16": {
+"dialogue": "My ride has been having trouble and I am trying to figure out what is wrong with her. I am thinking she might need a new engine. If you happen to come across an engine block, come visit me again. I will gladly take it off your hands.",
+"offset": Vector2( -2100, 980 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_17",
+"text": "Will do."
+}
+},
+"size": Vector2( 551.189, 542.922 ),
+"speaker": "Junkyard Worker"
+},
+"1_17": {
+"dialogue": "Anything else?",
+"offset": Vector2( -1380, 1060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_18",
+"text": "What is this place?"
+},
+1: {
+"condition": {
+},
+"link": "1_19",
+"text": "How did you end up here?"
+},
+2: {
+"condition": {
+},
+"link": "3_19",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 410.094, 541 ),
+"speaker": "Junkyard Worker"
+},
+"1_18": {
+"dialogue": "Oh, this is just a plain old junk yard. I take it you have met the Junkman? He runs a pretty smooth operation.",
+"offset": Vector2( -800, 760 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_20",
+"text": "Anything else you can tell me?"
+}
+},
+"size": Vector2( 410.093, 428.999 ),
+"speaker": "Junkyard Worker"
+},
+"1_19": {
+"dialogue": "Why, I was practically born here! The Junkman found me as an infant and raised me here. He really is a good man.",
+"offset": Vector2( -140, 1960 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_21",
+"text": "Seems like you are living a nice life."
+},
+1: {
+"condition": {
+},
+"link": "3_20",
+"text": "So he kidnapped you? Yikes."
+}
+},
+"size": Vector2( 410.095, 485 ),
+"speaker": "Junkyard Worker"
+},
+"1_2": {
+"dialogue": "Oh this beauty? She's my pride and joy. What brings you here?",
+"offset": Vector2( -2360, -500 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "What is this place?"
+},
+1: {
+"condition": {
+},
+"link": "1_30",
+"text": "How did you end up here?"
+},
+2: {
+"condition": {
+},
+"link": "1_16",
+"text": "Need help with anything?"
+},
+3: {
+"condition": {
+},
+"link": "1_51",
+"text": "Want to trade?"
+}
+},
+"size": Vector2( 392.937, 573 ),
+"speaker": "Junkyard Worker"
+},
+"1_20": {
+"dialogue": "No, not really. Like I said, this is a plain old junk yard. We simply break old machines down for scrap.",
+"offset": Vector2( -240, 700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_12",
+"text": "Got it. Thanks."
+},
+1: {
+"condition": {
+},
+"link": "3_13",
+"text": "Why aren't you just useless."
+}
+},
+"size": Vector2( 410.093, 485.002 ),
+"speaker": "Junkyard Worker"
+},
+"1_21": {
+"dialogue": "Well why are you still here, then? See yourself out.",
+"offset": Vector2( 1340, 1240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_14",
+"text": "Leave"
+}
+},
+"size": Vector2( 410.093, 429.001 ),
+"speaker": "Junkyard Worker"
+},
+"1_22": {
+"dialogue": "Wondering anything else?",
+"offset": Vector2( 1560, 620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_23",
+"text": "How did you end up here?"
+},
+1: {
+"condition": {
+},
+"link": "3_15",
+"text": "I got to go. See you around."
+}
+},
+"size": Vector2( 410.094, 484.999 ),
+"speaker": "Junkyard Worker"
+},
+"1_23": {
+"dialogue": "Why, I was practically born here! The Junkman found me as an infant and raised me here. He really is a good man.",
+"offset": Vector2( 2180, 260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_17",
+"text": "Seems like you are living a nice life."
+},
+1: {
+"condition": {
+},
+"link": "3_16",
+"text": "So he kidnapped you? Yikes."
+}
+},
+"size": Vector2( 410.094, 485 ),
+"speaker": "Junkyard Worker"
+},
+"1_24": {
+"dialogue": "Thanks. I try to find happiness in the simplest things in life. This work keeps me fairly occupied.",
+"offset": Vector2( 3360, 280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_26",
+"text": "..."
+}
+},
+"size": Vector2( 410.089, 429 ),
+"speaker": "Junkyard Worker"
+},
+"1_25": {
+"dialogue": "No... He raised me and I remain here on my own accord. He is a good man, please don't make assumptions about him like that.",
+"offset": Vector2( 3320, 1100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_26",
+"text": "..."
+}
+},
+"size": Vector2( 410.093, 429 ),
+"speaker": "Junkyard Worker"
+},
+"1_26": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 4060, 600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_18",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 410.091, 429 ),
+"speaker": "Junkyard Worker"
+},
+"1_27": {
+"dialogue": "No... He raised me and I remain here on my own accord. He is a good man, please don't make assumptions about him like that.",
+"offset": Vector2( 1100, 2520 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_29",
+"text": "..."
+}
+},
+"size": Vector2( 410.092, 428.999 ),
+"speaker": "Junkyard Worker"
+},
+"1_28": {
+"dialogue": "Thanks. I try to find happiness in the simplest things in life. This work keeps me fairly occupied.",
+"offset": Vector2( 1080, 1860 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_29",
+"text": "..."
+}
+},
+"size": Vector2( 410.093, 428.999 ),
+"speaker": "Junkyard Worker"
+},
+"1_29": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 2040, 2040 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_31",
+"text": "What is this place?"
+},
+1: {
+"condition": {
+},
+"link": "3_22",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 410.091, 484.998 ),
+"speaker": "Junkyard Worker"
+},
+"1_3": {
+"dialogue": "Oh, this is just a plain old junk yard. I take it you have met the Junkman? He runs a pretty smooth operation.",
+"offset": Vector2( -2120, -2180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "Anything else you can tell me?"
+}
+},
+"size": Vector2( 392.937, 429 ),
+"speaker": "Junkyard Worker"
+},
+"1_30": {
+"dialogue": "Why, I was practically born here! The Junkman found me as an infant and raised me here. He really is a good man.",
+"offset": Vector2( -1600, -560 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_28",
+"text": "Seems like you are living a nice life."
+},
+1: {
+"condition": {
+},
+"link": "3_27",
+"text": "So he kidnapped you? Yikes."
+}
+},
+"size": Vector2( 410.094, 485 ),
+"speaker": "Junkyard Worker"
+},
+"1_31": {
+"dialogue": "Oh, this is just a plain old junk yard. I take it you have met the Junkman? He runs a pretty smooth operation.",
+"offset": Vector2( 2580, 1980 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_32",
+"text": "Anything else you can tell me?"
+}
+},
+"size": Vector2( 410.093, 429 ),
+"speaker": "Junkyard Worker"
+},
+"1_32": {
+"dialogue": "No, not really. Like I said, this is a plain old junk yard. We simply break old machines down for scrap.",
+"offset": Vector2( 3180, 1980 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_23",
+"text": "Got it. Thanks."
+},
+1: {
+"condition": {
+},
+"link": "3_24",
+"text": "Why aren't you just useless."
+}
+},
+"size": Vector2( 410.091, 484.999 ),
+"speaker": "Junkyard Worker"
+},
+"1_33": {
+"dialogue": "Well why are you still here, then? See yourself out.",
+"offset": Vector2( 4080, 2600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_25",
+"text": "Leave"
+}
+},
+"size": Vector2( 410.094, 428.998 ),
+"speaker": "Junkyard Worker"
+},
+"1_34": {
+"dialogue": "Wondering anything else?",
+"offset": Vector2( 4040, 1860 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_26",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 410.091, 428.999 ),
+"speaker": "Junkyard Worker"
+},
+"1_35": {
+"dialogue": "No... He raised me and I remain here on my own accord. He is a good man, please don't make assumptions about him like that.",
+"offset": Vector2( -480, -220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_37",
+"text": "..."
+}
+},
+"size": Vector2( 410.096, 428.999 ),
+"speaker": "Junkyard Worker"
+},
+"1_36": {
+"dialogue": "Thanks. I try to find happiness in the simplest things in life. This work keeps me fairly occupied.",
+"offset": Vector2( -440, -1020 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_37",
+"text": "..."
+}
+},
+"size": Vector2( 410.095, 429 ),
+"speaker": "Junkyard Worker"
+},
+"1_37": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 300, -820 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_38",
+"text": "What is this place?"
+},
+1: {
+"condition": {
+},
+"link": "1_39",
+"text": "Need help with anything?"
+},
+2: {
+"condition": {
+},
+"link": "3_29",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 410.099, 541 ),
+"speaker": "Junkyard Worker"
+},
+"1_38": {
+"dialogue": "Oh, this is just a plain old junk yard. I take it you have met the Junkman? He runs a pretty smooth operation.",
+"offset": Vector2( 1100, -1260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_45",
+"text": "Anything else you can tell me?"
+}
+},
+"size": Vector2( 410.092, 429 ),
+"speaker": "Junkyard Worker"
+},
+"1_39": {
+"dialogue": "My ride has been having trouble and I am trying to figure out what is wrong with her. I am thinking she might need a new engine. If you happen to come across an engine block, come visit me again. I will gladly take it off your hands.",
+"offset": Vector2( 1280, -420 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_40",
+"text": "Will do."
+}
+},
+"size": Vector2( 478.519, 512 ),
+"speaker": "Junkyard Worker"
+},
+"1_4": {
+"dialogue": "No, not really. Like I said, this is a plain old junk yard. We simply break old machines down for scrap.",
+"offset": Vector2( -1640, -2220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Got it. Thanks."
+},
+1: {
+"condition": {
+},
+"link": "3_2",
+"text": "Why aren't you just useless."
+}
+},
+"size": Vector2( 392.937, 485 ),
+"speaker": "Junkyard Worker"
+},
+"1_40": {
+"dialogue": "Anything else?",
+"offset": Vector2( 1880, -420 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_41",
+"text": "What is this place?"
+},
+1: {
+"condition": {
+},
+"link": "3_30",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 410.093, 485 ),
+"speaker": "Junkyard Worker"
+},
+"1_41": {
+"dialogue": "Oh, this is just a plain old junk yard. I take it you have met the Junkman? He runs a pretty smooth operation.",
+"offset": Vector2( 2500, -540 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_42",
+"text": "Anything else you can tell me?"
+}
+},
+"size": Vector2( 410.092, 429 ),
+"speaker": "Junkyard Worker"
+},
+"1_42": {
+"dialogue": "No, not really. Like I said, this is a plain old junk yard. We simply break old machines down for scrap.",
+"offset": Vector2( 3140, -480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_32",
+"text": "Got it. Thanks."
+},
+1: {
+"condition": {
+},
+"link": "3_31",
+"text": "Why aren't you just useless."
+}
+},
+"size": Vector2( 410.088, 485 ),
+"speaker": "Junkyard Worker"
+},
+"1_43": {
+"dialogue": "Well why are you still here, then? See yourself out.",
+"offset": Vector2( 4160, -160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_33",
+"text": "Leave"
+}
+},
+"size": Vector2( 410.096, 428.999 ),
+"speaker": "Junkyard Worker"
+},
+"1_44": {
+"dialogue": "Wondering anything else?",
+"offset": Vector2( 4220, -880 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_34",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 410.097, 429 ),
+"speaker": "Junkyard Worker"
+},
+"1_45": {
+"dialogue": "No, not really. Like I said, this is a plain old junk yard. We simply break old machines down for scrap.",
+"offset": Vector2( 1720, -1420 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_35",
+"text": "Got it. Thanks."
+},
+1: {
+"condition": {
+},
+"link": "3_36",
+"text": "Why aren't you just useless."
+}
+},
+"size": Vector2( 410.09, 485 ),
+"speaker": "Junkyard Worker"
+},
+"1_46": {
+"dialogue": "Wondering anything else?",
+"offset": Vector2( 3200, -1660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_47",
+"text": "Need help with anything?"
+},
+1: {
+"condition": {
+},
+"link": "3_37",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 410.089, 485 ),
+"speaker": "Junkyard Worker"
+},
+"1_47": {
+"dialogue": "My ride has been having trouble and I am trying to figure out what is wrong with her. I am thinking she might need a new engine. If you happen to come across an engine block, come visit me again. I will gladly take it off your hands.",
+"offset": Vector2( 4080, -1740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_48",
+"text": "Will do."
+}
+},
+"size": Vector2( 564.525, 516 ),
+"speaker": "Junkyard Worker"
+},
+"1_48": {
+"dialogue": "Anything else",
+"offset": Vector2( 4780, -1800 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_38",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 410.092, 429.001 ),
+"speaker": "Junkyard Worker"
+},
+"1_49": {
+"dialogue": "Well why are you still here, then? See yourself out.",
+"offset": Vector2( 2740, -1100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_39",
+"text": "Leave"
+}
+},
+"size": Vector2( 410.091, 429 ),
+"speaker": "Junkyard Worker"
+},
+"1_5": {
+"dialogue": "Well why are you still here, then? See yourself out.",
+"offset": Vector2( -840, -1740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_3",
+"text": "Leave"
+}
+},
+"size": Vector2( 392.938, 429 ),
+"speaker": "Junkyard Worker"
+},
+"1_50": {
+"dialogue": "You again?",
+"offset": Vector2( -3460, 7760 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_15",
+"text": "Yeah, me. I just had a few questions."
+},
+1: {
+"condition": {
+},
+"link": "3_54",
+"text": "I might have something you are interested in."
+},
+2: {
+"condition": {
+},
+"link": "3_53",
+"text": "Leave"
+}
+},
+"size": Vector2( 458.516, 520.002 ),
+"speaker": "Junkyard Worker"
+},
+"1_51": {
+"dialogue": "Sorry, I got my hands full at the moment. As you can see, I am trying to fix my ride. However, I am all ears if you want to chat.",
+"offset": Vector2( -3460, 520 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_52",
+"text": "I was wondering..."
+},
+1: {
+"condition": {
+},
+"link": "3_49",
+"text": "Sorry for bothering you. See you soon."
+}
+},
+"size": Vector2( 466.516, 467 ),
+"speaker": "Junkyard Worker"
+},
+"1_52": {
+"dialogue": "Go on...",
+"offset": Vector2( -2740, 340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "What is this place?"
+},
+1: {
+"condition": {
+},
+"link": "1_30",
+"text": "How did you end up here?"
+},
+2: {
+"condition": {
+},
+"link": "1_16",
+"text": "Need help with anything?"
+}
+},
+"size": Vector2( 392.516, 520 ),
+"speaker": "Junkyard Worker"
+},
+"1_53": {
+"dialogue": "My ride has been having trouble and I am trying to figure out what is wrong with her. I am thinking she might need a new engine. If you happen to come across an engine block, come visit me again. I will gladly take it off your hands.",
+"offset": Vector2( -140, -2720 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_54",
+"text": "Will do."
+}
+},
+"size": Vector2( 538.521, 477 ),
+"speaker": "Junkyard Worker"
+},
+"1_54": {
+"dialogue": "Anything else?",
+"offset": Vector2( 540, -2560 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_55",
+"text": "How did you end up here?"
+},
+1: {
+"condition": {
+},
+"link": "3_43",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 544.522, 485 ),
+"speaker": "Junkyard Worker"
+},
+"1_55": {
+"dialogue": "Why, I was practically born here! The Junkman found me as an infant and raised me here. He really is a good man.",
+"offset": Vector2( 1360, -2660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_44",
+"text": "Seems like you are living a nice life."
+},
+1: {
+"condition": {
+},
+"link": "3_45",
+"text": "So he kidnapped you? Yikes."
+}
+},
+"size": Vector2( 570.517, 543 ),
+"speaker": "Junkyard Worker"
+},
+"1_56": {
+"dialogue": "No... He raised me and I remain here on my own accord. He is a good man, please don't make assumptions about him like that.",
+"offset": Vector2( 2560, -2220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_58",
+"text": "..."
+}
+},
+"size": Vector2( 518.512, 445 ),
+"speaker": "Junkyard Worker"
+},
+"1_57": {
+"dialogue": "Thanks. I try to find happiness in the simplest things in life. This work keeps me fairly occupied.",
+"offset": Vector2( 2520, -2860 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_58",
+"text": "..."
+}
+},
+"size": Vector2( 544.508, 477 ),
+"speaker": "Junkyard Worker"
+},
+"1_58": {
+"dialogue": "Anything else on your mind?",
+"offset": Vector2( 3320, -2720 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_46",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 540.519, 513 ),
+"speaker": "Junkyard Worker"
+},
+"1_59": {
+"dialogue": "Thank you, stranger. With this new engine block, I can finally get my ride up and running again. ",
+"offset": Vector2( -3060, 11060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_65",
+"text": "Don't mention it."
+},
+1: {
+"condition": {
+},
+"link": "3_52",
+"text": "No problem. See you around."
+}
+},
+"size": Vector2( 464.749, 467 ),
+"speaker": "Junkyard Worker"
+},
+"1_6": {
+"dialogue": "Wondering anything else?",
+"offset": Vector2( -840, -2660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "How did you end up here?"
+},
+1: {
+"condition": {
+},
+"link": "1_53",
+"text": "Need help with anything?"
+},
+2: {
+"condition": {
+},
+"link": "3_6",
+"text": "I got to go. See you around."
+}
+},
+"size": Vector2( 392.938, 541 ),
+"speaker": "Junkyard Worker"
+},
+"1_60": {
+"dialogue": "No engine block, eh? Well, should you come across one, you know where to find me.",
+"offset": Vector2( -3540, 11820 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_66",
+"text": "..."
+},
+1: {
+"condition": {
+},
+"link": "3_51",
+"text": "Sorry, I got to go. See you around."
+}
+},
+"size": Vector2( 484.196, 467.001 ),
+"speaker": "Junkyard Worker"
+},
+"1_61": {
+"dialogue": "Back again so soon? What brings you here?",
+"offset": Vector2( -3980, 4660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_15",
+"text": "I just had a few questions."
+},
+1: {
+"condition": {
+},
+"link": "3_58",
+"text": "I might have something you are interested in."
+},
+2: {
+"condition": {
+},
+"link": "3_57",
+"text": "Sorry for bothering you. See you around."
+}
+},
+"size": Vector2( 486.756, 520.004 ),
+"speaker": "Junkyard Worker"
+},
+"1_62": {
+"dialogue": "Nice trading with you, stranger. Did you need anything else?",
+"offset": Vector2( -2000, 3560 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_63",
+"text": "I just had a few questions."
+},
+1: {
+"condition": {
+},
+"link": "3_59",
+"text": "That is all. See you around."
+}
+},
+"size": Vector2( 442.03, 467 ),
+"speaker": "Junkyard Worker"
+},
+"1_63": {
+"dialogue": "Alright. Go on...",
+"offset": Vector2( -820, 8560 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_18",
+"text": "What is this place?"
+},
+1: {
+"condition": {
+},
+"link": "1_19",
+"text": "How did you end up here?"
+}
+},
+"size": Vector2( 392.516, 467.002 ),
+"speaker": "Junkyard Worker"
+},
+"1_64": {
+"dialogue": "Hey there, fella. Nice seeing you again. ",
+"offset": Vector2( -3900, 6720 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_15",
+"text": "Back at ya. Had something on my mind."
+},
+1: {
+"condition": {
+},
+"link": "3_61",
+"text": "I might have something you are interested in."
+},
+2: {
+"condition": {
+},
+"link": "3_62",
+"text": "Nice seeing you again, but I got to go. See you around."
+}
+},
+"size": Vector2( 554.516, 520.004 ),
+"speaker": "Junkyard Worker"
+},
+"1_65": {
+"dialogue": "Did you need anything else?",
+"offset": Vector2( -2460, 10640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_63",
+"text": "Yeah, I have some questions."
+},
+1: {
+"condition": {
+},
+"link": "3_64",
+"text": "That was all. See you around."
+}
+},
+"size": Vector2( 542.516, 467.004 ),
+"speaker": "Junkyard Worker"
+},
+"1_66": {
+"dialogue": "Did you need something?",
+"offset": Vector2( -2920, 11700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_15",
+"text": "Yeah, I have some questions."
+},
+1: {
+"condition": {
+},
+"link": "3_65",
+"text": "No. See you around."
+}
+},
+"size": Vector2( 490.516, 467.003 ),
+"speaker": "Junkyard Worker"
+},
+"1_7": {
+"dialogue": "Why, I was practically born here! The Junkman found me as an infant and raised me here. He really is a good man.",
+"offset": Vector2( -100, -3460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "Seems like you are living a nice life."
+},
+1: {
+"condition": {
+},
+"link": "3_4",
+"text": "So he kidnapped you? Yikes."
+}
+},
+"size": Vector2( 392.938, 485 ),
+"speaker": "Junkyard Worker"
+},
+"1_8": {
+"dialogue": "No... He raised me and I remain here on my own accord. He is a good man, please don't make assumptions about him like that.",
+"offset": Vector2( 1260, -3220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_10",
+"text": "..."
+}
+},
+"size": Vector2( 392.942, 429 ),
+"speaker": "Junkyard Worker"
+},
+"1_9": {
+"dialogue": "Thanks. I try to find happiness in the simplest things in life. This work keeps me fairly occupied.",
+"offset": Vector2( 1280, -3820 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_10",
+"text": "..."
+}
+},
+"size": Vector2( 392.938, 429 ),
+"speaker": "Junkyard Worker"
+},
+"3_1": {
+"link": "1_6",
+"offset": Vector2( -1200, -2060 ),
+"signalValue": "inc_respect:3"
+},
+"3_10": {
+"link": "END",
+"offset": Vector2( -3040, 6460 ),
+"signalValue": "continue"
+},
+"3_11": {
+"link": "END",
+"offset": Vector2( -3000, 9700 ),
+"signalValue": "continue"
+},
+"3_12": {
+"link": "1_22",
+"offset": Vector2( 460, 640 ),
+"signalValue": "inc_respect:3"
+},
+"3_13": {
+"link": "1_21",
+"offset": Vector2( 460, 1260 ),
+"signalValue": "dec_respect:3"
+},
+"3_14": {
+"link": "END",
+"offset": Vector2( 1800, 1740 ),
+"signalValue": "continue"
+},
+"3_15": {
+"link": "END",
+"offset": Vector2( 2040, 1200 ),
+"signalValue": "continue"
+},
+"3_16": {
+"link": "1_25",
+"offset": Vector2( 2920, 860 ),
+"signalValue": "dec_respect:3"
+},
+"3_17": {
+"link": "1_24",
+"offset": Vector2( 2900, 620 ),
+"signalValue": "inc_respect:3"
+},
+"3_18": {
+"link": "END",
+"offset": Vector2( 4680, 1160 ),
+"signalValue": "continue"
+},
+"3_19": {
+"link": "END",
+"offset": Vector2( -960, 1780 ),
+"signalValue": "continue"
+},
+"3_2": {
+"link": "1_5",
+"offset": Vector2( -1220, -1700 ),
+"signalValue": "dec_respect:3"
+},
+"3_20": {
+"link": "1_27",
+"offset": Vector2( 380, 2620 ),
+"signalValue": "dec_respect:3"
+},
+"3_21": {
+"link": "1_28",
+"offset": Vector2( 480, 1840 ),
+"signalValue": "inc_respect:3"
+},
+"3_22": {
+"link": "END",
+"offset": Vector2( 2600, 2660 ),
+"signalValue": "continue"
+},
+"3_23": {
+"link": "1_34",
+"offset": Vector2( 3620, 2040 ),
+"signalValue": "inc_respect:3"
+},
+"3_24": {
+"link": "1_33",
+"offset": Vector2( 3620, 2420 ),
+"signalValue": "dec_respect:3"
+},
+"3_25": {
+"link": "END",
+"offset": Vector2( 4620, 2840 ),
+"signalValue": "continue"
+},
+"3_26": {
+"link": "END",
+"offset": Vector2( 4680, 2020 ),
+"signalValue": "continue"
+},
+"3_27": {
+"link": "1_35",
+"offset": Vector2( -1020, -80 ),
+"signalValue": "dec_respect:3"
+},
+"3_28": {
+"link": "1_36",
+"offset": Vector2( -980, -760 ),
+"signalValue": "inc_respect:3"
+},
+"3_29": {
+"link": "END",
+"offset": Vector2( 720, -100 ),
+"signalValue": "continue"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2( -380, -1400 ),
+"signalValue": "continue"
+},
+"3_30": {
+"link": "END",
+"offset": Vector2( 2340, 60 ),
+"signalValue": "continue"
+},
+"3_31": {
+"link": "1_43",
+"offset": Vector2( 3740, 0 ),
+"signalValue": "dec_respect:3"
+},
+"3_32": {
+"link": "1_44",
+"offset": Vector2( 3780, -540 ),
+"signalValue": "inc_respect:3"
+},
+"3_33": {
+"link": "END",
+"offset": Vector2( 4660, 220 ),
+"signalValue": "continue"
+},
+"3_34": {
+"link": "END",
+"offset": Vector2( 4660, -420 ),
+"signalValue": "continue"
+},
+"3_35": {
+"link": "1_46",
+"offset": Vector2( 2380, -1440 ),
+"signalValue": "inc_respect:3"
+},
+"3_36": {
+"link": "1_49",
+"offset": Vector2( 2260, -900 ),
+"signalValue": "dec_respect:3"
+},
+"3_37": {
+"link": "END",
+"offset": Vector2( 3660, -1140 ),
+"signalValue": "continue"
+},
+"3_38": {
+"link": "END",
+"offset": Vector2( 5240, -1380 ),
+"signalValue": "continue"
+},
+"3_39": {
+"link": "END",
+"offset": Vector2( 3180, -640 ),
+"signalValue": "continue"
+},
+"3_4": {
+"link": "1_8",
+"offset": Vector2( 820, -2960 ),
+"signalValue": "dec_respect:3"
+},
+"3_40": {
+"link": "1_62",
+"offset": Vector2( -2620, 3820 ),
+"signalValue": "trade"
+},
+"3_41": {
+"link": "1_62",
+"offset": Vector2( -2940, 9360 ),
+"signalValue": "trade"
+},
+"3_42": {
+"link": "1_62",
+"offset": Vector2( -2920, 6120 ),
+"signalValue": "trade"
+},
+"3_43": {
+"link": "END",
+"offset": Vector2( 1180, -2040 ),
+"signalValue": "continue"
+},
+"3_44": {
+"link": "1_57",
+"offset": Vector2( 2040, -2580 ),
+"signalValue": "inc_respect:3"
+},
+"3_45": {
+"link": "1_56",
+"offset": Vector2( 2040, -2120 ),
+"signalValue": "dec_respect:3"
+},
+"3_46": {
+"link": "END",
+"offset": Vector2( 4009.33, -2441.74 ),
+"signalValue": "continue"
+},
+"3_47": {
+"link": "END",
+"offset": Vector2( -2920, 4820 ),
+"signalValue": "?:char_has_item:Engine Block->start_dialog:yes->start_dialog:no"
+},
+"3_48": {
+"link": "END",
+"offset": Vector2( -2580, 7100 ),
+"signalValue": "?:char_has_item:Engine Block->start_dialog:yes->start_dialog:no"
+},
+"3_49": {
+"link": "END",
+"offset": Vector2( -2920, 1000 ),
+"signalValue": "continue"
+},
+"3_5": {
+"link": "1_9",
+"offset": Vector2( 780, -3760 ),
+"signalValue": "inc_respect:3"
+},
+"3_50": {
+"link": "1_59",
+"offset": Vector2( -3680, 11140 ),
+"signalValue": "inc_respect:10"
+},
+"3_51": {
+"link": "END",
+"offset": Vector2( -2940, 12360 ),
+"signalValue": "continue"
+},
+"3_52": {
+"link": "END",
+"offset": Vector2( -2400, 11560 ),
+"signalValue": "continue"
+},
+"3_53": {
+"link": "END",
+"offset": Vector2( -2960, 8420 ),
+"signalValue": "continue"
+},
+"3_54": {
+"link": "3_55",
+"offset": Vector2( -2740, 8100 ),
+"signalValue": "trade"
+},
+"3_55": {
+"link": "END",
+"offset": Vector2( -2180, 8060 ),
+"signalValue": "?:char_has_item:Engine Block->start_dialog:yes->start_dialog:no"
+},
+"3_56": {
+"link": "END",
+"offset": Vector2( -4080, 3960 ),
+"signalValue": "?:char_has_item:Engine Block->start_dialog:neutral_b->start_dialog:neutral_nb"
+},
+"3_57": {
+"link": "END",
+"offset": Vector2( -3400, 5100 ),
+"signalValue": "continue"
+},
+"3_58": {
+"link": "3_47",
+"offset": Vector2( -3380, 4920 ),
+"signalValue": "trade"
+},
+"3_59": {
+"link": "END",
+"offset": Vector2( -1400, 4400 ),
+"signalValue": "continue"
+},
+"3_6": {
+"link": "END",
+"offset": Vector2( -520, -2080 ),
+"signalValue": "continue"
+},
+"3_60": {
+"link": "END",
+"offset": Vector2( -4340, 6040 ),
+"signalValue": "?:char_has_item:Engine Block->start_dialog:good_b->start_dialog:good_nb"
+},
+"3_61": {
+"link": "3_48",
+"offset": Vector2( -3180, 7140 ),
+"signalValue": "trade"
+},
+"3_62": {
+"link": "END",
+"offset": Vector2( -3238.04, 7344.23 ),
+"signalValue": "continue"
+},
+"3_63": {
+"link": "END",
+"offset": Vector2( -4020, 9040 ),
+"signalValue": "?:char_has_item:Engine Block->start_dialog:bad_b->start_dialog:bad_nb"
+},
+"3_64": {
+"link": "END",
+"offset": Vector2( -1760, 11300 ),
+"signalValue": "continue"
+},
+"3_65": {
+"link": "END",
+"offset": Vector2( -2333.12, 12243.1 ),
+"signalValue": "continue"
+},
+"3_7": {
+"link": "END",
+"offset": Vector2( 2160, -3100 ),
+"signalValue": "continue"
+},
+"3_8": {
+"link": "END",
+"offset": Vector2( 3120, -3600 ),
+"signalValue": "continue"
+},
+"3_9": {
+"link": "END",
+"offset": Vector2( -2700, 4360 ),
+"signalValue": "continue"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

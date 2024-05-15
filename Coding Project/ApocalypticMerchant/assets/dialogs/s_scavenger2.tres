@@ -1,0 +1,130 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -640, 80 ),
+"start_id": "default"
+},
+"1_1": {
+"dialogue": "Hey there... What're doing around here? What's in that caravan of yours? You up to no good? **shows gun** I can put a stop to you real quick.",
+"offset": Vector2( -420, 80 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Woah, relax! I'm a merchant, I'm carrying supplies."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "scavenger2"
+},
+"1_2": {
+"dialogue": "Oh, I'm so sorry about that! I'm a bit on edge these days. I have a hard time trusting anyone.",
+"offset": Vector2( -80, 80 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "Why's that?"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "scavenger2"
+},
+"1_3": {
+"dialogue": "My small hometown was ravaged by the apocalypse. Shortly afterwards, raiders came into the village and killed everyone including my family. I was the only one to survive, thanks to my parents hiding me away in a cupboard.",
+"offset": Vector2( 240, 80 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "Sorry to hear about that..."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "scavenger2"
+},
+"1_4": {
+"dialogue": "Don't be, it's been a long time since then. But I had to learn how to survive on my own and not let myself be taken advantage of, which often means being cautious around everyone. You seem like a good guy though. You said you're a merchant, right?",
+"offset": Vector2( 560, 80 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "I sure am."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "scavenger2"
+},
+"1_5": {
+"dialogue": "Usually I do my own scavenging to keep myself alive, but there are things that I do need to trade for sometimes. You got anything: food, medical supplies, weapons, I might be interested in?",
+"offset": Vector2( 880, 80 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_6",
+"text": "No, sorry."
+},
+1: {
+"condition": {
+},
+"link": "1_7",
+"text": "Yeah, take a look."
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "scaveger2"
+},
+"1_6": {
+"dialogue": "That's alright. My apologies for the tense introduction.",
+"offset": Vector2( 1260, 320 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "No problem. Stay safe out here."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "scavenger2"
+},
+"1_7": {
+"dialogue": "Thanks. Sorry about the tense introduction.",
+"offset": Vector2( 1260, 20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Don't worry about it. Stay safe out here."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "scavenger2"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( 1680, 260 ),
+"signalValue": "leave"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

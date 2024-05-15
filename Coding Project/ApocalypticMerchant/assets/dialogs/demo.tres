@@ -1,0 +1,149 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -120, -60 ),
+"start_id": "default"
+},
+"1_1": {
+"dialogue": "Henlo person!",
+"offset": Vector2( 120, -60 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "hello"
+},
+1: {
+"condition": {
+},
+"link": "3_2",
+"text": "i hate you"
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Amog"
+},
+"1_2": {
+"dialogue": "yay
+
+trade with me?",
+"offset": Vector2( 840, -180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_3",
+"text": "yes"
+},
+1: {
+"condition": {
+},
+"link": "3_5",
+"text": "no"
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Amog"
+},
+"1_3": {
+"dialogue": "sad",
+"offset": Vector2( 600, 360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Amog "
+},
+"1_4": {
+"dialogue": "Thank u!",
+"offset": Vector2( 1720, -180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_6",
+"text": "bye"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Amog"
+},
+"1_5": {
+"dialogue": "Awww... ok",
+"offset": Vector2( 1720, 120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_6",
+"text": "bye"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Amog"
+},
+"1_6": {
+"dialogue": "bye",
+"offset": Vector2( 2220, 40 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_6",
+"text": "(leave)"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Amog"
+},
+"3_1": {
+"link": "1_2",
+"offset": Vector2( 540, -60 ),
+"signalValue": "inc_respect:3"
+},
+"3_2": {
+"link": "1_3",
+"offset": Vector2( 560, 160 ),
+"signalValue": "dec_respect:3"
+},
+"3_3": {
+"link": "3_4",
+"offset": Vector2( 1240, -60 ),
+"signalValue": "inc_respect:3"
+},
+"3_4": {
+"link": "1_4",
+"offset": Vector2( 1480, -100 ),
+"signalValue": "trade"
+},
+"3_5": {
+"link": "1_5",
+"offset": Vector2( 1340, 180 ),
+"signalValue": "load_sprite:bad"
+},
+"3_6": {
+"link": "END",
+"offset": Vector2( 2620, 140 ),
+"signalValue": "leave"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

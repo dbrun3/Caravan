@@ -1,0 +1,120 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( 220, -20 ),
+"start_id": "default"
+},
+"1_1": {
+"dialogue": "A customer! Welcome to my shop. How can I help you?",
+"offset": Vector2( 480, -240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Can we trade supplies?"
+},
+1: {
+"condition": {
+},
+"link": "1_3",
+"text": "I need repairs..."
+},
+2: {
+"condition": {
+},
+"link": "3_2",
+"text": "Just checking the place out (leave)"
+}
+},
+"size": Vector2( 300, 309 ),
+"speaker": "Mechanic"
+},
+"1_2": {
+"dialogue": "Anything else?",
+"offset": Vector2( 1140, -300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "I need repairs..."
+},
+1: {
+"condition": {
+},
+"link": "3_2",
+"text": "That's it, thanks."
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Mechanic"
+},
+"1_3": {
+"dialogue": "Of course. I will warn you, a vehicle like that, it won't be cheap...",
+"offset": Vector2( 840, 20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_3",
+"text": "That's alright (Pay)"
+},
+1: {
+"condition": {
+},
+"link": "3_2",
+"text": "Ok, next time (leave)"
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Mechanic"
+},
+"1_4": {
+"dialogue": "Now take it easy on that poor vehicle. Too much weight will take it out fast!",
+"offset": Vector2( 1580, 40 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "(leave)"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Mechanic"
+},
+"3_1": {
+"link": "1_2",
+"offset": Vector2( 860, -180 ),
+"signalValue": "trade"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 1206.25, 228.711 ),
+"signalValue": "leave"
+},
+"3_3": {
+"link": "1_4",
+"offset": Vector2( 1279.97, 136.22 ),
+"signalValue": "repair"
+}
+}
+variables = {
+"money": {
+"type": 2,
+"value": 10.0
+}
+}
+comments = [  ]
+strays = [  ]
+characters = ""

@@ -1,0 +1,515 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"bill": "0_8",
+"default": "0_1",
+"good": "0_7",
+"heal": "0_2",
+"neutral": "0_4",
+"no": "0_6",
+"no2": "0_9",
+"noheal": "0_3",
+"yes": "0_5"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( 20, -60 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "1_2",
+"offset": Vector2( 1120, -80 ),
+"start_id": "heal"
+},
+"0_3": {
+"link": "3_18",
+"offset": Vector2( 1120, 20 ),
+"start_id": "noheal"
+},
+"0_4": {
+"link": "1_5",
+"offset": Vector2( -40, 820 ),
+"start_id": "neutral"
+},
+"0_5": {
+"link": "3_11",
+"offset": Vector2( 1140, 740 ),
+"start_id": "yes"
+},
+"0_6": {
+"link": "3_20",
+"offset": Vector2( 600, 960 ),
+"start_id": "no"
+},
+"0_7": {
+"link": "1_19",
+"offset": Vector2( -240, 1320 ),
+"start_id": "good"
+},
+"0_8": {
+"link": "1_3",
+"offset": Vector2( 1720, -140 ),
+"start_id": "bill"
+},
+"0_9": {
+"link": "1_18",
+"offset": Vector2( 1080, 960 ),
+"start_id": "no2"
+},
+"1_1": {
+"dialogue": "I'm sorry now isn't a good time you'll have to wait with the rest.",
+"offset": Vector2( 240, -160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Please, I'm hurt bad."
+},
+1: {
+"condition": {
+},
+"link": "1_4",
+"text": "How can I help?"
+},
+2: {
+"condition": {
+},
+"link": "3_3",
+"text": "I'm sorry (leave)"
+}
+},
+"size": Vector2( 300, 309.001 ),
+"speaker": "Doctor"
+},
+"1_10": {
+"dialogue": "Their factory mostly survived and the people those who lived became market for anything that could help them forget. Maybe you've noticed the blue tabs... ",
+"offset": Vector2( 2320, 360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_11",
+"text": "Yes, I've noticed that."
+},
+1: {
+"condition": {
+},
+"link": "1_11",
+"text": "No, I haven't, but tell me more."
+}
+},
+"size": Vector2( 299.996, 282 ),
+"speaker": "Doctor"
+},
+"1_11": {
+"dialogue": "Those are Mats, a drug manufactured by Kronus. They are a highly-addictive stimulant and in high doses, essentially an opioid.",
+"offset": Vector2( 2660, 360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_12",
+"text": "But why make that?"
+}
+},
+"size": Vector2( 299.997, 281.999 ),
+"speaker": "Doctor"
+},
+"1_12": {
+"dialogue": "Power. Having people hooked on Mats is how they own the city. The scavengers that work for them are basically slaves, Kronus being the only distributer of Mats in the wasteland.",
+"offset": Vector2( 3000, 360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_13",
+"text": "That's terrible."
+}
+},
+"size": Vector2( 300.003, 255 ),
+"speaker": "Doctor"
+},
+"1_13": {
+"dialogue": "It is, especially for me! Since Kronus wants to keep their scavengers in pain, they limit the amount of medicine sent to the city. They run this hospital, but just enough so that people can keep working.",
+"offset": Vector2( 3340, 360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_15",
+"text": "I can get you supplies"
+},
+1: {
+"condition": {
+},
+"link": "3_2",
+"text": "I'm injured, could you spare any for me?"
+}
+},
+"size": Vector2( 300.003, 282 ),
+"speaker": "Doctor"
+},
+"1_14": {
+"dialogue": "I hope when I see you again, you haven't undone my hard work!",
+"offset": Vector2( 2700, -240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "(leave)"
+}
+},
+"size": Vector2( 299.999, 255 ),
+"speaker": "Doctor"
+},
+"1_15": {
+"dialogue": "Thank you! But please, please be careful. If they find out what you are doing...",
+"offset": Vector2( 3680, 360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": "I'll be careful (leave)"
+}
+},
+"size": Vector2( 299.997, 255 ),
+"speaker": "Doctor"
+},
+"1_16": {
+"dialogue": "Are you trying to waste my time? You're fine.",
+"offset": Vector2( 1380, 60 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_19",
+"text": "(leave)"
+}
+},
+"size": Vector2( 299.999, 255 ),
+"speaker": "Doctor"
+},
+"1_17": {
+"dialogue": "Thank you so much! This will go a long way.",
+"offset": Vector2( 2060, 740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_13",
+"text": "No problem."
+}
+},
+"size": Vector2( 300, 254.999 ),
+"speaker": "Doctor"
+},
+"1_18": {
+"dialogue": "Sorry, but I only need medical supplies.",
+"offset": Vector2( 1360, 1040 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_13",
+"text": "Understood."
+}
+},
+"size": Vector2( 299.997, 255.001 ),
+"speaker": "Doctor"
+},
+"1_19": {
+"dialogue": "Happy to see you! Let me know if you need anything.",
+"offset": Vector2( 0, 1320 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_16",
+"text": "Free Healing"
+},
+1: {
+"condition": {
+},
+"link": "3_6",
+"text": "I have more supplies for you (trade)"
+},
+2: {
+"condition": {
+},
+"link": "3_17",
+"text": "(leave)"
+}
+},
+"size": Vector2( 299.999, 309.001 ),
+"speaker": "Doctor"
+},
+"1_2": {
+"dialogue": "Oh my, yes let's get that looked at right away...",
+"offset": Vector2( 1360, -240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "(recieve medical attention)"
+}
+},
+"size": Vector2( 299.998, 255 ),
+"speaker": "Doctor"
+},
+"1_20": {
+"dialogue": "There you go, you should be feeling a lot better now!",
+"offset": Vector2( 600, 1320 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_17",
+"text": "I do, thank you."
+}
+},
+"size": Vector2( 299.999, 255.002 ),
+"speaker": "Doctor"
+},
+"1_3": {
+"dialogue": "Alright, you should be all good for now, just try not let that happen again anytime soon! That's gonna cost 200.",
+"offset": Vector2( 1960, -240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_9",
+"text": "(Pay)"
+},
+1: {
+"condition": {
+},
+"link": "1_6",
+"text": "I can't afford that..."
+}
+},
+"size": Vector2( 300.001, 282 ),
+"speaker": "Doctor"
+},
+"1_4": {
+"dialogue": "Oh! Well... It's not a matter of hands... but supply. We've already used up most of what they allowed for this month.",
+"offset": Vector2( 620, 240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_4",
+"text": "I'm sorry (leave)"
+},
+1: {
+"condition": {
+},
+"link": "1_7",
+"text": "They?"
+}
+},
+"size": Vector2( 300, 335.998 ),
+"speaker": "Doctor"
+},
+"1_5": {
+"dialogue": "Ah, it's you again. ",
+"offset": Vector2( 240, 700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_6",
+"text": "I have something for you (trade)"
+},
+1: {
+"condition": {
+},
+"link": "3_3",
+"text": "(leave)"
+},
+2: {
+"condition": {
+},
+"link": "3_1",
+"text": "I need healing"
+}
+},
+"size": Vector2( 300, 309.001 ),
+"speaker": "Doctor"
+},
+"1_6": {
+"dialogue": "Just pay what you can. It wouldn't have been right to leave you in the state you were anyway...",
+"offset": Vector2( 2360, -20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_9",
+"text": "(Pay)"
+}
+},
+"size": Vector2( 299.998, 255 ),
+"speaker": "Doctor"
+},
+"1_7": {
+"dialogue": "Kronus.",
+"offset": Vector2( 1160, 400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_8",
+"text": "Who?"
+},
+1: {
+"condition": {
+},
+"link": "1_8",
+"text": "I've seen that name somewhere..."
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Doctor"
+},
+"1_8": {
+"dialogue": "You're not from around here are you?",
+"offset": Vector2( 1620, 360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_9",
+"text": "No..."
+}
+},
+"size": Vector2( 300.001, 255 ),
+"speaker": "Doctor"
+},
+"1_9": {
+"dialogue": "Before the Skyfall, Kronus was a manufacturer of pretty much everything, but mostly pharmaceuticals... ",
+"offset": Vector2( 1980, 360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_10",
+"text": "continue"
+}
+},
+"size": Vector2( 300.002, 255 ),
+"speaker": "Doctor"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( 620, -160 ),
+"signalValue": "?:healthy->start_dialog:noheal->start_dialog:heal"
+},
+"3_10": {
+"link": "END",
+"offset": Vector2( 840, 740 ),
+"signalValue": "?:char_has_type:medical->start_dialog:yes->start_dialog:no"
+},
+"3_11": {
+"link": "3_14",
+"offset": Vector2( 1360, 740 ),
+"signalValue": "inc_respect:1"
+},
+"3_12": {
+"link": "END",
+"offset": Vector2( 3240, -40 ),
+"signalValue": "leave"
+},
+"3_13": {
+"link": "END",
+"offset": Vector2( 2440, 1020 ),
+"signalValue": "leave"
+},
+"3_14": {
+"link": "3_21",
+"offset": Vector2( 1620, 740 ),
+"signalValue": "load_sprite:good"
+},
+"3_16": {
+"link": "1_20",
+"offset": Vector2( 360, 1320 ),
+"signalValue": "heal_player"
+},
+"3_17": {
+"link": "END",
+"offset": Vector2( 960, 1680 ),
+"signalValue": "leave"
+},
+"3_18": {
+"link": "1_16",
+"offset": Vector2( 1160, 120 ),
+"signalValue": "dec_respect:2"
+},
+"3_19": {
+"link": "END",
+"offset": Vector2( 1760, 220 ),
+"signalValue": "leave"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 3326.91, 724.584 ),
+"signalValue": "?:healthy->start_dialog:noheal->start_dialog:heal"
+},
+"3_20": {
+"link": "END",
+"offset": Vector2( 800, 960 ),
+"signalValue": "?:char_has_item:Herbal Medicine->start_dialog:yes->start_dialog:no2"
+},
+"3_21": {
+"link": "1_17",
+"offset": Vector2( 1840, 740 ),
+"signalValue": "char_remove_item_type:medical"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2( 640, 80 ),
+"signalValue": "leave"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2( 980, 240 ),
+"signalValue": "leave"
+},
+"3_5": {
+"link": "END",
+"offset": Vector2( 1700, -60 ),
+"signalValue": "fade:start_dialog:bill"
+},
+"3_6": {
+"link": "3_10",
+"offset": Vector2( 600, 740 ),
+"signalValue": "trade"
+},
+"3_7": {
+"link": "END",
+"offset": Vector2( 4366.54, 493.388 ),
+"signalValue": "leave"
+},
+"3_8": {
+"link": "3_12",
+"offset": Vector2( 3020, -80 ),
+"signalValue": "heal:3"
+},
+"3_9": {
+"link": "1_14",
+"offset": Vector2( 2480, -140 ),
+"signalValue": "?:playerafford:200->subtract_money:200->set_money:0"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

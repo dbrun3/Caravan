@@ -1,0 +1,201 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"clean": "0_7",
+"def": "0_5",
+"default": "0_1",
+"fight": "0_6",
+"kronus": "0_4",
+"no": "0_3",
+"ssa": "0_2"
+}
+nodes = {
+"0_1": {
+"link": "3_1",
+"offset": Vector2( -440, 120 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "1_1",
+"offset": Vector2( -236.469, 282.087 ),
+"start_id": "ssa"
+},
+"0_3": {
+"link": "3_3",
+"offset": Vector2( -420, 620 ),
+"start_id": "no"
+},
+"0_4": {
+"link": "1_3",
+"offset": Vector2( -307.555, 778 ),
+"start_id": "kronus"
+},
+"0_5": {
+"link": "1_4",
+"offset": Vector2( -320, 1040 ),
+"start_id": "def"
+},
+"0_6": {
+"link": "1_6",
+"offset": Vector2( 780, 1040 ),
+"start_id": "fight"
+},
+"0_7": {
+"link": "1_7",
+"offset": Vector2( 720, 1360 ),
+"start_id": "clean"
+},
+"1_1": {
+"dialogue": "Colonel sent us to help you out, need reinforcements?",
+"offset": Vector2( 10.4759, 209.031 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Yes"
+},
+1: {
+"condition": {
+},
+"link": "3_2",
+"text": "No"
+}
+},
+"size": Vector2( 368.219, 455 ),
+"speaker": "SSA Patrol"
+},
+"1_2": {
+"dialogue": "[Combat increased +50]",
+"offset": Vector2( 400, 220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "(leave)"
+}
+},
+"size": Vector2( 368.219, 404 ),
+"speaker": "SSA Patrol"
+},
+"1_3": {
+"dialogue": "Surrender, Kronus-scum!",
+"offset": Vector2( 20, 700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_4",
+"text": "The Executive sends his regards..."
+}
+},
+"size": Vector2( 368.219, 404 ),
+"speaker": "Soldiers"
+},
+"1_4": {
+"dialogue": "Exit the Caravan slowly... what's your cargo, driver?",
+"offset": Vector2( 0, 1080 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "What's going on?"
+}
+},
+"size": Vector2( 368.219, 404 ),
+"speaker": "Soldiers"
+},
+"1_5": {
+"dialogue": "Don't worry. If you aren't working for the City, you can forget this ever happened...",
+"offset": Vector2( 400, 1080 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "(check cargo)"
+}
+},
+"size": Vector2( 368.219, 404 ),
+"speaker": "Soldiers"
+},
+"1_6": {
+"dialogue": "He's got Mats! Put your hands up!",
+"offset": Vector2( 1300, 660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_6",
+"text": "It's not what it looks like..."
+}
+},
+"size": Vector2( 368.219, 404 ),
+"speaker": "Soldiers"
+},
+"1_7": {
+"dialogue": "Alright, you're good. Move along...",
+"offset": Vector2( 1020, 1380 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": "leave"
+}
+},
+"size": Vector2( 368.219, 404 ),
+"speaker": "Soldiers"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( -220, 140 ),
+"signalValue": "?:hasssaally->start_dialog:ssa->start_dialog:no"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 880, 320 ),
+"signalValue": "continue"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2( -200, 600 ),
+"signalValue": "?:haskronusally->start_dialog:kronus->start_dialog:def"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2( 361.188, 796.43 ),
+"signalValue": "fight"
+},
+"3_5": {
+"link": "END",
+"offset": Vector2( 780, 1180 ),
+"signalValue": "?:player_has_item:Mats->start_dialog:fight->start_dialog:clean"
+},
+"3_6": {
+"link": "END",
+"offset": Vector2( 1344.93, 1208.97 ),
+"signalValue": "fight"
+},
+"3_7": {
+"link": "END",
+"offset": Vector2( 1340, 1460 ),
+"signalValue": "continue"
+},
+"3_8": {
+"link": "3_2",
+"offset": Vector2( 720, 460 ),
+"signalValue": "inc_combat:50"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

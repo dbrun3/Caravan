@@ -1,0 +1,524 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1",
+"end": "0_5",
+"neutral": "0_2",
+"no": "0_4",
+"yes": "0_3"
+}
+nodes = {
+"0_1": {
+"link": "3_15",
+"offset": Vector2( 83.5599, 361.44 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "3_4",
+"offset": Vector2( 80, 960 ),
+"start_id": "neutral"
+},
+"0_3": {
+"link": "1_13",
+"offset": Vector2( 220, 1080 ),
+"start_id": "yes"
+},
+"0_4": {
+"link": "1_14",
+"offset": Vector2( 240, 1240 ),
+"start_id": "no"
+},
+"0_5": {
+"link": "1_17",
+"offset": Vector2( 1400, 1040 ),
+"start_id": "end"
+},
+"1_1": {
+"dialogue": "Stay where you are, stranger. We are peaceful, but this shelter is fortified... Who are you? How did you find this place?",
+"offset": Vector2( 300, 240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "I'm a trader... and explorer."
+},
+1: {
+"condition": {
+},
+"link": "1_6",
+"text": "I found it in a terminal entry."
+}
+},
+"size": Vector2( 301.927, 283.931 ),
+"speaker": "Deacon"
+},
+"1_10": {
+"dialogue": "Here is the container to safely transport the core. I know it's large, but without it the core would kill all of us instantly. If you have any questions speak with my head engineer, Bishop, at the lab.",
+"offset": Vector2( 2980, 160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Got it (leave)"
+},
+1: {
+"condition": {
+},
+"link": "3_1",
+"text": "(Go to the lab)"
+}
+},
+"size": Vector2( 299.997, 282.001 ),
+"speaker": "Deacon"
+},
+"1_11": {
+"dialogue": "If you have any concerns, head to the lab, my chief engineer, Bishop, can provide you with more details...",
+"offset": Vector2( 3000, 500 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_12",
+"text": "continue"
+}
+},
+"size": Vector2( 299.997, 255 ),
+"speaker": "Deacon"
+},
+"1_12": {
+"dialogue": "I'll leave the transport container here.  I know it's large, but without it the core would kill all of us instantly. We'll talk again soon.",
+"offset": Vector2( 3380, 520 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Got it (leave)"
+},
+1: {
+"condition": {
+},
+"link": "3_1",
+"text": "(Go to the lab)"
+}
+},
+"size": Vector2( 299.999, 282 ),
+"speaker": "Deacon"
+},
+"1_13": {
+"dialogue": "You've returned... what news do you bring of the outside world?",
+"offset": Vector2( 380, 880 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_15",
+"text": "None yet."
+},
+1: {
+"condition": {
+},
+"link": "3_9",
+"text": "I have the core."
+}
+},
+"size": Vector2( 300, 282.001 ),
+"speaker": "Deacon"
+},
+"1_14": {
+"dialogue": "You've returned... what news do you bring of the outside world?",
+"offset": Vector2( 460, 1180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_15",
+"text": "None yet."
+}
+},
+"size": Vector2( 299.999, 255.001 ),
+"speaker": "Deacon"
+},
+"1_15": {
+"dialogue": "I understand. If you need anything, see Bishop in the lab.",
+"offset": Vector2( 820, 1220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "Leave"
+},
+1: {
+"condition": {
+},
+"link": "3_6",
+"text": "(Go to lab)"
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Deacon"
+},
+"1_16": {
+"dialogue": "You've done it! I'll get my people ready. We have to get started right away...",
+"offset": Vector2( 840, 960 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "(Wait for the Remnants to restore full power)"
+}
+},
+"size": Vector2( 300.001, 255.001 ),
+"speaker": "Deacon"
+},
+"1_17": {
+"dialogue": "Systems are back online... Power at... Maximum capacity! You... You have saved us. This power will last us several generations, more than we will ever hope to use... ",
+"offset": Vector2( 1600, 980 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_18",
+"text": "continue"
+}
+},
+"size": Vector2( 300, 255.001 ),
+"speaker": "Deacon"
+},
+"1_18": {
+"dialogue": "We owe you. This power, its as much yours as it is ours. We can share it. Just say where and we'll divert half your way. We are eternally grateful...",
+"offset": Vector2( 1920, 980 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_19",
+"text": "continue"
+}
+},
+"size": Vector2( 300.003, 255.001 ),
+"speaker": "Deacon"
+},
+"1_19": {
+"dialogue": "So... where to?",
+"offset": Vector2( 2240, 980 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_10",
+"text": "Kronus Industrial Grid."
+},
+1: {
+"condition": {
+},
+"link": "3_11",
+"text": "Deadwood Substation."
+},
+2: {
+"condition": {
+},
+"link": "1_20",
+"text": "Nowhere. It's all yours."
+}
+},
+"size": Vector2( 300.001, 309.001 ),
+"speaker": "Deacon"
+},
+"1_2": {
+"dialogue": "But only a Remnant would know the password to this shelter... How did you obtain it?",
+"offset": Vector2( 640, 120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "I am a Remnant (Lie)"
+},
+1: {
+"condition": {
+},
+"link": "1_4",
+"text": "(Tell him about the other shelter)"
+}
+},
+"size": Vector2( 299.999, 282.002 ),
+"speaker": "Deacon"
+},
+"1_20": {
+"dialogue": "Nonsense! You have as much claim to this power as we do. We couldn't have done it without you. Is this truly what uou desire?",
+"offset": Vector2( 2560, 1280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_19",
+"text": "No"
+},
+1: {
+"condition": {
+},
+"link": "1_21",
+"text": "Yes"
+}
+},
+"size": Vector2( 299.999, 282.001 ),
+"speaker": "Deacon"
+},
+"1_21": {
+"dialogue": "Then I have no choice, but to make you a Remnant of this shelter... We will do great things togther...",
+"offset": Vector2( 2920, 1260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_14",
+"text": "continue"
+}
+},
+"size": Vector2( 299.999, 255 ),
+"speaker": "Deacon"
+},
+"1_22": {
+"dialogue": "Done! I wish you well on your journey. You will not be forgotten...",
+"offset": Vector2( 2840, 780 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_17",
+"text": "Leave."
+}
+},
+"size": Vector2( 299.998, 255.001 ),
+"speaker": "Deacon"
+},
+"1_23": {
+"dialogue": "Done! Head over there and see for yourself the impact this power has. I wish you well on your journey traveler. You will not be forgotten...",
+"offset": Vector2( 2840, 1040 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_17",
+"text": "Leave."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Deacon"
+},
+"1_3": {
+"dialogue": "I will choose to believe you. Frankly we don't have much of a choice...",
+"offset": Vector2( 1500, 160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "continue"
+}
+},
+"size": Vector2( 299.999, 255.003 ),
+"speaker": "Deacon"
+},
+"1_4": {
+"dialogue": "So our suspicions were true... how could this happen?",
+"offset": Vector2( 1060, 680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "(Tell him about the raiders)"
+},
+1: {
+"condition": {
+},
+"link": "1_5",
+"text": "(Say nothing)"
+}
+},
+"size": Vector2( 299.999, 282.001 ),
+"speaker": "Deacon"
+},
+"1_5": {
+"dialogue": "It seems as though the world out there isn't ready for progress yet. But frankly, we can't wait forever...",
+"offset": Vector2( 1500, 480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "continue"
+}
+},
+"size": Vector2( 300, 255.002 ),
+"speaker": "Deacon"
+},
+"1_6": {
+"dialogue": "A terminal... then you're from one of the other shelters?",
+"offset": Vector2( 640, 480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "(Tell him about the other shelter)"
+},
+1: {
+"condition": {
+},
+"link": "1_3",
+"text": "Yes (Lie)"
+}
+},
+"size": Vector2( 300.001, 282.002 ),
+"speaker": "Deacon"
+},
+"1_7": {
+"dialogue": "The thing is, your arrival comes at a very providential moment. Our generator is soon to run out. We've been working on an alternative using existing components from within the mountain. But we're missing one piece...",
+"offset": Vector2( 1900, 340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_8",
+"text": "continue"
+}
+},
+"size": Vector2( 300.001, 255.001 ),
+"speaker": "Deacon"
+},
+"1_8": {
+"dialogue": "Our data shows there is a backup reactor core stored beneath the nuclear power plant at these coordinates... (He marks it on your map) ",
+"offset": Vector2( 2260, 340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_16",
+"text": "continue"
+}
+},
+"size": Vector2( 300, 255.001 ),
+"speaker": "Deacon"
+},
+"1_9": {
+"dialogue": "You are the only one in this shelter to have survived the wasteland. If you can retrieve this core... we will be in your debt.",
+"offset": Vector2( 2600, 320 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_10",
+"text": "I'll do it."
+},
+1: {
+"condition": {
+},
+"link": "1_11",
+"text": "I have to think about it."
+}
+},
+"size": Vector2( 299.999, 282.001 ),
+"speaker": "Deacon"
+},
+"3_1": {
+"link": "3_3",
+"offset": Vector2( 3740, 380 ),
+"signalValue": "enter:4"
+},
+"3_10": {
+"link": "1_22",
+"offset": Vector2( 2600, 1080 ),
+"signalValue": "kronuspowered"
+},
+"3_11": {
+"link": "1_23",
+"offset": Vector2( 2600, 1140 ),
+"signalValue": "deadwoodpowered"
+},
+"3_12": {
+"link": "END",
+"offset": Vector2( 3460, 1140 ),
+"signalValue": "fade:exit"
+},
+"3_13": {
+"link": "1_9",
+"offset": Vector2( 2540, 680 ),
+"signalValue": "give_item:corebox"
+},
+"3_14": {
+"link": "END",
+"offset": Vector2( 3280, 1440 ),
+"signalValue": "fade:end:0"
+},
+"3_15": {
+"link": "1_1",
+"offset": Vector2( 100, 120 ),
+"signalValue": "remnantfound"
+},
+"3_16": {
+"link": "3_13",
+"offset": Vector2( 2320, 680 ),
+"signalValue": "mark:nuclear"
+},
+"3_17": {
+"link": "3_12",
+"offset": Vector2( 3200, 1080 ),
+"signalValue": "remove_item:coreboxfull"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 3920, 520 ),
+"signalValue": "fade:leave"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2( 4000, 380 ),
+"signalValue": "talk:0"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2( 226.567, 789.694 ),
+"signalValue": "?:player_has_item:coreboxfull->start_dialog:yes->start_dialog:no"
+},
+"3_5": {
+"link": "END",
+"offset": Vector2( 1132.09, 1428.77 ),
+"signalValue": "leave"
+},
+"3_6": {
+"link": "3_7",
+"offset": Vector2( 1160, 1360 ),
+"signalValue": "enter:4"
+},
+"3_7": {
+"link": "END",
+"offset": Vector2( 1420, 1360 ),
+"signalValue": "talk:0"
+},
+"3_8": {
+"link": "END",
+"offset": Vector2( 1180, 1120 ),
+"signalValue": "fade:start_dialog:end"
+},
+"3_9": {
+"link": "1_16",
+"offset": Vector2( 662.799, 810.92 ),
+"signalValue": "inc_respect:5"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

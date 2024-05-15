@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/upgrade2button.png-1fead492e507dc8501e1e547026a465f.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://assets/skilltree/upgrade2button.png"
+dest_files=[ "res://.import/upgrade2button.png-1fead492e507dc8501e1e547026a465f.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

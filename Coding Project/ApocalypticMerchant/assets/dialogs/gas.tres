@@ -1,0 +1,247 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1",
+"neutral": "0_2"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( 226.667, -243.516 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "1_4",
+"offset": Vector2( 160, 100 ),
+"start_id": "neutral"
+},
+"1_1": {
+"dialogue": "Hello! How can I help you?",
+"offset": Vector2( 360, -600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Does the gas pump work?"
+},
+1: {
+"condition": {
+},
+"link": "1_8",
+"text": "What's in the back?"
+},
+2: {
+"condition": {
+},
+"link": "3_1",
+"text": "I'm a trader. Need anything? (trade)"
+},
+3: {
+"condition": {
+},
+"link": "3_3",
+"text": "Just passing though... (leave)"
+}
+},
+"size": Vector2( 368.22, 557 ),
+"speaker": "Gas Man"
+},
+"1_10": {
+"dialogue": "Those contractors I might've mentioned. One of them left behind a map... I don't want to get anyone in trouble, but I'm sure they could you give you some business. Let me show you...",
+"offset": Vector2( 380, 940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_4",
+"text": "Thank you!"
+}
+},
+"size": Vector2( 383.657, 404 ),
+"speaker": "Gas Man"
+},
+"1_2": {
+"dialogue": "Yes, sir. Surprised? I don't blame you, its rare to see a vehicle like that one you got there outside... But for whatever reason, there's still demand! At least enough for some contractor to consistantly buy out our supply...",
+"offset": Vector2( 860, -360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "Contractor?"
+}
+},
+"size": Vector2( 368.221, 404 ),
+"speaker": "Gas Man"
+},
+"1_3": {
+"dialogue": "I don't know who they are, to be honest. But they certainly use a lot. This store is more than just a relic of a forgotten time. It's one of the few places for miles that can store that kind of supply.",
+"offset": Vector2( 1220, -360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "Interesting..."
+}
+},
+"size": Vector2( 368.219, 404 ),
+"speaker": "Gas Man"
+},
+"1_4": {
+"dialogue": "The trader has returned! How goes business?",
+"offset": Vector2( 420, 60 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "Its well thanks..."
+},
+1: {
+"condition": {
+},
+"link": "1_9",
+"text": "Not great..."
+}
+},
+"size": Vector2( 368.219, 455.001 ),
+"speaker": "Gas Man"
+},
+"1_5": {
+"dialogue": "So what can I do for you?",
+"offset": Vector2( 840, 60 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "I'd like to buy gas."
+},
+1: {
+"condition": {
+},
+"link": "1_8",
+"text": "My vehicle needs maintenance."
+},
+2: {
+"condition": {
+},
+"link": "3_1",
+"text": "I'd like to trade"
+},
+3: {
+"condition": {
+},
+"link": "3_3",
+"text": "Just passing through (leave)"
+}
+},
+"size": Vector2( 368.22, 556.999 ),
+"speaker": "Gas Man"
+},
+"1_6": {
+"dialogue": "Pleasure doing business!",
+"offset": Vector2( 1600, 560 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "I need some gas too."
+},
+1: {
+"condition": {
+},
+"link": "3_3",
+"text": "Thanks! (leave)"
+}
+},
+"size": Vector2( 368.219, 455.002 ),
+"speaker": "Gas Man"
+},
+"1_7": {
+"dialogue": "Pleasure doing business!",
+"offset": Vector2( 1660, -220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "How about a trade, too?"
+},
+1: {
+"condition": {
+},
+"link": "3_3",
+"text": "Thanks! (leave)"
+}
+},
+"size": Vector2( 368.219, 455 ),
+"speaker": "Gas Man"
+},
+"1_8": {
+"dialogue": "That's my brother's autobody shop! As you'd imagine he doesn't get a lot of customers either, so he'd love if you paid him a visit. He'd get that caravan working brand new.",
+"offset": Vector2( 1020, 680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_3",
+"text": "Will do! (leave)"
+},
+1: {
+"condition": {
+},
+"link": "1_5",
+"text": "Maybe another time..."
+}
+},
+"size": Vector2( 368.22, 455 ),
+"speaker": "Gas Man"
+},
+"1_9": {
+"dialogue": "Customers are hard to come by in this new world. It wasn't always this way, back in my day... Ah anyway...",
+"offset": Vector2( 120, 520 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_10",
+"text": "..."
+}
+},
+"size": Vector2( 368.219, 404 ),
+"speaker": "Gas Man"
+},
+"3_1": {
+"link": "1_6",
+"offset": Vector2( 1280, 300 ),
+"signalValue": "trade"
+},
+"3_2": {
+"link": "1_7",
+"offset": Vector2( 1260, 80 ),
+"signalValue": "gas"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2( 2120, 200 ),
+"signalValue": "leave"
+},
+"3_4": {
+"link": "1_5",
+"offset": Vector2( 940, 1080 ),
+"signalValue": "mark:SSA"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

@@ -1,0 +1,705 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"bad": "0_2",
+"default": "0_1",
+"else1": "0_9",
+"else2": "0_10",
+"exec": "0_7",
+"good": "0_6",
+"lie": "0_13",
+"neutral": "0_3",
+"next": "0_8",
+"no": "0_5",
+"power": "0_11",
+"truth": "0_12",
+"yes": "0_4"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -245.751, 305 ),
+"start_id": "default"
+},
+"0_10": {
+"link": "3_22",
+"offset": Vector2( -560, 2240 ),
+"start_id": "else2"
+},
+"0_11": {
+"link": "1_21",
+"offset": Vector2( -393.097, 2650.77 ),
+"start_id": "power"
+},
+"0_12": {
+"link": "3_17",
+"offset": Vector2( 480, 1440 ),
+"start_id": "truth"
+},
+"0_13": {
+"link": "3_31",
+"offset": Vector2( 1360, 1160 ),
+"start_id": "lie"
+},
+"0_2": {
+"link": "3_13",
+"offset": Vector2( -400, 1600 ),
+"start_id": "bad"
+},
+"0_3": {
+"link": "3_26",
+"offset": Vector2( -560, 1320 ),
+"start_id": "neutral"
+},
+"0_4": {
+"link": "1_13",
+"offset": Vector2( -180, 1200 ),
+"start_id": "yes"
+},
+"0_5": {
+"link": "1_14",
+"offset": Vector2( -180, 1440 ),
+"start_id": "no"
+},
+"0_6": {
+"link": "3_27",
+"offset": Vector2( -580, 2020 ),
+"start_id": "good"
+},
+"0_7": {
+"link": "1_18",
+"offset": Vector2( -300, 1960 ),
+"start_id": "exec"
+},
+"0_8": {
+"link": "3_24",
+"offset": Vector2( 800, 2420 ),
+"start_id": "next"
+},
+"0_9": {
+"link": "3_14",
+"offset": Vector2( -500, 1480 ),
+"start_id": "else1"
+},
+"1_1": {
+"dialogue": "I am the Manager... and what can KRONUS... do for you?",
+"offset": Vector2( 80, 220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": "I have questions"
+},
+1: {
+"condition": {
+},
+"link": "3_8",
+"text": "How about what *I* can do for you?"
+}
+},
+"size": Vector2( 299.999, 282.001 ),
+"speaker": "The Manager"
+},
+"1_10": {
+"dialogue": "That information is for internal personel ONLY.",
+"offset": Vector2( 860, 940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "I have a different question..."
+},
+1: {
+"condition": {
+},
+"link": "1_6",
+"text": "How can I join you?"
+}
+},
+"size": Vector2( 299.999, 282.001 ),
+"speaker": "The Manager"
+},
+"1_11": {
+"dialogue": "Excellent, I'll mark our facility on your map. I will also provide you with the order form...",
+"offset": Vector2( 2060, 540 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_4",
+"text": "(take form)"
+}
+},
+"size": Vector2( 299.998, 255.001 ),
+"speaker": "The Manager"
+},
+"1_12": {
+"dialogue": "Welcome to the Kronus family...",
+"offset": Vector2( 2900, 560 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_6",
+"text": "(leave)"
+}
+},
+"size": Vector2( 299.991, 255.001 ),
+"speaker": "The Manager"
+},
+"1_13": {
+"dialogue": "You've returned. I assume you've completed the order?",
+"offset": Vector2( 40, 1620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_28",
+"text": "Yes"
+}
+},
+"size": Vector2( 300, 255.003 ),
+"speaker": "The Manager"
+},
+"1_14": {
+"dialogue": "You've returned. I assume you've completed the order?",
+"offset": Vector2( 100, 1120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_30",
+"text": "No"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "The Manager"
+},
+"1_15": {
+"dialogue": "Complete the order... or risk immediate termination",
+"offset": Vector2( 1040, 1360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_16",
+"text": "(leave)"
+}
+},
+"size": Vector2( 299.999, 255 ),
+"speaker": "The Manager"
+},
+"1_16": {
+"dialogue": "Here is your compensation... AND your next order...",
+"offset": Vector2( 660, 1700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_20",
+"text": "(take form)"
+}
+},
+"size": Vector2( 299.997, 255.003 ),
+"speaker": "The Manager"
+},
+"1_17": {
+"dialogue": "Keep up the good work and you'll be on track for a promotion.",
+"offset": Vector2( 1220, 1720 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_21",
+"text": "(leave)"
+}
+},
+"size": Vector2( 299.999, 255.004 ),
+"speaker": "The Manager"
+},
+"1_18": {
+"dialogue": "Another success I assume?",
+"offset": Vector2( 0, 2020 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_19",
+"text": "Yes"
+}
+},
+"size": Vector2( 300, 255.002 ),
+"speaker": "The Manager"
+},
+"1_19": {
+"dialogue": "Excellent. In fact, the Executive has taken notice of your hard work. He'd like to speak with you.",
+"offset": Vector2( 420, 2060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_20",
+"text": "Not yet"
+},
+1: {
+"condition": {
+},
+"link": "3_23",
+"text": "(Meet with the Executive)"
+}
+},
+"size": Vector2( 299.996, 282.002 ),
+"speaker": "The Manager"
+},
+"1_2": {
+"dialogue": "Oh? And what might that be?",
+"offset": Vector2( 440, 480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_9",
+"text": "I can get better scrap than what you have here..."
+},
+1: {
+"condition": {
+},
+"link": "3_10",
+"text": "I am capable of transporting large cargo..."
+},
+2: {
+"condition": {
+},
+"link": "3_11",
+"text": "I have a knack for distribution..."
+}
+},
+"size": Vector2( 299.997, 309.003 ),
+"speaker": "The Manager"
+},
+"1_20": {
+"dialogue": "You do not have a say in this matter.",
+"offset": Vector2( 440, 2380 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_23",
+"text": "(Meet with the Executive)"
+}
+},
+"size": Vector2( 299.998, 255.003 ),
+"speaker": "The Manager"
+},
+"1_21": {
+"dialogue": "The Executive wishes to see you...",
+"offset": Vector2( -160, 2580 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_23",
+"text": "(enter)"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "The Manager"
+},
+"1_22": {
+"dialogue": "Why do you lie, trader? You are a fool, returning to me after taking off with MY cargo. Or perhaps suicidal... ",
+"offset": Vector2( 1740, 1100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_26",
+"text": "..."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "The Manager"
+},
+"1_23": {
+"dialogue": "Mats are our most popular product as a pharmeceutical supplier. A wonder drug that increases productivity and worker moral, so effective that our employees choose Mats over standard pay.",
+"offset": Vector2( 1317.31, -65.676 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "I have another question..."
+}
+},
+"size": Vector2( 299.999, 255 ),
+"speaker": "The Manager"
+},
+"1_24": {
+"dialogue": "The City is for employees only. If you are not fit to work... I suggest you find somewhere else to peddle.",
+"offset": Vector2( 1640, 280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Fine"
+},
+1: {
+"condition": {
+},
+"link": "1_25",
+"text": "You hiring?"
+}
+},
+"size": Vector2( 300.001, 282 ),
+"speaker": "The Manager"
+},
+"1_25": {
+"dialogue": "As it so happens... one of our drivers took off with his last shipment. He was quickly found and made an example of. Coincedentally a position has just opened... ",
+"offset": Vector2( 2000, 240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_11",
+"text": "I'll take it"
+}
+},
+"size": Vector2( 299.999, 255 ),
+"speaker": "The Manager"
+},
+"1_26": {
+"dialogue": "if that's what you wish...",
+"offset": Vector2( 2060, 1100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_32",
+"text": "continue"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "The Manager"
+},
+"1_3": {
+"dialogue": "I... MAY... have answers...",
+"offset": Vector2( 460, 100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "Why are your guards calling me a \"Scav\"?"
+},
+1: {
+"condition": {
+},
+"link": "1_5",
+"text": "Who is in charge here?"
+},
+2: {
+"condition": {
+},
+"link": "1_23",
+"text": "What are \"Mats\"?"
+},
+3: {
+"condition": {
+},
+"link": "1_24",
+"text": "Nevermind. I'm leaving."
+}
+},
+"size": Vector2( 297.997, 336 ),
+"speaker": "The Manager"
+},
+"1_4": {
+"dialogue": "Our many employees work as Scavengers, collecting materials for our offsite production facility. That is all I am at liberty to disclose.",
+"offset": Vector2( 820, -180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "I have another question..."
+}
+},
+"size": Vector2( 299.998, 282 ),
+"speaker": "The Manager"
+},
+"1_5": {
+"dialogue": "You seek the Executive. But one is not granted presense with the Executive without being the Corporation's favor.",
+"offset": Vector2( 820, 280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "I have another question..."
+},
+1: {
+"condition": {
+},
+"link": "1_6",
+"text": "How can I be in Kronus's favor?"
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "The Manager"
+},
+"1_6": {
+"dialogue": "As it so happens... one of our drivers took off with his last shipment. He was quickly found and made an example of. Coincedentally a position has just opened... ",
+"offset": Vector2( 920, 620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "I need to think about it."
+},
+1: {
+"condition": {
+},
+"link": "3_3",
+"text": "I'll do it. "
+}
+},
+"size": Vector2( 300.001, 282 ),
+"speaker": "The Manager"
+},
+"1_7": {
+"dialogue": "The City is for employees only. If you are not fit to work... I suggest you find somewhere else to peddle.",
+"offset": Vector2( 1260, 660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "(Leave)"
+},
+1: {
+"condition": {
+},
+"link": "3_3",
+"text": "Fine. Ill do it"
+}
+},
+"size": Vector2( 299.998, 282.001 ),
+"speaker": "The Manager"
+},
+"1_8": {
+"dialogue": "We do not distribute outside of the City... It is against policy. However...",
+"offset": Vector2( 1260, 280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_6",
+"text": "continue"
+}
+},
+"size": Vector2( 299.998, 255.001 ),
+"speaker": "The Manager"
+},
+"1_9": {
+"dialogue": "The quality of materials our employees scavenge is hardly relevant... ",
+"offset": Vector2( 480, 860 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "I can do something else for you..."
+},
+1: {
+"condition": {
+},
+"link": "3_12",
+"text": "What's it for?"
+}
+},
+"size": Vector2( 299.996, 282.001 ),
+"speaker": "The Manager"
+},
+"3_1": {
+"link": "3_2",
+"offset": Vector2( 1700, 880 ),
+"signalValue": "dec_respect:3"
+},
+"3_10": {
+"link": "1_6",
+"offset": Vector2( 680, 800 ),
+"signalValue": "load_sprite:neutral"
+},
+"3_11": {
+"link": "1_8",
+"offset": Vector2( 1080, 180 ),
+"signalValue": "load_sprite:neutral"
+},
+"3_12": {
+"link": "1_10",
+"offset": Vector2( 655.687, 1203.63 ),
+"signalValue": "load_sprite:default"
+},
+"3_13": {
+"link": "END",
+"offset": Vector2( -200, 1600 ),
+"signalValue": "talk:1"
+},
+"3_14": {
+"link": "END",
+"offset": Vector2( -300, 1340 ),
+"signalValue": "?:player_has_item:matbox->start_dialog:yes->start_dialog:no"
+},
+"3_15": {
+"link": "3_5",
+"offset": Vector2( 2660, 960 ),
+"signalValue": "inc_respect:1"
+},
+"3_16": {
+"link": "3_18",
+"offset": Vector2( 1420, 1420 ),
+"signalValue": "inc_respect:3"
+},
+"3_17": {
+"link": "1_15",
+"offset": Vector2( 740, 1440 ),
+"signalValue": "dec_respect:5"
+},
+"3_18": {
+"link": "END",
+"offset": Vector2( 1660, 1420 ),
+"signalValue": "leave"
+},
+"3_19": {
+"link": "1_16",
+"offset": Vector2( 420, 1700 ),
+"signalValue": "inc_respect:1"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 1980, 860 ),
+"signalValue": "leave"
+},
+"3_20": {
+"link": "3_34",
+"offset": Vector2( 960, 1980 ),
+"signalValue": "give_item:order"
+},
+"3_21": {
+"link": "END",
+"offset": Vector2( 1540, 1900 ),
+"signalValue": "leave"
+},
+"3_22": {
+"link": "END",
+"offset": Vector2( -340, 2100 ),
+"signalValue": "?:player_has_item:invoice->start_dialog:exec->start_dialog:no"
+},
+"3_23": {
+"link": "END",
+"offset": Vector2( 787.742, 2320.39 ),
+"signalValue": "fade:start_dialog:next"
+},
+"3_24": {
+"link": "3_25",
+"offset": Vector2( 1020, 2420 ),
+"signalValue": "enter:2"
+},
+"3_25": {
+"link": "END",
+"offset": Vector2( 1260, 2420 ),
+"signalValue": "talk:0"
+},
+"3_26": {
+"link": "END",
+"offset": Vector2( -780, 1500 ),
+"signalValue": "?:haskronuspowered->start_dialog:power->start_dialog:else1"
+},
+"3_27": {
+"link": "END",
+"offset": Vector2( -727.056, 2150.89 ),
+"signalValue": "?:haskronuspowered->start_dialog:power->start_dialog:else2"
+},
+"3_28": {
+"link": "3_29",
+"offset": Vector2( 360, 1540 ),
+"signalValue": "remove_item:invoice"
+},
+"3_29": {
+"link": "3_19",
+"offset": Vector2( 420, 1620 ),
+"signalValue": "remove_item:matbox"
+},
+"3_3": {
+"link": "1_11",
+"offset": Vector2( 1740, 720 ),
+"signalValue": "kronusally"
+},
+"3_30": {
+"link": "END",
+"offset": Vector2( 540, 1320 ),
+"signalValue": "?:player_has_item:invoice->start_dialog:lie->start_dialog:truth"
+},
+"3_31": {
+"link": "1_22",
+"offset": Vector2( 1480, 1260 ),
+"signalValue": "set_respect:0"
+},
+"3_32": {
+"link": "END",
+"offset": Vector2( 2400, 1240 ),
+"signalValue": "dead"
+},
+"3_33": {
+"link": "3_15",
+"offset": Vector2( 2420, 960 ),
+"signalValue": "mark:factory"
+},
+"3_34": {
+"link": "1_17",
+"offset": Vector2( 928.274, 2097.52 ),
+"signalValue": "inc_money:200"
+},
+"3_4": {
+"link": "3_33",
+"offset": Vector2( 2380, 720 ),
+"signalValue": "give_item:order"
+},
+"3_5": {
+"link": "1_12",
+"offset": Vector2( 2640, 720 ),
+"signalValue": "load_sprite:good"
+},
+"3_6": {
+"link": "END",
+"offset": Vector2( 3228.63, 685.754 ),
+"signalValue": "leave"
+},
+"3_7": {
+"link": "1_3",
+"offset": Vector2( 165.211, -31.6385 ),
+"signalValue": "load_sprite:neutral"
+},
+"3_8": {
+"link": "1_2",
+"offset": Vector2( 180, 600 ),
+"signalValue": "load_sprite:good"
+},
+"3_9": {
+"link": "1_9",
+"offset": Vector2( 120, 860 ),
+"signalValue": "load_sprite:neutral"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

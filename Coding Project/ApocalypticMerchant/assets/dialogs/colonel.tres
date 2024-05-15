@@ -1,0 +1,918 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"ally": "0_3",
+"core": "0_10",
+"dead": "0_7",
+"default": "0_1",
+"good": "0_11",
+"n": "0_14",
+"naa": "0_16",
+"neutral": "0_2",
+"no": "0_12",
+"noally": "0_4",
+"nocore": "0_9",
+"nodead": "0_8",
+"norem": "0_5",
+"remnant": "0_6",
+"us": "0_15",
+"yaa": "0_17",
+"yes": "0_13"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( 220, 40 ),
+"start_id": "default"
+},
+"0_10": {
+"link": "1_26",
+"offset": Vector2( 3520, 1860 ),
+"start_id": "core"
+},
+"0_11": {
+"link": "3_11",
+"offset": Vector2( 253.786, 1755.23 ),
+"start_id": "good"
+},
+"0_12": {
+"link": "3_15",
+"offset": Vector2( 573.88, 1997.48 ),
+"start_id": "no"
+},
+"0_13": {
+"link": "1_29",
+"offset": Vector2( 720, 1780 ),
+"start_id": "yes"
+},
+"0_14": {
+"link": "1_28",
+"offset": Vector2( 820, 2100 ),
+"start_id": "n"
+},
+"0_15": {
+"link": "1_32",
+"offset": Vector2( 627.27, 2323.52 ),
+"start_id": "us"
+},
+"0_16": {
+"link": "1_37",
+"offset": Vector2( 2100, 760 ),
+"start_id": "naa"
+},
+"0_17": {
+"link": "1_40",
+"offset": Vector2( -220, 1340 ),
+"start_id": "yaa"
+},
+"0_2": {
+"link": "3_2",
+"offset": Vector2( 160, 780 ),
+"start_id": "neutral"
+},
+"0_3": {
+"link": "3_6",
+"offset": Vector2( 80, 1140 ),
+"start_id": "ally"
+},
+"0_4": {
+"link": "1_11",
+"offset": Vector2( 380, 780 ),
+"start_id": "noally"
+},
+"0_5": {
+"link": "1_13",
+"offset": Vector2( 276.083, 1038.05 ),
+"start_id": "norem"
+},
+"0_6": {
+"link": "1_14",
+"offset": Vector2( 260, 1340 ),
+"start_id": "remnant"
+},
+"0_7": {
+"link": "1_23",
+"offset": Vector2( 2940, 1240 ),
+"start_id": "dead"
+},
+"0_8": {
+"link": "1_24",
+"offset": Vector2( 3160, 1840 ),
+"start_id": "nodead"
+},
+"0_9": {
+"link": "1_22",
+"offset": Vector2( 3500, 1640 ),
+"start_id": "nocore"
+},
+"1_1": {
+"dialogue": "Ah! Put 'er there, civilian! (He shakes your hand) So you're our new arms guy I hear?",
+"offset": Vector2( 440, -40 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Not exactly..."
+},
+1: {
+"condition": {
+},
+"link": "1_3",
+"text": "That's me."
+}
+},
+"size": Vector2( 368.219, 455 ),
+"speaker": "Colonel"
+},
+"1_10": {
+"dialogue": "We are the direct successors of the greatest military force to have ever waged war on this Earth in the name of democracy. ",
+"offset": Vector2( 1680, 960 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_8",
+"text": "Sign me up!"
+},
+1: {
+"condition": {
+},
+"link": "1_7",
+"text": "I have another question"
+}
+},
+"size": Vector2( 383.655, 454.999 ),
+"speaker": "Colonel"
+},
+"1_11": {
+"dialogue": "Civilian! How can I help you?",
+"offset": Vector2( 640, 640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "I have some questions..."
+},
+1: {
+"condition": {
+},
+"link": "3_5",
+"text": "Just stopping by (leave)"
+}
+},
+"size": Vector2( 383.656, 454.999 ),
+"speaker": "Colonel"
+},
+"1_12": {
+"dialogue": "The details of the box aren't important, but you'll know it when you see it. Our current intel points us towards a bunker right here (he shows you on a map). Raiders hit the place hard, but those morons wouldn't have much of a use for it.",
+"offset": Vector2( 2040, 420 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": "..."
+}
+},
+"size": Vector2( 383.655, 404 ),
+"speaker": "Colonel"
+},
+"1_13": {
+"dialogue": "Have you located the Box, civilian?",
+"offset": Vector2( 640, 1060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_15",
+"text": "I have some more questions..."
+}
+},
+"size": Vector2( 383.656, 404 ),
+"speaker": "Colonel"
+},
+"1_14": {
+"dialogue": "Have you located the Box, civilian?",
+"offset": Vector2( 640, 1360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_16",
+"text": "I have but... (explain the Remnants)"
+}
+},
+"size": Vector2( 383.656, 404.001 ),
+"speaker": "Colonel"
+},
+"1_15": {
+"dialogue": "Ask away",
+"offset": Vector2( 1022.58, 1040.29 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_38",
+"text": "Why do you need me to get this box?"
+},
+1: {
+"condition": {
+},
+"link": "1_39",
+"text": "What's in the box?"
+},
+2: {
+"condition": {
+},
+"link": "1_37",
+"text": "That's all"
+}
+},
+"size": Vector2( 383.655, 506 ),
+"speaker": "Colonel"
+},
+"1_16": {
+"dialogue": "Ah. I see... Well, as promised, you are now officially a soldier of the SSA, and I can finally tell you why WE need that core.",
+"offset": Vector2( 1020, 1380 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_17",
+"text": "..."
+}
+},
+"size": Vector2( 383.656, 404 ),
+"speaker": "Colonel"
+},
+"1_17": {
+"dialogue": "If Kronus were to get ahold of that kind of power, their influence would no longer be bound by perimeter of the City.",
+"offset": Vector2( 1360, 1380 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_18",
+"text": "..."
+}
+},
+"size": Vector2( 383.657, 404 ),
+"speaker": "Colonel"
+},
+"1_18": {
+"dialogue": "If their factories become fully operational, Kronus would effectively own the wasteland. Vehicles, weapons, medicine. They would make and control it all.",
+"offset": Vector2( 1700, 1400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_19",
+"text": "..."
+}
+},
+"size": Vector2( 383.655, 404.001 ),
+"speaker": "Colonel"
+},
+"1_19": {
+"dialogue": "But that will not happen, because we plan on using that same power against them.",
+"offset": Vector2( 2060, 1400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_20",
+"text": "..."
+}
+},
+"size": Vector2( 383.656, 404.001 ),
+"speaker": "Colonel"
+},
+"1_2": {
+"dialogue": "Then what in the goddamn... PRIVATE FINGER! Nevermind, you must be here for a reason...",
+"offset": Vector2( 580, 280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_6",
+"text": "I'm the tech guy"
+},
+1: {
+"condition": {
+},
+"link": "1_8",
+"text": "I want to join the SSA"
+}
+},
+"size": Vector2( 368.219, 455 ),
+"speaker": "Colonel"
+},
+"1_20": {
+"dialogue": "Our scientists have finished reassembling a relic from our founders' past. A machine that can level the skyscraper from which they command, defeat their army of super-soldiers",
+"offset": Vector2( 2400, 1400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_21",
+"text": "..."
+}
+},
+"size": Vector2( 383.656, 404.001 ),
+"speaker": "Colonel"
+},
+"1_21": {
+"dialogue": "and restore order and democracy to the city. They call it the Reclaimer... and it is the reason why we need that core more than ...",
+"offset": Vector2( 2760, 1400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_9",
+"text": "Understood."
+},
+1: {
+"condition": {
+},
+"link": "3_8",
+"text": "The Remnants will share the power..."
+}
+},
+"size": Vector2( 383.656, 455 ),
+"speaker": "Colonel"
+},
+"1_22": {
+"dialogue": "You see son, this core is our only shot at rebuilding this  great nation. What do you say?",
+"offset": Vector2( 3860, 1580 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_10",
+"text": "I'll get the core."
+}
+},
+"size": Vector2( 383.652, 404.001 ),
+"speaker": "Colonel"
+},
+"1_23": {
+"dialogue": "Share it with who? There isn't anyone out there who has any use for that power other than the enemy.",
+"offset": Vector2( 3360, 1120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_25",
+"text": "(Tell him about Independence)"
+},
+1: {
+"condition": {
+},
+"link": "3_9",
+"text": "You're right..."
+}
+},
+"size": Vector2( 383.654, 454.999 ),
+"speaker": "Colonel"
+},
+"1_24": {
+"dialogue": "Share it with who? There isn't anyone out there who has any use for that power other than the enemy.",
+"offset": Vector2( 3320, 2000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_22",
+"text": "You're right..."
+}
+},
+"size": Vector2( 383.654, 404 ),
+"speaker": "Colonel"
+},
+"1_25": {
+"dialogue": "I see... then perhaps there is another way... I'll send some scouts to make contact with this group. If you can manage to power Independence, we'll make sure they stay safe. Good work soldier.",
+"offset": Vector2( 3840, 1120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_13",
+"text": "(leave)"
+}
+},
+"size": Vector2( 383.652, 404 ),
+"speaker": "Colonel"
+},
+"1_26": {
+"dialogue": "You see son, this core is our only shot at rebuilding this  great nation. What do you say?",
+"offset": Vector2( 3860, 2000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_31",
+"text": "(Give the core)"
+}
+},
+"size": Vector2( 383.652, 404 ),
+"speaker": "Colonel"
+},
+"1_27": {
+"dialogue": "I knew you would know what to do... good luck soldier.",
+"offset": Vector2( 4460, 1580 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_12",
+"text": "(leave)"
+}
+},
+"size": Vector2( 383.655, 404.001 ),
+"speaker": "Colonel"
+},
+"1_28": {
+"dialogue": "You have the core, private?",
+"offset": Vector2( 1080, 2020 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_30",
+"text": "No"
+}
+},
+"size": Vector2( 383.656, 404 ),
+"speaker": "Colonel"
+},
+"1_29": {
+"dialogue": "You have the core, private?",
+"offset": Vector2( 1080, 1740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_31",
+"text": "Yes"
+}
+},
+"size": Vector2( 383.656, 404 ),
+"speaker": "Colonel"
+},
+"1_3": {
+"dialogue": "Excellent! I don't know if you know this, civilian, but a war is brewing... You have just chosen the right side of history!",
+"offset": Vector2( 820, -140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "War with who?"
+},
+1: {
+"condition": {
+},
+"link": "1_5",
+"text": "I'm glad I could help"
+}
+},
+"size": Vector2( 368.219, 455 ),
+"speaker": "Colonel"
+},
+"1_30": {
+"dialogue": "Remember, this core is our only shot at rebuilding this  great nation. We are counting on you.",
+"offset": Vector2( 1460, 2040 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_17",
+"text": "(leave)"
+}
+},
+"size": Vector2( 383.656, 404 ),
+"speaker": "Colonel"
+},
+"1_31": {
+"dialogue": "You actually got it... There ain't enough medals in the world for what you have just accomplished. I'll pass it along to our scientists, we have a lot of work to do, fast!",
+"offset": Vector2( 4060, 2400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_34",
+"text": "..."
+}
+},
+"size": Vector2( 383.653, 404 ),
+"speaker": "Colonel"
+},
+"1_32": {
+"dialogue": "Ah, you're back. I think we can arrange something with those folks over in Independence... something new... Thanks to you.",
+"offset": Vector2( 820, 2400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_33",
+"text": "..."
+}
+},
+"size": Vector2( 383.656, 404 ),
+"speaker": "Colonel"
+},
+"1_33": {
+"dialogue": "My men will meet you there when the power returns. Good luck.",
+"offset": Vector2( 1180, 2400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_16",
+"text": "(leave)"
+}
+},
+"size": Vector2( 383.656, 404 ),
+"speaker": "Colonel"
+},
+"1_34": {
+"dialogue": "When the time comes, soldier, can I count on you to march alongside side us on our path towards victory over tyranny?",
+"offset": Vector2( 4571.81, 2151.03 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_35",
+"text": "Yes, sir!"
+},
+1: {
+"condition": {
+},
+"link": "1_36",
+"text": "No"
+}
+},
+"size": Vector2( 383.658, 455 ),
+"speaker": "Colonel"
+},
+"1_35": {
+"dialogue": "Right answer! When the sound of Democracy rings across the wasteland, the world will know that Kronus has fallen!",
+"offset": Vector2( 4940, 2040 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_18",
+"text": "continue"
+}
+},
+"size": Vector2( 383.66, 404 ),
+"speaker": "Colonel"
+},
+"1_36": {
+"dialogue": "That's a damn shame. But after what you've already done for us, I can't say you haven't done enough. Good luck on your journey, trader.",
+"offset": Vector2( 4940, 2340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_18",
+"text": "continue"
+}
+},
+"size": Vector2( 383.66, 404.001 ),
+"speaker": "Colonel"
+},
+"1_37": {
+"dialogue": "If you can get that box, I will personally make you a member of this elite force.",
+"offset": Vector2( 2340, 760 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_3",
+"text": "Got it (leave)"
+},
+1: {
+"condition": {
+},
+"link": "1_15",
+"text": "I have questions"
+}
+},
+"size": Vector2( 383.656, 454.998 ),
+"speaker": "Colonel"
+},
+"1_38": {
+"dialogue": "Seems like a simple task doesn't it. The problem isn't getting the box. It's who knows that we're after it. The enemy isn't aware of our presence yet, but it won't be long...",
+"offset": Vector2( 1360, 1060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_15",
+"text": "Understood. I have something else..."
+}
+},
+"size": Vector2( 383.657, 404 ),
+"speaker": "Colonel"
+},
+"1_39": {
+"dialogue": "Well, nothing... yet. But that information is on a need to know basis. Only our science staff is concerned with what its for.",
+"offset": Vector2( 2100, 1120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_15",
+"text": "I have something else..."
+}
+},
+"size": Vector2( 383.656, 404 ),
+"speaker": "Colonel"
+},
+"1_4": {
+"dialogue": "Kronus... Those commie bastards that've taken over the City. Make no mistake son, they are NOT just a company. They are the barrier to a free market, an enemy of democracy! ",
+"offset": Vector2( 1300, 0 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_41",
+"text": "Who?"
+},
+1: {
+"condition": {
+},
+"link": "1_5",
+"text": "Got it"
+}
+},
+"size": Vector2( 368.219, 455 ),
+"speaker": "Colonel"
+},
+"1_40": {
+"dialogue": "If you can get that box, I will personally make you a member of this elite force.",
+"offset": Vector2( -60, 1460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_16",
+"text": "I actually have it already..."
+}
+},
+"size": Vector2( 383.656, 404.001 ),
+"speaker": "Colonel"
+},
+"1_41": {
+"dialogue": "My God, son, have you been living under a rock? The Evil force that has taken over the City? This city? (He points to it on your map)",
+"offset": Vector2( 1315.05, -384.178 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_21",
+"text": "..."
+}
+},
+"size": Vector2( 383.656, 404 ),
+"speaker": "Colonel"
+},
+"1_42": {
+"dialogue": "Well that doesn't matter. The point is we needed ammo and you came during our time of need!",
+"offset": Vector2( 1900, -300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "Your welcome"
+}
+},
+"size": Vector2( 383.655, 404 ),
+"speaker": "Colonel"
+},
+"1_5": {
+"dialogue": "The SSA appreciates your service, civilian, providing us with the necessary materials to defeat tyranny and defend liberty. If you don't have any questions, Private Finger will take you to Bubbles, our weapons specialist.",
+"offset": Vector2( 1700, 0 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "I have some questions..."
+},
+1: {
+"condition": {
+},
+"link": "3_1",
+"text": "Got it. (leave)"
+}
+},
+"size": Vector2( 368.218, 455 ),
+"speaker": "Colonel"
+},
+"1_6": {
+"dialogue": "Oh! Er, my mistake. Anyways, I don't know if you know this, civilian, but a war is brewing... You have just chosen the right side of history!",
+"offset": Vector2( 940, 220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "War with who?"
+},
+1: {
+"condition": {
+},
+"link": "1_5",
+"text": "I'm glad I could help"
+}
+},
+"size": Vector2( 368.219, 455 ),
+"speaker": "Colonel"
+},
+"1_7": {
+"dialogue": "Shoot.",
+"offset": Vector2( 1280, 560 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_9",
+"text": "What's your plan to defeat Kronus?"
+},
+1: {
+"condition": {
+},
+"link": "1_8",
+"text": "How can I join you?"
+},
+2: {
+"condition": {
+},
+"link": "1_10",
+"text": "What is the SSA?"
+},
+3: {
+"condition": {
+},
+"link": "3_19",
+"text": "Nevermind (leave)"
+}
+},
+"size": Vector2( 368.219, 557 ),
+"speaker": "Colonel"
+},
+"1_8": {
+"dialogue": "Our force is closed to outsiders... But maybe there is something you can do for us... Our scientists are working on a project that requires a particular type of box that's hard to come by.",
+"offset": Vector2( 1720, 420 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_12",
+"text": "A box?"
+}
+},
+"size": Vector2( 368.218, 404 ),
+"speaker": "Colonel"
+},
+"1_9": {
+"dialogue": "That information is classified, civilian: SSA eyes and ears only.",
+"offset": Vector2( 1720, 680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_8",
+"text": "I want to join you"
+},
+1: {
+"condition": {
+},
+"link": "1_7",
+"text": "I have another question"
+}
+},
+"size": Vector2( 368.218, 454.999 ),
+"speaker": "Colonel"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( 2090.88, 268.927 ),
+"signalValue": "leave"
+},
+"3_10": {
+"link": "1_27",
+"offset": Vector2( 4200, 1760 ),
+"signalValue": "inc_respect:5"
+},
+"3_11": {
+"link": "END",
+"offset": Vector2( 480, 1760 ),
+"signalValue": "?:player_has_item:coreboxfull->start_dialog:yes->start_dialog:no"
+},
+"3_12": {
+"link": "END",
+"offset": Vector2( 4820, 1740 ),
+"signalValue": "leave"
+},
+"3_13": {
+"link": "3_14",
+"offset": Vector2( 4210.11, 1300.93 ),
+"signalValue": "uss"
+},
+"3_14": {
+"link": "END",
+"offset": Vector2( 4425.39, 1305.09 ),
+"signalValue": "leave"
+},
+"3_15": {
+"link": "END",
+"offset": Vector2( 580, 2120 ),
+"signalValue": "?:hasuss->start_dialog:us->start_dialog:n"
+},
+"3_16": {
+"link": "END",
+"offset": Vector2( 1520, 2560 ),
+"signalValue": "leave"
+},
+"3_17": {
+"link": "END",
+"offset": Vector2( 1776.54, 2227.3 ),
+"signalValue": "leave"
+},
+"3_18": {
+"link": "END",
+"offset": Vector2( 5305.38, 2278.02 ),
+"signalValue": "fade:end:4"
+},
+"3_19": {
+"link": "END",
+"offset": Vector2( 1317.62, 891.807 ),
+"signalValue": "leave"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 340, 680 ),
+"signalValue": "?:hasssaally->start_dialog:ally->start_dialog:noally"
+},
+"3_20": {
+"link": "END",
+"offset": Vector2( 2680, 440 ),
+"signalValue": "?:player_has_item:corebox->start_dialog:yaa->start_dialog:naa"
+},
+"3_21": {
+"link": "1_42",
+"offset": Vector2( 1641.75, -272.569 ),
+"signalValue": "mark:Kronus"
+},
+"3_3": {
+"link": "3_4",
+"offset": Vector2( 2523.19, 596.159 ),
+"signalValue": "ssaally"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2( 2780, 580 ),
+"signalValue": "leave"
+},
+"3_5": {
+"link": "END",
+"offset": Vector2( 1000, 860 ),
+"signalValue": "leave"
+},
+"3_6": {
+"link": "END",
+"offset": Vector2( 300, 1140 ),
+"signalValue": "?:hasremnantfound->start_dialog:remnant->start_dialog:norem"
+},
+"3_7": {
+"link": "3_20",
+"offset": Vector2( 2420, 460 ),
+"signalValue": "mark:Shelter"
+},
+"3_8": {
+"link": "END",
+"offset": Vector2( 2980, 1980 ),
+"signalValue": "?:hasdeadwoodfound->start_dialog:dead->start_dialog:nodead"
+},
+"3_9": {
+"link": "END",
+"offset": Vector2( 3820, 1460 ),
+"signalValue": "?:player_has_item:coreboxfull->start_dialog:core->start_dialog:nocore"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

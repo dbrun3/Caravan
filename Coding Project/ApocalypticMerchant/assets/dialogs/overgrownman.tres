@@ -1,0 +1,328 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"bad": "0_4",
+"default": "0_1",
+"good": "0_2",
+"neutral": "0_3"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -1780, -380 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "1_14",
+"offset": Vector2( -1660.84, 700.893 ),
+"start_id": "good"
+},
+"0_3": {
+"link": "1_15",
+"offset": Vector2( -1660, 1000 ),
+"start_id": "neutral"
+},
+"0_4": {
+"link": "1_16",
+"offset": Vector2( -1660, 1280 ),
+"start_id": "bad"
+},
+"1_1": {
+"dialogue": "Oh hey there. Sorry if I looked surprised. Most people don't bother with conversation nowadays. What can I do for you? ",
+"offset": Vector2( -1520, -480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Ask about the town."
+},
+1: {
+"condition": {
+},
+"link": "1_7",
+"text": "Ask where to find parts/supplies."
+},
+2: {
+"condition": {
+},
+"link": "1_10",
+"text": "Insult the town's appearance."
+}
+},
+"size": Vector2( 300, 309 ),
+"speaker": "Overgrown Man"
+},
+"1_10": {
+"dialogue": "Wow, this place sure looks on the verge of becoming a dump. Ever think about giving up on the place and finding new areas to settle?",
+"offset": Vector2( -1220, -80 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "Next"
+}
+},
+"size": Vector2( 300, 255.001 ),
+"speaker": "You"
+},
+"1_11": {
+"dialogue": "Well, isn't that a way to introduce yourself. And no, I never considered leaving. Place may look dreary but I've got too many fond memories here to give up on it. Certainly other people have though. I'm one of the few who have remained. Anyways, what brings you here?",
+"offset": Vector2( -520, 80 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_8",
+"text": "I'm looking for parts and scrap."
+},
+1: {
+"condition": {
+},
+"link": "3_6",
+"text": "What's it to you?"
+}
+},
+"size": Vector2( 300, 282.002 ),
+"speaker": "Overgrown Man"
+},
+"1_12": {
+"dialogue": "A real pleasant fellow you are aren't you? Well, if you've got nothing to ask me then I'm off. Got things to do.",
+"offset": Vector2( 80, 100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "See ya."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Overgrown Man"
+},
+"1_13": {
+"dialogue": "I know there are places where I would be better off but I can't ditch this place you know? This place was home. Still is home. Too many fond memories to leave behind. I have someone I must get to now, but I appreciate the conversation. Maybe we'll talk again sometime.",
+"offset": Vector2( 620, -480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "For sure."
+}
+},
+"size": Vector2( 300.001, 255 ),
+"speaker": "Overgrown Man"
+},
+"1_14": {
+"dialogue": "Good Test.",
+"offset": Vector2( -1420, 640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": ""
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Good"
+},
+"1_15": {
+"dialogue": "Neutral Test.",
+"offset": Vector2( -1420, 960 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": ""
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Neutral"
+},
+"1_16": {
+"dialogue": "Bad Test.",
+"offset": Vector2( -1420, 1260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": ""
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Bad"
+},
+"1_2": {
+"dialogue": "Hi, I'm [Player name]. I'm just passing through, looking for scrap and all. Curious to learn more about this place though. It looks a bit worse for wear. What happened here?",
+"offset": Vector2( -1180, -580 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_3",
+"text": "Next"
+}
+},
+"size": Vector2( 293.952, 280.92 ),
+"speaker": "You"
+},
+"1_3": {
+"dialogue": "**sigh** This town used to thrive, you know? People had their beautiful homes and lovely families. But when the world fell apart, the overgrown took over. And as you can see, not so much in the pleasant way. Mostly weeds and now-dead plants and trees. The rubble just adds on to the dismal display.",
+"offset": Vector2( -620, -600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "Must've been tough."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Overgrown Man"
+},
+"1_4": {
+"dialogue": "Tough doesn't even begin to describe it. People grew depressed, angry. Some took their own lives. Others turned on each other as they fought over resources that were once plentiful. Some left seeking new refuge. As you can see, I've stuck around.",
+"offset": Vector2( -280, -740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "Sorry to hear about that."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Overgrown Man"
+},
+"1_5": {
+"dialogue": "It's okay. Me and the others who've stuck around, we're survivors, and that's what matters. We make do with what we have, and try our best to maintain some semblance of the life we had prior to the chaos.",
+"offset": Vector2( 60, -840 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_13",
+"text": "I would leave this place if I were you."
+},
+1: {
+"condition": {
+},
+"link": "3_4",
+"text": "I respect that a lot."
+}
+},
+"size": Vector2( 300.004, 282 ),
+"speaker": "Overgrown Man"
+},
+"1_6": {
+"dialogue": "And I respect you. I'm sure it's not easy being a guy who constantly travels from place to place. Takes a lot of willpower and grit. Say, I have someone I must get to now, but I appreciate the conversation. Let's talk again, yeah? ",
+"offset": Vector2( 620, -940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "For sure!"
+},
+1: {
+"condition": {
+},
+"link": "3_2",
+"text": "Alright"
+}
+},
+"size": Vector2( 299.999, 282 ),
+"speaker": "Overgrown Man"
+},
+"1_7": {
+"dialogue": "You know where I can find any scrap or parts around here?",
+"offset": Vector2( -520, -240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_8",
+"text": "Next"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "You"
+},
+"1_8": {
+"dialogue": "Your best bet is to probably look underneath the rubble. You could also ask around, perhaps some of the other villagers might have something they'd be willing to give or sell you. Unfortunately, I personally don't have anything for you, sorry.",
+"offset": Vector2( -160, -240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_9",
+"text": "Understood. Thanks."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Overgrown Man"
+},
+"1_9": {
+"dialogue": "No problem. Let me know if you need anything.",
+"offset": Vector2( 160, -240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Will do."
+}
+},
+"size": Vector2( 299.998, 255 ),
+"speaker": "Overgrown Man"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( 500, 180 ),
+"signalValue": "leave"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 1040, -580 ),
+"signalValue": "leave"
+},
+"3_3": {
+"link": "1_3",
+"offset": Vector2( -860, -500 ),
+"signalValue": "inc_respect:2"
+},
+"3_4": {
+"link": "1_6",
+"offset": Vector2( 400, -780 ),
+"signalValue": "inc_respect:2"
+},
+"3_5": {
+"link": "1_11",
+"offset": Vector2( -820, 160 ),
+"signalValue": "dec_respect:2"
+},
+"3_6": {
+"link": "1_12",
+"offset": Vector2( -160, 280 ),
+"signalValue": "dec_respect:1"
+},
+"3_7": {
+"link": "END",
+"offset": Vector2( -1000, 1040 ),
+"signalValue": "leave"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

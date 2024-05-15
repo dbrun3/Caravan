@@ -1,0 +1,352 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"bad": "0_5",
+"call": "0_9",
+"dead": "0_6",
+"def": "0_7",
+"default": "0_1",
+"neutral": "0_2",
+"no": "0_4",
+"win": "0_8",
+"yes": "0_3"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -860, 460 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "3_1",
+"offset": Vector2( -1020, 860 ),
+"start_id": "neutral"
+},
+"0_3": {
+"link": "1_4",
+"offset": Vector2( -720, 980 ),
+"start_id": "yes"
+},
+"0_4": {
+"link": "1_5",
+"offset": Vector2( -720, 780 ),
+"start_id": "no"
+},
+"0_5": {
+"link": "3_6",
+"offset": Vector2( -1042.47, 1328.17 ),
+"start_id": "bad"
+},
+"0_6": {
+"link": "1_13",
+"offset": Vector2( -780, 1520 ),
+"start_id": "dead"
+},
+"0_7": {
+"link": "1_7",
+"offset": Vector2( 720, 160 ),
+"start_id": "def"
+},
+"0_8": {
+"link": "1_15",
+"offset": Vector2( 1260, 780 ),
+"start_id": "win"
+},
+"0_9": {
+"link": "1_9",
+"offset": Vector2( -280, 980 ),
+"start_id": "call"
+},
+"1_1": {
+"dialogue": "I've been watching your journey, intern. A true businessman in the making... You remind me of myself a long, long time ago...",
+"offset": Vector2( -520, 340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "..."
+}
+},
+"size": Vector2( 300, 255.001 ),
+"speaker": "The Executive"
+},
+"1_10": {
+"dialogue": "The factory will grow, and so too will our power. To mold the world however we see fit. To bring back our old world, or make something new... ",
+"offset": Vector2( 180, 1080 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_11",
+"text": "..."
+}
+},
+"size": Vector2( 300.002, 255.001 ),
+"speaker": "The Executive"
+},
+"1_11": {
+"dialogue": " All thanks to you... you will go far in this company. Very, very far... ",
+"offset": Vector2( 520, 1080 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "continue"
+}
+},
+"size": Vector2( 300, 255.001 ),
+"speaker": "The Executive"
+},
+"1_12": {
+"dialogue": "Your lack of ambition will be noted...",
+"offset": Vector2( 100, 660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_4",
+"text": "(leave)"
+}
+},
+"size": Vector2( 300.002, 255.001 ),
+"speaker": "The Executive"
+},
+"1_13": {
+"dialogue": "You've once again returned empty handed...",
+"offset": Vector2( -538.991, 1432.34 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_14",
+"text": "I..."
+}
+},
+"size": Vector2( 300, 255.001 ),
+"speaker": "The Executive"
+},
+"1_14": {
+"dialogue": "Silence. Perhaps you were not the best fit for this position. And now you will be terminated. GUARDS!",
+"offset": Vector2( -160, 1440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": "continue"
+}
+},
+"size": Vector2( 300, 255.001 ),
+"speaker": "The Executive"
+},
+"1_15": {
+"dialogue": "Investigate the facility. It is in the heart of the region the Scavs call \"The Scorch.\" See if there is any chance it can be repaired... ",
+"offset": Vector2( 941.569, 953.166 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_16",
+"text": "I've already found an alternative power source..."
+}
+},
+"size": Vector2( 300.001, 255 ),
+"speaker": "The Executive"
+},
+"1_16": {
+"dialogue": "What are you talking about?",
+"offset": Vector2( 1314.85, 969.695 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_17",
+"text": "I've already routed power to your factory."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "The Executive"
+},
+"1_17": {
+"dialogue": "I need to make a call...",
+"offset": Vector2( 1720, 980 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_9",
+"text": "(wait)"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "The Executive"
+},
+"1_2": {
+"dialogue": "Your loyalty to the corporation has not gone unnoticed... I believe a promotion is in order.",
+"offset": Vector2( -180, 340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "..."
+}
+},
+"size": Vector2( 300, 255.001 ),
+"speaker": "The Executive"
+},
+"1_3": {
+"dialogue": "You may have noticed that my industrial facilities are not operating at their maximum capacity...",
+"offset": Vector2( 160, 340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_6",
+"text": "..."
+}
+},
+"size": Vector2( 300.003, 255.001 ),
+"speaker": "The Executive"
+},
+"1_4": {
+"dialogue": "What news do you bring me from the wasteland?",
+"offset": Vector2( -520, 1080 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_9",
+"text": "I've restored power to your factory"
+}
+},
+"size": Vector2( 300, 255.001 ),
+"speaker": "The Executive"
+},
+"1_5": {
+"dialogue": "What news do you bring me from the wasteland?",
+"offset": Vector2( -500, 660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Nothing yet."
+}
+},
+"size": Vector2( 283.333, 266.112 ),
+"speaker": "The Executive"
+},
+"1_6": {
+"dialogue": "With destruction of the old nuclear power facility, we have been forced to depend on backup generators... gas. This is NOT sustainable.",
+"offset": Vector2( 500, 340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "..."
+}
+},
+"size": Vector2( 300.001, 255.001 ),
+"speaker": "The Executive"
+},
+"1_7": {
+"dialogue": "Investigate the facility. It is in the heart of the region the Scavs call \"The Scorch.\" See if there is any chance it can be repaired... ",
+"offset": Vector2( 840, 340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_8",
+"text": "..."
+}
+},
+"size": Vector2( 300.002, 255.001 ),
+"speaker": "The Executive"
+},
+"1_8": {
+"dialogue": "Your uniform is outside... You will need it to withstand the extreme radiation. Get to it...",
+"offset": Vector2( 1180, 340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_3",
+"text": "(leave)"
+}
+},
+"size": Vector2( 300, 255.001 ),
+"speaker": "The Executive"
+},
+"1_9": {
+"dialogue": "Yes... YES! You've done well... With our production at maximum capacity, we can bring the rest of our wasteland into our empire! ",
+"offset": Vector2( -180, 1080 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_10",
+"text": "..."
+}
+},
+"size": Vector2( 300, 255.001 ),
+"speaker": "The Executive"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( -820, 860 ),
+"signalValue": "?:haskronuspowered->start_dialog:yes->start_dialog:no"
+},
+"3_2": {
+"link": "1_12",
+"offset": Vector2( -180, 860 ),
+"signalValue": "dec_respect:2"
+},
+"3_3": {
+"link": "3_4",
+"offset": Vector2( 1520, 440 ),
+"signalValue": "give_item:Kronus Suit"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2( 1780, 520 ),
+"signalValue": "fade:exit"
+},
+"3_5": {
+"link": "END",
+"offset": Vector2( 900, 1240 ),
+"signalValue": "fade:end:1"
+},
+"3_6": {
+"link": "END",
+"offset": Vector2( -800, 1400 ),
+"signalValue": "?:haskronuspowered->start_dialog:yes->start_dialog:dead"
+},
+"3_7": {
+"link": "END",
+"offset": Vector2( 200, 1620 ),
+"signalValue": "fade:dead"
+},
+"3_8": {
+"link": "END",
+"offset": Vector2( 900, 860 ),
+"signalValue": "?:haskronuspowered->start_dialog:win->start_dialog:def"
+},
+"3_9": {
+"link": "END",
+"offset": Vector2( 2044.08, 1154.1 ),
+"signalValue": "fade:start_dialog:call"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

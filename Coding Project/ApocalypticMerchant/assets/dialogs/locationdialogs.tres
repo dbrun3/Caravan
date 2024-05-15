@@ -1,0 +1,2040 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"abandon": "0_17",
+"abandon1": "0_22",
+"car": "0_49",
+"car2": "0_50",
+"cave1": "0_18",
+"cave2": "0_19",
+"cave3": "0_20",
+"cave4": "0_21",
+"cave5": "0_24",
+"chaos": "0_43",
+"city": "0_44",
+"city0": "0_16",
+"city1": "0_1",
+"city2": "0_4",
+"city3": "0_5",
+"continue": "0_11",
+"core": "0_31",
+"deadoff": "0_40",
+"deadon": "0_41",
+"deadwood1": "0_15",
+"deadwood2": "0_10",
+"deadwood3": "0_2",
+"desert": "0_13",
+"die": "0_35",
+"empty": "0_46",
+"factory": "0_8",
+"fight": "0_32",
+"gas": "0_9",
+"homes": "0_45",
+"junk": "0_3",
+"lose": "0_34",
+"moregas": "0_47",
+"nogas": "0_48",
+"norope": "0_30",
+"nothing": "0_12",
+"nuclear": "0_27",
+"plane": "0_6",
+"remnant": "0_25",
+"repair": "0_36",
+"repaired0": "0_39",
+"repaired1": "0_37",
+"repaired2": "0_38",
+"rope": "0_29",
+"scorch": "0_14",
+"shack": "0_7",
+"ssa": "0_23",
+"ssa_int": "0_26",
+"uss": "0_42",
+"win": "0_33",
+"woods": "0_28"
+}
+nodes = {
+"0_1": {
+"link": "1_11",
+"offset": Vector2( -140, -340 ),
+"start_id": "city1"
+},
+"0_10": {
+"link": "1_10",
+"offset": Vector2( -160, 60 ),
+"start_id": "deadwood2"
+},
+"0_11": {
+"link": "1_1",
+"offset": Vector2( 940, -280 ),
+"start_id": "continue"
+},
+"0_12": {
+"link": "1_12",
+"offset": Vector2( 940, -20 ),
+"start_id": "nothing"
+},
+"0_13": {
+"link": "1_42",
+"offset": Vector2( -700, -460 ),
+"start_id": "desert"
+},
+"0_14": {
+"link": "1_14",
+"offset": Vector2( -208.964, 3115.55 ),
+"start_id": "scorch"
+},
+"0_15": {
+"link": "1_2",
+"offset": Vector2( -200, 440 ),
+"start_id": "deadwood1"
+},
+"0_16": {
+"link": "1_15",
+"offset": Vector2( -127.076, -500.937 ),
+"start_id": "city0"
+},
+"0_17": {
+"link": "1_16",
+"offset": Vector2( -240, 3500 ),
+"start_id": "abandon"
+},
+"0_18": {
+"link": "1_19",
+"offset": Vector2( -260, 3920 ),
+"start_id": "cave1"
+},
+"0_19": {
+"link": "3_60",
+"offset": Vector2( 340, 3820 ),
+"start_id": "cave2"
+},
+"0_2": {
+"link": "3_115",
+"offset": Vector2( 940, 600 ),
+"start_id": "deadwood3"
+},
+"0_20": {
+"link": "3_56",
+"offset": Vector2( 940, 3900 ),
+"start_id": "cave3"
+},
+"0_21": {
+"link": "3_57",
+"offset": Vector2( 940, 4280 ),
+"start_id": "cave4"
+},
+"0_22": {
+"link": "3_85",
+"offset": Vector2( 660, 3340 ),
+"start_id": "abandon1"
+},
+"0_23": {
+"link": "1_26",
+"offset": Vector2( 1067.27, 2526.62 ),
+"start_id": "ssa"
+},
+"0_24": {
+"link": "1_27",
+"offset": Vector2( -300.826, 4318.91 ),
+"start_id": "cave5"
+},
+"0_25": {
+"link": "3_72",
+"offset": Vector2( 2320, 4300 ),
+"start_id": "remnant"
+},
+"0_26": {
+"link": "3_74",
+"offset": Vector2( 940, 2640 ),
+"start_id": "ssa_int"
+},
+"0_27": {
+"link": "1_29",
+"offset": Vector2( 1060, 2120 ),
+"start_id": "nuclear"
+},
+"0_28": {
+"link": "1_43",
+"offset": Vector2( -940, -320 ),
+"start_id": "woods"
+},
+"0_29": {
+"link": "3_84",
+"offset": Vector2( 2100, 2060 ),
+"start_id": "rope"
+},
+"0_3": {
+"link": "1_3",
+"offset": Vector2( -160, 740 ),
+"start_id": "junk"
+},
+"0_30": {
+"link": "1_30",
+"offset": Vector2( 2080, 2220 ),
+"start_id": "norope"
+},
+"0_31": {
+"link": "1_33",
+"offset": Vector2( 3260, 2120 ),
+"start_id": "core"
+},
+"0_32": {
+"link": "1_34",
+"offset": Vector2( 1660, 300 ),
+"start_id": "fight"
+},
+"0_33": {
+"link": "3_110",
+"offset": Vector2( 2480, 60 ),
+"start_id": "win"
+},
+"0_34": {
+"link": "3_111",
+"offset": Vector2( 2480, 320 ),
+"start_id": "lose"
+},
+"0_35": {
+"link": "1_37",
+"offset": Vector2( 3180, 740 ),
+"start_id": "die"
+},
+"0_36": {
+"link": "1_38",
+"offset": Vector2( 1140, -680 ),
+"start_id": "repair"
+},
+"0_37": {
+"link": "3_105",
+"offset": Vector2( 1710, -478.691 ),
+"start_id": "repaired1"
+},
+"0_38": {
+"link": "3_108",
+"offset": Vector2( 1700, -340 ),
+"start_id": "repaired2"
+},
+"0_39": {
+"link": "1_41",
+"offset": Vector2( 2500, -660 ),
+"start_id": "repaired0"
+},
+"0_4": {
+"link": "1_4",
+"offset": Vector2( -160, 1120 ),
+"start_id": "city2"
+},
+"0_40": {
+"link": "1_13",
+"offset": Vector2( 1040, 480 ),
+"start_id": "deadoff"
+},
+"0_41": {
+"link": "3_116",
+"offset": Vector2( 960.205, 843.815 ),
+"start_id": "deadon"
+},
+"0_42": {
+"link": "3_117",
+"offset": Vector2( 1200, 840 ),
+"start_id": "uss"
+},
+"0_43": {
+"link": "3_118",
+"offset": Vector2( 1066.22, 1047.99 ),
+"start_id": "chaos"
+},
+"0_44": {
+"link": "1_44",
+"offset": Vector2( -967.145, 71.5129 ),
+"start_id": "city"
+},
+"0_45": {
+"link": "1_45",
+"offset": Vector2( -317, 4754.17 ),
+"start_id": "homes"
+},
+"0_46": {
+"link": "1_46",
+"offset": Vector2( 1819.78, -85.0721 ),
+"start_id": "empty"
+},
+"0_47": {
+"link": "1_47",
+"offset": Vector2( 2543.08, -178.724 ),
+"start_id": "moregas"
+},
+"0_48": {
+"link": "1_48",
+"offset": Vector2( 3397.73, -257.365 ),
+"start_id": "nogas"
+},
+"0_49": {
+"link": "1_49",
+"offset": Vector2( -246.48, 5134.4 ),
+"start_id": "car"
+},
+"0_5": {
+"link": "1_5",
+"offset": Vector2( -160, 1420 ),
+"start_id": "city3"
+},
+"0_50": {
+"link": "1_50",
+"offset": Vector2( -289.757, 5543.57 ),
+"start_id": "car2"
+},
+"0_6": {
+"link": "1_6",
+"offset": Vector2( -160, 1720 ),
+"start_id": "plane"
+},
+"0_7": {
+"link": "1_7",
+"offset": Vector2( -160, 2100 ),
+"start_id": "shack"
+},
+"0_8": {
+"link": "1_8",
+"offset": Vector2( -160, 2360 ),
+"start_id": "factory"
+},
+"0_9": {
+"link": "1_9",
+"offset": Vector2( -160, 2680 ),
+"start_id": "gas"
+},
+"1_1": {
+"dialogue": "",
+"offset": Vector2( 1160, -340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_14",
+"text": "Continue"
+},
+1: {
+"condition": {
+},
+"link": "3_15",
+"text": "Return"
+}
+},
+"size": Vector2( 299.999, 282 ),
+"speaker": ""
+},
+"1_10": {
+"dialogue": "A makeshift camp made from an Old World national guard outpost.",
+"offset": Vector2( 60, -20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_4",
+"text": "Explore yard"
+},
+1: {
+"condition": {
+},
+"link": "3_6",
+"text": "Enter tent"
+},
+2: {
+"condition": {
+},
+"link": "3_8",
+"text": "Check Inventory"
+},
+3: {
+"condition": {
+},
+"link": "3_90",
+"text": "Leave"
+}
+},
+"size": Vector2( 283.923, 336 ),
+"speaker": "Independence"
+},
+"1_11": {
+"dialogue": "These residential buildings are home to the few who have nowhere else to go.",
+"offset": Vector2( 80, -360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_9",
+"text": "Explore surrounding area"
+},
+1: {
+"condition": {
+},
+"link": "3_12",
+"text": "Scavenge buildings"
+},
+2: {
+"condition": {
+},
+"link": "3_11",
+"text": "Leave"
+},
+3: {
+"condition": {
+},
+"link": "3_89",
+"text": "Check Inventory"
+}
+},
+"size": Vector2( 300, 336 ),
+"speaker": "Old Residential District"
+},
+"1_12": {
+"dialogue": "You see nothing.",
+"offset": Vector2( 1100, -20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_15",
+"text": "Return"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": ""
+},
+"1_13": {
+"dialogue": "Without power, the grid is dead, and the Deadwood; dark.",
+"offset": Vector2( 1320, 480 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_45",
+"text": "Leave"
+}
+},
+"size": Vector2( 300.002, 255.001 ),
+"speaker": "Deadwood Power Grid"
+},
+"1_14": {
+"dialogue": "DANGER - RADIATION
+(Leaving the Cravan without proper gear is not advised)",
+"offset": Vector2( 0, 3100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_43",
+"text": "Leave"
+},
+1: {
+"condition": {
+},
+"link": "3_100",
+"text": "Check inventory"
+},
+2: {
+"condition": {
+},
+"link": "3_119",
+"text": "Explore"
+}
+},
+"size": Vector2( 300.001, 309.006 ),
+"speaker": "The Scorch"
+},
+"1_15": {
+"dialogue": "The mechanical beating heart of the decaying city. A sign above the door reads \"KRONUS\"",
+"offset": Vector2( 80, -680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_32",
+"text": "Enter building"
+},
+1: {
+"condition": {
+},
+"link": "3_44",
+"text": "Leave"
+},
+2: {
+"condition": {
+},
+"link": "3_88",
+"text": "Check inventory"
+}
+},
+"size": Vector2( 300, 309 ),
+"speaker": "The Tower"
+},
+"1_16": {
+"dialogue": "The large door of this underground shelter is open, but there's no sign of life.",
+"offset": Vector2( -60, 3460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_47",
+"text": "Enter shelter"
+},
+1: {
+"condition": {
+},
+"link": "3_68",
+"text": "Check inventory"
+},
+2: {
+"condition": {
+},
+"link": "3_101",
+"text": "Leave"
+}
+},
+"size": Vector2( 300, 309.002 ),
+"speaker": "Abandoned Shelter"
+},
+"1_17": {
+"dialogue": "The interior is mostly destroyed, save for a single terminal.",
+"offset": Vector2( 580, 3460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_49",
+"text": "Investigate Terminal"
+},
+1: {
+"condition": {
+},
+"link": "3_65",
+"text": "Collect nearby scrap"
+},
+2: {
+"condition": {
+},
+"link": "3_64",
+"text": "Return to Caravan"
+}
+},
+"size": Vector2( 299.998, 309.002 ),
+"speaker": "Abandoned Shelter"
+},
+"1_18": {
+"dialogue": "    Location - Passkey
+REDACTED - REDACTED
+REDACTED - REDACTED
+  Mountain - H3L1522",
+"offset": Vector2( 1740, 3460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_124",
+"text": "Exit terminal"
+}
+},
+"size": Vector2( 276.373, 255.002 ),
+"speaker": "Terminal"
+},
+"1_19": {
+"dialogue": "The light is lost upon a small patch this side of the mountain.",
+"offset": Vector2( -40, 3880 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_51",
+"text": "Enter Cave"
+},
+1: {
+"condition": {
+},
+"link": "3_102",
+"text": "Check Inventory"
+},
+2: {
+"condition": {
+},
+"link": "3_50",
+"text": "Leave"
+}
+},
+"size": Vector2( 300, 309.002 ),
+"speaker": "Mountainside"
+},
+"1_2": {
+"dialogue": "A ruined suburb, reclaimed by nature",
+"offset": Vector2( 20, 300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_91",
+"text": "Explore Houses"
+},
+1: {
+"condition": {
+},
+"link": "3_33",
+"text": "Check Inventory"
+},
+2: {
+"condition": {
+},
+"link": "3_93",
+"text": "Leave"
+}
+},
+"size": Vector2( 300.001, 309.002 ),
+"speaker": "Deadwood Burbs"
+},
+"1_20": {
+"dialogue": "A small terminal sits next to a large metal door. They are both locked.",
+"offset": Vector2( 1180, 3780 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_22",
+"text": "Try to open terminal"
+},
+1: {
+"condition": {
+},
+"link": "3_54",
+"text": "Return to Caravan"
+}
+},
+"size": Vector2( 299.999, 282.002 ),
+"speaker": "Cave"
+},
+"1_21": {
+"dialogue": "It is dark.",
+"offset": Vector2( 560, 3880 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_59",
+"text": "Search ground"
+},
+1: {
+"condition": {
+},
+"link": "3_53",
+"text": "Continue deeper"
+},
+2: {
+"condition": {
+},
+"link": "3_52",
+"text": "Return to Caravan"
+}
+},
+"size": Vector2( 300.001, 309.005 ),
+"speaker": "Cave"
+},
+"1_22": {
+"dialogue": "\"Incorrect Passkey: Timeout - 5 minutes\"",
+"offset": Vector2( 1520, 3760 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_20",
+"text": "Exit terminal"
+}
+},
+"size": Vector2( 300.003, 255.01 ),
+"speaker": "Terminal"
+},
+"1_23": {
+"dialogue": "A small terminal sits next to a large metal door. They are both locked.",
+"offset": Vector2( 1180, 4180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_58",
+"text": "Enter abandoned shelter passkey"
+},
+1: {
+"condition": {
+},
+"link": "3_54",
+"text": "Return to Caravan"
+}
+},
+"size": Vector2( 299.999, 282.004 ),
+"speaker": "Cave"
+},
+"1_24": {
+"dialogue": "\"Password Accepted - Unlocking door\"",
+"offset": Vector2( 1700, 4180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_55",
+"text": "Continue..."
+}
+},
+"size": Vector2( 300.002, 255.003 ),
+"speaker": "Terminal"
+},
+"1_25": {
+"dialogue": "\"Warning! Shelter Integrity At Risk. Please follow Evacuation Protocols and proceed to nearest secondary location.\"",
+"offset": Vector2( 1420, 3460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_18",
+"text": "\"Display secondary locations\""
+}
+},
+"size": Vector2( 300.001, 255.002 ),
+"speaker": "Terminal"
+},
+"1_26": {
+"dialogue": "Hidden in the canyon, an old force is regaining its strength.",
+"offset": Vector2( 1280, 2440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_70",
+"text": "Enter "
+},
+1: {
+"condition": {
+},
+"link": "3_69",
+"text": "Leave"
+}
+},
+"size": Vector2( 299.997, 282 ),
+"speaker": "Military Base"
+},
+"1_27": {
+"dialogue": "The light is lost upon a small patch this side of the mountain.",
+"offset": Vector2( -20, 4240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_55",
+"text": "Travel to Remnant's Shelter"
+},
+1: {
+"condition": {
+},
+"link": "3_51",
+"text": "Enter Cave"
+},
+2: {
+"condition": {
+},
+"link": "3_102",
+"text": "Check Inventory"
+},
+3: {
+"condition": {
+},
+"link": "3_50",
+"text": "Leave"
+}
+},
+"size": Vector2( 299.999, 336.006 ),
+"speaker": "Mountainside"
+},
+"1_28": {
+"dialogue": "This text gets replaced by  the \"player_lose_half_inventory\" signal!",
+"offset": Vector2( 2500, 620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_109",
+"text": "Leave"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Aftermath Run"
+},
+"1_29": {
+"dialogue": "DANGER - EXTREME RADIATION
+(Leaving the Cravan without proper protection is lethal)",
+"offset": Vector2( 1280, 2060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_24",
+"text": "Enter the plant"
+},
+1: {
+"condition": {
+},
+"link": "3_82",
+"text": "Leave"
+}
+},
+"size": Vector2( 299.997, 282 ),
+"speaker": "Destroyed Plant"
+},
+"1_3": {
+"dialogue": "A junkyard continues its trade long after the world left it behind. Towards the north of the yard sits a sheetmetal shack.",
+"offset": Vector2( 80, 640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_34",
+"text": "Explore yard"
+},
+1: {
+"condition": {
+},
+"link": "3_35",
+"text": "Enter the shack"
+},
+2: {
+"condition": {
+},
+"link": "3_94",
+"text": "Check Inventory"
+},
+3: {
+"condition": {
+},
+"link": "3_38",
+"text": "Leave"
+}
+},
+"size": Vector2( 299.033, 336.001 ),
+"speaker": "Motortown"
+},
+"1_30": {
+"dialogue": "The interior of the plant has almost entirely caved in. What remains is a large chasm, too deep to see into.",
+"offset": Vector2( 2280, 2220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_76",
+"text": "Return to Caravan"
+}
+},
+"size": Vector2( 299.996, 255 ),
+"speaker": "Destroyed Plant"
+},
+"1_31": {
+"dialogue": "The interior of the plant has almost entirely caved in. What remains is a large chasm, too deep to see into.",
+"offset": Vector2( 2300, 1920 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_76",
+"text": "Return to Caravan"
+},
+1: {
+"condition": {
+},
+"link": "3_77",
+"text": "Use rope "
+}
+},
+"size": Vector2( 299.994, 282.001 ),
+"speaker": "Destroyed Plant"
+},
+"1_32": {
+"dialogue": "You descend to the basement. Before you lies a large metal tower housing several dead reactor cores... and one live one.",
+"offset": Vector2( 2860, 1920 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_78",
+"text": "Recover the core (Requires Container)"
+},
+1: {
+"condition": {
+},
+"link": "3_79",
+"text": "Return to surface"
+}
+},
+"size": Vector2( 300, 282.001 ),
+"speaker": "Destroyed Plant Basement"
+},
+"1_33": {
+"dialogue": "You have successfully acquired the core!",
+"offset": Vector2( 3500, 1940 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_83",
+"text": "Return to Surface"
+}
+},
+"size": Vector2( 299.994, 255 ),
+"speaker": "Destroyed Plant Basement"
+},
+"1_34": {
+"dialogue": "This text is modified by the \"fight\" signal!",
+"offset": Vector2( 1900, 220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_87",
+"text": "Fight"
+},
+1: {
+"condition": {
+},
+"link": "3_86",
+"text": "Run (Lose half your inventory)"
+}
+},
+"size": Vector2( 300.001, 282 ),
+"speaker": "Combat!"
+},
+"1_35": {
+"dialogue": "This text gets replaced by  the \"receive_fight_reward\" signal!",
+"offset": Vector2( 2940, -60 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_113",
+"text": "Return to Caravan"
+}
+},
+"size": Vector2( 299.998, 255 ),
+"speaker": "Aftermath Win"
+},
+"1_36": {
+"dialogue": "This text gets replaced by  the \"player_clear_inventory\" signal!",
+"offset": Vector2( 3180, 320 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_114",
+"text": "Leave"
+}
+},
+"size": Vector2( 299.995, 255.001 ),
+"speaker": "Aftermath Loss"
+},
+"1_37": {
+"dialogue": "this screen will not be in the end game abnd instead be a picture",
+"offset": Vector2( 3420, 740 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2( 299.999, 255 ),
+"speaker": "die test"
+},
+"1_38": {
+"dialogue": "\"Warning - Durability low, maintenance required.\"",
+"offset": Vector2( 1360, -780 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_39",
+"text": "Disable warning"
+},
+1: {
+"condition": {
+},
+"link": "3_104",
+"text": "Small repair (requires small kit)"
+},
+2: {
+"condition": {
+},
+"link": "3_106",
+"text": "Large repair (requires large kit)"
+}
+},
+"size": Vector2( 329.901, 309 ),
+"speaker": "Caravan"
+},
+"1_39": {
+"dialogue": "\"All systems operational\"",
+"offset": Vector2( 1920, -820 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_103",
+"text": "Enter Caravan"
+}
+},
+"size": Vector2( 300.003, 255 ),
+"speaker": "Caravan"
+},
+"1_4": {
+"dialogue": "This grounded aircraft houses rare Old World technology, and those who wish to keep it for themselves.",
+"offset": Vector2( 80, 980 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_39",
+"text": "Enter the Aircraft"
+},
+1: {
+"condition": {
+},
+"link": "3_123",
+"text": "Leave"
+}
+},
+"size": Vector2( 299.997, 282 ),
+"speaker": "Terminal "
+},
+"1_40": {
+"dialogue": "\"Kit used\"",
+"offset": Vector2( 2160, -540 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_39",
+"text": "Disable warning"
+},
+1: {
+"condition": {
+},
+"link": "3_104",
+"text": "Small repair (requires small kit)"
+},
+2: {
+"condition": {
+},
+"link": "3_106",
+"text": "Large repair (requires large kit)"
+}
+},
+"size": Vector2( 300, 309 ),
+"speaker": "Caravan"
+},
+"1_41": {
+"dialogue": "\"No kit present\"",
+"offset": Vector2( 2580, -540 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_39",
+"text": "Disable warning"
+},
+1: {
+"condition": {
+},
+"link": "3_104",
+"text": "Small repair (requires small kit)"
+},
+2: {
+"condition": {
+},
+"link": "3_106",
+"text": "Large repair (requires large kit)"
+}
+},
+"size": Vector2( 300, 309 ),
+"speaker": "Caravan"
+},
+"1_42": {
+"dialogue": "You exit the Caravan...",
+"offset": Vector2( -480, -620 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_42",
+"text": "continue"
+}
+},
+"size": Vector2( 303.858, 255 ),
+"speaker": "Desert"
+},
+"1_43": {
+"dialogue": "You exit the Caravan...",
+"offset": Vector2( -860, -220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_42",
+"text": "continue"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "The Deadwoods"
+},
+"1_44": {
+"dialogue": "You exit the Caravan...",
+"offset": Vector2( -700, 120 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_42",
+"text": "continue"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "City Streets"
+},
+"1_45": {
+"dialogue": "DANGER - RADIATION
+(Leaving the Cravan without proper gear is not advised)
+
+The remains of an old suburb, burned red by the blast of the nearby power plant",
+"offset": Vector2( -80, 4720 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_128",
+"text": "Explore homes"
+},
+1: {
+"condition": {
+},
+"link": "3_120",
+"text": "Leave"
+}
+},
+"size": Vector2( 300, 282.002 ),
+"speaker": "Scorched Homes"
+},
+"1_46": {
+"dialogue": "\"FUEL TANK EMPTY\"",
+"offset": Vector2( 2040, -180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_125",
+"text": "Use spare gas"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Caravan"
+},
+"1_47": {
+"dialogue": "\"Tank used\"",
+"offset": Vector2( 2753.88, -276.38 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_126",
+"text": "Return"
+}
+},
+"size": Vector2( 299.999, 255 ),
+"speaker": "Caravan"
+},
+"1_48": {
+"dialogue": "\"No tank present\"
+
+You are stranded...",
+"offset": Vector2( 3333.57, -179.032 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_127",
+"text": "continue"
+}
+},
+"size": Vector2( 299.998, 255 ),
+"speaker": "Caravan"
+},
+"1_49": {
+"dialogue": "A military vehicle, appears recently abandoned by its owner...",
+"offset": Vector2( -20, 5140 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_133",
+"text": "Scavange/Stash"
+},
+1: {
+"condition": {
+},
+"link": "3_129",
+"text": "Siphon Gas"
+},
+2: {
+"condition": {
+},
+"link": "3_132",
+"text": "Leave"
+}
+},
+"size": Vector2( 300, 309 ),
+"speaker": "Deserted Humvee"
+},
+"1_5": {
+"dialogue": "An old world hospital still in operation.",
+"offset": Vector2( 60, 1300 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_29",
+"text": "Enter the hospital"
+},
+1: {
+"condition": {
+},
+"link": "3_28",
+"text": "Explore surrounding area"
+},
+2: {
+"condition": {
+},
+"link": "3_41",
+"text": "Leave"
+},
+3: {
+"condition": {
+},
+"link": "3_95",
+"text": "Check inventory"
+}
+},
+"size": Vector2( 287.458, 336 ),
+"speaker": "Medical District"
+},
+"1_50": {
+"dialogue": "A military vehicle, appears recently abandoned by its owner...",
+"offset": Vector2( -40, 5520 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_133",
+"text": "Scavange/Stash"
+},
+1: {
+"condition": {
+},
+"link": "3_132",
+"text": "Leave"
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Deserted Humvee"
+},
+"1_51": {
+"dialogue": "The grid's power has been restored!!!!",
+"offset": Vector2( 1680, 840 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Deadwood Power Grid"
+},
+"1_6": {
+"dialogue": "An Old-World bomber plane. It seems to have been left alone all these years.",
+"offset": Vector2( 60, 1640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_16",
+"text": "Scavenge/Stash"
+},
+1: {
+"condition": {
+},
+"link": "3_17",
+"text": "Leave"
+}
+},
+"size": Vector2( 299.998, 309 ),
+"speaker": "Old Warplane"
+},
+"1_7": {
+"dialogue": "Seemingly deserted, this general store doesn't get many customers.",
+"offset": Vector2( 60, 2000 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Enter store"
+},
+1: {
+"condition": {
+},
+"link": "3_1",
+"text": "Leave"
+},
+2: {
+"condition": {
+},
+"link": "3_96",
+"text": "Check inventory"
+}
+},
+"size": Vector2( 299.998, 309 ),
+"speaker": "Lone Star General"
+},
+"1_8": {
+"dialogue": "An old world factory... Seemingly still in use.",
+"offset": Vector2( 40, 2320 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_23",
+"text": "Approach entrance"
+},
+1: {
+"condition": {
+},
+"link": "3_27",
+"text": "Leave"
+},
+2: {
+"condition": {
+},
+"link": "3_97",
+"text": "Check inventory"
+}
+},
+"size": Vector2( 299.998, 309 ),
+"speaker": "Kronus Industries"
+},
+"1_9": {
+"dialogue": "A gas station with a small garage in the back. ",
+"offset": Vector2( 60, 2680 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_19",
+"text": "Enter station"
+},
+1: {
+"condition": {
+},
+"link": "3_18",
+"text": "Go to garage"
+},
+2: {
+"condition": {
+},
+"link": "3_20",
+"text": "Check inventory"
+},
+3: {
+"condition": {
+},
+"link": "3_98",
+"text": "Leave"
+}
+},
+"size": Vector2( 299.998, 336.003 ),
+"speaker": "Texaco"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( 460, 2240 ),
+"signalValue": "exit"
+},
+"3_10": {
+"link": "END",
+"offset": Vector2( 700, -260 ),
+"signalValue": "talk:?,0"
+},
+"3_100": {
+"link": "END",
+"offset": Vector2( 320, 3380 ),
+"signalValue": "inventory"
+},
+"3_101": {
+"link": "END",
+"offset": Vector2( 320, 3740 ),
+"signalValue": "exit"
+},
+"3_102": {
+"link": "END",
+"offset": Vector2( 360, 4300 ),
+"signalValue": "inventory"
+},
+"3_103": {
+"link": "END",
+"offset": Vector2( 2320, -800 ),
+"signalValue": "exit"
+},
+"3_104": {
+"link": "END",
+"offset": Vector2( 1760, -560 ),
+"signalValue": "?:player_has_item:Small Repair Kit->start_dialog:repaired1->start_dialog:repaired0"
+},
+"3_105": {
+"link": "1_40",
+"offset": Vector2( 1920, -460 ),
+"signalValue": "smallrepair"
+},
+"3_106": {
+"link": "END",
+"offset": Vector2( 1528.88, -428.555 ),
+"signalValue": "?:player_has_item:Large Repair Kit->start_dialog:repaired2->start_dialog:repaired"
+},
+"3_107": {
+"link": "END",
+"offset": Vector2( 1320, 2780 ),
+"signalValue": "talk:0"
+},
+"3_108": {
+"link": "1_40",
+"offset": Vector2( 1920, -340 ),
+"signalValue": "largerepair"
+},
+"3_109": {
+"link": "END",
+"offset": Vector2( 2840, 820 ),
+"signalValue": "continue"
+},
+"3_11": {
+"link": "END",
+"offset": Vector2( 700, -80 ),
+"signalValue": "exit"
+},
+"3_110": {
+"link": "1_35",
+"offset": Vector2( 2700, 60 ),
+"signalValue": "receive_fight_reward"
+},
+"3_111": {
+"link": "3_112",
+"offset": Vector2( 2700, 320 ),
+"signalValue": "dec_health:1"
+},
+"3_112": {
+"link": "1_36",
+"offset": Vector2( 2940, 320 ),
+"signalValue": "player_clear_inventory"
+},
+"3_113": {
+"link": "END",
+"offset": Vector2( 3280, 140 ),
+"signalValue": "continue"
+},
+"3_114": {
+"link": "END",
+"offset": Vector2( 3520, 520 ),
+"signalValue": "continue"
+},
+"3_115": {
+"link": "END",
+"offset": Vector2( 1040, 700 ),
+"signalValue": "?:hasdeadwoodpowered->start_dialog:deadon->start_dialog:deadoff"
+},
+"3_116": {
+"link": "END",
+"offset": Vector2( 1140, 920 ),
+"signalValue": "?:hasuss->start_dialog:uss->start_dialog:chaos"
+},
+"3_117": {
+"link": "1_51",
+"offset": Vector2( 1427.03, 881.327 ),
+"signalValue": "fade:end:3"
+},
+"3_118": {
+"link": "1_51",
+"offset": Vector2( 1325.64, 1056.33 ),
+"signalValue": "fade:end:2"
+},
+"3_119": {
+"link": "3_99",
+"offset": Vector2( 340, 3140 ),
+"signalValue": "scorch"
+},
+"3_12": {
+"link": "3_13",
+"offset": Vector2( 440, -160 ),
+"signalValue": "enter:1"
+},
+"3_120": {
+"link": "END",
+"offset": Vector2( 300, 4940 ),
+"signalValue": "exit"
+},
+"3_121": {
+"link": "3_122",
+"offset": Vector2( 300, 4860 ),
+"signalValue": "enter:1"
+},
+"3_122": {
+"link": "END",
+"offset": Vector2( 520, 4820 ),
+"signalValue": "talk:?,0"
+},
+"3_123": {
+"link": "END",
+"offset": Vector2( 403.309, 1223.69 ),
+"signalValue": "exit"
+},
+"3_124": {
+"link": "3_48",
+"offset": Vector2( 2108.92, 3583.55 ),
+"signalValue": "mark:Mountain"
+},
+"3_125": {
+"link": "END",
+"offset": Vector2( 2380, -160 ),
+"signalValue": "?:player_has_item:Gas->start_dialog:moregas->start_dialog:nogas"
+},
+"3_126": {
+"link": "END",
+"offset": Vector2( 3100, -240 ),
+"signalValue": "usegas"
+},
+"3_127": {
+"link": "END",
+"offset": Vector2( 3660, 0 ),
+"signalValue": "dead"
+},
+"3_128": {
+"link": "3_121",
+"offset": Vector2( 280, 4720 ),
+"signalValue": "scorch"
+},
+"3_129": {
+"link": "3_130",
+"offset": Vector2( 340, 5340 ),
+"signalValue": "set_location_dialog:car2"
+},
+"3_13": {
+"link": "END",
+"offset": Vector2( 700, -160 ),
+"signalValue": "talk:?,0"
+},
+"3_130": {
+"link": "3_131",
+"offset": Vector2( 560, 5340 ),
+"signalValue": "fillgas"
+},
+"3_131": {
+"link": "END",
+"offset": Vector2( 800, 5340 ),
+"signalValue": "start_dialog:car2"
+},
+"3_132": {
+"link": "END",
+"offset": Vector2( 333.467, 5723.3 ),
+"signalValue": "exit"
+},
+"3_133": {
+"link": "END",
+"offset": Vector2( 440, 5600 ),
+"signalValue": "inventory"
+},
+"3_14": {
+"link": "END",
+"offset": Vector2( 1540, -200 ),
+"signalValue": "talk:?,0"
+},
+"3_15": {
+"link": "END",
+"offset": Vector2( 1540, -60 ),
+"signalValue": "leave"
+},
+"3_16": {
+"link": "END",
+"offset": Vector2( 420, 1780 ),
+"signalValue": "inventory"
+},
+"3_17": {
+"link": "END",
+"offset": Vector2( 420, 1860 ),
+"signalValue": "exit"
+},
+"3_18": {
+"link": "3_22",
+"offset": Vector2( 440, 2860 ),
+"signalValue": "enter:2"
+},
+"3_19": {
+"link": "3_21",
+"offset": Vector2( 440, 2780 ),
+"signalValue": "enter:1"
+},
+"3_2": {
+"link": "3_3",
+"offset": Vector2( 440, 2160 ),
+"signalValue": "enter:1"
+},
+"3_20": {
+"link": "END",
+"offset": Vector2( 440, 2940 ),
+"signalValue": "inventory"
+},
+"3_21": {
+"link": "END",
+"offset": Vector2( 660, 2780 ),
+"signalValue": "talk:0"
+},
+"3_22": {
+"link": "END",
+"offset": Vector2( 660, 2860 ),
+"signalValue": "talk:0"
+},
+"3_23": {
+"link": "3_25",
+"offset": Vector2( 440, 2440 ),
+"signalValue": "enter:1"
+},
+"3_24": {
+"link": "3_26",
+"offset": Vector2( 1620, 2180 ),
+"signalValue": "nuclear"
+},
+"3_25": {
+"link": "END",
+"offset": Vector2( 680, 2440 ),
+"signalValue": "talk:0"
+},
+"3_26": {
+"link": "3_75",
+"offset": Vector2( 1860, 2140 ),
+"signalValue": "enter:1"
+},
+"3_27": {
+"link": "END",
+"offset": Vector2( 500, 2580 ),
+"signalValue": "exit"
+},
+"3_28": {
+"link": "3_31",
+"offset": Vector2( 480, 1520 ),
+"signalValue": "enter:2"
+},
+"3_29": {
+"link": "3_30",
+"offset": Vector2( 480, 1440 ),
+"signalValue": "enter:1"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2( 720, 2200 ),
+"signalValue": "talk:0"
+},
+"3_30": {
+"link": "END",
+"offset": Vector2( 740, 1440 ),
+"signalValue": "talk:0"
+},
+"3_31": {
+"link": "END",
+"offset": Vector2( 740, 1520 ),
+"signalValue": "talk:?,0"
+},
+"3_32": {
+"link": "3_46",
+"offset": Vector2( 440, -520 ),
+"signalValue": "enter:1"
+},
+"3_33": {
+"link": "END",
+"offset": Vector2( 640, 600 ),
+"signalValue": "inventory"
+},
+"3_34": {
+"link": "3_36",
+"offset": Vector2( 420, 740 ),
+"signalValue": "enter:2"
+},
+"3_35": {
+"link": "3_37",
+"offset": Vector2( 420, 840 ),
+"signalValue": "enter:1"
+},
+"3_36": {
+"link": "END",
+"offset": Vector2( 640, 740 ),
+"signalValue": "talk:?,0"
+},
+"3_37": {
+"link": "END",
+"offset": Vector2( 640, 840 ),
+"signalValue": "talk:0"
+},
+"3_38": {
+"link": "END",
+"offset": Vector2( 420, 940 ),
+"signalValue": "exit"
+},
+"3_39": {
+"link": "3_40",
+"offset": Vector2( 420, 1060 ),
+"signalValue": "enter:1"
+},
+"3_4": {
+"link": "3_5",
+"offset": Vector2( 440, 40 ),
+"signalValue": "enter:2"
+},
+"3_40": {
+"link": "END",
+"offset": Vector2( 640, 1060 ),
+"signalValue": "talk:?,0"
+},
+"3_41": {
+"link": "END",
+"offset": Vector2( 480, 1620 ),
+"signalValue": "exit"
+},
+"3_42": {
+"link": "END",
+"offset": Vector2( -440, -180 ),
+"signalValue": "rand_event"
+},
+"3_43": {
+"link": "END",
+"offset": Vector2( 400, 3300 ),
+"signalValue": "exit"
+},
+"3_44": {
+"link": "END",
+"offset": Vector2( 440, -420 ),
+"signalValue": "exit"
+},
+"3_45": {
+"link": "END",
+"offset": Vector2( 1660, 540 ),
+"signalValue": "exit"
+},
+"3_46": {
+"link": "END",
+"offset": Vector2( 720, -520 ),
+"signalValue": "talk:0"
+},
+"3_47": {
+"link": "1_17",
+"offset": Vector2( 320, 3580 ),
+"signalValue": "enter:1"
+},
+"3_48": {
+"link": "1_17",
+"offset": Vector2( 2200, 3300 ),
+"signalValue": "enter:1"
+},
+"3_49": {
+"link": "3_63",
+"offset": Vector2( 920, 3500 ),
+"signalValue": "enter:2"
+},
+"3_5": {
+"link": "END",
+"offset": Vector2( 660, 40 ),
+"signalValue": "talk:?,0"
+},
+"3_50": {
+"link": "END",
+"offset": Vector2( 320, 4140 ),
+"signalValue": "exit"
+},
+"3_51": {
+"link": "1_21",
+"offset": Vector2( 320, 4040 ),
+"signalValue": "enter:1"
+},
+"3_52": {
+"link": "END",
+"offset": Vector2( 940, 4120 ),
+"signalValue": "leave"
+},
+"3_53": {
+"link": "END",
+"offset": Vector2( 940, 4040 ),
+"signalValue": "?:playerhaspasskey->start_dialog:cave4->start_dialog:cave3"
+},
+"3_54": {
+"link": "END",
+"offset": Vector2( 1560, 4060 ),
+"signalValue": "leave"
+},
+"3_55": {
+"link": "END",
+"offset": Vector2( 2020, 4380 ),
+"signalValue": "fade:start_dialog:remnant"
+},
+"3_56": {
+"link": "1_20",
+"offset": Vector2( 940, 3960 ),
+"signalValue": "enter:2"
+},
+"3_57": {
+"link": "1_23",
+"offset": Vector2( 940, 4340 ),
+"signalValue": "enter:2"
+},
+"3_58": {
+"link": "1_24",
+"offset": Vector2( 1500, 4260 ),
+"signalValue": "set_location_dialog:cave5"
+},
+"3_59": {
+"link": "3_62",
+"offset": Vector2( 600, 4220 ),
+"signalValue": "set_location_dialog:cave2"
+},
+"3_6": {
+"link": "3_7",
+"offset": Vector2( 440, 160 ),
+"signalValue": "enter:1"
+},
+"3_60": {
+"link": "3_61",
+"offset": Vector2( 320, 3900 ),
+"signalValue": "enter:1"
+},
+"3_61": {
+"link": "1_21",
+"offset": Vector2( 320, 3960 ),
+"signalValue": "set_location_dialog:cave1"
+},
+"3_62": {
+"link": "END",
+"offset": Vector2( 600, 4320 ),
+"signalValue": "talk:?,0"
+},
+"3_63": {
+"link": "1_25",
+"offset": Vector2( 940, 3600 ),
+"signalValue": "giveplayerpasskey"
+},
+"3_64": {
+"link": "END",
+"offset": Vector2( 940, 3740 ),
+"signalValue": "leave"
+},
+"3_65": {
+"link": "3_66",
+"offset": Vector2( 940, 3680 ),
+"signalValue": "set_location_dialog:abandon1"
+},
+"3_66": {
+"link": "END",
+"offset": Vector2( 1160, 3680 ),
+"signalValue": "talk:?,0"
+},
+"3_67": {
+"link": "1_17",
+"offset": Vector2( 920, 3340 ),
+"signalValue": "set_location_dialog:abandon"
+},
+"3_68": {
+"link": "END",
+"offset": Vector2( 320, 3660 ),
+"signalValue": "inventory"
+},
+"3_69": {
+"link": "END",
+"offset": Vector2( 1660, 2660 ),
+"signalValue": "exit"
+},
+"3_7": {
+"link": "END",
+"offset": Vector2( 660, 160 ),
+"signalValue": "talk:0"
+},
+"3_70": {
+"link": "3_71",
+"offset": Vector2( 1680, 2580 ),
+"signalValue": "enter:1"
+},
+"3_71": {
+"link": "END",
+"offset": Vector2( 1920, 2580 ),
+"signalValue": "talk:0"
+},
+"3_72": {
+"link": "3_73",
+"offset": Vector2( 2540, 4300 ),
+"signalValue": "enter:3"
+},
+"3_73": {
+"link": "END",
+"offset": Vector2( 2780, 4300 ),
+"signalValue": "talk:0"
+},
+"3_74": {
+"link": "3_107",
+"offset": Vector2( 1060, 2780 ),
+"signalValue": "enter:2"
+},
+"3_75": {
+"link": "END",
+"offset": Vector2( 2080, 2140 ),
+"signalValue": "?:player_has_item:Rope->start_dialog:rope->start_dialog:norope"
+},
+"3_76": {
+"link": "END",
+"offset": Vector2( 2640, 2380 ),
+"signalValue": "leave"
+},
+"3_77": {
+"link": "1_32",
+"offset": Vector2( 2635.22, 2034.49 ),
+"signalValue": "enter:2"
+},
+"3_78": {
+"link": "END",
+"offset": Vector2( 3260, 2040 ),
+"signalValue": "?:player_has_item:corebox->start_dialog:core->none"
+},
+"3_79": {
+"link": "END",
+"offset": Vector2( 3260, 2200 ),
+"signalValue": "leave"
+},
+"3_8": {
+"link": "END",
+"offset": Vector2( 440, 240 ),
+"signalValue": "inventory"
+},
+"3_80": {
+"link": "3_81",
+"offset": Vector2( 3840, 2100 ),
+"signalValue": "give_item:coreboxfull"
+},
+"3_81": {
+"link": "END",
+"offset": Vector2( 4060, 2100 ),
+"signalValue": "fade:leave"
+},
+"3_82": {
+"link": "END",
+"offset": Vector2( 1640, 2260 ),
+"signalValue": "exit"
+},
+"3_83": {
+"link": "3_80",
+"offset": Vector2( 3840, 2000 ),
+"signalValue": "remove_item:corebox"
+},
+"3_84": {
+"link": "1_31",
+"offset": Vector2( 2021.22, 1761.17 ),
+"signalValue": "remove_item:rope"
+},
+"3_85": {
+"link": "3_67",
+"offset": Vector2( 831.806, 3172.8 ),
+"signalValue": "enter:1"
+},
+"3_86": {
+"link": "1_28",
+"offset": Vector2( 2240, 540 ),
+"signalValue": "player_lose_half_inventory"
+},
+"3_87": {
+"link": "END",
+"offset": Vector2( 2240, 400 ),
+"signalValue": "?:calculate_fight->start_dialog:win->start_dialog:lose"
+},
+"3_88": {
+"link": "END",
+"offset": Vector2( 651.032, -407.954 ),
+"signalValue": "inventory"
+},
+"3_89": {
+"link": "END",
+"offset": Vector2( 460, -80 ),
+"signalValue": "inventory"
+},
+"3_9": {
+"link": "3_10",
+"offset": Vector2( 440, -260 ),
+"signalValue": "enter:2"
+},
+"3_90": {
+"link": "END",
+"offset": Vector2( 460, 300 ),
+"signalValue": "exit"
+},
+"3_91": {
+"link": "3_92",
+"offset": Vector2( 380, 460 ),
+"signalValue": "enter:1"
+},
+"3_92": {
+"link": "END",
+"offset": Vector2( 620, 500 ),
+"signalValue": "talk:?,0"
+},
+"3_93": {
+"link": "END",
+"offset": Vector2( 360, 560 ),
+"signalValue": "exit"
+},
+"3_94": {
+"link": "END",
+"offset": Vector2( 640, 920 ),
+"signalValue": "inventory"
+},
+"3_95": {
+"link": "END",
+"offset": Vector2( 760, 1640 ),
+"signalValue": "inventory"
+},
+"3_96": {
+"link": "END",
+"offset": Vector2( 480, 2320 ),
+"signalValue": "inventory"
+},
+"3_97": {
+"link": "END",
+"offset": Vector2( 440, 2520 ),
+"signalValue": "inventory"
+},
+"3_98": {
+"link": "END",
+"offset": Vector2( 440, 3020 ),
+"signalValue": "exit"
+},
+"3_99": {
+"link": "END",
+"offset": Vector2( 400, 3240 ),
+"signalValue": "rand_event"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

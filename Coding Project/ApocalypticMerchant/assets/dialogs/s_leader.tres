@@ -1,0 +1,107 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -360, -100 ),
+"start_id": "default"
+},
+"1_1": {
+"dialogue": "Hey, you! Stop right there!",
+"offset": Vector2( -120, -180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Easy there, who are you?"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "leader"
+},
+"1_2": {
+"dialogue": "Name's [name]. I lead a small settlement up north made up of the few there that survived the apocalypse. ",
+"offset": Vector2( 220, -180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "So what are you stopping me for?"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "leader"
+},
+"1_3": {
+"dialogue": "I'm responsible for their safety and well-being in this harsh world, but that means I need to go out and gather supplies for them. You got any weapons or supplies I could trade for?",
+"offset": Vector2( 560, -180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Yeah."
+},
+1: {
+"condition": {
+},
+"link": "1_4",
+"text": "No."
+}
+},
+"size": Vector2( 300.001, 282 ),
+"speaker": "leader"
+},
+"1_4": {
+"dialogue": "**sigh** My people are suffering out there and it hurts to see. Given I'm the leader, I feel to blame for the troubles we're having, but I'm doing the best I can. Thanks anyways.",
+"offset": Vector2( 900, 60 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Wishing the best for you."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "leader"
+},
+"1_5": {
+"dialogue": "Thanks, my people are suffering out there and it hurts to see. This will definitely help, I owe you one.",
+"offset": Vector2( 1200, -260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Don't worry bout it."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "leader"
+},
+"3_1": {
+"link": "1_5",
+"offset": Vector2( 900, -140 ),
+"signalValue": "trade"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 1640, 20 ),
+"signalValue": "leave"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

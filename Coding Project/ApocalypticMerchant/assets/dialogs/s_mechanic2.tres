@@ -1,0 +1,116 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -520, 100 ),
+"start_id": "default"
+},
+"1_1": {
+"dialogue": "Well, well, well. Looks like we got a visitor. What's a young lad like you doing in this town?",
+"offset": Vector2( -300, 20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "I'm scavenging for whatever parts I can get my hands on."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "mechanic"
+},
+"1_2": {
+"dialogue": "A scavenger huh? I'm a bit of a scavenger myself. The name's [name]. I used to be an engineering at a manufacturing plant back in the day. Turns out these skills come quite handy in the aftermath of a pandemic. Lots of bits and pieces that need to be put together again.",
+"offset": Vector2( 40, 20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "Nice to meet you."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "mechanic"
+},
+"1_3": {
+"dialogue": "I make my living outta salvaging and repairing broken machinery, so I'm always looking for spare parts n' tools. You got anything I might be interested in? I'd be willing to trade ya.",
+"offset": Vector2( 380, 20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Yeah."
+},
+1: {
+"condition": {
+},
+"link": "1_4",
+"text": "No, sorry."
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "mechanic"
+},
+"1_4": {
+"dialogue": "Nah, it's alright man. Good luck on your travels.",
+"offset": Vector2( 740, 280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Good luck with your business."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "mechanic"
+},
+"1_5": {
+"dialogue": "Appreciate the parts my man. Hope what I gave you is equally as useful. Good luck on your travels.",
+"offset": Vector2( 1000, -40 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Good luck with your business."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "mechanic"
+},
+"2_1": {
+"comment": "Backstory: Before the apocalypse, Jackson was an engineer who worked in a manufacturing plant. When society collapsed, he turned his skills toward salvaging and repairing machinery to survive. Jackson is always tinkering with gadgets and vehicles, trying to keep them running in the wasteland.
+Motivation: Jackson trades for spare parts, tools, and technical knowledge. He's especially interested in acquiring rare or unusual components that he can use to repair or upgrade his machines.",
+"offset": Vector2( -260, -360 ),
+"size": {
+"x": 490.316,
+"y": 285.185
+}
+},
+"3_1": {
+"link": "1_5",
+"offset": Vector2( 740, 60 ),
+"signalValue": "trade"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 1420, 240 ),
+"signalValue": "leave"
+}
+}
+variables = {
+}
+comments = [ "2_1" ]
+strays = [  ]
+characters = ""

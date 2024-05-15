@@ -1,0 +1,120 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1",
+"no": "0_3",
+"yes": "0_2"
+}
+nodes = {
+"0_1": {
+"link": "3_1",
+"offset": Vector2( -52.4343, 328.932 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "1_1",
+"offset": Vector2( 161.873, 451.073 ),
+"start_id": "yes"
+},
+"0_3": {
+"link": "1_2",
+"offset": Vector2( 142.583, 543.666 ),
+"start_id": "no"
+},
+"1_1": {
+"dialogue": "Scanning credentials... Employee... Carry on.",
+"offset": Vector2( 380, 320 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "leave"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Loss Prevention"
+},
+"1_2": {
+"dialogue": "Where is your scrap, scav?",
+"offset": Vector2( 269.735, 685.648 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "I don't have any. I don't work here."
+},
+1: {
+"condition": {
+},
+"link": "1_4",
+"text": "I turned it in already! I'm just getting more."
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Loss Prevention"
+},
+"1_3": {
+"dialogue": "Then face termination...",
+"offset": Vector2( 600, 640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_4",
+"text": "..."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Loss Prevention"
+},
+"1_4": {
+"dialogue": "Hmm... Carry on.",
+"offset": Vector2( 600, 900 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_3",
+"text": "leave"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Loss Prevention"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( 160, 340 ),
+"signalValue": "?:haskronusally->start_dialog:yes->start_dialog:no"
+},
+"3_2": {
+"link": "3_5",
+"offset": Vector2( 700, 500 ),
+"signalValue": "continue"
+},
+"3_3": {
+"link": "3_5",
+"offset": Vector2( 920, 1060 ),
+"signalValue": "continue"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2( 940, 840 ),
+"signalValue": "fight"
+},
+"3_5": {
+"link": "END",
+"offset": Vector2( 1362.83, 787.8 ),
+"signalValue": "pop"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

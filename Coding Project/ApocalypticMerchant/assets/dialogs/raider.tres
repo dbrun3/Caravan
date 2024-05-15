@@ -1,0 +1,40 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -420, 360 ),
+"start_id": "default"
+},
+"1_1": {
+"dialogue": "Well, well, well. Look what the waste dragged in. You got something for me, or should I just take it?",
+"offset": Vector2( -40, 260 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Big mistake, scrap-heap..."
+}
+},
+"size": Vector2( 391.714, 404 ),
+"speaker": "Raider"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( 460, 460 ),
+"signalValue": "fight"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

@@ -1,0 +1,131 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -65, 273 ),
+"start_id": "default"
+},
+"1_1": {
+"dialogue": "Hey, you there! Hold up a minute!",
+"offset": Vector2( 140, 160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Easy there. What's up?"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Scavenger"
+},
+"1_2": {
+"dialogue": "Boy, am I sure glad I ran into you! Been in need of some parts n' tools. You wouldn't happen to have [insert item here] would you?",
+"offset": Vector2( 480, 160 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "Yeah I do."
+},
+1: {
+"condition": {
+},
+"link": "1_4",
+"text": "No I don't."
+}
+},
+"size": Vector2( 299.999, 282 ),
+"speaker": "Scavenger"
+},
+"1_3": {
+"dialogue": "Well ain't it my lucky day! I'll buy it off you for [insert amount here]. How's that sound?",
+"offset": Vector2( 840, 60 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "You got yourself a deal."
+},
+1: {
+"condition": {
+},
+"link": "1_6",
+"text": "Sorry, not looking to sell."
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Scavenger"
+},
+"1_4": {
+"dialogue": "Well darn. Looks like I'm out of luck. Thanks anyways.",
+"offset": Vector2( 840, 400 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "Take care."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Scavenger"
+},
+"1_5": {
+"dialogue": "Thank you so much! You don't know how long I've been searching for this. I wish you the best of luck traveler.",
+"offset": Vector2( 1220, -80 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Appreciate it."
+}
+},
+"size": Vector2( 299.998, 255 ),
+"speaker": "Scavenger"
+},
+"1_6": {
+"dialogue": "Screw this! Spent countless days just trying to find someone who had this and when I finally do they're not interested in doing business. I must be cursed. Well, off to the next person. ",
+"offset": Vector2( 1220, 240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Hope your luck turns around."
+}
+},
+"size": Vector2( 299.998, 255 ),
+"speaker": "Scavenger"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( 1220, 580 ),
+"signalValue": "leave"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 1620, 200 ),
+"signalValue": "leave"
+}
+}
+variables = {
+"money": {
+"type": 2,
+"value": 10.0
+}
+}
+comments = [  ]
+strays = [  ]
+characters = ""

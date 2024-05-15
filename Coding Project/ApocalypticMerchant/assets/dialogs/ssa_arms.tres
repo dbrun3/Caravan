@@ -1,0 +1,517 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"default": "0_1",
+"good": "0_7",
+"neutral": "0_4",
+"noammo1": "0_8",
+"noammo2": "0_12",
+"nobarrel": "0_6",
+"nossa": "0_3",
+"nossa2": "0_15",
+"noweapon": "0_10",
+"yesammo1": "0_11",
+"yesammo2": "0_14",
+"yesbarrel": "0_5",
+"yesssa1": "0_9",
+"yesssa2": "0_13",
+"yesweapon": "0_2"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -2060, -360 ),
+"start_id": "default"
+},
+"0_10": {
+"link": "3_14",
+"offset": Vector2( -1140, -460 ),
+"start_id": "noweapon"
+},
+"0_11": {
+"link": "3_18",
+"offset": Vector2( -1680, -960 ),
+"start_id": "yesammo1"
+},
+"0_12": {
+"link": "1_11",
+"offset": Vector2( -560, 120 ),
+"start_id": "noammo2"
+},
+"0_13": {
+"link": "1_18",
+"offset": Vector2( -720, 760 ),
+"start_id": "yesssa2"
+},
+"0_14": {
+"link": "3_19",
+"offset": Vector2( -1060, 1100 ),
+"start_id": "yesammo2"
+},
+"0_15": {
+"link": "3_22",
+"offset": Vector2( -980, 120 ),
+"start_id": "nossa2"
+},
+"0_2": {
+"link": "1_7",
+"offset": Vector2( -700, -780 ),
+"start_id": "yesweapon"
+},
+"0_3": {
+"link": "3_13",
+"offset": Vector2( -1140, -560 ),
+"start_id": "nossa"
+},
+"0_4": {
+"link": "3_4",
+"offset": Vector2( -2060, 200 ),
+"start_id": "neutral"
+},
+"0_5": {
+"link": "1_10",
+"offset": Vector2( -1580, 40 ),
+"start_id": "yesbarrel"
+},
+"0_6": {
+"link": "1_13",
+"offset": Vector2( -1580, 440 ),
+"start_id": "nobarrel"
+},
+"0_7": {
+"link": "1_14",
+"offset": Vector2( -1840, 900 ),
+"start_id": "good"
+},
+"0_8": {
+"link": "1_8",
+"offset": Vector2( -700, -500 ),
+"start_id": "noammo1"
+},
+"0_9": {
+"link": "1_15",
+"offset": Vector2( -720, -1160 ),
+"start_id": "yesssa1"
+},
+"1_1": {
+"dialogue": "Well, look who we have here. They call me Bubbles. I handle the weapon arsenal.",
+"offset": Vector2( -1840, -460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Do you have weapons for sale?"
+},
+1: {
+"condition": {
+},
+"link": "1_3",
+"text": "What's your favorite weapon here?"
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Bubbles"
+},
+"1_10": {
+"dialogue": "Welcome back. What do you need?",
+"offset": Vector2( -1340, 40 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "(Buy/Trade)"
+},
+1: {
+"condition": {
+},
+"link": "3_8",
+"text": "I found the barrel assembly."
+},
+2: {
+"condition": {
+},
+"link": "3_12",
+"text": "(leave)"
+}
+},
+"size": Vector2( 300, 309 ),
+"speaker": "Bubbles"
+},
+"1_11": {
+"dialogue": "Pleasure doing business.",
+"offset": Vector2( -360, 40 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_6",
+"text": "(leave)"
+}
+},
+"size": Vector2( 300.001, 255 ),
+"speaker": "Bubbles"
+},
+"1_12": {
+"dialogue": "Well, isn't that so! It looks like this AK-47 is going to see some action once again! Man, I'd love to keep this, but a deal is a deal. It's all yours buddy.",
+"offset": Vector2( -500, 360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_7",
+"text": "Thanks, I'll take good care of this."
+}
+},
+"size": Vector2( 300.001, 255 ),
+"speaker": "Bubbles"
+},
+"1_13": {
+"dialogue": "Welcome back. What do you need?",
+"offset": Vector2( -1340, 440 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "(Buy/Trade)"
+},
+1: {
+"condition": {
+},
+"link": "3_12",
+"text": "(leave)"
+}
+},
+"size": Vector2( 300, 282.001 ),
+"speaker": "Bubbles"
+},
+"1_14": {
+"dialogue": "Well, if it isn't my good ol' friend. What can I do for you today?",
+"offset": Vector2( -1580, 900 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_5",
+"text": "(Buy/Trade)"
+},
+1: {
+"condition": {
+},
+"link": "3_12",
+"text": "(leave)"
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Bubbles"
+},
+"1_15": {
+"dialogue": "Ah, the SSA Suit. Not only does it look quite rugged, it'll also be needed to enter the nuclear facility.",
+"offset": Vector2( -480, -1220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_17",
+"text": "Thanks for the information."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Bubbles"
+},
+"1_16": {
+"dialogue": "Thanks for the ammo man, the crew really needed this.",
+"offset": Vector2( -1040, -1040 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "Sure thing. What's your favorite weapon here?"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Bubbles"
+},
+"1_17": {
+"dialogue": "Mhm. Can I tell you about something? It's about this AK-47 here, my favorite of the bunch.",
+"offset": Vector2( -140, -1220 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "What about it?"
+}
+},
+"size": Vector2( 300.001, 255 ),
+"speaker": "Bubbles"
+},
+"1_18": {
+"dialogue": "Ah, the SSA Suit. Not only does it look quite rugged, it'll also be needed to enter the nuclear facility.",
+"offset": Vector2( -500, 700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_17",
+"text": "Thanks for the information (leave)"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Bubbles"
+},
+"1_19": {
+"dialogue": "Thanks for the ammo man, the crew really needed this.",
+"offset": Vector2( -420, 1100 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_21",
+"text": "No problem. (leave)"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Bubbles"
+},
+"1_2": {
+"dialogue": "Now you're speaking my language. You're in luck, because we got the finest assortment of heavy-hitters here. Unfortunately, no ammo.",
+"offset": Vector2( -1500, -560 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_1",
+"text": "(Buy/Trade)"
+},
+1: {
+"condition": {
+},
+"link": "1_3",
+"text": "Which of these is your favorite?"
+}
+},
+"size": Vector2( 300, 282 ),
+"speaker": "Bubbles"
+},
+"1_3": {
+"dialogue": "Now that's a damn good question. It'd definitely be the AK-47 here. It packs quite the punch. Unfortunately, this bad boy is out of service.",
+"offset": Vector2( -1160, -280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "What do you mean?"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Bubbles"
+},
+"1_4": {
+"dialogue": "It's missing a part. The barrel assembly to be more specific. Without that, it can't showcase what it does best.",
+"offset": Vector2( -820, -280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "So it's not for sale?"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Bubbles"
+},
+"1_5": {
+"dialogue": "That's right. But I'll tell you what. I'm sure the barrel assembly is out there somewhere. We long since gave up on trying to find it, but if you can and bring it to me, our prized AK-47 is all yours. How's that sound?",
+"offset": Vector2( -480, -280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_6",
+"text": "Sounds like you got yourself a deal."
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Bubbles"
+},
+"1_6": {
+"dialogue": "You know, I like you. You bring good energy. I'll be here if you need anything else.",
+"offset": Vector2( -140, -280 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_2",
+"text": "Alright."
+}
+},
+"size": Vector2( 300.002, 255 ),
+"speaker": "Bubbles"
+},
+"1_7": {
+"dialogue": "Thanks for the purchase. You won't regret it, trust me.",
+"offset": Vector2( -480, -900 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_9",
+"text": "Is this your favorite weapon?"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Bubbles"
+},
+"1_8": {
+"dialogue": "Changed your mind? Well I'll be darned. I don't know how you could pass up on such firepower.",
+"offset": Vector2( -480, -600 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "What's your favorite weapon here?"
+}
+},
+"size": Vector2( 300, 255 ),
+"speaker": "Bubbles"
+},
+"1_9": {
+"dialogue": "I mean that's a beauty, but it certainly ain't this AK-47 we got here. Unfortunately, this thing won't be doing any damage anytime soon.",
+"offset": Vector2( -140, -900 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "What do you mean?"
+}
+},
+"size": Vector2( 300.002, 255 ),
+"speaker": "Bubbles"
+},
+"3_1": {
+"link": "3_3",
+"offset": Vector2( -1160, -680 ),
+"signalValue": "trade"
+},
+"3_10": {
+"link": "3_11",
+"offset": Vector2( 80, 360 ),
+"signalValue": "give_item:AK"
+},
+"3_11": {
+"link": "END",
+"offset": Vector2( 320, 360 ),
+"signalValue": "leave"
+},
+"3_12": {
+"link": "END",
+"offset": Vector2( -980, 200 ),
+"signalValue": "leave"
+},
+"3_13": {
+"link": "END",
+"offset": Vector2( -920, -560 ),
+"signalValue": "?:floor_has_type:weapons->start_dialog:yesweapon->start_dialog:noweapon"
+},
+"3_14": {
+"link": "END",
+"offset": Vector2( -920, -460 ),
+"signalValue": "?:char_has_type:ammo->start_dialog:yesammo1->start_dialog:noammo1"
+},
+"3_15": {
+"link": "1_16",
+"offset": Vector2( -1260, -960 ),
+"signalValue": "load_sprite:good"
+},
+"3_16": {
+"link": "END",
+"offset": Vector2( -760, 40 ),
+"signalValue": "?:floor_has_item:SSA Suit->start_dialog:yesssa2->start_dialog:nossa2"
+},
+"3_17": {
+"link": "END",
+"offset": Vector2( -160, 740 ),
+"signalValue": "leave"
+},
+"3_18": {
+"link": "3_15",
+"offset": Vector2( -1480, -960 ),
+"signalValue": "char_remove_item_type:ammo"
+},
+"3_19": {
+"link": "3_20",
+"offset": Vector2( -860, 1100 ),
+"signalValue": "char_remove_item_type:ammo"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 200, -280 ),
+"signalValue": "leave"
+},
+"3_20": {
+"link": "1_19",
+"offset": Vector2( -640, 1100 ),
+"signalValue": "load_sprite:good"
+},
+"3_21": {
+"link": "END",
+"offset": Vector2( -80, 1100 ),
+"signalValue": "leave"
+},
+"3_22": {
+"link": "END",
+"offset": Vector2( -780, 120 ),
+"signalValue": "?:char_has_type:ammo->start_dialog:yesammo2->start_dialog:noammo2"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2( -920, -680 ),
+"signalValue": "?:floor_has_item:SSA Suit->start_dialog:yesssa1->start_dialog:nossa"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2( -1840, 200 ),
+"signalValue": "?:player_has_item:AK Barrel->start_dialog:yesbarrel->start_dialog:nobarrel"
+},
+"3_5": {
+"link": "3_16",
+"offset": Vector2( -980, 40 ),
+"signalValue": "trade"
+},
+"3_6": {
+"link": "END",
+"offset": Vector2( -40, 40 ),
+"signalValue": "leave"
+},
+"3_7": {
+"link": "3_10",
+"offset": Vector2( -160, 360 ),
+"signalValue": "remove_item:AK Barrel"
+},
+"3_8": {
+"link": "3_9",
+"offset": Vector2( -980, 360 ),
+"signalValue": "set_respect:10"
+},
+"3_9": {
+"link": "1_12",
+"offset": Vector2( -740, 360 ),
+"signalValue": "load_sprite:good"
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

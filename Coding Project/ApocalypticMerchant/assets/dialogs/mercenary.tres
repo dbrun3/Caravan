@@ -1,0 +1,314 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"bad": "0_4",
+"default": "0_1",
+"good": "0_2",
+"neutral": "0_3"
+}
+nodes = {
+"0_1": {
+"link": "1_2",
+"offset": Vector2( -1080, -20 ),
+"start_id": "default"
+},
+"0_2": {
+"link": "1_1",
+"offset": Vector2( -780, 680 ),
+"start_id": "good"
+},
+"0_3": {
+"link": "1_9",
+"offset": Vector2( -800, 1000 ),
+"start_id": "neutral"
+},
+"0_4": {
+"link": "1_10",
+"offset": Vector2( -880, 1340 ),
+"start_id": "bad"
+},
+"1_1": {
+"dialogue": "Good Test.",
+"offset": Vector2( -140, 520 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "Trade"
+},
+1: {
+"condition": {
+},
+"link": "3_5",
+"text": "Leave"
+}
+},
+"size": Vector2( 376.5, 466.998 ),
+"speaker": "Mercenary"
+},
+"1_10": {
+"dialogue": "Well look who I found! You know, I've had a change of heart. It's no fair, letting the wastes out there take you, leaving me to wonder what could have been... I think I'd rather watch you die myself...",
+"offset": Vector2( -360, 1640 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_12",
+"text": "..."
+}
+},
+"size": Vector2( 392.515, 466.999 ),
+"speaker": "Mercenary"
+},
+"1_11": {
+"dialogue": "A proper babe in the woods. Ha! Hope you've got something to protect yourself in that fancy caravan there.",
+"offset": Vector2( 160, -360 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_3",
+"text": "What would I need that for?"
+},
+1: {
+"condition": {
+},
+"link": "3_4",
+"text": "I won't be the one who needs protecting..."
+}
+},
+"size": Vector2( 392.516, 467.001 ),
+"speaker": "Mercenary"
+},
+"1_12": {
+"dialogue": "Pleasure doing business with you. Off you go now.",
+"offset": Vector2( 2620, 580 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_9",
+"text": "Leave"
+}
+},
+"size": Vector2( 392.519, 413.998 ),
+"speaker": "Mercenary"
+},
+"1_2": {
+"dialogue": "Well, well, well, what do we have here? ",
+"offset": Vector2( -660, -200 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_6",
+"text": "..."
+}
+},
+"size": Vector2( 376.5, 414 ),
+"speaker": "Mercenary"
+},
+"1_3": {
+"dialogue": "Well, you see, you need help, or else you're not going to make it out alive. I can help you...",
+"offset": Vector2( 580, -880 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_4",
+"text": "continue"
+}
+},
+"size": Vector2( 376.5, 414 ),
+"speaker": "Mercenary"
+},
+"1_4": {
+"dialogue": "But survival isn't free.",
+"offset": Vector2( 1020, -700 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "You're a mercenary?"
+}
+},
+"size": Vector2( 376.501, 414.001 ),
+"speaker": "Mercenary"
+},
+"1_5": {
+"dialogue": "Officially, but I prefer 'Savior for Hire.' For 50 coins, I'll make sure you get where you need to be in one piece. Deal?",
+"offset": Vector2( 1500, -900 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_8",
+"text": "I think I'll manage."
+},
+1: {
+"condition": {
+},
+"link": "3_3",
+"text": "Deal."
+}
+},
+"size": Vector2( 376.501, 467 ),
+"speaker": "Mercenary"
+},
+"1_6": {
+"dialogue": "Smart man. You've just saved yourself from certain death. I knew you had some brains in you. Pleasure doing business.
+
+[Combat Level increased by 20]",
+"offset": Vector2( 2160, -880 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_10",
+"text": "Let's go."
+}
+},
+"size": Vector2( 376.5, 414 ),
+"speaker": "Mercenary"
+},
+"1_7": {
+"dialogue": "I could've helped you out. No matter, you'll find out soon enough... Watch yourself.",
+"offset": Vector2( 1640, 180 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "Wait. I was looking to trade."
+},
+1: {
+"condition": {
+},
+"link": "3_7",
+"text": "Leave"
+}
+},
+"size": Vector2( 376.501, 467 ),
+"speaker": "Mercenary"
+},
+"1_8": {
+"dialogue": "Oh, confident are you? We'll see how that plays out... I'll be around when you come to your senses.",
+"offset": Vector2( 2100, -240 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "Wait. How about a trade."
+},
+1: {
+"condition": {
+},
+"link": "3_9",
+"text": "We'll see."
+}
+},
+"size": Vector2( 376.5, 467 ),
+"speaker": "Mercenary"
+},
+"1_9": {
+"dialogue": "Neutral Test.",
+"offset": Vector2( -380, 1060 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "3_8",
+"text": "Trade"
+},
+1: {
+"condition": {
+},
+"link": "3_5",
+"text": "Leave"
+}
+},
+"size": Vector2( 376.499, 466.998 ),
+"speaker": "Mercenary"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2( 3040, 120 ),
+"signalValue": "leave"
+},
+"3_10": {
+"link": "3_9",
+"offset": Vector2( 2780, -440 ),
+"signalValue": "inc_combat:20"
+},
+"3_11": {
+"link": "1_12",
+"offset": Vector2( 2295.69, 1020.32 ),
+"signalValue": "set_respect:5"
+},
+"3_12": {
+"link": "3_13",
+"offset": Vector2( 100, 1840 ),
+"signalValue": "fight"
+},
+"3_13": {
+"link": "END",
+"offset": Vector2( 340, 1840 ),
+"signalValue": "exit"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2( 3040, -40 ),
+"signalValue": "continue"
+},
+"3_3": {
+"link": "1_6",
+"offset": Vector2( 1660, -280 ),
+"signalValue": "inc_respect:5"
+},
+"3_4": {
+"link": "1_7",
+"offset": Vector2( 780, 100 ),
+"signalValue": "dec_respect:5"
+},
+"3_5": {
+"link": "END",
+"offset": Vector2( 480, 1120 ),
+"signalValue": "leave"
+},
+"3_6": {
+"link": "1_11",
+"offset": Vector2( -240, 220 ),
+"signalValue": "load_sprite:0"
+},
+"3_7": {
+"link": "3_1",
+"offset": Vector2( 2760, 120 ),
+"signalValue": "move:Terminal"
+},
+"3_8": {
+"link": "3_11",
+"offset": Vector2( 2000, 1180 ),
+"signalValue": "trade"
+},
+"3_9": {
+"link": "3_2",
+"offset": Vector2( 2760, -80 ),
+"signalValue": "pop"
+}
+}
+variables = {
+"money": {
+"type": 2,
+"value": 10.0
+}
+}
+comments = [  ]
+strays = [  ]
+characters = ""

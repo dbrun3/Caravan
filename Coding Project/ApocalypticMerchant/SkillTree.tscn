@@ -1,0 +1,263 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://assets/skilltree/upgrade2button.png" type="Texture" id=1]
+[ext_resource path="res://assets/skilltree/skilltree.png" type="Texture" id=2]
+[ext_resource path="res://ReturnToMapButton.gd" type="Script" id=3]
+[ext_resource path="res://Speed1.gd" type="Script" id=4]
+[ext_resource path="res://SkillTree.gd" type="Script" id=5]
+[ext_resource path="res://SlotIncrease1.gd" type="Script" id=6]
+[ext_resource path="res://WeightIncrease.gd" type="Script" id=7]
+[ext_resource path="res://TankCapacity1.gd" type="Script" id=8]
+[ext_resource path="res://assets/skilltree/contextpopupbackground.png" type="Texture" id=9]
+[ext_resource path="res://assets/skilltree/upgrade1hover.png" type="Texture" id=10]
+[ext_resource path="res://assets/skilltree/upgrade1disabled.png" type="Texture" id=11]
+[ext_resource path="res://assets/skilltree/upgradebutton.png" type="Texture" id=12]
+[ext_resource path="res://assets/skilltree/upgrade2hover.png" type="Texture" id=13]
+[ext_resource path="res://assets/skilltree/upgrade2disabled.png" type="Texture" id=14]
+[ext_resource path="res://WeightIncrease2.gd" type="Script" id=15]
+[ext_resource path="res://TankCapacity2.gd" type="Script" id=16]
+[ext_resource path="res://Speed2.gd" type="Script" id=17]
+[ext_resource path="res://SlotIncrease2.gd" type="Script" id=18]
+
+[node name="SkillTree" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+texture = ExtResource( 2 )
+
+[node name="DescriptionBackground" type="TextureRect" parent="."]
+visible = false
+margin_left = 523.0
+margin_top = 334.0
+margin_right = 756.0
+margin_bottom = 484.0
+texture = ExtResource( 9 )
+
+[node name="SlotIncrease1" type="TextureButton" parent="."]
+margin_left = 116.0
+margin_top = 316.0
+margin_right = 180.0
+margin_bottom = 380.0
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 10 )
+texture_disabled = ExtResource( 11 )
+script = ExtResource( 6 )
+
+[node name="SlotIncrease1Description" type="RichTextLabel" parent="SlotIncrease1"]
+visible = false
+margin_left = 423.0
+margin_top = 56.0
+margin_right = 624.0
+margin_bottom = 159.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Skill: Inventory Upgrade 1
+
+Increases inventory slots by 12
+
+Cost: $1000"
+
+[node name="SlotIncrease2" type="TextureButton" parent="SlotIncrease1"]
+margin_left = 1.0
+margin_top = 245.0
+margin_right = 65.0
+margin_bottom = 309.0
+texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 13 )
+texture_disabled = ExtResource( 14 )
+script = ExtResource( 18 )
+
+[node name="SlotIncrease2Description" type="RichTextLabel" parent="SlotIncrease1/SlotIncrease2"]
+visible = false
+margin_left = 424.0
+margin_top = -185.0
+margin_right = 638.0
+margin_bottom = -94.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Skill: Inventory Upgrade 2
+
+Increases inventory slots by 12
+
+Cost: $3000 + Upgrade 1"
+
+[node name="Speed1" type="TextureButton" parent="."]
+margin_left = 863.0
+margin_top = 321.0
+margin_right = 927.0
+margin_bottom = 385.0
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 10 )
+texture_disabled = ExtResource( 11 )
+script = ExtResource( 4 )
+
+[node name="Speed1Description" type="RichTextLabel" parent="Speed1"]
+visible = false
+margin_left = -322.0
+margin_top = 43.0
+margin_right = -125.0
+margin_bottom = 141.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Skill: Speed Upgrade 1
+
+Increases caravan top speed by 15mph
+
+Cost: $1000"
+
+[node name="Speed2" type="TextureButton" parent="Speed1"]
+margin_left = 1.0
+margin_top = 244.0
+margin_right = 65.0
+margin_bottom = 308.0
+texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 13 )
+texture_disabled = ExtResource( 14 )
+script = ExtResource( 17 )
+
+[node name="Speed2Description" type="RichTextLabel" parent="Speed1/Speed2"]
+visible = false
+margin_left = -323.0
+margin_top = -198.0
+margin_right = -116.0
+margin_bottom = -99.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Skill: Speed Upgrade 2
+
+Increases caravan top speed by 30mph
+
+Cost: $3000 + Upgrade 1"
+
+[node name="ReturnToMapButton" type="Button" parent="."]
+margin_left = 582.0
+margin_top = 575.0
+margin_right = 699.0
+margin_bottom = 607.0
+text = "Return to map"
+script = ExtResource( 3 )
+
+[node name="PlayerMoney" type="RichTextLabel" parent="."]
+margin_left = 594.0
+margin_top = 214.0
+margin_right = 717.0
+margin_bottom = 254.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "$0000000"
+
+[node name="WeightIncrease" type="TextureButton" parent="."]
+margin_left = 365.0
+margin_top = 319.0
+margin_right = 429.0
+margin_bottom = 383.0
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 10 )
+texture_disabled = ExtResource( 11 )
+script = ExtResource( 7 )
+
+[node name="WeightIncreaseDescription" type="RichTextLabel" parent="WeightIncrease"]
+visible = false
+margin_left = 173.0
+margin_top = 52.0
+margin_right = 402.0
+margin_bottom = 146.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Skill: Weight Capacity Upgrade 1
+
+Increases weight capacity of the caravan by 50%
+
+Cost: $1000"
+
+[node name="WeightIncrease2" type="TextureButton" parent="WeightIncrease"]
+margin_left = 1.0
+margin_top = 242.0
+margin_right = 65.0
+margin_bottom = 306.0
+texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 13 )
+texture_disabled = ExtResource( 14 )
+script = ExtResource( 15 )
+
+[node name="WeightIncrease2Description" type="RichTextLabel" parent="WeightIncrease/WeightIncrease2"]
+visible = false
+margin_left = 171.0
+margin_top = -190.0
+margin_right = 412.0
+margin_bottom = -97.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Skill: Weight Capacity Upgrade 2
+
+Increases weight capacity of the caravan by 50%
+
+Cost: $3000 + Upgrade 1"
+
+[node name="TankCapacity1" type="TextureButton" parent="."]
+margin_left = 1107.0
+margin_top = 319.0
+margin_right = 1171.0
+margin_bottom = 383.0
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 10 )
+texture_disabled = ExtResource( 11 )
+script = ExtResource( 8 )
+
+[node name="TankCapacity1Description" type="RichTextLabel" parent="TankCapacity1"]
+visible = false
+margin_left = -566.0
+margin_top = 50.0
+margin_right = -357.0
+margin_bottom = 143.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Skill: Fuel Capacity Upgrade 1
+
+Increases fuel tank capacity by 10%
+
+Cost: $1000"
+
+[node name="TankCapacity2" type="TextureButton" parent="TankCapacity1"]
+margin_top = 246.0
+margin_right = 64.0
+margin_bottom = 310.0
+texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 13 )
+texture_disabled = ExtResource( 14 )
+script = ExtResource( 16 )
+
+[node name="TankCapacity2Description" type="RichTextLabel" parent="TankCapacity1/TankCapacity2"]
+visible = false
+margin_left = -566.0
+margin_top = -194.0
+margin_right = -360.0
+margin_bottom = -86.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Skill: Fuel Capacity Upgrade 2
+
+Increases fuel tank capacity by 20%
+
+Cost: $3000 + Upgrade 1"
+
+[connection signal="mouse_entered" from="SlotIncrease1" to="SlotIncrease1" method="_on_SlotIncrease1_mouse_entered"]
+[connection signal="mouse_exited" from="SlotIncrease1" to="SlotIncrease1" method="_on_SlotIncrease1_mouse_exited"]
+[connection signal="pressed" from="SlotIncrease1" to="SlotIncrease1" method="_on_SlotIncrease1_pressed"]
+[connection signal="mouse_entered" from="SlotIncrease1/SlotIncrease2" to="SlotIncrease1/SlotIncrease2" method="_on_SlotIncrease2_mouse_entered"]
+[connection signal="mouse_exited" from="SlotIncrease1/SlotIncrease2" to="SlotIncrease1/SlotIncrease2" method="_on_SlotIncrease2_mouse_exited"]
+[connection signal="pressed" from="SlotIncrease1/SlotIncrease2" to="SlotIncrease1/SlotIncrease2" method="_on_SlotIncrease2_pressed"]
+[connection signal="mouse_entered" from="Speed1" to="Speed1" method="_on_Speed1_mouse_entered"]
+[connection signal="mouse_exited" from="Speed1" to="Speed1" method="_on_Speed1_mouse_exited"]
+[connection signal="pressed" from="Speed1" to="Speed1" method="_on_Speed1_pressed"]
+[connection signal="mouse_entered" from="Speed1/Speed2" to="Speed1/Speed2" method="_on_Speed2_mouse_entered"]
+[connection signal="mouse_exited" from="Speed1/Speed2" to="Speed1/Speed2" method="_on_Speed2_mouse_exited"]
+[connection signal="pressed" from="Speed1/Speed2" to="Speed1/Speed2" method="_on_Speed2_pressed"]
+[connection signal="pressed" from="ReturnToMapButton" to="ReturnToMapButton" method="_on_ReturnToMapButton_pressed"]
+[connection signal="mouse_entered" from="WeightIncrease" to="WeightIncrease" method="_on_WeightIncrease_mouse_entered"]
+[connection signal="mouse_exited" from="WeightIncrease" to="WeightIncrease" method="_on_WeightIncrease_mouse_exited"]
+[connection signal="pressed" from="WeightIncrease" to="WeightIncrease" method="_on_WeightIncrease_pressed"]
+[connection signal="mouse_entered" from="WeightIncrease/WeightIncrease2" to="WeightIncrease/WeightIncrease2" method="_on_WeightIncrease2_mouse_entered"]
+[connection signal="mouse_exited" from="WeightIncrease/WeightIncrease2" to="WeightIncrease/WeightIncrease2" method="_on_WeightIncrease2_mouse_exited"]
+[connection signal="pressed" from="WeightIncrease/WeightIncrease2" to="WeightIncrease/WeightIncrease2" method="_on_WeightIncrease2_pressed"]
+[connection signal="mouse_entered" from="TankCapacity1" to="TankCapacity1" method="_on_TankCapacity1_mouse_entered"]
+[connection signal="mouse_exited" from="TankCapacity1" to="TankCapacity1" method="_on_TankCapacity1_mouse_exited"]
+[connection signal="pressed" from="TankCapacity1" to="TankCapacity1" method="_on_TankCapacity1_pressed"]
+[connection signal="mouse_entered" from="TankCapacity1/TankCapacity2" to="TankCapacity1/TankCapacity2" method="_on_TankCapacity2_mouse_entered"]
+[connection signal="mouse_exited" from="TankCapacity1/TankCapacity2" to="TankCapacity1/TankCapacity2" method="_on_TankCapacity2_mouse_exited"]
+[connection signal="pressed" from="TankCapacity1/TankCapacity2" to="TankCapacity1/TankCapacity2" method="_on_TankCapacity2_pressed"]

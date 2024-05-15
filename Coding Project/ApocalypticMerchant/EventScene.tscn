@@ -1,0 +1,940 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/backgrounds/amogus.jpeg" type="Texture" id=1]
+[ext_resource path="res://assets/dialogframeFINALHD.png" type="Texture" id=2]
+[ext_resource path="res://addons/dialogue_nodes/objects/dialogueBox.gd" type="Script" id=4]
+[ext_resource path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" type="Script" id=5]
+[ext_resource path="res://assets/themes/metapixelDIALOG/MetalPixel.tres" type="Theme" id=6]
+
+[sub_resource type="GDScript" id=1]
+resource_name = " DialogControl"
+script/source = "extends Control
+
+
+# Declare member variables here. Examples:
+onready var dialogue_box = $DialogueBox
+onready var background = $Images/Background
+onready var foreground = $Images/Foreground
+
+#var ship = Location.new(\"The Ship\", \"res://assets/backgrounds/amogus.jpeg\", \"res://assets/backgrounds/amogus.jpeg\", \"city1\").add_character(amog)
+#var amog = CharacterEvent.new(\"Amogus\", \"res://assets/characters/sus.png\", \"char1\")
+var canCheckInventory = false
+var characterIndex = -1
+var encounterNum = -1
+var room = 0
+var item = null
+var time_out_call = \"\"
+var win_probability: int # used for fights
+var fight_msgs: Array # Array of Strings [npc_initial_message, npc_win_message, npc_lose_message, run_message] 
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	
+	print(\"dialog ready\")
+	
+	if not dialogue_box.running:
+		
+		print(\"new dialog\")
+		
+		if Global.current_character != null && Global.current_character.currentPage != \"none\":	
+			
+			print(\"returning\")
+			
+			dialogue_box.set_data(Global.current_character.load_dialog())
+			dialogue_box.start(\"default\") # needed only to initialize new box after old destroyed
+			foreground.texture = Global.current_character.load_sprite(\" \")
+			dialogue_box.proceed(Global.current_character.currentPage)
+			Global.current_character.currentPage = -1
+		else:
+			dialogue_box.set_data(Global.current_location.load_dialog())
+			dialogue_box.start(Global.current_location.get_dialog())
+			canCheckInventory = true
+		
+		background.texture = Global.current_location.load_background(Global.current_location.currentBackground)
+		characterIndex = -1
+	Fade.fade_in(1)
+
+func _on_RandItem_Timer():
+	dialogue_box.dialogue.text = item.get_name() + \" - Value: \" + str(item.get_value()) + \", Weight: \" + str(item.get_weight())
+	item = null
+	
+func _on_Fight_Timer(fight_msg: String):
+	win_probability = Fight.calculate_fight_win_probability()
+	
+	dialogue_box.speaker.text = Global.current_character.get_name()
+	dialogue_box.dialogue.text = fight_msg
+	var fight_button = dialogue_box.options.get_child(0)
+	fight_button.text = fight_button.text + \" (\" + str(win_probability) + \"% chance of win)\"
+	dialogue_box.show_options()
+	
+func _on_Reward_Timer(npc_lose_msg: String, reward: String):
+	dialogue_box.speaker.text = Global.current_character.get_name()
+	dialogue_box.dialogue.text = npc_lose_msg + \"\\n[You won and have received \" + reward + \"]\"
+	dialogue_box.show_options()
+	_on_DialogueBox_dialogue_signal(\"pop\")
+	
+	
+func _on_Lose_Timer(npc_win_msg: String):
+	dialogue_box.speaker.text = Global.current_character.get_name()
+	dialogue_box.dialogue.text = npc_win_msg + \"\\n[You lost and have been robbed of your items]\"
+	dialogue_box.show_options()
+	
+	var non_quest_items = []
+	for item in Global.player.inventory:
+		if item.get_type() != \"quests\":
+			non_quest_items.append(item)
+	
+	for non_quest_item in non_quest_items:
+		Global.player.inventory.erase(non_quest_item)
+		Global.player.remove_weight(non_quest_item.get_weight()) # player weight fix ???
+	_on_DialogueBox_dialogue_signal(\"pop\")
+		
+func _on_Run_Timer(run_msg: String):
+	dialogue_box.speaker.text = Global.current_character.get_name()
+	dialogue_box.dialogue.text = run_msg + \"\\n[You ran away and have forfeited half your items]\"
+	dialogue_box.show_options()
+	
+	var non_quest_items = []
+	for item in Global.player.inventory:
+		if item.get_type() != \"quests\":
+			non_quest_items.append(item)
+	
+	var num_non_quest_items_to_remove: int
+	if non_quest_items.size() == 1:
+		num_non_quest_items_to_remove = 1
+	else:
+		num_non_quest_items_to_remove = non_quest_items.size() / 2
+	
+	randomize() # reset seed
+	non_quest_items.shuffle()
+	
+	for i in range(num_non_quest_items_to_remove):
+		Global.player.inventory.erase(non_quest_items[i])
+		Global.player.remove_weight(non_quest_items[i].get_weight()) # player weight fix ???
+		
+	_on_DialogueBox_dialogue_signal(\"pop\")
+		
+
+func _on_Fade_Timer():
+	Fade.fade_in(2)
+	_on_DialogueBox_dialogue_signal(time_out_call)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	time_out_call = \"\"
+
+func _on_DialogueBox_dialogue_signal(value):
+	var tokens = value.split(\":\")
+	var function = tokens[0]
+	var args
+	if tokens.size() > 1:
+		args = tokens[1].split(\",\")
+	else:
+		args = []
+
+	match(function):
+		
+		\"fillgas\":
+			Global.player.gas = Global.player.max_gas_capacity
+		
+		\"receive_fight_reward\": # player won and gets the fight reward
+			# grab character's losing message
+			var npc_lose_msg = fight_msgs[2]
+			
+			# grab a random reward item from possible rewards
+			var rng = RandomNumberGenerator.new()
+			rng.randomize()
+			var possible_rewards = Global.current_character.rewards
+			var reward = possible_rewards[rng.randi_range(0, possible_rewards.size() - 1)]
+			
+			var timer := Timer.new()
+			timer.wait_time = 0.01 # 1 second
+			timer.one_shot = true # don't loop, run once
+			timer.autostart = true # start timer when added to a scene
+			timer.connect(\"timeout\", self, \"_on_Reward_Timer\", [npc_lose_msg, reward])
+			add_child(timer)
+			_on_DialogueBox_dialogue_signal(\"give_item:\"+reward)
+		\"player_clear_inventory\": # player loses all non-quest items 
+			# grab character's winning message
+			var npc_win_msg = fight_msgs[1]
+			
+			var timer := Timer.new()
+			timer.wait_time = 0.01 # 1 second
+			timer.one_shot = true # don't loop, run once
+			timer.autostart = true # start timer when added to a scene
+			timer.connect(\"timeout\", self, \"_on_Lose_Timer\", [npc_win_msg])
+			add_child(timer)
+		\"player_lose_half_inventory\": # player loses half of non-quest items
+			# grab character's message when player runs away
+			var run_msg = fight_msgs[3]
+			
+			var timer := Timer.new()
+			timer.wait_time = 0.01 # 1 second
+			timer.one_shot = true # don't loop, run once
+			timer.autostart = true # start timer when added to a scene
+			timer.connect(\"timeout\", self, \"_on_Run_Timer\", [run_msg])
+			add_child(timer)
+		\"rand_event\":
+				
+			if encounterNum == -1:
+				var offset = 1
+				if Global.current_location.locationBiome == \"city\" || Global.current_location.locationBiome == \"woods\":
+					offset = 3
+				elif Global.current_location.locationBiome == \"scorch\":
+					offset = 0
+				var rng = RandomNumberGenerator.new()
+				rng.randomize()
+				encounterNum = rng.randi_range(0, offset)
+				
+			if encounterNum == 0:
+				characterIndex = -1
+				dialogue_box.set_data(Global.current_location.load_dialog())
+				dialogue_box.start(\"nothing\")
+				return
+			else:
+				encounterNum -= 1
+			
+			Global.current_character = Global.charevent_manager.get_rand_event(Global.current_location.locationBiome)
+			
+			dialogue_box.set_data(Global.current_character.load_dialog())
+			dialogue_box.start(\"default\")
+			foreground.texture = Global.current_character.load_sprite(\"default\")
+		\"calculate_fight\":
+			var rng = RandomNumberGenerator.new()
+			rng.randomize()
+			if rng.randi_range(1, 100) <= win_probability:
+				return true # player won
+			return false # player lost
+		\"enter\":
+			characterIndex = -1;
+			background.texture = Global.current_location.load_background(int(args[0]))
+			room = int(args[0]) - 1
+		\"continue\":
+			characterIndex += 1
+			foreground.texture = ResourceLoader.load(\"res://assets/characters/noone.png\")
+			Global.current_character = null
+			dialogue_box.set_data(Global.current_location.load_dialog())
+			dialogue_box.start(\"continue\")
+		\"move\":
+			var r = -1
+			if args.size() == 2:
+				r = int(args[1])
+			Global.location_manager.move_character_to_location(Global.current_character.get_name(), args[0], r)
+		\"mark\":	
+			Global.location_manager.unveil_location(args[0])
+		
+		\"usegas\":
+			Global.player.gas += 50
+			Global.player.remove_item(\"Gas\")
+		
+		\"gas\":
+			
+			#fill tank OR buy as much as possible
+			
+			var gas = Global.player.max_gas_capacity - Global.player.gas
+			var cost = gas / 50
+			if Global.player.money >= cost:
+				Global.player.money -= cost
+				Global.player.gas += gas
+			else:
+				cost = Global.player.money
+				gas = cost * 50
+				Global.player.money = 0
+				Global.player.gas += gas
+		\"repair\":
+			
+			#fill durability OR buy as much as possible
+			
+			var dur = Global.player.max_durability - Global.player.durability
+			var cost = dur / 50
+			if Global.player.money >= cost:
+				Global.player.money -= cost
+				Global.player.durability += dur
+			else:
+				cost = Global.player.money
+				dur = cost * 50
+				Global.player.money = 0
+				Global.player.durability += dur
+		\"fight\":
+			dialogue_box.set_data(Global.current_location.load_dialog())
+			dialogue_box.start(\"fight\")
+			
+			# grab fight messages; fight messages are separated by pipe symbol
+			# ex. fight:npc_initial_msg|npc_win_msg|npc_lose_msg|run_msg
+			if args.size() == 0:
+				fight_msgs = [\"You messed with the wrong person!\",
+							  \"Quite bold of you to think you had a chance. I'll be taking your stuff, thank you very much!\",
+							  \"I surrender! No more please.\",
+							  \"Hey, get back here!\"]
+			else:
+				var fightarg = \"\"
+				# reform all text after the colon just in case some of the fight messages have commas (which would have split them into separate tokens)
+				for arg in args:
+					fightarg += arg
+				# split at the | and store the fight messages, empty string means use default
+				var msgs = fightarg.split(\"|\")
+				for i in range(4):
+					var fight_msg = msgs[i]
+					if fight_msg != \"\":
+						fight_msgs[i] = fight_msg
+			
+			# grab character's initial fight message
+			var npc_initial_msg = fight_msgs[0]
+			
+			var timer := Timer.new()
+			timer.wait_time = 0.01 # 1 second
+			timer.one_shot = true # don't loop, run once
+			timer.autostart = true # start timer when added to a scene
+			timer.connect(\"timeout\", self, \"_on_Fight_Timer\", [npc_initial_msg])
+			add_child(timer)
+		\"fade\":
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			time_out_call = value.substr(5, -1)
+			Fade.fade_out(2)
+			var timer := Timer.new()
+			timer.wait_time = 3 # 2 second
+			timer.one_shot = true # don't loop, run once
+			timer.autostart = true # start timer when added to a scene
+			timer.connect(\"timeout\", self, \"_on_Fade_Timer\")
+			add_child(timer)
+			
+		\"talk\":
+			Global.current_location.currentPage = dialogue_box.currentPage
+			
+			if encounterNum != -1:
+				_on_DialogueBox_dialogue_signal(\"rand_event\")
+				return	
+			
+			if args[0] == \"?\":
+				
+				if characterIndex < 0:
+					characterIndex = int(args[1])
+					if characterIndex > Global.current_location.get_characters(room).size():
+						characterIndex = Global.current_location.get_characters(room).size() - 1
+					
+				
+				if characterIndex >= Global.current_location.get_characters(room).size():
+					characterIndex = -1
+					dialogue_box.set_data(Global.current_location.load_dialog())
+					dialogue_box.start(\"nothing\")
+					return	
+				
+				Global.current_character = Global.current_location.get_characters(room)[characterIndex]
+				
+			else:
+				Global.current_character = Global.current_location.get_characters(room)[int(args[0])]
+
+			var respect_status = Global.current_character.get_respect_status()
+			foreground.texture = Global.current_character.load_sprite(respect_status)
+			
+			### CHECK TO SEE IF RESOURCE LOADED SUCCESSFULLY: NEED THIS CHECK FOR NOW BECAUSE NOT ALL ASSETS HAVE
+			### DEFAULT, GOOD, NEUTRAL, AND BAD VERSIONS. AT THE VERY LEAST IT SHOULD HAVE DEFAULT
+			if foreground.texture == null:
+				Global.current_character.load_sprite(\"default\") # just load the default version instead
+			### ^Delete this later when all assets have all versions ###
+			
+			dialogue_box.set_data(Global.current_character.load_dialog())
+			
+
+			# If initial conversation with dynamic character, set respect to 5
+			if Global.location_manager.character_manager.exists_dCharacter(Global.current_character.get_name()) and respect_status == \"default\":
+				Global.current_character.set_respect(5)
+			
+			
+			dialogue_box.start(respect_status)
+		\"pop\":
+			if encounterNum == -1:
+				Global.current_location.characters[room].pop_at(characterIndex)	
+				characterIndex -= 1
+		\"start_dialog\":
+			dialogue_box.start(args[0])	
+		
+		\"player_afford\":
+			return Global.player.money >= int(args[0])
+			
+		\"add_money\":
+			Global.player.money += int(args[0])
+			
+		\"subtract_money\":
+			Global.player.money +- int(args[0])
+			
+		\"set_money\":
+			Global.player.money = int(args[0])
+			
+		\"healthy\":
+			return (Global.player.health == Global.player.max_health)
+		
+		\"heal\":
+			Global.player.health += int(args[0])
+			if Global.player.health > Global.player.max_health:
+				Global.player.health = Global.player.max_health
+			
+		\"inc_health\":
+			Global.player.health += int(args[0])
+		
+		\"dec_health\":
+			Global.player.health -= int(args[0])
+			if Global.player.health < 1:
+				_on_DialogueBox_dialogue_signal(\"dead\")
+				
+		\"heal_player\":
+			Global.player.health = Global.player.max_health
+		\"inc_money\":
+			Global.player.money += int(args[0])	
+		\"inc_combat\":
+			Global.player.combatSkill += int(args[0])
+			
+		\"dec_combat\":
+			Global.player.combatSkill -= int(args[0])
+		
+		\"hasdeadwoodfound\":
+			return Global.player.deadwoodFound
+		\"deadwoodfound\":
+			Global.player.deadwoodFound = true
+		\"hasremnantfound\":
+			return Global.player.remnantFound
+		\"remnantfound\":
+			Global.player.remnantFound = true
+		\"hasdeadwoodfound\":
+			return Global.player.deadwoodFound
+		\"deadwoodfound\":
+			Global.player.deadwoodFound = true
+		\"hasdeadwoodpowered\":
+			return Global.player.deadwoodPowered
+		\"deadwoodpowered\":
+			Global.player.deadwoodPowered = true
+		\"haskronuspowered\":
+			return Global.player.kronusPowered
+		\"kronuspowered\":
+			Global.player.kronusPowered = true
+		\"haskronusally\":
+			return Global.player.kronusAlly
+		\"kronusally\":
+			Global.player.kronusAlly = true
+		\"hasssaally\":
+			return Global.player.ssaAlly
+		\"ssaally\":
+			Global.player.ssaAlly = true
+		\"playerhaspasskey\":
+			return Global.player.hasPasskey
+		\"giveplayerpasskey\":
+			Global.player.hasPasskey = true
+		\"uss\":
+			Global.player.uss = true
+		\"hasuss\":
+			return Global.player.uss
+			
+		\"end\":
+			Global.ending = int(args[0])
+			Global.goto_scene(\"res://Ending.tscn\")
+		\"scorch\":
+			if !Global.player.has_item(\"SSA Suit\") && !Global.player.has_item(\"Kronus Suit\") && !Global.player.has_item(\"Hazmat Suit\"):
+				_on_DialogueBox_dialogue_signal(\"dec_health:2\")
+		\"nuclear\":
+			if !Global.player.has_item(\"SSA Suit\") && !Global.player.has_item(\"Kronus Suit\") && !Global.player.has_item(\"Hazmat Suit\"):
+				_on_DialogueBox_dialogue_signal(\"dead\")
+		\"dead\":
+			_on_DialogueBox_dialogue_signal(\"end:5\")
+		
+		\"set_location_dialog\":
+			Global.current_location.set_dialog(args[0])
+		\"move\":
+			Global.location_manager.move_character_to_location(Global.current_character.get_name(), args[0])
+		\"give_rand\":
+			print(\"BRUHH\")
+			item = Global.item_manager.get_rand_items_type(Global.current_character.get_name(), 1, false)[0]
+			Global.current_location.locationItems.append(item)
+			if args[0] == \"show\":
+				var timer := Timer.new()
+				timer.wait_time = 0.1 # 1 second
+				timer.one_shot = true # don't loop, run once
+				timer.autostart = true # start timer when added to a scene
+				timer.connect(\"timeout\", self, \"_on_RandItem_Timer\")
+				add_child(timer)
+			Global.player.hasTraded = true	
+		\"remove_item\":
+			Global.player.remove_item(args[0])
+		\"char_remove_item_type\":
+			Global.current_character.remove_item_type(args[0])
+		\"give_item\":
+			if args[0] == \"pallet\":
+				var rng = RandomNumberGenerator.new()
+				rng.randomize()
+				var r = rng.randi_range(1, 4)
+				match(r):
+					1:
+						_on_DialogueBox_dialogue_signal(\"give_item:Water Bottle Pack\")
+						_on_DialogueBox_dialogue_signal(\"give_item:Water Bottle Pack\")
+						_on_DialogueBox_dialogue_signal(\"give_item:Water Bottle Pack\")
+						_on_DialogueBox_dialogue_signal(\"give_item:Water Bottle Pack\")
+					2:
+						_on_DialogueBox_dialogue_signal(\"give_item:Medkit\")
+						_on_DialogueBox_dialogue_signal(\"give_item:Medkit\")
+						_on_DialogueBox_dialogue_signal(\"give_item:Medkit\")
+						_on_DialogueBox_dialogue_signal(\"give_item:Medkit\")
+					3:
+						_on_DialogueBox_dialogue_signal(\"give_item:MRE Box\")
+						_on_DialogueBox_dialogue_signal(\"give_item:MRE Box\")
+						_on_DialogueBox_dialogue_signal(\"give_item:MRE Box\")
+						_on_DialogueBox_dialogue_signal(\"give_item:MRE Box\")
+					4:
+						_on_DialogueBox_dialogue_signal(\"give_item:5.56\")
+						_on_DialogueBox_dialogue_signal(\"give_item:5.56\")
+						_on_DialogueBox_dialogue_signal(\"give_item:5.56\")
+						_on_DialogueBox_dialogue_signal(\"give_item:5.56\")
+			else:
+				var item = Global.item_manager.create_item(args[0])
+				Global.current_location.locationItems.append(item)
+			Global.player.hasTraded = true	
+		\"smallrepair\":
+			Global.player.remove_item(\"Small Repair Kit\")	
+			Global.player.durability += 20
+			if Global.player.durability > Global.player.max_durability:
+				Global.player.durability = Global.player.max_durability
+		\"largerepair\":
+			Global.player.remove_item(\"Large Repair Kit\")	
+			Global.player.durability += 50
+			if Global.player.durability > Global.player.max_durability:
+				Global.player.durability = Global.player.max_durability
+		\"floor_has_item\": # aka location_has_item
+			return Global.current_location.has_item(args[0])
+		\"floor_has_type\": # aka location_has_type
+			return Global.current_location.has_type(args[0])
+		\"player_has_item\":
+			return Global.player.has_item(args[0])
+		\"player_has_type\":
+			return Global.player.has_type(args[0])
+		
+		\"char_has_item\":	
+			if Global.current_character.has_item(args[0]):
+				print(\"Char has Item: True\")
+			else: 
+				print(\"Char has Item: False\")
+			
+			return Global.current_character.has_item(args[0])
+			
+		\"char_has_type\":
+			if Global.current_character.has_type(args[0]):
+				print(\"Char has Type: True\")
+			else: 
+				print(\"Char has Type: False\")
+			return Global.current_character.has_type(args[0])
+		\"set_char_inventory\": # ONLY USE THIS SIGNAL FOR RAND EVENT CHARACTERS
+			match args[0]:
+				\"Scav\":
+					# Give random amount of money
+					var rng = RandomNumberGenerator.new()
+					rng.randomize()
+					Global.current_character.money = rng.randi_range(10, 300)
+					# Reset/repopulate inventory
+					Global.current_character.inventory.clear() # reset inventory, avoid carry-over from past encounters
+					Global.current_character.inventory.append(Global.item_manager.create_item(\"Mats\"))
+					Global.current_character.inventory.append_array(Global.item_manager.get_rand_items([\"scrap\"], 2))
+				\"Wanderer\":
+					var rng = RandomNumberGenerator.new()
+					rng.randomize()
+					# Give random amount of money
+					Global.current_character.money = rng.randi_range(500, 1500)
+					# Reset/repopulate inventory
+					Global.current_character.inventory.clear() # reset inventory, avoid carry-over from past encounters
+					var num_items = rng.randi_range(5, 10)
+					Global.current_character.inventory = Global.item_manager.get_rand_items([\"scrap\", \"food\"], num_items)
+		\"inventory\":
+			Global.player.hasTraded = false
+			Global.goto_scene(\"res://Inventory.tscn\")
+		\"trade\":
+			Global.current_character.currentPage = dialogue_box.currentPage
+			dialogue_box.stop()
+			Global.goto_scene(\"res://TradeScene.tscn\")
+			Global.player.hasTraded = true
+		\"load_sprite\":
+			
+			var val = \"\"
+			if args.size() > 0:
+				val = args[0]
+			
+			foreground.texture = Global.current_character.load_sprite(val)
+		\"set_respect\":
+			Global.current_character.set_respect(int(args[0]))
+			foreground.texture = Global.current_character.load_sprite(\"\")
+			print(\"Character\\'s respect is now \" + str(Global.current_character.respect) + \"!\")
+		\"inc_respect\":
+			Global.current_character.inc_respect(int(args[0]))
+			foreground.texture = Global.current_character.load_sprite(\"\")
+			print(\"Character\\'s respect is now \" + str(Global.current_character.respect) + \"!\")
+			_on_DialogueBox_dialogue_signal(\"load_sprite\")
+		\"dec_respect\":
+			Global.current_character.dec_respect(int(args[0]))
+			foreground.texture = Global.current_character.load_sprite(\"\")
+			print(\"Character\\'s respect is now \" + str(Global.current_character.respect) + \"!\")
+			_on_DialogueBox_dialogue_signal(\"load_sprite\")	
+		\"?\":
+			var parts = value.substr(2, -1).split(\"->\")
+			var ret = _on_DialogueBox_dialogue_signal(parts[0])
+			if ret:
+				_on_DialogueBox_dialogue_signal(parts[1])
+			else:
+				_on_DialogueBox_dialogue_signal(parts[2])
+		\"leave\":
+			
+			dialogue_box.set_data(Global.current_location.load_dialog())
+			Global.current_character = null
+			foreground.texture = ResourceLoader.load(\"res://assets/characters/noone.png\")
+			if encounterNum == 0:
+				encounterNum = -1
+				if Global.player.needs_repair:
+					background.texture = ResourceLoader.load(\"res://assets/backgrounds/maintenance.png\")
+					dialogue_box.start(\"repair\")
+					Global.player.needs_repair = false
+				elif Global.player.gas <= 0:
+					background.texture = ResourceLoader.load(\"res://assets/backgrounds/maintenance.png\")
+					dialogue_box.start(\"empty\")
+				else:
+					_on_DialogueBox_dialogue_signal(\"exit\")	
+			elif encounterNum > 0:
+				pass
+				#_on_DialogueBox_dialogue_signal(\"rand_event\")	
+			else:
+				characterIndex = -1;
+				background.texture = Global.current_location.load_background(0)
+				dialogue_box.stop()
+				dialogue_box.start(Global.current_location.get_dialog())
+			
+		\"exit\": # leave a location
+			Global.current_location.currentPage = -1
+			background.texture = Global.current_location.load_background(0)
+			if Global.player.hasTraded && Global.current_location.locationItems.size() > 0:
+				Global.player.hasTraded = false
+				Global.goto_scene(\"res://Inventory.tscn\")
+			else:
+				Fade.fade_out(1)
+				Global.goto_scene(\"res://Navigation.tscn\")
+		_:
+			print(\"DialogControl: Unknown signal recieved\")
+
+
+func _input(event):
+	if Input.is_key_pressed(KEY_O):
+		for r in Global.current_location.characters:
+			for c in r:
+				print(c.get_name())
+	if Input.is_key_pressed(KEY_K):
+		for e in Global.charevent_manager.sCharDict:
+			print(e)
+"
+
+[sub_resource type="Shader" id=5]
+code = "/*
+Shader from Godot Shaders - the free shader library.
+godotshaders.com/shader/VHS-and-CRT-monitor-effect
+
+This shader is under CC0 license. Feel free to use, improve and 
+change this shader according to your needs and consider sharing 
+the modified result to godotshaders.com.
+*/
+
+shader_type canvas_item;
+
+//*** IMPORTANT! ***/ 
+// - If you are using this shader to affect the node it is applied to set 'overlay' to false (unchecked in the instepctor).
+// - If you are using this shader as an overlay, and want the shader to affect the nodes below in the Scene hierarchy,
+//   set 'overlay' to true (checked in the inspector).
+// On Mac there is potentially a bug causing this to not work properly. If that is the case and you want to use the shader as an overlay
+// change all \"overlay ? SCREEN_TEXTURE : TEXTURE\" to only \"SCREEN_TEXTURE\" on lines 129-140, and \"vec2 uv = overlay ? warp(SCREEN_UV) : warp(UV);\"
+// to \"vec2 uv = warp(SCREEN_UV);\" on line 98.
+uniform bool overlay = false;
+
+uniform float scanlines_opacity : hint_range(0.0, 1.0) = 0.4;
+uniform float scanlines_width : hint_range(0.0, 0.5) = 0.25;
+uniform float grille_opacity : hint_range(0.0, 1.0) = 0.3;
+uniform vec2 resolution = vec2(640.0, 480.0); // Set the number of rows and columns the texture will be divided in. Scanlines and grille will make a square based on these values
+
+uniform bool pixelate = true; // Fill each square (\"pixel\") with a sampled color, creating a pixel look and a more accurate representation of how a CRT monitor would work.
+
+uniform bool roll = true;
+uniform float roll_speed = 8.0; // Positive values are down, negative are up
+uniform float roll_size : hint_range(0.0, 100.0) = 15.0;
+uniform float roll_variation : hint_range(0.1, 5.0) = 1.8; // This valie is not an exact science. You have to play around with the value to find a look you like. How this works is explained in the code below.
+uniform float distort_intensity : hint_range(0.0, 0.2) = 0.05; // The distortion created by the rolling effect.
+
+uniform float noise_opacity : hint_range(0.0, 1.0) = 0.4;
+uniform float noise_speed = 5.0; // There is a movement in the noise pattern that can be hard to see first. This sets the speed of that movement.
+
+uniform float static_noise_intensity : hint_range(0.0, 1.0) = 0.06;
+
+uniform float aberration : hint_range(-1.0, 1.0) = 0.03; // Chromatic aberration, a distortion on each color channel.
+uniform float brightness = 1.4; // When adding scanline gaps and grille the image can get very dark. Brightness tries to compensate for that.
+uniform bool discolor = true; // Add a discolor effect simulating a VHS
+
+uniform float warp_amount :hint_range(0.0, 5.0) = 1.0; // Warp the texture edges simulating the curved glass of a CRT monitor or old TV.
+uniform bool clip_warp = false;
+
+uniform float vignette_intensity = 0.4; // Size of the vignette, how far towards the middle it should go.
+uniform float vignette_opacity : hint_range(0.0, 1.0) = 0.5;
+
+// Used by the noise functin to generate a pseudo random value between 0.0 and 1.0
+vec2 random(vec2 uv){
+    uv = vec2( dot(uv, vec2(127.1,311.7) ),
+               dot(uv, vec2(269.5,183.3) ) );
+    return -1.0 + 2.0 * fract(sin(uv) * 43758.5453123);
+}
+
+// Generate a Perlin noise used by the distortion effects
+float noise(vec2 uv) {
+    vec2 uv_index = floor(uv);
+    vec2 uv_fract = fract(uv);
+
+    vec2 blur = smoothstep(0.0, 1.0, uv_fract);
+
+    return mix( mix( dot( random(uv_index + vec2(0.0,0.0) ), uv_fract - vec2(0.0,0.0) ),
+                     dot( random(uv_index + vec2(1.0,0.0) ), uv_fract - vec2(1.0,0.0) ), blur.x),
+                mix( dot( random(uv_index + vec2(0.0,1.0) ), uv_fract - vec2(0.0,1.0) ),
+                     dot( random(uv_index + vec2(1.0,1.0) ), uv_fract - vec2(1.0,1.0) ), blur.x), blur.y) * 0.5 + 0.5;
+}
+
+// Takes in the UV and warps the edges, creating the spherized effect
+vec2 warp(vec2 uv){
+	vec2 delta = uv - 0.5;
+	float delta2 = dot(delta.xy, delta.xy);
+	float delta4 = delta2 * delta2;
+	float delta_offset = delta4 * warp_amount;
+	
+	return uv + delta * delta_offset;
+}
+
+// Adds a black border to hide stretched pixel created by the warp effect
+float border (vec2 uv){
+	float radius = min(warp_amount, 0.08);
+	radius = max(min(min(abs(radius * 2.0), abs(1.0)), abs(1.0)), 1e-5);
+	vec2 abs_uv = abs(uv * 2.0 - 1.0) - vec2(1.0, 1.0) + radius;
+	float dist = length(max(vec2(0.0), abs_uv)) / radius;
+	float square = smoothstep(0.96, 1.0, dist);
+	return clamp(1.0 - square, 0.0, 1.0);
+}
+
+// Adds a vignette shadow to the edges of the image
+float vignette(vec2 uv){
+	uv *= 1.0 - uv.xy;
+	float vignette = uv.x * uv.y * 15.0;
+	return pow(vignette, vignette_intensity * vignette_opacity);
+}
+
+void fragment()
+{
+	vec2 uv = overlay ? warp(SCREEN_UV) : warp(UV); // Warp the uv. uv will be used in most cases instead of UV to keep the warping
+	vec2 text_uv = uv;
+	vec2 roll_uv = vec2(0.0);
+	float time = roll ? TIME : 0.0;
+	
+
+	// Pixelate the texture based on the given resolution.
+	if (pixelate)
+	{
+		text_uv = ceil(uv * resolution) / resolution;
+	}
+	
+	// Create the rolling effect. We need roll_line a bit later to make the noise effect.
+	// That is why this runs if roll is true OR noise_opacity is over 0.
+	float roll_line = 0.0;
+	if (roll || noise_opacity > 0.0)
+	{
+		// Create the areas/lines where the texture will be distorted.
+		roll_line = smoothstep(0.3, 0.9, sin(uv.y * roll_size - (time * roll_speed) ) );
+		// Create more lines of a different size and apply to the first set of lines. This creates a bit of variation.
+		roll_line *= roll_line * smoothstep(0.3, 0.9, sin(uv.y * roll_size * roll_variation - (time * roll_speed * roll_variation) ) );
+		// Distort the UV where where the lines are
+		roll_uv = vec2(( roll_line * distort_intensity * (1.-UV.x)), 0.0);
+	}
+	
+	vec4 text;
+	if (roll)
+	{
+		// If roll is true distort the texture with roll_uv. The texture is split up into RGB to 
+		// make some chromatic aberration. We apply the aberration to the red and green channels accorging to the aberration parameter
+		// and intensify it a bit in the roll distortion.
+		text.r = texture(SCREEN_TEXTURE, text_uv + roll_uv * 0.8 + vec2(aberration, 0.0) * .1).r;
+		text.g = texture(SCREEN_TEXTURE, text_uv + roll_uv * 1.2 - vec2(aberration, 0.0) * .1 ).g;
+		text.b = texture(SCREEN_TEXTURE, text_uv + roll_uv).b;
+		text.a = 1.0;
+	}
+	else
+	{
+		// If roll is false only apply the aberration without any distorion. The aberration values are very small so the .1 is only 
+		// to make the slider in the Inspector less sensitive.
+		text.r = texture(SCREEN_TEXTURE, text_uv + vec2(aberration, 0.0) * .1).r;
+		text.g = texture(SCREEN_TEXTURE, text_uv - vec2(aberration, 0.0) * .1).g;
+		text.b = texture(SCREEN_TEXTURE, text_uv).b;
+		text.a = 1.0;
+	}
+	
+	float r = text.r;
+	float g = text.g;
+	float b = text.b;
+	
+	uv = warp(UV);
+	
+	// CRT monitors don't have pixels but groups of red, green and blue dots or lines, called grille. We isolate the texture's color channels 
+	// and divide it up in 3 offsetted lines to show the red, green and blue colors next to each other, with a small black gap between.
+	if (grille_opacity > 0.0){
+		
+		float g_r = smoothstep(0.85, 0.95, abs(sin(uv.x * (resolution.x * 3.14159265))));
+		r = mix(r, r * g_r, grille_opacity);
+		
+		float g_g = smoothstep(0.85, 0.95, abs(sin(1.05 + uv.x * (resolution.x * 3.14159265))));
+		g = mix(g, g * g_g, grille_opacity);
+		
+		float b_b = smoothstep(0.85, 0.95, abs(sin(2.1 + uv.x * (resolution.x * 3.14159265))));
+		b = mix(b, b * b_b, grille_opacity);
+		
+	}
+	
+	// Apply the grille to the texture's color channels and apply Brightness. Since the grille and the scanlines (below) make the image very dark you
+	// can compensate by increasing the brightness.
+	text.r = clamp(r * brightness, 0.0, 1.0);
+	text.g = clamp(g * brightness, 0.0, 1.0);
+	text.b = clamp(b * brightness, 0.0, 1.0);
+	
+	// Scanlines are the horizontal lines that make up the image on a CRT monitor. 
+	// Here we are actual setting the black gap between each line, which I guess is not the right definition of the word, but you get the idea  
+	float scanlines = 0.5;
+	if (scanlines_opacity > 0.0)
+	{
+		// Same technique as above, create lines with sine and applying it to the texture. Smoothstep to allow setting the line size.
+		scanlines = smoothstep(scanlines_width, scanlines_width + 0.5, abs(sin(uv.y * (resolution.y * 3.14159265))));
+		text.rgb = mix(text.rgb, text.rgb * vec3(scanlines), scanlines_opacity);
+	}
+	
+	// Apply the banded noise.
+	if (noise_opacity > 0.0)
+	{
+		// Generate a noise pattern that is very stretched horizontally, and animate it with noise_speed
+		float noise = smoothstep(0.4, 0.5, noise(uv * vec2(2.0, 200.0) + vec2(10.0, (TIME * (noise_speed))) ) );
+		
+		// We use roll_line (set above) to define how big the noise should be vertically (multiplying cuts off all black parts).
+		// We also add in some basic noise with random() to break up the noise pattern above. The noise is sized according to 
+		// the resolution value set in the inspector. If you don't like this look you can 
+		// change \"ceil(uv * resolution) / resolution\" to only \"uv\" to make it less pixelated. Or multiply resolution with som value
+		// greater than 1.0 to make them smaller.
+		roll_line *= noise * scanlines * clamp(random((ceil(uv * resolution) / resolution) + vec2(TIME * 0.8, 0.0)).x + 0.8, 0.0, 1.0);
+		// Add it to the texture based on noise_opacity
+		text.rgb = clamp(mix(text.rgb, text.rgb + roll_line, noise_opacity), vec3(0.0), vec3(1.0));
+	}
+	
+	// Apply static noise by generating it over the whole screen in the same way as above
+	if (static_noise_intensity > 0.0)
+	{
+		text.rgb += clamp(random((ceil(uv * resolution) / resolution) + fract(TIME)).x, 0.0, 1.0) * static_noise_intensity;
+	}
+	
+	// Apply a black border to hide imperfections caused by the warping.
+	// Also apply the vignette
+	text.rgb *= border(uv);
+	text.rgb *= vignette(uv);
+	// Hides the black border and make that area transparent. Good if you want to add the the texture on top an image of a TV or monitor.
+	if (clip_warp)
+	{
+		text.a = border(uv);
+	}
+	
+	// Apply discoloration to get a VHS look (lower saturation and higher contrast)
+	// You can play with the values below or expose them in the Inspector.
+	float saturation = 0.5;
+	float contrast = 1.2;
+	if (discolor)
+	{
+		// Saturation
+		vec3 greyscale = vec3(text.r + text.g + text.b) / 3.;
+		text.rgb = mix(text.rgb, greyscale, saturation);
+		
+		// Contrast
+		float midpoint = pow(0.5, 2.2);
+		text.rgb = (text.rgb - vec3(midpoint)) * contrast + midpoint;
+	}
+	
+	COLOR = text;
+}"
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 5 )
+shader_param/overlay = true
+shader_param/scanlines_opacity = 0.193
+shader_param/scanlines_width = 0.25
+shader_param/grille_opacity = 0.203
+shader_param/resolution = Vector2( 900, 500 )
+shader_param/pixelate = true
+shader_param/roll = true
+shader_param/roll_speed = 8.0
+shader_param/roll_size = 15.0
+shader_param/roll_variation = 1.8
+shader_param/distort_intensity = 0.05
+shader_param/noise_opacity = 0.4
+shader_param/noise_speed = 5.0
+shader_param/static_noise_intensity = 0.06
+shader_param/aberration = -0.004
+shader_param/brightness = 1.4
+shader_param/discolor = true
+shader_param/warp_amount = 0.53
+shader_param/clip_warp = false
+shader_param/vignette_intensity = 0.5
+shader_param/vignette_opacity = 0.887
+
+[sub_resource type="RichTextEffect" id=2]
+script = ExtResource( 5 )
+
+[node name="Event" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = SubResource( 1 )
+
+[node name="Images" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Background" type="TextureRect" parent="Images"]
+margin_left = 320.0
+margin_top = 40.0
+margin_right = 960.0
+margin_bottom = 336.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 7
+flip_h = true
+
+[node name="Foreground" type="TextureRect" parent="Images"]
+margin_left = 472.0
+margin_top = 56.0
+margin_right = 808.0
+margin_bottom = 392.0
+stretch_mode = 1
+
+[node name="TV_Shader" type="ColorRect" parent="Images"]
+material = SubResource( 4 )
+margin_left = 320.0
+margin_top = 40.0
+margin_right = 952.0
+margin_bottom = 336.0
+
+[node name="DialogueBox" type="PopupDialog" parent="."]
+visible = true
+margin_left = 312.0
+margin_top = 448.0
+margin_right = 968.0
+margin_bottom = 640.0
+rect_min_size = Vector2( 300, 72 )
+theme = ExtResource( 6 )
+popup_exclusive = true
+script = ExtResource( 4 )
+start_id = "demo1"
+hide_on_dialogue_end = false
+options_alignment = 1
+options_vertical = true
+scroll_speed = 10.0
+custom_effects = [ SubResource( 2 ) ]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+light_mask = 0
+margin_right = 1280.0
+margin_bottom = 720.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+expand = true
+
+[connection signal="dialogue_signal" from="DialogueBox" to="." method="_on_DialogueBox_dialogue_signal"]
