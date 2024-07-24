@@ -1,3 +1,6 @@
+LINK TO PLAY THE GAME: https://drive.google.com/file/d/1f1p2rXyYVgCYjeh7MhNyy18olFYAbBjG/view?usp=sharing
+(Please note the final product is a little rough...)
+
 # Group-10
 Repository for CS 442 Group 10
 
